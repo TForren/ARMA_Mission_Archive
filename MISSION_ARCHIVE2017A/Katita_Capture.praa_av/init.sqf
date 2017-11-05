@@ -1,0 +1,47 @@
+
+#define framework
+
+#include "core\script_macros.hpp"
+#include "core\init.sqf" //DO NOT REMOVE
+#include "customization\settings.sqf" //DO NOT REMOVE
+#include "core\dia\debug\dia_debug.sqf" //DO NOT REMOVE
+
+if (isServer) then {
+
+	"" call FNC_StartingCount; //DO NOT REMOVE
+	missionComplete = false;
+	[] spawn { //Spawns code running in parallel
+
+		while {!FW_MissionEnded} do { //Loops while the mission is not ended
+			
+			#include "customization\endConditions.sqf" //DO NOT REMOVE
+			
+			//The time limit in minutes variable called FW_TimeLimit is set in customization/settings.sqf, to disable the time limit set it to 0
+			if ((time / 60) >= FW_TimeLimit && FW_TimeLimit != 0) exitWith { //It is recommended that you do not remove the time limit end condition 
+				
+				FW_TimeLimitMessage call FNC_EndMission;
+				
+			};
+		};	
+	};
+};
+
+#include "modules\modules.sqf" //DO NOT REMOVE
+#include "core\postChecks.sqf" //DO NOT REMOVE
+
+missionNamespace setVariable ["RscSpectator_allowFreeCam",false];
+
+RydFFE_Debug = false;
+RydFFE_ShellView = false;
+RydFFE_FO = [aham1,aham2,aham3,aham4,aham5,aham6];
+RydFFE_Safe = 100;
+RydFFE_Add_Other = [
+[["rhs_2b14_82mm_msv"],["rhs_mag_3vo18_10","rhs_mag_3vo18_10","rhs_mag_3vo18_10","rhs_mag_d832du_10","rhs_mag_3vs25m_10"]]
+];
+
+[] execVM "RYD_FFE\FFE.sqf";
+
+#include "HZ\HZ_PlayerSetup.sqf";
+
+#include "HZ\HZ_init.sqf";
+

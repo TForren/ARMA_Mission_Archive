@@ -1,0 +1,9161 @@
+version=52;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=513;
+	class ItemIDProvider
+	{
+		nextID=1806;
+	};
+	class MarkerIDProvider
+	{
+		nextID=57;
+	};
+	class Camera
+	{
+		pos[]={6586.2607,100.56972,959.12451};
+		dir[]={-0.47450507,-0.44038513,-0.76222122};
+		up[]={-0.23273797,0.89780962,-0.37385812};
+		aside[]={-0.8489691,8.0885366e-007,0.52851069};
+	};
+};
+binarizationWanted=0;
+
+class AddonsMetaData
+{
+	class List
+	{
+		items=15;
+		class Item0
+		{
+			className="ace_repair";
+			name="ACE3 - Repair";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item1
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item2
+		{
+			className="CUP_WheeledVehicles_Datsun";
+			name="CUP_WheeledVehicles_Datsun";
+		};
+		class Item3
+		{
+			className="CUP_WheeledVehicles_BTR40";
+			name="CUP_WheeledVehicles_BTR40";
+		};
+		class Item4
+		{
+			className="CUP_Creatures_Military_TakiInsurgents";
+			name="CUP_Creatures_Military_TakiInsurgents";
+		};
+		class Item5
+		{
+			className="A3_Structures_F_Wrecks";
+			name="Arma 3 - Vehicle Wrecks";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item6
+		{
+			className="CUP_Misc3_Config";
+			name="CUP_Misc3_Config";
+		};
+		class Item7
+		{
+			className="rhs_c_a2port_car";
+			name="A2 ported cars";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item8
+		{
+			className="CUP_WheeledVehicles_Ural";
+			name="CUP_WheeledVehicles_Ural";
+		};
+		class Item9
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item10
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item11
+		{
+			className="rhs_c_btr";
+			name="BTR-70 & 80";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item12
+		{
+			className="A3_Structures_F_Heli";
+			name="Arma 3 Helicopters - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item13
+		{
+			className="ace_medical";
+			name="ACE3 - Medical";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item14
+		{
+			className="IF_Mods_insign";
+			name="IF_Mods_insign";
+		};
+	};
+};
+randomSeed=2668015;
+class ScenarioData
+{
+	author="Hoizen";
+	overviewText="Soviet MSV in Afghanistan secure the site of a recent ambush. [Hilly Terrain | Motr Inf | Low Tech]";
+	onLoadMission="Occupation BAF ARESNIC Company is tasked with cutting off revenue from local ultranationalists";
+	class Header
+	{
+		gameType="Coop";
+		minPlayers=20;
+		maxPlayers=31;
+	};
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=1;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="None";
+							};
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="ReviveRequiredTrait";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		class Attribute2
+		{
+			property="ReviveMode";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		class Attribute3
+		{
+			property="ReviveRequiredItemsFakConsumed";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute4
+		{
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		class Attribute5
+		{
+			property="ReviveMedicSpeedMultiplier";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=2;
+				};
+			};
+		};
+		class Attribute6
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute7
+		{
+			property="ReviveForceRespawnDelay";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=3;
+				};
+			};
+		};
+		class Attribute8
+		{
+			property="ReviveBleedOutDelay";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=20;
+				};
+			};
+		};
+		class Attribute9
+		{
+			property="ReviveDelay";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=6;
+				};
+			};
+		};
+		class Attribute10
+		{
+			property="ReviveUnconsciousStateMode";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		class Attribute11
+		{
+			property="ReviveRequiredItems";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		nAttributes=12;
+	};
+	class Category1
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="EnableDebugConsole";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		nAttributes=1;
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		briefingName="COvT31 Soviet Sunder V1.2";
+		overviewText="Soviet MSV in Afghanistan secure the site of a recent ambush. [Hilly Terrain | Motr Inf | Low Tech]";
+		resistanceWest=0;
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		rainForced=1;
+		lightningsForced=1;
+		wavesForced=1;
+		windForced=1;
+		year=1982;
+		month=6;
+		day=24;
+		hour=4;
+		minute=5;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=228;
+		class Item0
+		{
+			dataType="Trigger";
+			position[]={7090.2051,186.56065,1845.514};
+			class Attributes
+			{
+				name="trenchedArea1";
+				condition="true";
+				onActivation="_doot = [trenchedArea1,6 + (floor random 3),3,0,[6917.76,1329.06,0]] spawn HZ_fnc_entrenchArea;";
+				sizeA=220;
+				sizeB=220;
+			};
+			id=235;
+			type="EmptyDetectorAreaR250";
+			atlOffset=5.7819977;
+		};
+		class Item1
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={6564.7554,53.496437,829.03595};
+			};
+			id=901;
+			type="ACE_moduleAddSpareParts";
+			atlOffset=15.047779;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_moduleAddSpareParts_Part";
+					expression="_this setVariable ['Part',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="ACE_Wheel";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ACE_moduleAddSpareParts_List";
+					expression="_this setVariable ['List',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ACE_moduleAddSpareParts_Amount";
+					expression="_this setVariable ['Amount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=3;
+			};
+		};
+		class Item2
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={6557.8623,53.444458,823.07501};
+			};
+			name="HC";
+			isPlayable=1;
+			id=1118;
+			type="HeadlessClient_F";
+			atlOffset=15.047775;
+		};
+		class Item3
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7067.4805,287.49042,2353.9658};
+				angles[]={6.2018104,2.4378822,6.1590834};
+			};
+			side="Independent";
+			flags=4;
+			class Attributes
+			{
+				name="vic1";
+			};
+			id=1282;
+			type="CUP_I_Datsun_PK_TK";
+			atlOffset=-0.0053100586;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item4
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7072.248,285.94687,2335.7578};
+				angles[]={6.2161226,1.9697977,6.232861};
+			};
+			side="Independent";
+			flags=4;
+			class Attributes
+			{
+				name="vic2";
+			};
+			id=1283;
+			type="CUP_I_BTR40_MG_TKG";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item5
+		{
+			dataType="Group";
+			side="Independent";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7072.1357,283.82166,2335.9456};
+						angles[]={6.2161226,1.9697977,6.232861};
+					};
+					side="Independent";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=1287;
+					type="CUP_I_TK_GUE_Mechanic";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7072.1357,283.82166,2335.9456};
+						angles[]={6.2161226,1.9697977,6.232861};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=1289;
+					type="CUP_I_TK_GUE_Mechanic";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=1287;
+						item1=1283;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=1289;
+						item1=1283;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=1286;
+		};
+		class Item6
+		{
+			dataType="Group";
+			side="Independent";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7067.3643,285.38959,2354.1482};
+						angles[]={6.2018104,2.4378822,6.1590834};
+					};
+					side="Independent";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=1291;
+					type="CUP_I_TK_GUE_Mechanic";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7067.3643,285.38959,2354.1482};
+						angles[]={6.2018104,2.4378822,6.1590834};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=1292;
+					type="CUP_I_TK_GUE_Demo";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=1291;
+						item1=1282;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=1292;
+						item1=1282;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=1290;
+			atlOffset=-0.0053100586;
+		};
+		class Item7
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7115.2832,207.76518,1980.0415};
+				angles[]={6.1780324,4.1213369,0.15700975};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1331;
+			type="Land_Wreck_BRDM2_F";
+		};
+		class Item8
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7090.2153,197.75531,1917.9807};
+				angles[]={6.2161164,2.1542757,6.261601};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1332;
+			type="Land_Wreck_BMP2_F";
+		};
+		class Item9
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7169.4663,195.72398,1936.172};
+				angles[]={0.019186703,1.0859876,6.2544088};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1333;
+			type="T72Wreck";
+		};
+		class Item10
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7167.7173,197.02106,1935.9296};
+				angles[]={0.11731366,5.1716394,0.088239387};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1334;
+			type="T72WreckTurret";
+			atlOffset=1.050293;
+		};
+		class Item11
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7243.5,197.24838,1953.5084};
+				angles[]={0.028774392,0,0.098030619};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.21672241;
+				ammo=0.3555786;
+				fuel=0.386127;
+			};
+			id=1338;
+			type="rhs_uaz_open_vmf";
+			atlOffset=-0.0056610107;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="rhs_decalNumber_type";
+					expression="_this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cDecals4CarsNumberPlaces, _value]]] call rhs_fnc_decalsInit";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Default";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="Door_LF";
+					expression="_this animateDoor ['Door_LF',_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="rhs_decalPlatoon_type";
+					expression="_this setVariable ['rhs_decalPlatoon_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="rhs_decalArmy_type";
+					expression="_this setVariable ['rhs_decalArmy_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="rhs_decalArmy";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cDecalsCarsRightArmyPlaces,  _this getVariable ['rhs_decalArmy_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="rhs_decalNumber";
+					expression="if(parseNumber _value >= 0)then{[_this,[['Number', cDecals4CarsNumberPlaces, _this getVariable ['rhs_decalNumber_type','LicensePlate'],parseNumber _value]]] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="rhs_decalPlatoon";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cDecalsCarsRightPlatoonPlaces,  _this getVariable ['rhs_decalPlatoon_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				nAttributes=8;
+			};
+		};
+		class Item12
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7212.7456,195.20444,1975.3046};
+				angles[]={2.1028926,4.6844115,6.2600617};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.4749949;
+				ammo=0.45277771;
+				fuel=0.46666321;
+			};
+			id=1339;
+			type="CUP_O_Ural_Refuel_SLA";
+			atlOffset=1.5258789e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item13
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7194.9307,196.12042,1950.339};
+				angles[]={0.016790068,4.2797217,6.2520137};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.28059617;
+				ammo=0.51942861;
+				fuel=0.43333811;
+			};
+			id=1346;
+			type="CUP_O_Ural_Reammo_RU";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item14
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7216.9429,195.45721,1960.6487};
+				angles[]={0.028780481,4.1482463,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.16395727;
+				ammo=0.51942861;
+				fuel=0.41945261;
+			};
+			id=1347;
+			type="CUP_O_Ural_Empty_RU";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item15
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7239.0391,197.13873,1976.0211};
+				angles[]={0.014381513,5.2779627,0.12173671};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.14729446;
+				ammo=0.21116811;
+				fuel=0.18895127;
+			};
+			id=1348;
+			type="CUP_O_Ural_Repair_RU";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item16
+		{
+			dataType="Group";
+			side="Independent";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7076.7002,225.74933,1998.326};
+						angles[]={0,2.950479,0};
+					};
+					side="Independent";
+					flags=7;
+					class Attributes
+					{
+						init="this setGroupId [""Khalis faction Militia""]; " \n "[this,""I_SL""] call FNC_GearScript; ";
+						description="Khalis faction Leader";
+						isPlayable=1;
+					};
+					id=1352;
+					type="CUP_I_TK_GUE_Soldier";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7075.042,225.72438,1998.576};
+						angles[]={0,3.0531044,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setGroupId [""Takistani Militia""]; " \n "[this,""I_MG""] call FNC_GearScript; ";
+						description="Khalis faction Machinegunner";
+						isPlayable=1;
+					};
+					id=1354;
+					type="CUP_I_TK_GUE_Soldier";
+					atlOffset=0.01499939;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7073.124,225.64934,1998.493};
+						angles[]={0,3.1571088,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						init="this setGroupId [""Takistani Militia""]; " \n "[this,""I_AT""] call FNC_GearScript; ";
+						description="Khalis faction Militiaman (RPG-7)";
+						isPlayable=1;
+					};
+					id=1356;
+					type="CUP_I_TK_GUE_Soldier";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1351;
+		};
+		class Item17
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7079.0044,227.8407,1995.6852};
+				angles[]={6.2496223,2.734163,0.028780481};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, ""ins""] call FNC_VehicleGearScript;";
+			};
+			id=1357;
+			type="CUP_I_Datsun_PK_TK_Random";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item18
+		{
+			dataType="Marker";
+			position[]={7234.5381,-3.5193997e-016,1970.2581};
+			name="convoy";
+			text="Ambushed Convoy";
+			type="mil_marker";
+			colorName="ColorEAST";
+			a=0.80000001;
+			b=0.80000001;
+			id=1358;
+			atlOffset=-194.66629;
+		};
+		class Item19
+		{
+			dataType="Marker";
+			position[]={6905.4302,2.1175783e+025,1165.2665};
+			name="marker_54";
+			text="ASR  Sarkel";
+			type="mil_box";
+			colorName="ColorUNKNOWN";
+			id=1359;
+			atlOffset=2.1175783e+025;
+		};
+		class Item20
+		{
+			dataType="Marker";
+			position[]={6879.5752,3.9711138e+018,604.06799};
+			name="marker_55";
+			text="ASR  Maykop";
+			type="mil_box";
+			colorName="ColorUNKNOWN";
+			id=1360;
+			atlOffset=3.9711138e+018;
+		};
+		class Item21
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={6550.9277,47.282291,835.6427};
+			};
+			id=1396;
+			type="ModulePostprocess_F";
+			atlOffset=5.9191742;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModulePostprocess_F_CommitTime";
+					expression="_this setVariable ['CommitTime',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModulePostprocess_F_Template";
+					expression="_this setVariable ['Template',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Survive";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item22
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6543.7192,44.469265,857.25757};
+				angles[]={6.2424321,2.1627073,6.2783856};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, ""BTR""] call FNC_VehicleGearScript;this setVariable [""ace_cargo_space"", 20];";
+				textures="rhs_sand";
+			};
+			id=1397;
+			type="rhs_btr70_msv";
+			atlOffset=-0.023258209;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="crate_l3_unhide";
+					expression="[_this,_value,'crate_l3_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="rhs_decalLowerFront_type";
+					expression="_this setVariable ['rhs_decalLowerFront_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="rhs_externalMount";
+					expression="[_this,_value] call rhs_fnc_lockTop";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="rhs_decalVV_type";
+					expression="_this setVariable ['rhs_decalVV_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Platoon";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="rhs_decalArmy_type";
+					expression="_this setVariable ['rhs_decalArmy_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="crate_l2_unhide";
+					expression="[_this,_value,'crate_l2_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""rhs_weap_ak74m"",""rhs_weap_rpg26"",""rhs_weap_rpg7"",""FirstAidKit"",""Medikit""],[2,2,1,4,1]],[[""rhs_30Rnd_545x39_7N10_AK"",""rhs_10Rnd_762x54mmR_7N1"",""rhs_100Rnd_762x54mmR"",""rhs_mag_rdg2_white"",""rhs_mag_rgd5"",""rhs_VOG25"",""rhs_VG40OP_white"",""rhs_GRD40_White"",""rhs_rpg26_mag"",""rhs_rpg7_OG7V_mag""],[30,10,3,2,9,20,5,5,2,2]],[[],[]],[[""rhs_sidor"",""rhs_rpg""],[7,1]]],false]";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="rhs_decalLowerFront";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTRFrontPlatePlaces,  _this getVariable ['rhs_decalLowerFront_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="crate_l1_unhide";
+					expression="[_this,_value,'crate_l1_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="rhs_decalNumber2";
+					expression="if(parseNumber _value >= 0)then{if(parseNumber _value == 0)then{{[_this setobjectTexture [_x,'a3\data_f\clear_empty.paa']]}foreach cBTR2NumberPlaces}else{[_this, [['Number', cBTR2NumberPlaces, _this getVariable ['rhs_decalNumber_type2','Default'],parseNumber _value] ] ] call rhs_fnc_decalsInit}};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="rhs_decalNumber3";
+					expression="if(parseNumber _value >= 0)then{if(parseNumber _value == 0)then{{[_this setobjectTexture [_x,'a3\data_f\clear_empty.paa']]}foreach cBTR4NumberPlaces}else{[_this, [['Number', cBTR4NumberPlaces, _this getVariable ['rhs_decalNumber_type3','Default'],parseNumber _value] ] ] call rhs_fnc_decalsInit}};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute11
+				{
+					property="rhs_decalNumber4";
+					expression="if(parseNumber _value >= 0)then{if(parseNumber _value == 0)then{{[_this setobjectTexture [_x,'a3\data_f\clear_empty.paa']]}foreach cBTRCDF4NumberPlaces}else{[_this, [['Number', cBTRCDF4NumberPlaces, _this getVariable ['rhs_decalNumber_type4','CDF'],parseNumber _value] ] ] call rhs_fnc_decalsInit}};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute12
+				{
+					property="rhs_decalVV";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTRVVLetterSymPlaces,  _this getVariable ['rhs_decalVV_type','Platoon'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute13
+				{
+					property="rhs_decalRightTurret_type";
+					expression="_this setVariable ['rhs_decalRightTurret_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Honor";
+						};
+					};
+				};
+				class Attribute14
+				{
+					property="rhs_decalFront";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTROMONSymbolPlaces,  _this getVariable ['rhs_decalFront_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute15
+				{
+					property="crate_r4_unhide";
+					expression="[_this,_value,'crate_r4_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute16
+				{
+					property="rhs_decalPlatoon";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTRPlnSymPlaces,  _this getVariable ['rhs_decalPlatoon_type','Platoon'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute17
+				{
+					property="wheel_2_unhide";
+					expression="[_this,_value,'wheel_2_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute18
+				{
+					property="rhs_decalNumber_type2";
+					expression="if(_value != 'NoChange')then{ _this setVariable ['rhs_decalNumber_type2', _value];[_this,[['Number', cBTR2NumberPlaces, _value]]] call rhs_fnc_decalsInit}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NoChange";
+						};
+					};
+				};
+				class Attribute19
+				{
+					property="rhs_decalNumber_type3";
+					expression="if(_value != 'NoChange')then{ _this setVariable ['rhs_decalNumber_type3', _value];[_this,[['Number', cBTR4NumberPlaces, _value]]] call rhs_fnc_decalsInit}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NoChange";
+						};
+					};
+				};
+				class Attribute20
+				{
+					property="rhs_decalNumber_type4";
+					expression="if(_value != 'NoChange')then{ _this setVariable ['rhs_decalNumber_type4', _value];[_this,[['Number', cBTRCDF4NumberPlaces, _value]]] call rhs_fnc_decalsInit}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NoChange";
+						};
+					};
+				};
+				class Attribute21
+				{
+					property="rhs_decalArmy";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTRBackArmSymPlaces,  _this getVariable ['rhs_decalArmy_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute22
+				{
+					property="crate_r3_unhide";
+					expression="[_this,_value,'crate_r3_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute23
+				{
+					property="rhs_decalPlatoon_type";
+					expression="_this setVariable ['rhs_decalPlatoon_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Platoon";
+						};
+					};
+				};
+				class Attribute24
+				{
+					property="rhs_decalNumber";
+					expression="if(parseNumber _value >= 0)then{if(parseNumber _value == 0)then{{[_this setobjectTexture [_x,'a3\data_f\clear_empty.paa']]}foreach cBTR3NumberPlaces}else{[_this, [['Number', cBTR3NumberPlaces, _this getVariable ['rhs_decalNumber_type','Default'],parseNumber _value] ] ] call rhs_fnc_decalsInit}};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="921";
+						};
+					};
+				};
+				class Attribute25
+				{
+					property="rhs_decalFlag_type";
+					expression="_this setVariable ['rhs_decalFlag_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute26
+				{
+					property="rhs_decalFront_type";
+					expression="_this setVariable ['rhs_decalFront_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute27
+				{
+					property="crate_r2_unhide";
+					expression="[_this,_value,'crate_r2_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute28
+				{
+					property="rhs_decalLeftTurret_type";
+					expression="_this setVariable ['rhs_decalLeftTurret_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Honor";
+						};
+					};
+				};
+				class Attribute29
+				{
+					property="wheel_1_unhide";
+					expression="[_this,_value,'wheel_1_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute30
+				{
+					property="rhs_decalFlag";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTRFlagSymPlaces,  _this getVariable ['rhs_decalFlag_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute31
+				{
+					property="crate_r1_unhide";
+					expression="[_this,_value,'crate_r1_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute32
+				{
+					property="water_2_unhide";
+					expression="[_this,_value,'water_2_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute33
+				{
+					property="rhs_decalRightTurret";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTRRightGvardSymPlaces,  _this getVariable ['rhs_decalRightTurret_type','Honor'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute34
+				{
+					property="rhs_decalLeftTurret";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTRLeftGvardSymPlaces,  _this getVariable ['rhs_decalLeftTurret_type','Honor'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute35
+				{
+					property="rhs_decalNumber_type";
+					expression="if(_value != 'NoChange')then{ _this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cBTR3NumberPlaces, _value]]] call rhs_fnc_decalsInit}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Default";
+						};
+					};
+				};
+				class Attribute36
+				{
+					property="crate_l4_unhide";
+					expression="[_this,_value,'crate_l4_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute37
+				{
+					property="water_1_unhide";
+					expression="[_this,_value,'water_1_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=38;
+			};
+		};
+		class Item23
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6533.4297,44.30423,849.45844};
+				angles[]={6.2735863,2.3009374,6.2783856};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, ""BTR""] call FNC_VehicleGearScript;this setVariable [""ace_cargo_space"", 20];";
+				textures="rhs_sand";
+			};
+			id=1398;
+			type="rhs_btr70_msv";
+			atlOffset=-0.018806458;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="crate_l3_unhide";
+					expression="[_this,_value,'crate_l3_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="rhs_decalLowerFront_type";
+					expression="_this setVariable ['rhs_decalLowerFront_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="rhs_externalMount";
+					expression="[_this,_value] call rhs_fnc_lockTop";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="rhs_decalVV_type";
+					expression="_this setVariable ['rhs_decalVV_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Platoon";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="rhs_decalArmy_type";
+					expression="_this setVariable ['rhs_decalArmy_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="crate_l2_unhide";
+					expression="[_this,_value,'crate_l2_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""rhs_weap_ak74m"",""rhs_weap_rpg26"",""rhs_weap_rpg7"",""FirstAidKit"",""Medikit""],[2,2,1,4,1]],[[""rhs_30Rnd_545x39_7N10_AK"",""rhs_10Rnd_762x54mmR_7N1"",""rhs_100Rnd_762x54mmR"",""rhs_mag_rdg2_white"",""rhs_mag_rgd5"",""rhs_VOG25"",""rhs_VG40OP_white"",""rhs_GRD40_White"",""rhs_rpg26_mag"",""rhs_rpg7_OG7V_mag""],[30,10,3,2,9,20,5,5,2,2]],[[],[]],[[""rhs_sidor"",""rhs_rpg""],[7,1]]],false]";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="rhs_decalLowerFront";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTRFrontPlatePlaces,  _this getVariable ['rhs_decalLowerFront_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="crate_l1_unhide";
+					expression="[_this,_value,'crate_l1_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="rhs_decalNumber2";
+					expression="if(parseNumber _value >= 0)then{if(parseNumber _value == 0)then{{[_this setobjectTexture [_x,'a3\data_f\clear_empty.paa']]}foreach cBTR2NumberPlaces}else{[_this, [['Number', cBTR2NumberPlaces, _this getVariable ['rhs_decalNumber_type2','Default'],parseNumber _value] ] ] call rhs_fnc_decalsInit}};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="922";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="rhs_decalNumber3";
+					expression="if(parseNumber _value >= 0)then{if(parseNumber _value == 0)then{{[_this setobjectTexture [_x,'a3\data_f\clear_empty.paa']]}foreach cBTR4NumberPlaces}else{[_this, [['Number', cBTR4NumberPlaces, _this getVariable ['rhs_decalNumber_type3','Default'],parseNumber _value] ] ] call rhs_fnc_decalsInit}};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute11
+				{
+					property="rhs_decalNumber4";
+					expression="if(parseNumber _value >= 0)then{if(parseNumber _value == 0)then{{[_this setobjectTexture [_x,'a3\data_f\clear_empty.paa']]}foreach cBTRCDF4NumberPlaces}else{[_this, [['Number', cBTRCDF4NumberPlaces, _this getVariable ['rhs_decalNumber_type4','CDF'],parseNumber _value] ] ] call rhs_fnc_decalsInit}};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute12
+				{
+					property="rhs_decalVV";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTRVVLetterSymPlaces,  _this getVariable ['rhs_decalVV_type','Platoon'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute13
+				{
+					property="rhs_decalRightTurret_type";
+					expression="_this setVariable ['rhs_decalRightTurret_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Honor";
+						};
+					};
+				};
+				class Attribute14
+				{
+					property="rhs_decalFront";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTROMONSymbolPlaces,  _this getVariable ['rhs_decalFront_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute15
+				{
+					property="crate_r4_unhide";
+					expression="[_this,_value,'crate_r4_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute16
+				{
+					property="rhs_decalPlatoon";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTRPlnSymPlaces,  _this getVariable ['rhs_decalPlatoon_type','Platoon'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute17
+				{
+					property="wheel_2_unhide";
+					expression="[_this,_value,'wheel_2_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute18
+				{
+					property="rhs_decalNumber_type2";
+					expression="if(_value != 'NoChange')then{ _this setVariable ['rhs_decalNumber_type2', _value];[_this,[['Number', cBTR2NumberPlaces, _value]]] call rhs_fnc_decalsInit}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NoChange";
+						};
+					};
+				};
+				class Attribute19
+				{
+					property="rhs_decalNumber_type3";
+					expression="if(_value != 'NoChange')then{ _this setVariable ['rhs_decalNumber_type3', _value];[_this,[['Number', cBTR4NumberPlaces, _value]]] call rhs_fnc_decalsInit}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NoChange";
+						};
+					};
+				};
+				class Attribute20
+				{
+					property="rhs_decalNumber_type4";
+					expression="if(_value != 'NoChange')then{ _this setVariable ['rhs_decalNumber_type4', _value];[_this,[['Number', cBTRCDF4NumberPlaces, _value]]] call rhs_fnc_decalsInit}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NoChange";
+						};
+					};
+				};
+				class Attribute21
+				{
+					property="rhs_decalArmy";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTRBackArmSymPlaces,  _this getVariable ['rhs_decalArmy_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute22
+				{
+					property="crate_r3_unhide";
+					expression="[_this,_value,'crate_r3_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute23
+				{
+					property="rhs_decalPlatoon_type";
+					expression="_this setVariable ['rhs_decalPlatoon_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Platoon";
+						};
+					};
+				};
+				class Attribute24
+				{
+					property="rhs_decalNumber";
+					expression="if(parseNumber _value >= 0)then{if(parseNumber _value == 0)then{{[_this setobjectTexture [_x,'a3\data_f\clear_empty.paa']]}foreach cBTR3NumberPlaces}else{[_this, [['Number', cBTR3NumberPlaces, _this getVariable ['rhs_decalNumber_type','Default'],parseNumber _value] ] ] call rhs_fnc_decalsInit}};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="922";
+						};
+					};
+				};
+				class Attribute25
+				{
+					property="rhs_decalFlag_type";
+					expression="_this setVariable ['rhs_decalFlag_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute26
+				{
+					property="rhs_decalFront_type";
+					expression="_this setVariable ['rhs_decalFront_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute27
+				{
+					property="crate_r2_unhide";
+					expression="[_this,_value,'crate_r2_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute28
+				{
+					property="rhs_decalLeftTurret_type";
+					expression="_this setVariable ['rhs_decalLeftTurret_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Honor";
+						};
+					};
+				};
+				class Attribute29
+				{
+					property="wheel_1_unhide";
+					expression="[_this,_value,'wheel_1_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute30
+				{
+					property="rhs_decalFlag";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTRFlagSymPlaces,  _this getVariable ['rhs_decalFlag_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute31
+				{
+					property="crate_r1_unhide";
+					expression="[_this,_value,'crate_r1_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute32
+				{
+					property="water_2_unhide";
+					expression="[_this,_value,'water_2_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute33
+				{
+					property="rhs_decalRightTurret";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTRRightGvardSymPlaces,  _this getVariable ['rhs_decalRightTurret_type','Honor'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute34
+				{
+					property="rhs_decalLeftTurret";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTRLeftGvardSymPlaces,  _this getVariable ['rhs_decalLeftTurret_type','Honor'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute35
+				{
+					property="rhs_decalNumber_type";
+					expression="if(_value != 'NoChange')then{ _this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cBTR3NumberPlaces, _value]]] call rhs_fnc_decalsInit}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NoChange";
+						};
+					};
+				};
+				class Attribute36
+				{
+					property="crate_l4_unhide";
+					expression="[_this,_value,'crate_l4_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute37
+				{
+					property="water_1_unhide";
+					expression="[_this,_value,'water_1_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=38;
+			};
+		};
+		class Item24
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6523.8521,44.328449,842.74194};
+				angles[]={6.2663951,2.3766496,6.2615957};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, ""BTR""] call FNC_VehicleGearScript;this setVariable [""ace_cargo_space"", 20];";
+				textures="rhs_sand";
+			};
+			id=1399;
+			type="rhs_btr70_msv";
+			atlOffset=-0.0097618103;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="crate_l3_unhide";
+					expression="[_this,_value,'crate_l3_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="rhs_decalLowerFront_type";
+					expression="_this setVariable ['rhs_decalLowerFront_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="rhs_externalMount";
+					expression="[_this,_value] call rhs_fnc_lockTop";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="rhs_decalVV_type";
+					expression="_this setVariable ['rhs_decalVV_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Platoon";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="rhs_decalArmy_type";
+					expression="_this setVariable ['rhs_decalArmy_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="crate_l2_unhide";
+					expression="[_this,_value,'crate_l2_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""rhs_weap_ak74m"",""rhs_weap_rpg26"",""rhs_weap_rpg7"",""FirstAidKit"",""Medikit""],[2,2,1,4,1]],[[""rhs_30Rnd_545x39_7N10_AK"",""rhs_10Rnd_762x54mmR_7N1"",""rhs_100Rnd_762x54mmR"",""rhs_mag_rdg2_white"",""rhs_mag_rgd5"",""rhs_VOG25"",""rhs_VG40OP_white"",""rhs_GRD40_White"",""rhs_rpg26_mag"",""rhs_rpg7_OG7V_mag""],[30,10,3,2,9,20,5,5,2,2]],[[],[]],[[""rhs_sidor"",""rhs_rpg""],[7,1]]],false]";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="rhs_decalLowerFront";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTRFrontPlatePlaces,  _this getVariable ['rhs_decalLowerFront_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="crate_l1_unhide";
+					expression="[_this,_value,'crate_l1_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="rhs_decalNumber2";
+					expression="if(parseNumber _value >= 0)then{if(parseNumber _value == 0)then{{[_this setobjectTexture [_x,'a3\data_f\clear_empty.paa']]}foreach cBTR2NumberPlaces}else{[_this, [['Number', cBTR2NumberPlaces, _this getVariable ['rhs_decalNumber_type2','Default'],parseNumber _value] ] ] call rhs_fnc_decalsInit}};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="rhs_decalNumber3";
+					expression="if(parseNumber _value >= 0)then{if(parseNumber _value == 0)then{{[_this setobjectTexture [_x,'a3\data_f\clear_empty.paa']]}foreach cBTR4NumberPlaces}else{[_this, [['Number', cBTR4NumberPlaces, _this getVariable ['rhs_decalNumber_type3','Default'],parseNumber _value] ] ] call rhs_fnc_decalsInit}};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute11
+				{
+					property="rhs_decalNumber4";
+					expression="if(parseNumber _value >= 0)then{if(parseNumber _value == 0)then{{[_this setobjectTexture [_x,'a3\data_f\clear_empty.paa']]}foreach cBTRCDF4NumberPlaces}else{[_this, [['Number', cBTRCDF4NumberPlaces, _this getVariable ['rhs_decalNumber_type4','CDF'],parseNumber _value] ] ] call rhs_fnc_decalsInit}};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute12
+				{
+					property="rhs_decalVV";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTRVVLetterSymPlaces,  _this getVariable ['rhs_decalVV_type','Platoon'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute13
+				{
+					property="rhs_decalRightTurret_type";
+					expression="_this setVariable ['rhs_decalRightTurret_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Honor";
+						};
+					};
+				};
+				class Attribute14
+				{
+					property="rhs_decalFront";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTROMONSymbolPlaces,  _this getVariable ['rhs_decalFront_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute15
+				{
+					property="crate_r4_unhide";
+					expression="[_this,_value,'crate_r4_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute16
+				{
+					property="rhs_decalPlatoon";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTRPlnSymPlaces,  _this getVariable ['rhs_decalPlatoon_type','Platoon'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute17
+				{
+					property="wheel_2_unhide";
+					expression="[_this,_value,'wheel_2_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute18
+				{
+					property="rhs_decalNumber_type2";
+					expression="if(_value != 'NoChange')then{ _this setVariable ['rhs_decalNumber_type2', _value];[_this,[['Number', cBTR2NumberPlaces, _value]]] call rhs_fnc_decalsInit}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NoChange";
+						};
+					};
+				};
+				class Attribute19
+				{
+					property="rhs_decalNumber_type3";
+					expression="if(_value != 'NoChange')then{ _this setVariable ['rhs_decalNumber_type3', _value];[_this,[['Number', cBTR4NumberPlaces, _value]]] call rhs_fnc_decalsInit}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NoChange";
+						};
+					};
+				};
+				class Attribute20
+				{
+					property="rhs_decalNumber_type4";
+					expression="if(_value != 'NoChange')then{ _this setVariable ['rhs_decalNumber_type4', _value];[_this,[['Number', cBTRCDF4NumberPlaces, _value]]] call rhs_fnc_decalsInit}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NoChange";
+						};
+					};
+				};
+				class Attribute21
+				{
+					property="rhs_decalArmy";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTRBackArmSymPlaces,  _this getVariable ['rhs_decalArmy_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute22
+				{
+					property="crate_r3_unhide";
+					expression="[_this,_value,'crate_r3_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute23
+				{
+					property="rhs_decalPlatoon_type";
+					expression="_this setVariable ['rhs_decalPlatoon_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Platoon";
+						};
+					};
+				};
+				class Attribute24
+				{
+					property="rhs_decalNumber";
+					expression="if(parseNumber _value >= 0)then{if(parseNumber _value == 0)then{{[_this setobjectTexture [_x,'a3\data_f\clear_empty.paa']]}foreach cBTR3NumberPlaces}else{[_this, [['Number', cBTR3NumberPlaces, _this getVariable ['rhs_decalNumber_type','Default'],parseNumber _value] ] ] call rhs_fnc_decalsInit}};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="923";
+						};
+					};
+				};
+				class Attribute25
+				{
+					property="rhs_decalFlag_type";
+					expression="_this setVariable ['rhs_decalFlag_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute26
+				{
+					property="rhs_decalFront_type";
+					expression="_this setVariable ['rhs_decalFront_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Army";
+						};
+					};
+				};
+				class Attribute27
+				{
+					property="crate_r2_unhide";
+					expression="[_this,_value,'crate_r2_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute28
+				{
+					property="rhs_decalLeftTurret_type";
+					expression="_this setVariable ['rhs_decalLeftTurret_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Honor";
+						};
+					};
+				};
+				class Attribute29
+				{
+					property="wheel_1_unhide";
+					expression="[_this,_value,'wheel_1_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute30
+				{
+					property="rhs_decalFlag";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTRFlagSymPlaces,  _this getVariable ['rhs_decalFlag_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute31
+				{
+					property="crate_r1_unhide";
+					expression="[_this,_value,'crate_r1_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute32
+				{
+					property="water_2_unhide";
+					expression="[_this,_value,'water_2_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute33
+				{
+					property="rhs_decalRightTurret";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTRRightGvardSymPlaces,  _this getVariable ['rhs_decalRightTurret_type','Honor'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute34
+				{
+					property="rhs_decalLeftTurret";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cBTRLeftGvardSymPlaces,  _this getVariable ['rhs_decalLeftTurret_type','Honor'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="-1";
+						};
+					};
+				};
+				class Attribute35
+				{
+					property="rhs_decalNumber_type";
+					expression="if(_value != 'NoChange')then{ _this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cBTR3NumberPlaces, _value]]] call rhs_fnc_decalsInit}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NoChange";
+						};
+					};
+				};
+				class Attribute36
+				{
+					property="crate_l4_unhide";
+					expression="[_this,_value,'crate_l4_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute37
+				{
+					property="water_1_unhide";
+					expression="[_this,_value,'water_1_unhide'] call rhs_fnc_setHabarEden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=38;
+			};
+		};
+		class Item25
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7085.4502,280.67456,2082.5742};
+				angles[]={0.021589722,0,6.0820537};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="[thingy,getpos this,east,[ ""inf""],2,1,[west],""""] call vk_fnc_addMarker;hideobject this";
+			};
+			id=1431;
+			type="Land_Baseball_01_F";
+			atlOffset=39.485641;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="hideObject";
+					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item26
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={6563.0498,90.210022,850.7254};
+				angles[]={0,0.16782331,0};
+			};
+			id=1435;
+			type="ACE_moduleAssignMedicRoles";
+			atlOffset=47.74876;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_moduleAssignMedicRoles_EnableList";
+					expression="_this setVariable ['EnableList',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ACE_moduleAssignMedicRoles_role";
+					expression="_this setVariable ['role',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item27
+		{
+			dataType="Marker";
+			position[]={6542.8364,42.167934,846.82129};
+			name="arkaim";
+			type="Empty";
+			id=1436;
+		};
+		class Item28
+		{
+			dataType="Marker";
+			position[]={7001.6177,108.76367,1345.7965};
+			name="marker_279";
+			text="OP - 201";
+			type="mil_triangle";
+			id=1449;
+			atlOffset=-14.86895;
+		};
+		class Item29
+		{
+			dataType="Marker";
+			position[]={7001.6616,3.8956361e+036,1455.6556};
+			name="marker_72";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=200;
+			angle=359.94971;
+			id=1450;
+			atlOffset=3.8956361e+036;
+		};
+		class Item30
+		{
+			dataType="Marker";
+			position[]={7220.9512,0,1440.8109};
+			name="marker_73";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=25;
+			angle=37.794704;
+			id=1451;
+			atlOffset=-170.24312;
+		};
+		class Item31
+		{
+			dataType="Marker";
+			position[]={7001.7153,0,1480.5575};
+			name="marker_75";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=25;
+			angle=90.217659;
+			id=1452;
+			atlOffset=-122.77827;
+		};
+		class Item32
+		{
+			dataType="Marker";
+			position[]={6784.0098,0,1438.7791};
+			name="marker_74";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=25;
+			angle=317.11792;
+			id=1462;
+			atlOffset=-103.70947;
+		};
+		class Item33
+		{
+			dataType="Marker";
+			position[]={7487.8306,3.26445e+015,2485.6653};
+			name="marker_62";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=100;
+			angle=90;
+			id=1463;
+			atlOffset=3.26445e+015;
+		};
+		class Item34
+		{
+			dataType="Marker";
+			position[]={7489.1514,3.26445e+015,1899.3083};
+			name="marker_64";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=100;
+			angle=90;
+			id=1465;
+			atlOffset=3.26445e+015;
+		};
+		class Item35
+		{
+			dataType="Marker";
+			position[]={5372.2441,1.6431223e+014,28.483643};
+			name="marker_233";
+			markerType="RECTANGLE";
+			type="rectangle";
+			fillName="SolidFull";
+			a=333.02048;
+			b=2;
+			angle=180;
+			id=1466;
+			atlOffset=1.6431223e+014;
+		};
+		class Item36
+		{
+			dataType="Marker";
+			position[]={5372.2017,14.523669,324.72827};
+			name="marker_245";
+			markerType="ELLIPSE";
+			type="ellipse";
+			fillName="Border";
+			a=100;
+			b=100;
+			drawBorder=1;
+			id=1476;
+		};
+		class Item37
+		{
+			dataType="Marker";
+			position[]={5487.9731,12.199095,140.26123};
+			name="marker_246";
+			markerType="ELLIPSE";
+			type="ellipse";
+			fillName="Border";
+			a=100;
+			b=100;
+			drawBorder=1;
+			id=1477;
+		};
+		class Item38
+		{
+			dataType="Marker";
+			position[]={5253.332,12.356751,143.02686};
+			name="marker_247";
+			markerType="ELLIPSE";
+			type="ellipse";
+			fillName="Border";
+			a=100;
+			b=100;
+			drawBorder=1;
+			id=1478;
+		};
+		class Item39
+		{
+			dataType="Marker";
+			position[]={5487.7051,12.56259,181.80273};
+			name="marker_248";
+			markerType="RECTANGLE";
+			type="rectangle";
+			fillName="SolidFull";
+			a=20;
+			b=5;
+			id=1479;
+		};
+		class Item40
+		{
+			dataType="Marker";
+			position[]={5499.6313,12.266502,149.97021};
+			name="marker_249";
+			markerType="RECTANGLE";
+			type="rectangle";
+			fillName="SolidFull";
+			a=61.191895;
+			b=-6.6586304;
+			id=1480;
+		};
+		class Item41
+		{
+			dataType="Marker";
+			position[]={5488.4395,11.919943,107.91528};
+			name="marker_250";
+			markerType="RECTANGLE";
+			type="rectangle";
+			fillName="SolidFull";
+			a=20;
+			b=5;
+			id=1481;
+		};
+		class Item42
+		{
+			dataType="Marker";
+			position[]={5252.9321,13.127593,184.72241};
+			name="marker_252";
+			markerType="RECTANGLE";
+			type="rectangle";
+			fillName="SolidFull";
+			a=20;
+			b=5;
+			id=1483;
+			atlOffset=9.5367432e-007;
+		};
+		class Item43
+		{
+			dataType="Marker";
+			position[]={5253.6665,12.404619,149.62573};
+			name="marker_253";
+			markerType="RECTANGLE";
+			type="rectangle";
+			fillName="SolidFull";
+			a=50;
+			b=5;
+			id=1484;
+		};
+		class Item44
+		{
+			dataType="Marker";
+			position[]={5253.6665,12.194827,110.83496};
+			name="marker_254";
+			markerType="RECTANGLE";
+			type="rectangle";
+			fillName="SolidFull";
+			a=20;
+			b=5;
+			id=1485;
+		};
+		class Item45
+		{
+			dataType="Marker";
+			position[]={5371.6875,15.252177,366.3064};
+			name="marker_256";
+			markerType="RECTANGLE";
+			type="rectangle";
+			fillName="SolidFull";
+			a=20;
+			b=5;
+			id=1487;
+			atlOffset=9.5367432e-007;
+		};
+		class Item46
+		{
+			dataType="Marker";
+			position[]={5372.4219,14.626044,331.20972};
+			name="marker_257";
+			markerType="RECTANGLE";
+			type="rectangle";
+			fillName="SolidFull";
+			a=50;
+			b=5;
+			id=1488;
+		};
+		class Item47
+		{
+			dataType="Marker";
+			position[]={5372.4219,14.106798,292.41895};
+			name="marker_258";
+			markerType="RECTANGLE";
+			type="rectangle";
+			fillName="SolidFull";
+			a=20;
+			b=5;
+			id=1489;
+		};
+		class Item48
+		{
+			dataType="Marker";
+			position[]={7506.6479,1.1242506e+014,1790.5969};
+			name="marker_220";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=19.302;
+			angle=30;
+			id=1506;
+			atlOffset=1.1242506e+014;
+		};
+		class Item49
+		{
+			dataType="Marker";
+			position[]={7488.0908,0,1295.642};
+			name="marker_66";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=100;
+			angle=90;
+			id=1507;
+			atlOffset=-119.32086;
+		};
+		class Item50
+		{
+			dataType="Marker";
+			position[]={6567.6382,2.5048725e+037,1221.894};
+			name="marker_281";
+			text="OP - 202";
+			type="mil_triangle";
+			id=1509;
+			atlOffset=2.5048725e+037;
+		};
+		class Item51
+		{
+			dataType="Marker";
+			position[]={7132.4648,-0.20251912,1837.5837};
+			name="marker_284";
+			text="SP VLAD";
+			type="mil_flag";
+			colorName="ColorWEST";
+			a=0;
+			b=0;
+			id=1510;
+			atlOffset=-184.32248;
+		};
+		class Item52
+		{
+			dataType="Marker";
+			position[]={6589.4204,47.377205,908.94037};
+			name="marker_2";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=25;
+			angle=213.51645;
+			id=1512;
+			atlOffset=2.8803864;
+		};
+		class Item53
+		{
+			dataType="Marker";
+			position[]={6542.7563,55.299507,938.02606};
+			name="marker_3";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=17.505997;
+			id=1513;
+			atlOffset=7.4014168;
+		};
+		class Item54
+		{
+			dataType="Marker";
+			position[]={6633.3789,43.628773,878.32001};
+			name="marker_4";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=49.18972;
+			id=1514;
+			atlOffset=4.1241913;
+		};
+		class Item55
+		{
+			dataType="Marker";
+			position[]={6602.6592,2.041984e+019,928.80426};
+			name="marker_5";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=25;
+			angle=123.32943;
+			id=1515;
+			atlOffset=2.041984e+019;
+		};
+		class Item56
+		{
+			dataType="Marker";
+			position[]={6616.0713,51.112064,953.4259};
+			name="marker_7";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=154.68423;
+			id=1517;
+			atlOffset=5.4036293;
+		};
+		class Item57
+		{
+			dataType="Marker";
+			position[]={6620.2334,51.45314,950.5993};
+			name="marker_8";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=96.493591;
+			id=1518;
+			atlOffset=5.4934845;
+		};
+		class Item58
+		{
+			dataType="Marker";
+			position[]={6601.0127,3.3249723e+023,926.42877};
+			name="marker_9";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			b=0.75;
+			angle=33.516468;
+			id=1519;
+			atlOffset=3.3249723e+023;
+		};
+		class Item59
+		{
+			dataType="Marker";
+			position[]={6568.5835,50.958488,921.33313};
+			name="marker_10";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=122.96038;
+			id=1520;
+			atlOffset=6.0633469;
+		};
+		class Item60
+		{
+			dataType="Marker";
+			position[]={6562.0591,48.043392,925.7948};
+			name="marker_11";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=122.96038;
+			id=1521;
+			atlOffset=1.6094894;
+		};
+		class Item61
+		{
+			dataType="Marker";
+			position[]={6563.1113,48.504375,920.21143};
+			name="marker_13";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=33.316856;
+			id=1523;
+			atlOffset=2.7349472;
+		};
+		class Item62
+		{
+			dataType="Marker";
+			position[]={6568.1948,2.7767386e+009,931.57477};
+			name="marker_15";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=4.3168063;
+			angle=153.51645;
+			id=1525;
+			atlOffset=2.7767386e+009;
+		};
+		class Item63
+		{
+			dataType="Marker";
+			position[]={6623.4932,44.721348,886.36743};
+			name="marker_25";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=10;
+			angle=213.51645;
+			id=1534;
+			atlOffset=4.6010513;
+		};
+		class Item64
+		{
+			dataType="Marker";
+			position[]={6555.0835,3.3249723e+023,931.5307};
+			name="marker_26";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=10;
+			angle=213.51645;
+			id=1535;
+			atlOffset=3.3249723e+023;
+		};
+		class Item65
+		{
+			dataType="Marker";
+			position[]={5539.0396,1.6431223e+014,289.60498};
+			name="marker_234";
+			markerType="RECTANGLE";
+			type="rectangle";
+			fillName="SolidFull";
+			a=310.44376;
+			b=2;
+			angle=237.63927;
+			id=1541;
+			atlOffset=1.6431223e+014;
+		};
+		class Item66
+		{
+			dataType="Marker";
+			position[]={5206.9546,2.7767386e+009,289.41382};
+			name="marker_235";
+			markerType="RECTANGLE";
+			type="rectangle";
+			fillName="SolidFull";
+			a=311.23209;
+			b=2;
+			angle=122.36098;
+			id=1543;
+			atlOffset=2.7767386e+009;
+		};
+		class Item67
+		{
+			dataType="Marker";
+			position[]={7487.8306,3.26445e+015,2179.3516};
+			name="marker_79";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=100;
+			angle=90;
+			id=1544;
+			atlOffset=3.26445e+015;
+		};
+		class Item68
+		{
+			dataType="Marker";
+			position[]={7532.1538,0,1764.6201};
+			name="marker_221";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=19.302;
+			angle=60;
+			id=1547;
+			atlOffset=-242.63818;
+		};
+		class Item69
+		{
+			dataType="Marker";
+			position[]={7541.752,1.1242506e+014,1728.6323};
+			name="marker_222";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=19.302;
+			angle=90;
+			id=1548;
+			atlOffset=1.1242506e+014;
+		};
+		class Item70
+		{
+			dataType="Marker";
+			position[]={7532.0493,0,1693.0696};
+			name="marker_223";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=19.302;
+			angle=120;
+			id=1550;
+			atlOffset=-228.93529;
+		};
+		class Item71
+		{
+			dataType="Marker";
+			position[]={7505.4712,3.26445e+015,1662.76};
+			name="marker_224";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=22.09149;
+			angle=139.99998;
+			id=1551;
+			atlOffset=3.26445e+015;
+		};
+		class Item72
+		{
+			dataType="Marker";
+			position[]={7489.1514,0,1551.5945};
+			name="marker_65";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=97.974121;
+			angle=90;
+			id=1552;
+			atlOffset=-184.09801;
+		};
+		class Item73
+		{
+			dataType="Marker";
+			position[]={6571.3848,45.401917,929.51563};
+			name="marker_16";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=4.3169999;
+			angle=273.5079;
+			id=1553;
+			atlOffset=0.039699554;
+		};
+		class Item74
+		{
+			dataType="Marker";
+			position[]={6615.2656,46.111694,890.06433};
+			name="marker_12";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=122.96038;
+			id=1554;
+			atlOffset=5.1806412;
+		};
+		class Item75
+		{
+			dataType="Marker";
+			position[]={6608.7417,47.710278,894.52606};
+			name="marker_14";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=122.96038;
+			id=1555;
+			atlOffset=4.4378433;
+		};
+		class Item76
+		{
+			dataType="Marker";
+			position[]={6609.7935,46.699184,888.94263};
+			name="marker_17";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=33.316856;
+			id=1556;
+			atlOffset=5.4052963;
+		};
+		class Item77
+		{
+			dataType="Marker";
+			position[]={6614.8765,2.7767386e+009,900.30591};
+			name="marker_19";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=4.3168063;
+			angle=153.51645;
+			id=1557;
+			atlOffset=2.7767386e+009;
+		};
+		class Item78
+		{
+			dataType="Marker";
+			position[]={6618.0669,42.055317,898.24683};
+			name="marker_20";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=4.3169999;
+			angle=273.55588;
+			id=1558;
+		};
+		class Item79
+		{
+			dataType="Marker";
+			position[]={6615.9282,2.7767386e+009,948.94373};
+			name="marker_6";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=33.516468;
+			id=1516;
+			atlOffset=2.7767386e+009;
+		};
+		class Item80
+		{
+			dataType="Marker";
+			position[]={6616.8433,2.7767386e+009,950.30109};
+			name="marker_21";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=3.2034688;
+			b=2.2770021;
+			angle=33.516468;
+			id=1559;
+			atlOffset=2.7767386e+009;
+		};
+		class Item81
+		{
+			dataType="Marker";
+			position[]={6618.4736,2.7767386e+009,952.4079};
+			name="marker_22";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=2.193826;
+			b=1.9812824;
+			angle=33.516468;
+			id=1560;
+			atlOffset=2.7767386e+009;
+		};
+		class Item82
+		{
+			dataType="Marker";
+			position[]={6999.3008,0,1510.0853};
+			name="marker_23";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=121.57249;
+			id=1562;
+			atlOffset=-122.27481;
+		};
+		class Item83
+		{
+			dataType="Marker";
+			position[]={7004.3296,0,1509.9919};
+			name="marker_24";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=63.381824;
+			id=1563;
+			atlOffset=-123.44563;
+		};
+		class Item84
+		{
+			dataType="Marker";
+			position[]={7001.6294,0,1506.2537};
+			name="marker_27";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=0.40507978;
+			id=1564;
+			atlOffset=-122.92281;
+		};
+		class Item85
+		{
+			dataType="Marker";
+			position[]={7001.6533,0,1507.8893};
+			name="marker_28";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=3.2034688;
+			b=2.2770021;
+			angle=0.40507978;
+			id=1565;
+			atlOffset=-122.90118;
+		};
+		class Item86
+		{
+			dataType="Marker";
+			position[]={7001.8701,0,1510.545};
+			name="marker_29";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=2.193826;
+			b=1.9812824;
+			angle=0.40507978;
+			id=1566;
+			atlOffset=-122.90314;
+		};
+		class Item87
+		{
+			dataType="Marker";
+			position[]={7488.0908,0,990.1792};
+			name="marker_67";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=100;
+			angle=90;
+			id=1568;
+			atlOffset=-66.283028;
+		};
+		class Item88
+		{
+			dataType="Marker";
+			position[]={7488.0908,0.21704865,725.34094};
+			name="marker_68";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=100;
+			angle=90;
+			id=1569;
+			atlOffset=-43.558266;
+		};
+		class Item89
+		{
+			dataType="Marker";
+			position[]={6501.2388,0,1567.2137};
+			name="marker_70";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=100;
+			angle=270.13953;
+			id=1572;
+			atlOffset=-144.68895;
+		};
+		class Item90
+		{
+			dataType="Marker";
+			position[]={6484.0073,0,1675.9677};
+			name="marker_225";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=19.302;
+			angle=210.13948;
+			id=1573;
+			atlOffset=-163.97333;
+		};
+		class Item91
+		{
+			dataType="Marker";
+			position[]={6503.7705,0,2170.876};
+			name="marker_71";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=100;
+			angle=270.13953;
+			id=1574;
+			atlOffset=-265.36575;
+		};
+		class Item92
+		{
+			dataType="Marker";
+			position[]={6458.5645,0,1702.0065};
+			name="marker_226";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=19.302;
+			angle=240.13963;
+			id=1576;
+			atlOffset=-180.01256;
+		};
+		class Item93
+		{
+			dataType="Marker";
+			position[]={6458.8438,0,1773.5565};
+			name="marker_227";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=19.302;
+			angle=300.13965;
+			id=1577;
+			atlOffset=-174.80147;
+		};
+		class Item94
+		{
+			dataType="Marker";
+			position[]={6485.4956,0,1803.8011};
+			name="marker_228";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=22.09149;
+			angle=320.13962;
+			id=1578;
+			atlOffset=-169.36916;
+		};
+		class Item95
+		{
+			dataType="Marker";
+			position[]={6502.0859,0,1914.9266};
+			name="marker_76";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=97.974121;
+			angle=270.13953;
+			id=1579;
+			atlOffset=-183.43739;
+		};
+		class Item96
+		{
+			dataType="Marker";
+			position[]={6504.5146,0,2476.3379};
+			name="marker_77";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=100;
+			angle=270.13953;
+			id=1580;
+			atlOffset=-350.98944;
+		};
+		class Item97
+		{
+			dataType="Marker";
+			position[]={6501.2388,0,1279.0721};
+			name="marker_78";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=100;
+			angle=270.13953;
+			id=1583;
+			atlOffset=-109.1599;
+		};
+		class Item98
+		{
+			dataType="Marker";
+			position[]={5902.606,3.26445e+015,764.71802};
+			name="marker_80";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=100;
+			angle=325.88165;
+			id=1584;
+			atlOffset=3.26445e+015;
+		};
+		class Item99
+		{
+			dataType="Marker";
+			position[]={5982.7925,1.1242506e+014,840.17975};
+			name="marker_229";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=19.302;
+			angle=265.88153;
+			id=1585;
+			atlOffset=1.1242506e+014;
+		};
+		class Item100
+		{
+			dataType="Marker";
+			position[]={6402.9648,0,1102.439};
+			name="marker_81";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=100;
+			angle=325.88165;
+			id=1586;
+			atlOffset=-74.362175;
+		};
+		class Item101
+		{
+			dataType="Marker";
+			position[]={5989.9917,0,875.86633};
+			name="marker_230";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=19.302;
+			angle=295.88168;
+			id=1587;
+			atlOffset=-70.746513;
+		};
+		class Item102
+		{
+			dataType="Marker";
+			position[]={6049.2856,0,915.91248};
+			name="marker_231";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=19.302;
+			angle=355.88159;
+			id=1588;
+			atlOffset=-74.461311;
+		};
+		class Item103
+		{
+			dataType="Marker";
+			position[]={6089.2861,3.26445e+015,910.90967};
+			name="marker_232";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=22.09149;
+			angle=15.88166;
+			id=1589;
+			atlOffset=3.26445e+015;
+		};
+		class Item104
+		{
+			dataType="Marker";
+			position[]={6190.4717,0,959.75232};
+			name="marker_82";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=97.974121;
+			angle=325.88165;
+			id=1590;
+			atlOffset=-79.545883;
+		};
+		class Item105
+		{
+			dataType="Marker";
+			position[]={5664.4536,3.26445e+015,602.51746};
+			name="marker_83";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=100;
+			angle=325.88162;
+			id=1591;
+			atlOffset=3.26445e+015;
+		};
+		class Item106
+		{
+			dataType="Marker";
+			position[]={6013.6245,0,903.58276};
+			name="marker_236";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=19.302;
+			angle=326.99402;
+			id=1592;
+			atlOffset=-74.171516;
+		};
+		class Item107
+		{
+			dataType="Marker";
+			position[]={7162.3506,3.26445e+015,332.4375};
+			name="marker_69";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=100;
+			angle=142.18114;
+			id=1595;
+			atlOffset=3.26445e+015;
+		};
+		class Item108
+		{
+			dataType="Marker";
+			position[]={7087.2021,1.1242506e+014,251.95764};
+			name="marker_237";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=19.302;
+			angle=82.181122;
+			id=1596;
+			atlOffset=1.1242506e+014;
+		};
+		class Item109
+		{
+			dataType="Marker";
+			position[]={7382.7617,3.26445e+015,505.19409};
+			name="marker_85";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=100;
+			angle=142.18114;
+			id=1598;
+			atlOffset=3.26445e+015;
+		};
+		class Item110
+		{
+			dataType="Marker";
+			position[]={7082.3208,13.526803,215.88113};
+			name="marker_238";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=19.302;
+			angle=112.18102;
+			id=1599;
+			atlOffset=-9.5367432e-007;
+		};
+		class Item111
+		{
+			dataType="Marker";
+			position[]={7059.7773,1.1242506e+014,186.23245};
+			name="marker_239";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=19.302;
+			angle=142.18114;
+			id=1600;
+			atlOffset=1.1242506e+014;
+		};
+		class Item112
+		{
+			dataType="Marker";
+			position[]={7025.7354,13.298192,172.09131};
+			name="marker_240";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=19.302;
+			angle=172.18106;
+			id=1601;
+			atlOffset=-9.5367432e-007;
+		};
+		class Item113
+		{
+			dataType="Marker";
+			position[]={6985.4951,3.26445e+015,174.50177};
+			name="marker_241";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=22.09149;
+			angle=192.18102;
+			id=1602;
+			atlOffset=3.26445e+015;
+		};
+		class Item114
+		{
+			dataType="Marker";
+			position[]={6887.6729,13.119718,119.23077};
+			name="marker_86";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=97.974121;
+			angle=142.18114;
+			id=1603;
+		};
+		class Item115
+		{
+			dataType="Marker";
+			position[]={6448.6484,0,1737.9808};
+			name="marker_242";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=19.302;
+			angle=90;
+			id=1604;
+			atlOffset=-177.45393;
+		};
+		class Item116
+		{
+			dataType="Marker";
+			position[]={8579.2842,49.521709,869.76563};
+			name="marker_30";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=25;
+			angle=270.16086;
+			id=1605;
+			atlOffset=12.246567;
+		};
+		class Item117
+		{
+			dataType="Marker";
+			position[]={8577.9219,57.113411,924.73505};
+			name="marker_33";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=74.150391;
+			id=1606;
+			atlOffset=16.373184;
+		};
+		class Item118
+		{
+			dataType="Marker";
+			position[]={8577.877,50.219994,816.21246};
+			name="marker_34";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=105.83411;
+			id=1607;
+			atlOffset=17.213688;
+		};
+		class Item119
+		{
+			dataType="Marker";
+			position[]={8578.1787,53.684372,893.98419};
+			name="marker_39";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=179.60477;
+			id=1612;
+			atlOffset=16.042225;
+		};
+		class Item120
+		{
+			dataType="Marker";
+			position[]={8578.3184,50.802242,901.8866};
+			name="marker_40";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=179.60477;
+			id=1613;
+			atlOffset=12.496044;
+		};
+		class Item121
+		{
+			dataType="Marker";
+			position[]={8574.2334,51.618523,897.93805};
+			name="marker_41";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=89.961212;
+			id=1614;
+			atlOffset=13.631901;
+		};
+		class Item122
+		{
+			dataType="Marker";
+			position[]={8586.5195,2.7767386e+009,899.94037};
+			name="marker_42";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=4.3168063;
+			angle=210.16074;
+			id=1615;
+			atlOffset=2.7767386e+009;
+		};
+		class Item123
+		{
+			dataType="Marker";
+			position[]={8579.1641,50.241516,828.89404};
+			name="marker_43";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=10;
+			angle=270.16086;
+			id=1616;
+			atlOffset=15.373459;
+		};
+		class Item124
+		{
+			dataType="Marker";
+			position[]={8579.2734,3.3249723e+023,910.86737};
+			name="marker_44";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=10;
+			angle=270.16086;
+			id=1617;
+			atlOffset=3.3249723e+023;
+		};
+		class Item125
+		{
+			dataType="Marker";
+			position[]={8586.5547,47.617081,896.14294};
+			name="marker_45";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=4.3169999;
+			angle=330.16077;
+			id=1618;
+			atlOffset=9.9109917;
+		};
+		class Item126
+		{
+			dataType="Marker";
+			position[]={8577.7285,52.208782,837.79895};
+			name="marker_46";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=179.60477;
+			id=1619;
+			atlOffset=15.360321;
+		};
+		class Item127
+		{
+			dataType="Marker";
+			position[]={8577.8691,52.278774,845.70142};
+			name="marker_47";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=179.60477;
+			id=1620;
+			atlOffset=15.001122;
+		};
+		class Item128
+		{
+			dataType="Marker";
+			position[]={8573.7813,52.663559,841.7533};
+			name="marker_48";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=89.961212;
+			id=1621;
+			atlOffset=15.479042;
+		};
+		class Item129
+		{
+			dataType="Marker";
+			position[]={8586.0693,2.7767386e+009,843.75513};
+			name="marker_49";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=4.3168063;
+			angle=210.16074;
+			id=1622;
+			atlOffset=2.7767386e+009;
+		};
+		class Item130
+		{
+			dataType="Marker";
+			position[]={8586.1035,46.635208,839.95813};
+			name="marker_50";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=4.3169999;
+			angle=330.16077;
+			id=1623;
+			atlOffset=9.5180016;
+		};
+		class Item131
+		{
+			dataType="Marker";
+			position[]={4665.6733,43.770309,834.11029};
+			name="marker_56";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=25;
+			angle=88.889679;
+			id=1627;
+			atlOffset=2.8646393;
+		};
+		class Item132
+		{
+			dataType="Marker";
+			position[]={4668.2554,42.985104,779.18469};
+			name="marker_57";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=252.8792;
+			id=1628;
+			atlOffset=7.111702;
+		};
+		class Item133
+		{
+			dataType="Marker";
+			position[]={4665.8921,51.020725,887.68152};
+			name="marker_58";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=284.56284;
+			id=1629;
+			atlOffset=5.2021179;
+		};
+		class Item134
+		{
+			dataType="Marker";
+			position[]={4667.3154,44.506996,809.92224};
+			name="marker_84";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=358.33347;
+			id=1634;
+			atlOffset=5.9727478;
+		};
+		class Item135
+		{
+			dataType="Marker";
+			position[]={4667.3511,40.134769,802.01868};
+			name="marker_87";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=358.33347;
+			id=1635;
+			atlOffset=2.2958031;
+		};
+		class Item136
+		{
+			dataType="Marker";
+			position[]={4671.3477,41.373138,806.05688};
+			name="marker_88";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=268.68994;
+			id=1636;
+			atlOffset=3.2088051;
+		};
+		class Item137
+		{
+			dataType="Marker";
+			position[]={4659.1094,2.7767386e+009,803.78247};
+			name="marker_89";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=4.3168063;
+			angle=28.889664;
+			id=1637;
+			atlOffset=2.7767386e+009;
+		};
+		class Item138
+		{
+			dataType="Marker";
+			position[]={4664.8857,49.223698,874.97443};
+			name="marker_90";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=10;
+			angle=88.889679;
+			id=1638;
+			atlOffset=4.2849197;
+		};
+		class Item139
+		{
+			dataType="Marker";
+			position[]={4666.5952,3.3249723e+023,793.01892};
+			name="marker_91";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=10;
+			angle=88.889679;
+			id=1639;
+			atlOffset=3.3249723e+023;
+		};
+		class Item140
+		{
+			dataType="Marker";
+			position[]={4658.9893,38.424892,807.57819};
+			name="marker_92";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=4.3169999;
+			angle=148.88968;
+			id=1640;
+			atlOffset=0.0033531189;
+		};
+		class Item141
+		{
+			dataType="Marker";
+			position[]={4666.5186,49.414581,866.10364};
+			name="marker_93";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=358.33347;
+			id=1641;
+			atlOffset=5.2069969;
+		};
+		class Item142
+		{
+			dataType="Marker";
+			position[]={4666.5542,48.955704,858.20001};
+			name="marker_94";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=358.33347;
+			id=1642;
+			atlOffset=5.4472771;
+		};
+		class Item143
+		{
+			dataType="Marker";
+			position[]={4670.5527,49.549034,862.23785};
+			name="marker_95";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=5;
+			angle=268.68994;
+			id=1643;
+			atlOffset=5.5473213;
+		};
+		class Item144
+		{
+			dataType="Marker";
+			position[]={4658.3125,2.7767386e+009,859.96387};
+			name="marker_96";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=4.3168063;
+			angle=28.889664;
+			id=1644;
+			atlOffset=2.7767386e+009;
+		};
+		class Item145
+		{
+			dataType="Marker";
+			position[]={4658.1943,43.887417,863.75916};
+			name="marker_97";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=4.3169999;
+			angle=148.88968;
+			id=1645;
+		};
+		class Item146
+		{
+			dataType="Marker";
+			position[]={5489.6699,12.22976,143.01575};
+			name="marker_255";
+			markerType="RECTANGLE";
+			type="rectangle";
+			fillName="SolidFull";
+			a=50;
+			b=5;
+			id=1649;
+		};
+		class Item147
+		{
+			dataType="Marker";
+			position[]={8710.5283,45.932308,1021.8474};
+			name="marker_103";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=328.94565;
+			id=1652;
+			atlOffset=7.6293945e-006;
+		};
+		class Item148
+		{
+			dataType="Marker";
+			position[]={8699.125,46.082737,1015.0212};
+			name="marker_104";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=58.945698;
+			id=1653;
+			atlOffset=1.5258789e-005;
+		};
+		class Item149
+		{
+			dataType="Marker";
+			position[]={8727.2842,42.400562,982.17804};
+			name="marker_105";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=345.12918;
+			id=1654;
+			atlOffset=1.1444092e-005;
+		};
+		class Item150
+		{
+			dataType="Marker";
+			position[]={8714.4297,80.909866,978.80066};
+			name="marker_106";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=75.129341;
+			id=1655;
+			atlOffset=38.163517;
+		};
+		class Item151
+		{
+			dataType="Marker";
+			position[]={8735.1543,39.060745,940.0047};
+			name="marker_107";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=353.92917;
+			id=1659;
+			atlOffset=7.6293945e-006;
+		};
+		class Item152
+		{
+			dataType="Marker";
+			position[]={8721.9355,76.471901,938.63354};
+			name="marker_108";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=83.92939;
+			id=1660;
+			atlOffset=37.214493;
+		};
+		class Item153
+		{
+			dataType="Marker";
+			position[]={8737.5156,36.42564,897.58075};
+			name="marker_109";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=359.82449;
+			id=1663;
+			atlOffset=7.6293945e-006;
+		};
+		class Item154
+		{
+			dataType="Marker";
+			position[]={8724.2246,73.089653,897.57458};
+			name="marker_110";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=89.824547;
+			id=1664;
+			atlOffset=36.52948;
+		};
+		class Item155
+		{
+			dataType="Marker";
+			position[]={8723.1621,73.430611,857.50726};
+			name="marker_111";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=93.101234;
+			id=1665;
+			atlOffset=36.530571;
+		};
+		class Item156
+		{
+			dataType="Marker";
+			position[]={8736.4316,36.868214,856.75378};
+			name="marker_112";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=3.1011639;
+			id=1666;
+			atlOffset=7.6293945e-006;
+		};
+		class Item157
+		{
+			dataType="Marker";
+			position[]={8731.5547,30.746813,813.85364};
+			name="marker_113";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=10.296064;
+			id=1667;
+			atlOffset=9.5367432e-006;
+		};
+		class Item158
+		{
+			dataType="Marker";
+			position[]={8718.4854,67.8899,816.263};
+			name="marker_114";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=100.29607;
+			id=1668;
+			atlOffset=36.532951;
+		};
+		class Item159
+		{
+			dataType="Marker";
+			position[]={8709.0313,64.865166,776.52698};
+			name="marker_115";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=105.51579;
+			id=1669;
+			atlOffset=35.304089;
+		};
+		class Item160
+		{
+			dataType="Marker";
+			position[]={8721.8281,27.909897,772.93854};
+			name="marker_116";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=15.515777;
+			id=1670;
+			atlOffset=7.6293945e-006;
+		};
+		class Item161
+		{
+			dataType="Marker";
+			position[]={8692.8896,63.9375,740.54614};
+			name="marker_117";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=122.78617;
+			id=1671;
+			atlOffset=36.578651;
+		};
+		class Item162
+		{
+			dataType="Marker";
+			position[]={8704.0439,26.66802,733.32043};
+			name="marker_118";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=32.786175;
+			id=1672;
+			atlOffset=0.056280136;
+		};
+		class Item163
+		{
+			dataType="Marker";
+			position[]={8714.7158,26.795919,751.43616};
+			name="marker_119";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=22.318363;
+			id=1673;
+			atlOffset=9.5367432e-006;
+		};
+		class Item164
+		{
+			dataType="Marker";
+			position[]={8726.2773,29.032476,793.18787};
+			name="marker_120";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=10.466055;
+			id=1674;
+			atlOffset=5.7220459e-006;
+		};
+		class Item165
+		{
+			dataType="Marker";
+			position[]={8733.834,35.801056,836.93359};
+			name="marker_121";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=2.8029153;
+			id=1675;
+			atlOffset=0.059875488;
+		};
+		class Item166
+		{
+			dataType="Marker";
+			position[]={8736.6104,36.867783,876.25732};
+			name="marker_122";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=1.2214195;
+			id=1676;
+			atlOffset=7.6293945e-006;
+		};
+		class Item167
+		{
+			dataType="Marker";
+			position[]={8736.9111,37.206715,918.35693};
+			name="marker_123";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=355.36493;
+			id=1677;
+			atlOffset=3.8146973e-006;
+		};
+		class Item168
+		{
+			dataType="Marker";
+			position[]={8732.2207,40.899982,961.42517};
+			name="marker_124";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=351.86929;
+			id=1678;
+			atlOffset=1.1444092e-005;
+		};
+		class Item169
+		{
+			dataType="Marker";
+			position[]={8721.4023,43.886276,1001.9434};
+			name="marker_125";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=340.10492;
+			id=1679;
+			atlOffset=7.6293945e-006;
+		};
+		class Item170
+		{
+			dataType="Marker";
+			position[]={8699.5264,47.363823,1038.3472};
+			name="marker_126";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=325.41925;
+			id=1680;
+			atlOffset=1.1444092e-005;
+		};
+		class Item171
+		{
+			dataType="Marker";
+			position[]={8692.3828,26.340227,716.96167};
+			name="marker_127";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=218.09721;
+			id=1681;
+			atlOffset=7.6293945e-006;
+		};
+		class Item172
+		{
+			dataType="Marker";
+			position[]={4523.1919,31.562748,676.74243};
+			name="marker_128";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=147.53648;
+			id=1682;
+			atlOffset=0.0023422241;
+		};
+		class Item173
+		{
+			dataType="Marker";
+			position[]={4534.4238,32.242725,683.84692};
+			name="marker_129";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=237.53651;
+			id=1683;
+		};
+		class Item174
+		{
+			dataType="Marker";
+			position[]={4505.4653,32.884346,715.98773};
+			name="marker_130";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=163.72012;
+			id=1684;
+			atlOffset=0.027629852;
+		};
+		class Item175
+		{
+			dataType="Marker";
+			position[]={4518.2324,71.307495,719.68018};
+			name="marker_131";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=253.72015;
+			id=1685;
+			atlOffset=38.19009;
+		};
+		class Item176
+		{
+			dataType="Marker";
+			position[]={4496.5605,36.59705,757.95471};
+			name="marker_132";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=172.52013;
+			id=1686;
+		};
+		class Item177
+		{
+			dataType="Marker";
+			position[]={4509.7422,73.195587,759.65051};
+			name="marker_133";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=262.52023;
+			id=1687;
+			atlOffset=37.242119;
+		};
+		class Item178
+		{
+			dataType="Marker";
+			position[]={4493.1572,41.196411,800.30786};
+			name="marker_134";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=178.41534;
+			id=1688;
+			atlOffset=0.012367249;
+		};
+		class Item179
+		{
+			dataType="Marker";
+			position[]={4506.4434,76.907776,800.64075};
+			name="marker_135";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=268.41531;
+			id=1689;
+			atlOffset=36.551384;
+		};
+		class Item180
+		{
+			dataType="Marker";
+			position[]={4506.52,79.343689,840.72211};
+			name="marker_136";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=271.69211;
+			id=1690;
+			atlOffset=36.547966;
+		};
+		class Item181
+		{
+			dataType="Marker";
+			position[]={4493.2368,43.749271,841.14905};
+			name="marker_137";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=181.69202;
+			id=1691;
+			atlOffset=0.037513733;
+		};
+		class Item182
+		{
+			dataType="Marker";
+			position[]={4497.0566,45.56921,884.15613};
+			name="marker_138";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=188.88686;
+			id=1692;
+			atlOffset=0.038715363;
+		};
+		class Item183
+		{
+			dataType="Marker";
+			position[]={4510.1816,81.479256,882.06891};
+			name="marker_139";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=278.88702;
+			id=1693;
+			atlOffset=36.571644;
+		};
+		class Item184
+		{
+			dataType="Marker";
+			position[]={4518.6553,83.365639,922.02539};
+			name="marker_140";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=284.10669;
+			id=1694;
+			atlOffset=36.581268;
+		};
+		class Item185
+		{
+			dataType="Marker";
+			position[]={4505.7744,47.425163,925.2981};
+			name="marker_141";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=194.10658;
+			id=1695;
+			atlOffset=0.038711548;
+		};
+		class Item186
+		{
+			dataType="Marker";
+			position[]={4533.9072,83.667282,958.39246};
+			name="marker_142";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=301.37701;
+			id=1696;
+			atlOffset=35.288937;
+		};
+		class Item187
+		{
+			dataType="Marker";
+			position[]={4522.5791,48.979816,965.34155};
+			name="marker_143";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=211.37703;
+			id=1697;
+			atlOffset=0.097381592;
+		};
+		class Item188
+		{
+			dataType="Marker";
+			position[]={4512.356,48.269741,946.96887};
+			name="marker_144";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=200.90915;
+			id=1698;
+			atlOffset=0.041110992;
+		};
+		class Item189
+		{
+			dataType="Marker";
+			position[]={4501.8247,46.513653,904.9455};
+			name="marker_145";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=189.0569;
+			id=1699;
+			atlOffset=0.038715363;
+		};
+		class Item190
+		{
+			dataType="Marker";
+			position[]={4495.3462,44.477715,861.0271};
+			name="marker_146";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=181.39378;
+			id=1700;
+			atlOffset=0.098590851;
+		};
+		class Item191
+		{
+			dataType="Marker";
+			position[]={4493.5376,42.553165,821.64697};
+			name="marker_147";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=179.81224;
+			id=1701;
+			atlOffset=0.048988342;
+		};
+		class Item192
+		{
+			dataType="Marker";
+			position[]={4494.272,39.596169,779.55286};
+			name="marker_148";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=173.95575;
+			id=1702;
+			atlOffset=0.023910522;
+		};
+		class Item193
+		{
+			dataType="Marker";
+			position[]={4500.0205,33.178768,736.61292};
+			name="marker_149";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=170.46024;
+			id=1703;
+			atlOffset=0.01953125;
+		};
+		class Item194
+		{
+			dataType="Marker";
+			position[]={4511.832,32.862282,696.37299};
+			name="marker_150";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=158.69576;
+			id=1704;
+			atlOffset=0.02942276;
+		};
+		class Item195
+		{
+			dataType="Marker";
+			position[]={4534.5962,29.551641,660.51819};
+			name="marker_151";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=144.01007;
+			id=1705;
+			atlOffset=-1.9073486e-006;
+		};
+		class Item196
+		{
+			dataType="Marker";
+			position[]={4533.8345,49.613365,981.98218};
+			name="marker_152";
+			markerType="RECTANGLE";
+			type="rectangle";
+			colorName="ColorRed";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=36.688351;
+			id=1706;
+			atlOffset=0.038715363;
+		};
+		class Item197
+		{
+			dataType="Marker";
+			position[]={7188.5571,205.53615,1801.1685};
+			name="marker_186";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=180.78923;
+			id=1740;
+			atlOffset=5.5454102;
+		};
+		class Item198
+		{
+			dataType="Marker";
+			position[]={7188.3394,198.14241,1787.8802};
+			name="marker_187";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=90.789154;
+			id=1741;
+			atlOffset=9.1552734e-005;
+		};
+		class Item199
+		{
+			dataType="Marker";
+			position[]={7145.2778,186.97978,1791.0217};
+			name="marker_188";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=97.984055;
+			id=1742;
+			atlOffset=9.1552734e-005;
+		};
+		class Item200
+		{
+			dataType="Marker";
+			position[]={7147.1577,193.88078,1804.1781};
+			name="marker_189";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=187.98407;
+			id=1743;
+			atlOffset=5.5444489;
+		};
+		class Item201
+		{
+			dataType="Marker";
+			position[]={7107.0728,183.59943,1812.021};
+			name="marker_190";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=193.20378;
+			id=1744;
+			atlOffset=5.4136658;
+		};
+		class Item202
+		{
+			dataType="Marker";
+			position[]={7104.0034,175.76642,1799.0902};
+			name="marker_191";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=103.20377;
+			id=1745;
+			atlOffset=0.00010681152;
+		};
+		class Item203
+		{
+			dataType="Marker";
+			position[]={7070.4702,171.87613,1826.6985};
+			name="marker_192";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=210.47423;
+			id=1746;
+			atlOffset=3.3109436;
+		};
+		class Item204
+		{
+			dataType="Marker";
+			position[]={7063.7002,168.84572,1815.2617};
+			name="marker_193";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=120.47415;
+			id=1747;
+			atlOffset=9.1552734e-005;
+		};
+		class Item205
+		{
+			dataType="Marker";
+			position[]={7082.2314,172.45567,1805.3293};
+			name="marker_194";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=110.00629;
+			id=1748;
+			atlOffset=9.1552734e-005;
+		};
+		class Item206
+		{
+			dataType="Marker";
+			position[]={7124.416,181.02049,1795.462};
+			name="marker_195";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=98.154037;
+			id=1749;
+			atlOffset=0.075363159;
+		};
+		class Item207
+		{
+			dataType="Marker";
+			position[]={7168.4307,192.82578,1789.6763};
+			name="marker_196";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=90.490921;
+			id=1750;
+			atlOffset=9.1552734e-005;
+		};
+		class Item208
+		{
+			dataType="Marker";
+			position[]={7207.8345,203.53554,1788.488};
+			name="marker_197";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=88.909431;
+			id=1751;
+			atlOffset=9.1552734e-005;
+		};
+		class Item209
+		{
+			dataType="Marker";
+			position[]={7046.8843,173.15825,1826.2534};
+			name="marker_202";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=305.78546;
+			id=1756;
+			atlOffset=0.00010681152;
+		};
+		class Item210
+		{
+			dataType="Marker";
+			position[]={7089.5674,207.02324,1965.9016};
+			name="marker_198";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=168.40128;
+			id=1757;
+			atlOffset=5.5376282;
+		};
+		class Item211
+		{
+			dataType="Marker";
+			position[]={7092.2056,200.2142,1952.8761};
+			name="marker_199";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=78.401268;
+			id=1758;
+			atlOffset=4.5776367e-005;
+		};
+		class Item212
+		{
+			dataType="Marker";
+			position[]={7049.4727,198.43228,1946.7064};
+			name="marker_200";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=85.596169;
+			id=1759;
+			atlOffset=6.1035156e-005;
+		};
+		class Item213
+		{
+			dataType="Marker";
+			position[]={7048.4863,205.98694,1959.9598};
+			name="marker_201";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=175.59624;
+			id=1760;
+			atlOffset=5.1709137;
+		};
+		class Item214
+		{
+			dataType="Marker";
+			position[]={7007.6519,215.39732,1959.0208};
+			name="marker_203";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=180.81595;
+			id=1761;
+			atlOffset=5.3519287;
+		};
+		class Item215
+		{
+			dataType="Marker";
+			position[]={7007.4282,207.34729,1945.7325};
+			name="marker_204";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=90.815887;
+			id=1762;
+			atlOffset=3.0517578e-005;
+		};
+		class Item216
+		{
+			dataType="Marker";
+			position[]={6968.7529,227.3063,1965.5042};
+			name="marker_205";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=21.22883;
+			b=2.4475701;
+			angle=198.08627;
+			id=1763;
+			atlOffset=3.1326447;
+		};
+		class Item217
+		{
+			dataType="Marker";
+			position[]={6964.5942,221.89076,1952.8813};
+			name="marker_206";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=108.08616;
+			id=1764;
+			atlOffset=4.5776367e-005;
+		};
+		class Item218
+		{
+			dataType="Marker";
+			position[]={6984.8247,214.39317,1947.1558};
+			name="marker_207";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=97.618462;
+			id=1765;
+			atlOffset=4.5776367e-005;
+		};
+		class Item219
+		{
+			dataType="Marker";
+			position[]={7028.144,205.8886,1946.5679};
+			name="marker_208";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=85.766151;
+			id=1766;
+			atlOffset=4.5776367e-005;
+		};
+		class Item220
+		{
+			dataType="Marker";
+			position[]={7072.375,195.50439,1950.3593};
+			name="marker_209";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=78.103035;
+			id=1767;
+			atlOffset=4.5776367e-005;
+		};
+		class Item221
+		{
+			dataType="Marker";
+			position[]={7111.1162,202.93903,1957.652};
+			name="marker_210";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=76.521545;
+			id=1768;
+			atlOffset=0.16056824;
+		};
+		class Item222
+		{
+			dataType="Marker";
+			position[]={6945.8115,229.90134,1960.0096};
+			name="marker_211";
+			markerType="RECTANGLE";
+			type="IDM_DOT";
+			colorName="ColorWEST";
+			fillName="SolidFull";
+			a=14.746264;
+			b=2.4634202;
+			angle=293.39752;
+			id=1769;
+			atlOffset=4.5776367e-005;
+		};
+		class Item223
+		{
+			dataType="Marker";
+			position[]={7006.3628,-0.021149479,2007.5909};
+			name="marker_285";
+			text="SP LENIN";
+			type="mil_flag";
+			colorName="ColorWEST";
+			a=0;
+			b=0;
+			id=1770;
+			atlOffset=-226.04695;
+		};
+		class Item224
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6511.2969,45.972389,869.47882};
+						angles[]={6.185153,2.1604772,6.185153};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CAPTAIN";
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 921 Platoon Commander""]; " \n "[this,""O_PC""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;     ";
+						name="o13";
+						description="Arkaim – 921 | 1st Platoon | Platoon Commander";
+						isPlayer=1;
+						isPlayable=1;
+					};
+					id=1773;
+					type="O_officer_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1772;
+		};
+		class Item225
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=9;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6561.603,42.515526,854.11188};
+						angles[]={6.2544088,3.9744744,0.023983587};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+						skill=0.57819647;
+						rank="LIEUTENANT";
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 921""];" \n "[this, ""RED""] call FNC_SetTeamColor;" \n "[this,""O_SL""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;     ";
+						name="o9";
+						description="Arkaim – 921 | 1st Section A | Section Leader/Vehicle Commander (A FTL)";
+						isPlayable=1;
+					};
+					id=1775;
+					type="O_Soldier_SL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6559.4834,42.446896,853.1311};
+						angles[]={6.259202,0.90378428,0.0215872};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 921""];" \n "[this, ""RED""] call FNC_SetTeamColor;" \n "[this,""O_MG""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o10";
+						description="Arkaim – 921 | 1st Section A | Machine Gunner";
+						isPlayable=1;
+					};
+					id=1776;
+					type="O_Soldier_AR_F";
+					atlOffset=3.8146973e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6558.3145,42.402573,852.16669};
+						angles[]={6.259202,0.90378428,0.019186703};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 921""];" \n "[this, ""YELLOW""] call FNC_SetTeamColor;" \n "[this,""O_RPG""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o11";
+						description="Arkaim – 921 | 1st Section A | RPG Gunner";
+						isPlayable=1;
+					};
+					id=1777;
+					type="O_Soldier_LAT_F";
+					atlOffset=3.8146973e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6557.0908,42.349934,851.20819};
+						angles[]={6.2568064,0.90378428,0.026379252};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 921""];" \n "[this, ""YELLOW""] call FNC_SetTeamColor;" \n "[this,""O_RPGA""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o12";
+						description="Arkaim – 921 | 1st Section A | RPG Gunner Assistant";
+						isPlayable=1;
+					};
+					id=1778;
+					type="O_Soldier_F";
+					atlOffset=3.8146973e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6556.0674,42.302315,850.42688};
+						angles[]={6.2568064,0.90378428,0.026379252};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 921""];" \n "[this, ""BLUE""] call FNC_SetTeamColor;" \n "[this,""O_FTL""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o22";
+						description="Arkaim – 921 | 1st Section B | Senior Rifleman (B FTL)";
+						isPlayable=1;
+					};
+					id=1779;
+					type="O_Soldier_SL_F";
+					atlOffset=3.8146973e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6555.1563,42.260616,849.72766};
+						angles[]={6.2615981,0.90378428,0.0215872};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 921""];" \n "[this, ""BLUE""] call FNC_SetTeamColor;" \n "[this,""O_RAT""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o23";
+						description="Arkaim – 921 | 1st Section B | Rifleman (AT)";
+						isPlayable=1;
+					};
+					id=1780;
+					type="O_Soldier_LAT_F";
+					atlOffset=3.8146973e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6554.1313,42.224392,848.88147};
+						angles[]={6.261601,0.90378428,0.016790967};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 921""];" \n "[this, ""BLUE""] call FNC_SetTeamColor;" \n "[this,""O_MED""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o24";
+						description="Arkaim – 921 | 1st Section B | Combat Lifesaver";
+						isPlayable=1;
+					};
+					id=1781;
+					type="O_Soldier_F";
+					atlOffset=3.8146973e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6553.1548,42.185436,847.99243};
+						angles[]={6.259202,0.90378428,0.01918981};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 921""];" \n "[this, ""GREEN""] call FNC_SetTeamColor;" \n "[this, ""ACRE_PRC148"", 1] call FNC_SetRadio;" \n "[this,""O_VG""] call FNC_GearScript; " \n "[this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o29";
+						description="Arkaim – 921 | 1st Section C | Vehicle Gunner (C FTL)";
+						isPlayable=1;
+					};
+					id=1782;
+					type="O_soldier_repair_F";
+					atlOffset=3.8146973e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6552.0425,42.166832,847.05286};
+						angles[]={0.004796607,0.90377903,6.278389};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 921""];" \n "[this, ""GREEN""] call FNC_SetTeamColor;" \n "[this,""O_VD""] call FNC_GearScript; " \n "[this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o30";
+						description="Arkaim – 921 | 1st Section C | Vehicle Driver";
+						isPlayable=1;
+					};
+					id=1783;
+					type="O_soldier_repair_F";
+					atlOffset=3.8146973e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1774;
+		};
+		class Item226
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=9;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6481.9761,42.631111,809.21515};
+						angles[]={6.2280717,3.590729,6.2161217};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+						skill=0.57819647;
+						rank="LIEUTENANT";
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 922""];" \n "[this, ""RED""] call FNC_SetTeamColor;" \n "[this,""O_SL""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;     ";
+						name="o5";
+						description="Arkaim – 922 | 2nd Section A | Section Leader/Vehicle Commander (A FTL)";
+						isPlayable=1;
+					};
+					id=1785;
+					type="O_Soldier_SL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6479.9453,42.639824,807.56335};
+						angles[]={6.2018089,0.58791876,6.2328539};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 922""];" \n "[this, ""RED""] call FNC_SetTeamColor;" \n "[this,""O_MG""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o6";
+						description="Arkaim – 922 | 2nd Section A | Machine Gunner";
+						isPlayable=1;
+					};
+					id=1786;
+					type="O_Soldier_AR_F";
+					atlOffset=3.8146973e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6479.1323,42.612946,806.28528};
+						angles[]={6.230464,0.58791876,6.2328553};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 922""];" \n "[this, ""YELLOW""] call FNC_SetTeamColor;" \n "[this,""O_RPG""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o7";
+						description="Arkaim – 922 | 2nd Section A | RPG Gunner";
+						isPlayable=1;
+					};
+					id=1787;
+					type="O_Soldier_LAT_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6478.2661,42.592823,804.99237};
+						angles[]={6.2352471,0.58791876,6.230463};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 922""];" \n "[this, ""YELLOW""] call FNC_SetTeamColor;" \n "[this,""O_RPGA""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o8";
+						description="Arkaim – 922 | 2nd Section A | RPG Gunner Assistant";
+						isPlayable=1;
+					};
+					id=1788;
+					type="O_Soldier_F";
+					atlOffset=7.6293945e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6477.5869,42.566013,803.98145};
+						angles[]={6.2209001,0.58791876,6.2448225};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Section 1-2""];" \n "[this, ""BLUE""] call FNC_SetTeamColor;" \n "[this,""O_FTL""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o19";
+						description="Arkaim – 922 | 2nd Section B | Senior Rifleman (B FTL)";
+						isPlayable=1;
+					};
+					id=1789;
+					type="O_Soldier_SL_F";
+					atlOffset=3.8146973e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6476.9385,42.544556,803.03143};
+						angles[]={6.2304621,0.58791876,6.2137361};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 922""];" \n "[this, ""BLUE""] call FNC_SetTeamColor;" \n "[this,""O_RAT""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o20";
+						description="Arkaim – 922 | 2nd Section B | Rifleman (AT)";
+						isPlayable=1;
+					};
+					id=1790;
+					type="O_Soldier_LAT_F";
+					atlOffset=3.8146973e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6476.2275,42.547134,801.9104};
+						angles[]={6.2496147,0.58791876,6.2137351};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 922""];" \n "[this, ""BLUE""] call FNC_SetTeamColor;" \n "[this,""O_RIF""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o21";
+						description="Arkaim – 922 | 2nd Section B | Rifleman";
+						isPlayable=1;
+					};
+					id=1791;
+					type="O_Soldier_F";
+					atlOffset=7.6293945e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6475.2446,42.560753,800.63776};
+						angles[]={6.2424307,0.58791876,6.2208991};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 922""];" \n "[this, ""GREEN""] call FNC_SetTeamColor;" \n "[this, ""ACRE_PRC148"", 1] call FNC_SetRadio;" \n "[this,""O_VG""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o27";
+						description="Arkaim – 922 | 2nd Section C | Vehicle Gunner (C FTL)";
+						isPlayable=1;
+					};
+					id=1792;
+					type="O_soldier_repair_F";
+					atlOffset=3.8146973e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6474.4619,42.579746,799.53381};
+						angles[]={6.2544088,0.58791876,6.2041917};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 922""];" \n "[this, ""GREEN""] call FNC_SetTeamColor;" \n "[this,""O_VD""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o28";
+						description="Arkaim – 922 | 2nd Section C | Vehicle Driver";
+						isPlayable=1;
+					};
+					id=1793;
+					type="O_soldier_repair_F";
+					atlOffset=-7.6293945e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1784;
+		};
+		class Item227
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=9;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6519.8452,41.844799,826.92615};
+						angles[]={6.2280707,3.9414246,6.2520127};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+						skill=0.57819647;
+						rank="LIEUTENANT";
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 923""];" \n "[this, ""RED""] call FNC_SetTeamColor;" \n "[this,""O_SL""] call FNC_GearScript; " \n "[this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;     ";
+						name="o1";
+						description="Arkaim – 923 | 3rd Section A | Section Leader/Vehicle Commander (A FTL)";
+						isPlayable=1;
+					};
+					id=1795;
+					type="O_Soldier_SL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6517.6362,41.86607,825.97876};
+						angles[]={6.2304621,0.98035395,6.2496147};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 923""];" \n "[this, ""RED""] call FNC_SetTeamColor;" \n "[this,""O_MG""] call FNC_GearScript;  [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o2";
+						description="Arkaim – 923 | 3rd Section A | Machine Gunner";
+						isPlayable=1;
+					};
+					id=1796;
+					type="O_Soldier_AR_F";
+					atlOffset=0.0011901855;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6516.3965,41.86544,825.10822};
+						angles[]={6.2376418,0.98035395,6.2448225};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 923""];" \n "[this, ""YELLOW""] call FNC_SetTeamColor;" \n "[this,""O_RPG""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o3";
+						description="Arkaim – 923 | 3rd Section A | RPG Gunner";
+						isPlayable=1;
+					};
+					id=1797;
+					type="O_Soldier_LAT_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6515.1011,41.86517,824.24475};
+						angles[]={6.2256784,0.98035395,6.2352471};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 923""];" \n "[this, ""YELLOW""] call FNC_SetTeamColor;" \n "[this,""O_RPGA""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o4";
+						description="Arkaim – 923 | 3rd Section A | RPG Gunner Assistant";
+						isPlayable=1;
+					};
+					id=1798;
+					type="O_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6514.0864,41.861874,823.57013};
+						angles[]={6.2256784,0.98035395,6.2496166};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 923""];" \n "[this, ""BLUE""] call FNC_SetTeamColor;" \n "[this,""O_FTL""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o16";
+						description="Arkaim – 923 | 3rd Section B | Senior Rifleman (B FTL) ";
+						isPlayable=1;
+					};
+					id=1799;
+					type="O_Soldier_SL_F";
+					atlOffset=3.8146973e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6513.1235,41.879356,822.94116};
+						angles[]={6.2400346,0.98035395,6.2352486};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 923""];" \n "[this, ""BLUE""] call FNC_SetTeamColor;" \n "[this,""O_RAT""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o17";
+						description="Arkaim – 923 | 3rd Section B | Rifleman (AT)";
+						isPlayable=1;
+					};
+					id=1800;
+					type="O_Soldier_LAT_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6512.0386,41.892612,822.17651};
+						angles[]={6.2304621,0.98035395,6.2400346};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 923""];" \n "[this, ""BLUE""] call FNC_SetTeamColor;" \n "[this,""O_MARK""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o18";
+						description="Arkaim – 923 | 3rd Section B | Marksman";
+						isPlayable=1;
+					};
+					id=1801;
+					type="O_soldier_M_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6510.8975,41.900921,821.38867};
+						angles[]={6.2328539,0.98035395,6.2376404};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 923""];" \n "[this, ""GREEN""] call FNC_SetTeamColor;" \n "[this, ""ACRE_PRC148"", 1] call FNC_SetRadio;" \n "[this,""O_VG""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o25";
+						description="Arkaim – 923 | 3rd Section C | Vehicle Gunner (C FTL)";
+						isPlayable=1;
+					};
+					id=1802;
+					type="O_soldier_repair_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6509.7305,41.907204,820.50873};
+						angles[]={6.2328539,0.98035395,6.247221};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						lock="UNLOCKED";
+						init="this setGroupId [""Arkaim 923""];" \n "[this, ""GREEN""] call FNC_SetTeamColor;" \n "[this,""O_VD""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="o26";
+						description="Arkaim – 923 | 3rd Section C | Vehicle Driver";
+						isPlayable=1;
+					};
+					id=1803;
+					type="O_soldier_repair_F";
+					atlOffset=3.8146973e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1794;
+		};
+	};
+	class Connections
+	{
+		class LinkIDProvider
+		{
+			nextID=3;
+		};
+		class Links
+		{
+			items=3;
+			class Item0
+			{
+				linkID=0;
+				item0=1399;
+				item1=901;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item1
+			{
+				linkID=1;
+				item0=1398;
+				item1=901;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item2
+			{
+				linkID=2;
+				item0=1397;
+				item1=901;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+		};
+	};
+};

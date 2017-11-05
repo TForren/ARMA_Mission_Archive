@@ -1,0 +1,1334 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"aia_takistan_config",
+		"A3_Modules_F",
+		"A3_Characters_F",
+		"acre_api",
+		"ace_finger",
+		"ace_sitting",
+		"A3_Characters_F_BLUFOR",
+		"ace_medical",
+		"RHS_US_A2_AirImport",
+		"CAStructures_E_Misc_Misc_Interier",
+		"A3_Structures_F_Heli_Furniture",
+		"A3_Structures_F_Mil_Helipads",
+		"A3_Structures_F_Heli_Items_Airport",
+		"MELB",
+		"A3_Supplies_F_Heli_CargoNets",
+		"A3_Supplies_F_Heli_Slingload",
+		"CAStructures_E_HouseK",
+		"CAStructures_E_HouseL",
+		"B_config",
+		"rhsusf_c_rg33",
+		"rhsusf_c_hmmwv",
+		"rhsusf_vehicles",
+		"rhsusf_c_fmtv",
+		"lop_faction_tak_civ",
+		"lop_faction_am",
+		"UK3CB_BAF_Equipment_Static_Weapons",
+		"a3_map_lingor3",
+		"rhsusf_c_m113",
+		"ace_viewdistance",
+		"lop_faction_afr",
+		"lop_faction_napa"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Characters_F",
+		"A3_Modules_F",
+		"acre_api",
+		"ace_viewdistance",
+		"ace_finger",
+		"ace_sitting",
+		"ace_medical",
+		"A3_Characters_F_BLUFOR",
+		"lop_faction_afr",
+		"rhsusf_c_m113",
+		"lop_faction_napa",
+		"a3_map_lingor3"
+	};
+	randomSeed=7146955;
+	class Intel
+	{
+		briefingName="CO30 Lingering Lament V1.21";
+		overviewText="Lingor Gov. Forces attempt a daring breakout of an encirclement [M113 Convoy/Low Tech/Short]";
+		startWeather=0.63;
+		startWind=0.099999994;
+		startWaves=0.099999994;
+		forecastWeather=0.65999997;
+		forecastWind=0.099999994;
+		forecastWaves=0.099999994;
+		forecastRain=1;
+		forecastLightnings=0.099999994;
+		rainForced=1;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Groups
+	{
+		items=16;
+		class Item0
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4785.7227,28.34606,3201.0574};
+					azimut=-1.68651;
+					id=0;
+					side="LOGIC";
+					vehicle="HeadlessClient_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="HC";
+					description="Headless Client";
+				};
+			};
+		};
+		class Item1
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5317.5078,102.80798,10545.568};
+					id=1;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="dac_Support_logic";
+				};
+			};
+		};
+		class Item2
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4798.96,35.740955,3200.6917};
+					azimut=-1.68651;
+					class args
+					{
+						items=3;
+						class Item0
+						{
+							value="1";
+							parentCls="acre_api_DifficultySettings";
+							typeName="SignalLoss";
+						};
+						class Item1
+						{
+							value="0";
+							parentCls="acre_api_DifficultySettings";
+							typeName="FullDuplex";
+						};
+						class Item2
+						{
+							value="1";
+							parentCls="acre_api_DifficultySettings";
+							typeName="Interference";
+						};
+					};
+					id=2;
+					side="LOGIC";
+					vehicle="acre_api_DifficultySettings";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item3
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={4803.9229,38.624462,3200.6702};
+					azimut=-1.6865053;
+					class args
+					{
+						items=11;
+						class Item0
+						{
+							value="1";
+							parentCls="acre_api_nameChannels";
+							typeName="SideSelect";
+						};
+						class Item1
+						{
+							value="PLTNET 1";
+							parentCls="acre_api_nameChannels";
+							typeName="Channel_1";
+						};
+						class Item2
+						{
+							value="PLTNET 2";
+							parentCls="acre_api_nameChannels";
+							typeName="Channel_2";
+						};
+						class Item3
+						{
+							value="PLTNET 3";
+							parentCls="acre_api_nameChannels";
+							typeName="Channel_3";
+						};
+						class Item4
+						{
+							value="COYNET 1";
+							parentCls="acre_api_nameChannels";
+							typeName="Channel_4";
+						};
+						class Item5
+						{
+							value="CASNET 1";
+							parentCls="acre_api_nameChannels";
+							typeName="Channel_5";
+						};
+						class Item6
+						{
+							value="CASNET 2";
+							parentCls="acre_api_nameChannels";
+							typeName="Channel_6";
+						};
+						class Item7
+						{
+							value="CASNET 3";
+							parentCls="acre_api_nameChannels";
+							typeName="Channel_7";
+						};
+						class Item8
+						{
+							value="FIRES";
+							parentCls="acre_api_nameChannels";
+							typeName="Channel_8";
+						};
+						class Item9
+						{
+							value="LOGISTICS";
+							parentCls="acre_api_nameChannels";
+							typeName="Channel_9";
+						};
+						class Item10
+						{
+							value="SUPPORT";
+							parentCls="acre_api_nameChannels";
+							typeName="Channel_10";
+						};
+					};
+					id=3;
+					side="LOGIC";
+					vehicle="acre_api_nameChannels";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+				class Item1
+				{
+					position[]={4809.168,41.493599,3200.7341};
+					class args
+					{
+						items=2;
+						class Item0
+						{
+							value="1";
+							parentCls="ace_viewdistance_ModuleSettings";
+							typeName="moduleViewDistanceEnabled";
+						};
+						class Item1
+						{
+							value="3000";
+							parentCls="ace_viewdistance_ModuleSettings";
+							typeName="moduleViewDistanceLimit";
+						};
+					};
+					id=4;
+					side="LOGIC";
+					vehicle="ace_viewdistance_ModuleSettings";
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item4
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4794.2686,32.594097,3200.5266};
+					azimut=-1.6865053;
+					class args
+					{
+						items=6;
+						class Item0
+						{
+							value="1";
+							parentCls="acre_api_basicMissionSetup";
+							typeName="RadioSetup";
+						};
+						class Item1
+						{
+							value="0";
+							parentCls="acre_api_basicMissionSetup";
+							typeName="BabelSetup";
+						};
+						class Item2
+						{
+							value="ACRE_PRC343";
+							parentCls="acre_api_basicMissionSetup";
+							typeName="DefaultRadio";
+						};
+						class Item3
+						{
+							value="";
+							parentCls="acre_api_basicMissionSetup";
+							typeName="DefaultRadio_Two";
+						};
+						class Item4
+						{
+							value="";
+							parentCls="acre_api_basicMissionSetup";
+							typeName="DefaultRadio_Three";
+						};
+						class Item5
+						{
+							value="";
+							parentCls="acre_api_basicMissionSetup";
+							typeName="DefaultRadio_Four";
+						};
+					};
+					id=5;
+					side="LOGIC";
+					vehicle="acre_api_basicMissionSetup";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item5
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4796.4795,35.026268,3207.0247};
+					azimut=-1.6865053;
+					class args
+					{
+						items=2;
+						class Item0
+						{
+							value="1";
+							parentCls="ace_finger_moduleSettings";
+							typeName="enabled";
+						};
+						class Item1
+						{
+							value="4";
+							parentCls="ace_finger_moduleSettings";
+							typeName="maxRange";
+						};
+					};
+					id=6;
+					side="LOGIC";
+					vehicle="ace_finger_moduleSettings";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item6
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4789.8408,30.35314,3206.925};
+					azimut=-1.6865053;
+					class args
+					{
+						items=1;
+						class Item0
+						{
+							value="1";
+							parentCls="ACE_ModuleSitting";
+							typeName="enable";
+						};
+					};
+					id=7;
+					side="LOGIC";
+					vehicle="ACE_ModuleSitting";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item7
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4708.6772,20.082712,3174.3728};
+					azimut=362.28836;
+					class args
+					{
+						items=2;
+						class Item0
+						{
+							value="";
+							parentCls="ACE_moduleAssignMedicRoles";
+							typeName="EnableList";
+						};
+						class Item1
+						{
+							value="1";
+							parentCls="ACE_moduleAssignMedicRoles";
+							typeName="role";
+						};
+					};
+					id=8;
+					side="LOGIC";
+					vehicle="ACE_moduleAssignMedicRoles";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=0;
+					synchronizations[]={2,1};
+				};
+			};
+		};
+		class Item8
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={4702.7407,20.082712,3179.4709};
+					azimut=-306.104;
+					id=9;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					rank="CAPTAIN";
+					skill=0.60000002;
+					text="b1";
+					init="[this,""B_PC"",""1'0""] call FNC_GearScript;";
+					description="1'0 HQ US Platoon Commander";
+				};
+				class Item1
+				{
+					position[]={4701.0801,20.082712,3178.3953};
+					azimut=-292.19901;
+					special="NONE";
+					id=10;
+					side="WEST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.60000002;
+					text="b3";
+					init="[this,""B_MED"",""1'0""] call FNC_GearScript;";
+					description="1'0 HQ Platoon Medic";
+					syncId=1;
+					synchronizations[]={0};
+				};
+				class Item2
+				{
+					position[]={4701.3711,20.082712,3179.2205};
+					azimut=-247.201;
+					special="FLY";
+					id=11;
+					side="WEST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.60000002;
+					text="b4";
+					init="[this,""B_MED"",""1'0""] call FNC_GearScript;";
+					description="1'0 HQ Platoon Medic";
+					syncId=2;
+					synchronizations[]={0};
+				};
+			};
+		};
+		class Item9
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=8;
+				class Item0
+				{
+					position[]={4735.1226,20.082712,3191.1958};
+					azimut=758.50269;
+					special="NONE";
+					id=12;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					text="b5";
+					init="[this,""B_SL"",""1'1""] call FNC_GearScript;";
+					description="1'1 Gov. Army of Lingor Squad Leader";
+				};
+				class Item1
+				{
+					position[]={4736.5142,20.082712,3193.0215};
+					azimut=257.72348;
+					special="NONE";
+					id=13;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b6";
+					init="[this,""B_MG"",""1'1""] call FNC_GearScript;";
+					description="1'1 Machine Gunner";
+				};
+				class Item2
+				{
+					position[]={4738.0146,20.082712,3191.2847};
+					azimut=-62.025215;
+					special="NONE";
+					id=14;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b12";
+					init="[this,""B_RPG"",""1'1""] call FNC_GearScript;";
+					description="1'1 RPG Gunner";
+				};
+				class Item3
+				{
+					position[]={4736.5386,20.082712,3191.3152};
+					azimut=732.63464;
+					special="NONE";
+					id=15;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b7";
+					init="[this,""B_RPGA"",""1'1""] call FNC_GearScript;";
+					description="1'1 Assistant RPG Gunner";
+				};
+				class Item4
+				{
+					position[]={4737.9653,20.082712,3193.0537};
+					azimut=-106.02885;
+					special="NONE";
+					id=16;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b10";
+					init="[this,""B_FTL"",""1'1""] call FNC_GearScript;";
+					description="1'1 Senior RIfleman";
+				};
+				class Item5
+				{
+					position[]={4739.4541,20.082712,3193.0615};
+					azimut=259.16446;
+					special="NONE";
+					id=17;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b11";
+					init="[this,""B_DR"",""1'1 Crew""] call FNC_GearScript;";
+					description="1'1 M113 Gunner";
+				};
+				class Item6
+				{
+					position[]={4735.1812,20.082712,3192.8198};
+					azimut=459.97745;
+					special="NONE";
+					id=18;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b9";
+					init="[this,""B_RIF"",""1'1""] call FNC_GearScript;";
+					description="1'1 Rifleman";
+				};
+				class Item7
+				{
+					position[]={4739.6216,20.082712,3191.3706};
+					azimut=-102.63464;
+					special="NONE";
+					id=19;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b13";
+					init="[this,""B_DR"",""1'1 Crew""] call FNC_GearScript;";
+					description="1'1 M113 Driver";
+				};
+			};
+		};
+		class Item10
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=8;
+				class Item0
+				{
+					position[]={4735.23,20.082712,3186.3052};
+					azimut=758.50269;
+					special="NONE";
+					id=20;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					text="b5_1";
+					init="[this,""B_SL"",""1'2""] call FNC_GearScript;";
+					description="1'2 Gov. Army of Lingor Squad Leader";
+				};
+				class Item1
+				{
+					position[]={4736.6196,20.082712,3188.1323};
+					azimut=257.72348;
+					special="NONE";
+					id=21;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b6_1";
+					init="[this,""B_MG"",""1'2""] call FNC_GearScript;";
+					description="1'2 Machine Gunner";
+				};
+				class Item2
+				{
+					position[]={4738.1221,20.082712,3186.395};
+					azimut=-62.025215;
+					special="NONE";
+					id=22;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b12_1";
+					init="[this,""B_RPG"",""1'2""] call FNC_GearScript;";
+					description="1'2 RPG Gunner";
+				};
+				class Item3
+				{
+					position[]={4736.6455,20.082712,3186.4253};
+					azimut=732.63464;
+					special="NONE";
+					id=23;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b7_1";
+					init="[this,""B_RPGA"",""1'2""] call FNC_GearScript;";
+					description="1'2 Assistant RPG Gunner";
+				};
+				class Item4
+				{
+					position[]={4738.0732,20.082712,3188.1638};
+					azimut=-106.02885;
+					special="NONE";
+					id=24;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b10_1";
+					init="[this,""B_FTL"",""1'2""] call FNC_GearScript;";
+					description="1'2 Senior RIfleman";
+				};
+				class Item5
+				{
+					position[]={4739.563,20.082712,3188.1719};
+					azimut=259.16446;
+					special="NONE";
+					id=25;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b11_1";
+					init="[this,""B_DR"",""1'2 Crew""] call FNC_GearScript;";
+					description="1'2 M113 Gunner";
+				};
+				class Item6
+				{
+					position[]={4735.2866,20.082712,3187.9299};
+					azimut=459.97745;
+					special="NONE";
+					id=26;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b9_1";
+					init="[this,""B_RIF"",""1'2""] call FNC_GearScript;";
+					description="1'2 Rifleman";
+				};
+				class Item7
+				{
+					position[]={4739.7285,20.082712,3186.48};
+					azimut=-102.63464;
+					special="NONE";
+					id=27;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b13_1";
+					init="[this,""B_DR"",""1'2 Crew""] call FNC_GearScript";
+					description="1'2 M113 Driver";
+				};
+			};
+		};
+		class Item11
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=8;
+				class Item0
+				{
+					position[]={4735.354,20.082712,3181.5437};
+					azimut=758.50269;
+					special="NONE";
+					id=28;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					text="b5_1_1";
+					init="[this,""B_SL"",""1'3""] call FNC_GearScript;";
+					description="1'3 Gov. Army of Lingor Squad Leader";
+				};
+				class Item1
+				{
+					position[]={4736.7456,20.082712,3183.3708};
+					azimut=257.72348;
+					special="NONE";
+					id=29;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b6_1_1";
+					init="[this,""B_MG"",""1'3""] call FNC_GearScript;";
+					description="1'3 Machine Gunner";
+				};
+				class Item2
+				{
+					position[]={4738.2466,20.082712,3181.6328};
+					azimut=-62.025215;
+					special="NONE";
+					id=30;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b12_1_1";
+					init="[this,""B_RPG"",""1'3""] call FNC_GearScript;";
+					description="1'3 RPG Gunner";
+				};
+				class Item3
+				{
+					position[]={4736.769,20.082712,3181.6641};
+					azimut=732.63464;
+					special="NONE";
+					id=31;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b7_1_1";
+					init="[this,""B_RPGA"",""1'3""] call FNC_GearScript;";
+					description="1'3 Assistant RPG Gunner";
+				};
+				class Item4
+				{
+					position[]={4738.1978,20.082712,3183.4019};
+					azimut=-106.02885;
+					special="NONE";
+					id=32;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b10_1_1";
+					init="[this,""B_FTL"",""1'3""] call FNC_GearScript;";
+					description="1'3 Senior RIfleman";
+				};
+				class Item5
+				{
+					position[]={4739.6885,20.082712,3183.4102};
+					azimut=259.16446;
+					special="NONE";
+					id=33;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b11_1_1";
+					init="[this,""B_DR"",""1'3 Crew""] call FNC_GearScript;";
+					description="1'3 M113 Gunner";
+				};
+				class Item6
+				{
+					position[]={4735.4126,20.082712,3183.1689};
+					azimut=459.97745;
+					special="NONE";
+					id=34;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b9_1_1";
+					init="[this,""B_RIF"",""1'3""] call FNC_GearScript;";
+					description="1'3 Rifleman";
+				};
+				class Item7
+				{
+					position[]={4739.8535,20.082712,3181.7188};
+					azimut=-102.63464;
+					special="NONE";
+					id=35;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b13_1_1";
+					init="[this,""B_DR"",""1'3 Crew""] call FNC_GearScript";
+					description="1'3 M113 Driver";
+				};
+			};
+		};
+		class Item12
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=8;
+				class Item0
+				{
+					position[]={4735.3706,20.082712,3176.8198};
+					azimut=758.50269;
+					special="NONE";
+					id=36;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					text="b5_1_1_1";
+					init="[this,""B_SL"",""1'4""] call FNC_GearScript;";
+					description="1'4 Gov. Army of Lingor Squad Leader";
+				};
+				class Item1
+				{
+					position[]={4736.7651,20.082712,3178.6465};
+					azimut=257.72348;
+					special="NONE";
+					id=37;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b6_1_1_1";
+					init="[this,""B_MG"",""1'4""] call FNC_GearScript;";
+					description="1'4 Machine Gunner";
+				};
+				class Item2
+				{
+					position[]={4738.2646,20.082712,3176.9092};
+					azimut=-62.025215;
+					special="NONE";
+					id=38;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b12_1_1_1";
+					init="[this,""B_RPG"",""1'3""] call FNC_GearScript;";
+					description="1'4 RPG Gunner";
+				};
+				class Item3
+				{
+					position[]={4736.7866,20.082712,3176.9397};
+					azimut=732.63464;
+					special="NONE";
+					id=39;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b7_1_1_1";
+					init="[this,""B_RPGA"",""1'4""] call FNC_GearScript;";
+					description="1'4 Assistant RPG Gunner";
+				};
+				class Item4
+				{
+					position[]={4738.2139,20.082712,3178.6785};
+					azimut=-106.02885;
+					special="NONE";
+					id=40;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b10_1_1_1";
+					init="[this,""B_FTL"",""1'4""] call FNC_GearScript;";
+					description="1'4 Senior RIfleman";
+				};
+				class Item5
+				{
+					position[]={4739.7051,20.082712,3178.6865};
+					azimut=259.16446;
+					special="NONE";
+					id=41;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b11_1_1_1";
+					init="[this,""B_DR"",""1'4 Crew""] call FNC_GearScript;";
+					description="1'4 M113 Gunner";
+				};
+				class Item6
+				{
+					position[]={4735.4302,20.082712,3178.4451};
+					azimut=459.97745;
+					special="NONE";
+					id=42;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b9_1_1_1";
+					init="[this,""B_RIF"",""1'4""] call FNC_GearScript;";
+					description="1'4 Rifleman";
+				};
+				class Item7
+				{
+					position[]={4739.8711,20.082712,3176.9954};
+					azimut=-102.63464;
+					special="NONE";
+					id=43;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="b13_1_1_1";
+					init="[this,""B_DR"",""1'4 Crew""] call FNC_GearScript";
+					description="1'4 M113 Driver";
+				};
+			};
+		};
+		class Item13
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4732.0869,20.082712,3181.9641};
+					azimut=-13.376535;
+					class args
+					{
+						items=1;
+						class Item0
+						{
+							value="1";
+							parentCls="ACE_moduleAssignMedicalFacility";
+							typeName="enabled";
+						};
+					};
+					id=44;
+					side="LOGIC";
+					vehicle="ACE_moduleAssignMedicalFacility";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=3;
+					synchronizations[]={4};
+				};
+			};
+		};
+		class Item14
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=9;
+				class Item0
+				{
+					position[]={4680.1274,17.939775,1874.3903};
+					placement=80;
+					id=45;
+					side="GUER";
+					vehicle="LOP_AFR_Infantry_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, this, 100] call CBA_fnc_TaskDefend";
+				};
+				class Item1
+				{
+					position[]={4662.9141,17.939775,1870.9713};
+					azimut=-10.424277;
+					id=46;
+					side="GUER";
+					vehicle="LOP_AFR_Infantry_SL";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={4664.8809,17.939775,1871.3356};
+					azimut=-10.424277;
+					id=47;
+					side="GUER";
+					vehicle="LOP_AFR_Infantry_Corpsman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item3
+				{
+					position[]={4666.8481,17.939775,1871.6949};
+					azimut=-10.424277;
+					id=48;
+					side="GUER";
+					vehicle="LOP_AFR_Infantry_Marksman";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item4
+				{
+					position[]={4668.8149,17.939775,1872.0573};
+					azimut=-10.424277;
+					id=49;
+					side="GUER";
+					vehicle="LOP_AFR_Infantry_AT";
+					skill=0.40000001;
+				};
+				class Item5
+				{
+					position[]={4670.7822,17.939775,1872.4205};
+					azimut=-10.424277;
+					id=50;
+					side="GUER";
+					vehicle="LOP_AFR_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item6
+				{
+					position[]={4672.749,17.939775,1872.7828};
+					azimut=-10.424277;
+					id=51;
+					side="GUER";
+					vehicle="LOP_AFR_Infantry_Rifleman";
+					skill=0.40000001;
+				};
+				class Item7
+				{
+					position[]={4674.7163,17.939775,1873.1432};
+					azimut=-10.424277;
+					id=52;
+					side="GUER";
+					vehicle="LOP_AFR_Infantry_AR";
+					skill=0.40000001;
+				};
+				class Item8
+				{
+					position[]={4676.6831,17.939775,1873.5065};
+					azimut=-10.4243;
+					id=53;
+					side="GUER";
+					vehicle="LOP_AFR_Infantry_GL";
+					skill=0.40000001;
+				};
+			};
+		};
+		class Item15
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4777.6626,22.750561,3193.3464};
+					id=54;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="Server";
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=5;
+		class Item0
+		{
+			position[]={4727.8032,20.082712,3191.1355};
+			azimut=633.23865;
+			special="NONE";
+			id=55;
+			side="EMPTY";
+			vehicle="rhsusf_m113_usarmy";
+			leader=1;
+			skill=0.60000002;
+			text="m4";
+			init="[this, ""STD""] call FNC_VehicleGearScript;";
+			description="1'1 Gov. Army of Lingor Squad Leader";
+		};
+		class Item1
+		{
+			position[]={4727.8911,20.082712,3186.1433};
+			azimut=630.27869;
+			special="NONE";
+			id=56;
+			side="EMPTY";
+			vehicle="rhsusf_m113_usarmy_M240";
+			leader=1;
+			skill=0.60000002;
+			text="m3";
+			init="[this, ""STD""] call FNC_VehicleGearScript;";
+			description="1'1 Gov. Army of Lingor Squad Leader";
+		};
+		class Item2
+		{
+			position[]={4727.917,20.082712,3181.6765};
+			azimut=628.61566;
+			special="NONE";
+			id=57;
+			side="EMPTY";
+			vehicle="rhsusf_m113_usarmy_medical";
+			leader=1;
+			skill=0.60000002;
+			text="m2";
+			init="[this, ""STD2""] call FNC_VehicleGearScript;";
+			description="1'1 Gov. Army of Lingor Squad Leader";
+			syncId=4;
+			synchronizations[]={3};
+		};
+		class Item3
+		{
+			position[]={4728.25,20.082712,3176.6594};
+			azimut=627.22168;
+			special="NONE";
+			id=58;
+			side="EMPTY";
+			vehicle="rhsusf_m113_usarmy_MK19";
+			leader=1;
+			skill=0.60000002;
+			text="m1";
+			init="[this, ""STD""] call FNC_VehicleGearScript;";
+			description="1'1 Gov. Army of Lingor Squad Leader";
+		};
+		class Item4
+		{
+			position[]={4703.311,20.082712,3172.9954};
+			azimut=825.65698;
+			special="NONE";
+			id=59;
+			side="EMPTY";
+			vehicle="LOP_NAPA_Landrover";
+			leader=1;
+			skill=0.60000002;
+			init="[this, ""STD""] call FNC_VehicleGearScript;";
+			description="1'1 Gov. Army of Lingor Squad Leader";
+		};
+	};
+	class Markers
+	{
+		items=5;
+		class Item0
+		{
+			position[]={4750.6274,20.082712,3212.6282};
+			name="aomarksoyoucanseeit";
+			type="Empty";
+		};
+		class Item1
+		{
+			position[]={4750.7339,20.082712,3214.2864};
+			name="ao";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="Border";
+			a=2800;
+			b=2900;
+			drawBorder=1;
+		};
+		class Item2
+		{
+			position[]={4780.8999,21.456085,3180.5703};
+			name="HQ";
+			type="IDM_LOGO";
+			colorName="ColorWhite";
+			a=0.89999998;
+			b=0.89999998;
+		};
+		class Item3
+		{
+			position[]={6705.6387,29.01371,1935.1021};
+			name="end";
+			text="End";
+			type="mil_end";
+			colorName="ColorGreen";
+		};
+		class Item4
+		{
+			position[]={4726.1055,20.082712,3209.8342};
+			name="start";
+			text="Start";
+			type="mil_start";
+			colorName="ColorGreen";
+			angle=175.8096;
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"aia_takistan_config",
+		"a3_map_lingor3"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_lingor3"
+	};
+	randomSeed=1609947;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.40000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.40000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"aia_takistan_config",
+		"a3_map_lingor3"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_lingor3"
+	};
+	randomSeed=6542022;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.40000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.40000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"aia_takistan_config",
+		"a3_map_lingor3"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_lingor3"
+	};
+	randomSeed=6728010;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.40000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.40000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};

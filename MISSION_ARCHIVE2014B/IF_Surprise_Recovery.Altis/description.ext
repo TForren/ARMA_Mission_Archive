@@ -1,0 +1,34 @@
+author = "Hoizen"; // Author
+onLoadName = "CO-10 Surprise Recovery";
+onLoadMission = "US Navy Seals Recover enemy Intel from sunken transport choppers";
+loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "overview.paa";
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+
+class Header {
+   gameType = Coop;
+   playerCountMultipleOf = 1; //Disables auto balance
+};
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission Completed";
+		subtitle = "Intel Recovered";
+		description = "The enemy intel has been located and recovered.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class End2
+	{
+		title = "Mission Failed";
+		subtitle = "All remaining Blufor have been eliminated";
+		description = "The Blufor were unable to acomplish their goals.";
+		pictureBackground = "overview.paa";
+		picture = "o_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+};

@@ -1,0 +1,51 @@
+#define description
+
+#include "core\description.hpp" //DO NOT REMOVE
+#include "modules\modules.sqf" //DO NOT REMOVE
+#include "sounds\config.cpp"
+#include "RYD_HAL\HAL_RADIO.cpp"
+
+#undef description
+#define description_functions
+
+class CfgFunctions {
+
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+
+};
+	
+#undef description_functions
+#define description_titles
+	
+class rscTitles {
+
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+
+};
+
+#undef description_titles
+#define description_params
+
+class Params {
+	
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+	
+	class IntervalMin
+	{
+		title = "Minimum Mortar Interval";
+		values[] = {1,2,3,4,5,6,7,8,9,10,12,14,16,18,20,30};
+		//texts[] = {"test1","test2","test3"};
+		default = 3;
+	};	
+	class IntervalMax
+	{
+		title = "Maximum Mortar Interval (>min)";
+		values[] = {2,3,4,5,6,7,8,9,10,12,14,16,18,20,30,50};
+		//texts[] = {"test1","test2","test3"};
+		default = 8;
+	};
+	
+};

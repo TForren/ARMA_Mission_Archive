@@ -1,0 +1,57 @@
+author = "Hoizen"; // Author
+onLoadName = "Thirsky Ruskies";
+onLoadMission = "US QRF disrupt Russian entrenchment in the market town of Thirsk";
+loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "overview.paa";
+
+
+
+class Header
+{
+ gameType = COOP;            
+ minPlayers = 1;             
+ maxPlayers = 20;      
+
+};
+
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+respawn = 1; 
+enableDebugConsole = 2;
+
+#include "sounds\config.cpp"
+#include "Riflesquad.cpp"
+#include "WeaponsSquad.cpp"
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Operation Successful";
+		subtitle = "Operation: Thirsky Ruskies concluded";
+		description = "The Russian force entrenched in Thirsk has been cleared out and the resulting counter-attack has been pushed back. The Blufor now have their own stronghold in the market town of Thirsk and a future offensive is now made possible against the rest of the Island's Russian power.  ";
+		pictureBackground = "MissionOver.paa";
+		picture = "IFID.paa";
+		pictureColor[] = {1.0,1.0,1.0,1};
+	};
+
+	class End2
+	{
+		title = "Operation Failure";
+		subtitle = "Operation: Thirsky Ruskies concluded";
+		description = "The blufor were able to clear out the town of Russian forces and destroy the munition stock pile. However, the russian counter-attack was able to eliminate the remaining blufor.";
+		pictureBackground = "MissionOver.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.6,0.3,0.0,1};
+	};
+	
+	class End3
+	{
+		title = "Operation Failure";
+		subtitle = "Operation: Thirsky Ruskies concluded";
+		description = "The blufor were unable to clear out Thirsk of Russian forces.";
+		pictureBackground = "MissionOver.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.6,0.3,0.0,1};
+	};
+	
+};

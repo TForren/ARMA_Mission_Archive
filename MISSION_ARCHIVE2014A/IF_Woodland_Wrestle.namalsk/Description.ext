@@ -1,0 +1,63 @@
+author = "Hoizen"; // Author
+onLoadName = "Woodland Wrestle";
+onLoadMission = "US hunt a fleeing HVT";
+//loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "overview.paa";
+
+
+
+class Header
+{
+ gameType = DM;            
+ minPlayers = 1;             
+ maxPlayers = 18;      
+
+};
+
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+respawn = 1; 
+enableDebugConsole = 2;
+
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Blufor Victory";
+		subtitle = "The HVT has been eliminated";
+		description = "The Blufor have successfully eliminated the HVT";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class End2
+	{
+		title = "Opfor Victory";
+		subtitle = "The HVT has escaped to Canada";
+		description = "The Blufor were unable to eliminate the HVT and he has escaped to Canada where he will enjoy all the Canadian Bacon he wants. Way to go, Blufor.";
+		pictureBackground = "overview.paa";
+		picture = "flag_canada";
+		pictureColor[] = {1.0,1.0,1.0,1};
+	};
+	
+		class End3
+	{
+		title = "Opfor Victory";
+		subtitle = "All Blufor Eliminated";
+		description = "The blufor have been wiped out and the hvt is safe to escape.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.6,0.3,0.0,1};
+	};
+	
+			class End4
+	{
+		title = "Blufor Victory";
+		subtitle = "Time Limit Reached";
+		description = "The waiting opfor got sick of waiting and left without the HVT.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.6,0.3,0.0,1};
+	};
+};

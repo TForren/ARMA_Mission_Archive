@@ -1,0 +1,35 @@
+comment "Exported from Arsenal by Hoizen";
+
+comment "Remove existing items";
+removeAllWeapons player;
+removeAllItems player;
+removeAllAssignedItems player;
+removeUniform player;
+removeVest player;
+removeBackpack player;
+removeHeadgear player;
+removeGoggles player;
+
+comment "Add containers";
+player forceAddUniform "UK3CB_BAF_U_CrewmanCoveralls_RTR";
+player addItemToUniform "FirstAidKit";
+player addVest "V_PlateCarrierSpec_blk";
+for "_i" from 1 to 2 do {player addItemToVest "CUP_15Rnd_9x19_M9";};
+player addHeadgear "CUP_H_USArmy_Helmet_ECH1_Black";
+player addGoggles "rhs_balaclava";
+
+comment "Add weapons";
+player addWeapon "CUP_hgun_BallisticShield_Armed";
+player addWeapon "hgun_P07_F";
+player addWeapon "Binocular";
+
+comment "Add items";
+player linkItem "ItemMap";
+player linkItem "ItemCompass";
+player linkItem "ItemWatch";
+player linkItem "ItemRadio";
+player linkItem "ItemGPS";
+
+comment "Set identity";
+player setFace "WhiteHead_03";
+player setSpeaker "Male05ENG";

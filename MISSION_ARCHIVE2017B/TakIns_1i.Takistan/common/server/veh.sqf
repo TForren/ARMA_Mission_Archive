@@ -1,0 +1,34 @@
+if(isDedicated)then{if(isClass(configFile>>"cfgPatches">>"CUP_TrackedVehicles_Core"))then{
+deleteVehicle MRAP0;deleteVehicle MRAP1;deleteVehicle MRAP2;deleteVehicle MRAP3;deleteVehicle MRAP4;deleteVehicle MRAP5;deleteVehicle MRAP6;deleteVehicle MRAP7;
+deleteVehicle bh0;deleteVehicle ch470;deleteVehicle ah0;deleteVehicle mh0;deleteVehicle mh1;
+deleteVehicle tank0;deleteVehicle tank1;deleteVehicle ifv0;deleteVehicle ifv1;
+deleteVehicle SUV0;deleteVehicle SUV1;deleteVehicle SUV2;deleteVehicle SUV3;sleep 2;
+_veh0=createVehicle["CUP_B_HMMWV_M2_GPK_USA",getMarkerPos "hmmwv0",[],0,"NONE"];_veh0 setDir 250.762;_veh0 setPos getMarkerPos "hmmwv0";clearItemCargoGlobal _veh0;_veh0 lock 0;_nul=[_veh0,15,5,{}]execVM "common\server\VRS.sqf";
+_veh1=createVehicle["CUP_B_HMMWV_M2_GPK_USA",getMarkerPos "hmmwv1",[],0,"NONE"];_veh1 setDir 250.762;_veh1 setPos getMarkerPos "hmmwv1";clearItemCargoGlobal _veh1;_veh1 lock 0;_nul=[_veh1,15,5,{}]execVM "common\server\VRS.sqf";
+_veh2=createVehicle["CUP_B_HMMWV_M2_GPK_USA",getMarkerPos "hmmwv2",[],0,"NONE"];_veh2 setDir 250.762;_veh2 setPos getMarkerPos "hmmwv2";clearItemCargoGlobal _veh2;_veh2 lock 0;_nul=[_veh2,15,5,{}]execVM "common\server\VRS.sqf";
+_veh3=createVehicle["CUP_B_HMMWV_M2_GPK_USA",getMarkerPos "hmmwv3",[],0,"NONE"];_veh3 setDir 250.762;_veh3 setPos getMarkerPos "hmmwv3";clearItemCargoGlobal _veh3;_veh3 lock 0;_nul=[_veh3,15,5,{}]execVM "common\server\VRS.sqf";
+_veh4=createVehicle["CUP_B_HMMWV_M2_GPK_USA",getMarkerPos "hmmwv4",[],0,"NONE"];_veh4 setDir 250.762;_veh4 setPos getMarkerPos "hmmwv4";clearItemCargoGlobal _veh4;_veh4 lock 0;_nul=[_veh4,15,5,{}]execVM "common\server\VRS.sqf";
+_veh5=createVehicle["CUP_B_HMMWV_M2_GPK_USA",getMarkerPos "hmmwv5",[],0,"NONE"];_veh5 setDir 250.762;_veh5 setPos getMarkerPos "hmmwv5";clearItemCargoGlobal _veh5;_veh5 lock 0;_nul=[_veh5,15,5,{}]execVM "common\server\VRS.sqf";
+_veh6=createVehicle["CUP_B_HMMWV_M2_GPK_USA",getMarkerPos "hmmwv6",[],0,"NONE"];_veh6 setDir 250.762;_veh6 setPos getMarkerPos "hmmwv6";clearItemCargoGlobal _veh6;_veh6 lock 0;_nul=[_veh6,15,5,{}]execVM "common\server\VRS.sqf";
+_veh7=createVehicle["CUP_RG31_M2",getMarkerPos "hmmwv7",[],0,"NONE"];_veh7 setDir 340.762;_veh7 setPos getMarkerPos "hmmwv7";clearItemCargoGlobal _veh7;_veh7 lock 0;_nul=[_veh7,15,5,{}]execVM "common\server\VRS.sqf";
+_veh8=createVehicle["CUP_B_UH60M_US",getMarkerPos "bh0",[],0,"NONE"];_veh8 setDir 147;_veh8 setPos getMarkerPos "bh0";clearItemCargoGlobal _veh8;_veh8 lock 0;_nul=[_veh8,15,2,{}]execVM "common\server\VRS.sqf";
+_veh9=createVehicle["CUP_B_CH47F_USA",getMarkerPos "ch470",[],0,"NONE"];_veh9 setDir 234.806;_veh9 setPos getMarkerPos "ch470";clearItemCargoGlobal _veh9;_veh9 lock 0;_nul=[_veh9,15,5,{}]execVM "common\server\VRS.sqf";
+_veh10=createVehicle["CUP_B_M1A2_TUSK_MG_DES_US_Army",getMarkerPos "tank0",[],0,"NONE"];_veh10 setDir 153;_veh10 setPos getMarkerPos "tank0";clearItemCargoGlobal _veh10;_veh10 lock 0;_nul=[_veh10,15,5,{}]execVM "common\server\VRS.sqf";
+_veh11=createVehicle["CUP_B_M1A2_TUSK_MG_DES_US_Army",getMarkerPos "tank1",[],0,"NONE"];_veh11 setDir 153;_veh11 setPos getMarkerPos "tank1";clearItemCargoGlobal _veh11;_veh11 lock 0;_nul=[_veh11,15,5,{}]execVM "common\server\VRS.sqf";
+_veh12=createVehicle["CUP_B_M1126_ICV_M2_Desert_Slat",getMarkerPos "ifv0",[],0,"NONE"];_veh12 setDir 332;_veh12 setPos getMarkerPos "ifv0";clearItemCargoGlobal _veh12;_veh12 lock 0;_nul=[_veh12,15,5,{}]execVM "common\server\VRS.sqf";
+_veh13=createVehicle["CUP_B_M1126_ICV_M2_Desert_Slat",getMarkerPos "ifv1",[],0,"NONE"];_veh13 setDir 332;_veh13 setPos getMarkerPos "ifv1";clearItemCargoGlobal _veh13;_veh13 lock 0;_nul=[_veh13,15,5,{}]execVM "common\server\VRS.sqf";
+_veh14=createVehicle["CUP_C_Skoda_White_CIV",getMarkerPos "suv0",[],0,"NONE"];_veh14 allowDamage false;_veh14 setDir 263.308;_veh14 setPos getMarkerPos "suv0";clearItemCargoGlobal _veh14;_veh14 lock 3;
+_veh15=createVehicle["CUP_C_UAZ_Unarmed_TK_CIV",getMarkerPos "suv1",[],0,"NONE"];_veh15 allowDamage false;_veh15 setDir 263.308;_veh15 setPos getMarkerPos "suv1";clearItemCargoGlobal _veh15;Guy1 moveInDriver _veh15;_veh15 lock 3;
+_veh16=createVehicle["CUP_C_LR_Transport_CTK",getMarkerPos "suv2",[],0,"NONE"];_veh16 allowDamage false;_veh16 setDir 70.3264;_veh16 setPos getMarkerPos "suv2";clearItemCargoGlobal _veh16;_veh16 lock 3;
+_veh17=createVehicle["CUP_C_Datsun_Covered",getMarkerPos "suv3",[],0,"NONE"];_veh17 allowDamage false;_veh17 setDir 70.3264;_veh17 setPos getMarkerPos "suv3";clearItemCargoGlobal _veh17;_veh17 lock 3;
+_veh18=createVehicle["CUP_B_AH64D_AT_USA",getMarkerPos "ah0",[],0,"NONE"];_veh18 setDir 150;_veh18 setPos getMarkerPos "ah0";clearItemCargoGlobal _veh18;_veh18 lock 0;_nul=[_veh18,15,5,{}]execVM "common\server\VRS.sqf";
+_veh19=createVehicle["CUP_B_AH6J_ESCORT_USA",getMarkerPos "ah1",[],0,"NONE"];_veh19 setDir 150;_veh19 setPos getMarkerPos "ah1";clearItemCargoGlobal _veh19;_veh19 lock 0;_nul=[_veh19,15,5,{}]execVM "common\server\VRS.sqf";
+_veh20=createVehicle["CUP_B_MH6J_USA",getMarkerPos "mh0",[],0,"NONE"];_veh20 setDir 147;_veh20 setPos getMarkerPos "mh0";clearItemCargoGlobal _veh20;_veh20 lock 0;_nul=[_veh20,15,5,{}]execVM "common\server\VRS.sqf";
+_veh21=createVehicle["CUP_B_MH6J_USA",getMarkerPos "mh1",[],0,"NONE"];_veh21 setDir 147;_veh21 setPos getMarkerPos "mh1";clearItemCargoGlobal _veh21;_veh21 lock 0;_nul=[_veh21,15,5,{}]execVM "common\server\VRS.sqf";sleep 1;
+_veh0 setDamage 0;_veh1 setDamage 0;_veh2 setDamage 0;_veh3 setDamage 0;_veh4 setDamage 0;_veh5 setDamage 0;_veh6 setDamage 0;_veh7 setDamage 0;
+_veh8 setDamage 0;_veh9 setDamage 0;_veh10 setDamage 0;_veh11 setDamage 0;_veh12 setDamage 0;_veh13 setDamage 0;_veh14 setDamage 0;_veh15 setDamage 0;
+_veh16 setDamage 0;_veh17 setDamage 0;_veh18 setDamage 0;_veh19 setDamage 0;_veh20 setDamage 0;_veh21 setDamage 0;}else{
+_nul=[MRAP0,15,5,{}]execVM "common\server\VRS.sqf";_nul=[MRAP1,15,5,{}]execVM "common\server\VRS.sqf";_nul=[MRAP2,15,5,{}]execVM "common\server\VRS.sqf";_nul=[MRAP3,15,5,{}]execVM "common\server\VRS.sqf";_nul=[MRAP4,15,5,{}]execVM "common\server\VRS.sqf";_nul=[MRAP5,15,5,{}]execVM "common\server\VRS.sqf";_nul=[MRAP6,15,5,{}]execVM "common\server\VRS.sqf";_nul=[MRAP7,15,5,{}]execVM "common\server\VRS.sqf";
+_nul=[ah0,15,5,{}]execVM "common\server\VRS.sqf";_nul=[ch470,15,5,{}]execVM "common\server\VRS.sqf";_nul=[bh0,15,5,{}]execVM "common\server\VRS.sqf";_nul=[mh0,15,5,{}]execVM "common\server\VRS.sqf";_nul=[mh1,15,5,{}]execVM "common\server\VRS.sqf";
+_nul=[tank0,15,5,{}]execVM "common\server\VRS.sqf";_nul=[tank1,15,5,{}]execVM "common\server\VRS.sqf";_nul=[ifv0,15,5,{}]execVM "common\server\VRS.sqf";_nul=[ifv1,15,5,{}]execVM "common\server\VRS.sqf";
+_nul=[a100,15,5,{}]execVM "common\server\VRS.sqf";_nul=[a101,15,5,{}]execVM "common\server\VRS.sqf";};};

@@ -1,0 +1,4917 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=9;
+	class ItemIDProvider
+	{
+		nextID=196;
+	};
+	class MarkerIDProvider
+	{
+		nextID=3;
+	};
+	class Camera
+	{
+		pos[]={4012.8257,412.12155,6094.6265};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Characters_F",
+	"A3_Weapons_F",
+	"corevlitecharacterstka",
+	"po_factions_me",
+	"rds_A2_Civilians",
+	"A3_Weapons_F_Ammoboxes",
+	"rhs_c_weapons",
+	"asr_ai3_rhs_ru_c",
+	"ace_compat_rhs_afrf3",
+	"rhsusf_c_troops",
+	"RHS_US_A2_AirImport",
+	"ace_compat_rhs_usf3",
+	"asr_ai3_cfgvehicles",
+	"A3_Ui_F",
+	"rhsusf_main",
+	"asr_ai3_cfgcamouflage"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=12;
+		class Item0
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="corevlitecharacterstka";
+			name="WarfareThai Characters Plus";
+			author="WarfareThai";
+			url="https://www.facebook.com/groups/warfarethai";
+		};
+		class Item3
+		{
+			className="po_factions_me";
+			name="po_factions_me";
+			author="Leight, Keeway";
+		};
+		class Item4
+		{
+			className="rds_A2_Civilians";
+			name="rds_A2_Civilians";
+		};
+		class Item5
+		{
+			className="rhs_c_weapons";
+			name="AFRF Weapons Pack";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item6
+		{
+			className="ace_compat_rhs_afrf3";
+			name="ACE3 - RHS AFRF Compatibility";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item7
+		{
+			className="rhsusf_c_troops";
+			name="RHSUSF Infantry & Equipment";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item8
+		{
+			className="RHS_US_A2_AirImport";
+			name="RHSUSF A2 Air Ports";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item9
+		{
+			className="ace_compat_rhs_usf3";
+			name="ACE3 - RHS USF Compatibility";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item10
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item11
+		{
+			className="rhsusf_main";
+			name="rhsusf_main";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+	};
+};
+randomSeed=7290951;
+class ScenarioData
+{
+	author="Hoizen";
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=1;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="None";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		briefingName="TVT40 - Cape Compromised V1";
+		overviewText="Undercover CIA agents muck up a fake trade with the Taliban [Air Cav | Night ]";
+		timeOfChanges=1800.0002;
+		startWeather=0.44999999;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.44999999;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		rainForced=1;
+		lightningsForced=1;
+		wavesForced=1;
+		windForced=1;
+		year=2011;
+		month=10;
+		day=11;
+		hour=18;
+		minute=8;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=31;
+		class Item0
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4131.3403,366.01123,6156.1753};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="this addHeadgear ([""LOP_H_Turban"",""LOP_H_Pakol"",""H_Hat_Turban_D"",""H_Hat_Pagri"",""H_Hat_Turban_A"",""H_Hat_Turban_C"",""H_Hat_Pagri_C"",""H_Hat_Turban_E"",""H_Hat_Pagri_B"",""H_Hat_Turban_B"",""H_Hat_Taqiyah_B"",""H_Hat_Taqiyah_D"",""H_Hat_Taqiyah_E"",""H_Hat_Taqiyah_C"",""H_Hat_Taqiyah_A"",""H_Hat_Pakol"",""H_Hat_Ghutra"",""H_Hat_Ghutra_A""] call BIS_fnc_selectRandom); this addUniform ([""LOP_U_TAK_Civ_Fatigue_15"", ""LOP_U_TAK_Civ_Fatigue_16"", ""LOP_U_TAK_Civ_Fatigue_13"", ""LOP_U_TAK_Civ_Fatigue_14"", ""LOP_U_TAK_Civ_Fatigue_04"", ""LOP_U_TAK_Civ_Fatigue_12"", ""LOP_U_TAK_Civ_Fatigue_11"", ""LOP_U_TAK_Civ_Fatigue_09"", ""LOP_U_TAK_Civ_Fatigue_02"", ""LOP_U_TAK_Civ_Fatigue_10"", ""LOP_U_TAK_Civ_Fatigue_01"",""LOP_U_TAK_Civ_Fatigue_05"",""LOP_U_TAK_Civ_Fatigue_07"",""LOP_U_TAK_Civ_Fatigue_08"",""LOP_U_TAK_Civ_Fatigue_06Z""] call BIS_fnc_selectRandom);this setFace ([""PersianHead_A3_01"",""PersianHead_A3_02"",""PersianHead_A3_03""] call BIS_fnc_selectRandom)";
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="LOP_U_TAK_Civ_Fatigue_08";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							headgear="H_Hat_Taqiyah_D";
+						};
+					};
+					id=20;
+					type="C_man_polo_1_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Waypoint";
+					position[]={4129.5718,365.6741,6159.4131};
+					type="Dismiss";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=25;
+					atlOffset=3.0517578e-005;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=19;
+		};
+		class Item1
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4209.1304,363.49097,6193.2251};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="this addHeadgear ([""LOP_H_Turban"",""LOP_H_Pakol"",""H_Hat_Turban_D"",""H_Hat_Pagri"",""H_Hat_Turban_A"",""H_Hat_Turban_C"",""H_Hat_Pagri_C"",""H_Hat_Turban_E"",""H_Hat_Pagri_B"",""H_Hat_Turban_B"",""H_Hat_Taqiyah_B"",""H_Hat_Taqiyah_D"",""H_Hat_Taqiyah_E"",""H_Hat_Taqiyah_C"",""H_Hat_Taqiyah_A"",""H_Hat_Pakol"",""H_Hat_Ghutra"",""H_Hat_Ghutra_A""] call BIS_fnc_selectRandom); this addUniform ([""LOP_U_TAK_Civ_Fatigue_15"", ""LOP_U_TAK_Civ_Fatigue_16"", ""LOP_U_TAK_Civ_Fatigue_13"", ""LOP_U_TAK_Civ_Fatigue_14"", ""LOP_U_TAK_Civ_Fatigue_04"", ""LOP_U_TAK_Civ_Fatigue_12"", ""LOP_U_TAK_Civ_Fatigue_11"", ""LOP_U_TAK_Civ_Fatigue_09"", ""LOP_U_TAK_Civ_Fatigue_02"", ""LOP_U_TAK_Civ_Fatigue_10"", ""LOP_U_TAK_Civ_Fatigue_01"",""LOP_U_TAK_Civ_Fatigue_05"",""LOP_U_TAK_Civ_Fatigue_07"",""LOP_U_TAK_Civ_Fatigue_08"",""LOP_U_TAK_Civ_Fatigue_06Z""] call BIS_fnc_selectRandom);this setFace ([""PersianHead_A3_01"",""PersianHead_A3_02"",""PersianHead_A3_03""] call BIS_fnc_selectRandom)";
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="LOP_U_TAK_Civ_Fatigue_08";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							headgear="H_Hat_Taqiyah_D";
+						};
+					};
+					id=27;
+					type="C_man_polo_1_F";
+					atlOffset=0.15997314;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Waypoint";
+					position[]={4207.3618,362.78989,6196.4629};
+					type="Dismiss";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=28;
+					atlOffset=-0.00012207031;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=26;
+			atlOffset=0.15997314;
+		};
+		class Item2
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4078.145,367.94995,6191.8101};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="this addHeadgear ([""LOP_H_Turban"",""LOP_H_Pakol"",""H_Hat_Turban_D"",""H_Hat_Pagri"",""H_Hat_Turban_A"",""H_Hat_Turban_C"",""H_Hat_Pagri_C"",""H_Hat_Turban_E"",""H_Hat_Pagri_B"",""H_Hat_Turban_B"",""H_Hat_Taqiyah_B"",""H_Hat_Taqiyah_D"",""H_Hat_Taqiyah_E"",""H_Hat_Taqiyah_C"",""H_Hat_Taqiyah_A"",""H_Hat_Pakol"",""H_Hat_Ghutra"",""H_Hat_Ghutra_A""] call BIS_fnc_selectRandom); this addUniform ([""LOP_U_TAK_Civ_Fatigue_15"", ""LOP_U_TAK_Civ_Fatigue_16"", ""LOP_U_TAK_Civ_Fatigue_13"", ""LOP_U_TAK_Civ_Fatigue_14"", ""LOP_U_TAK_Civ_Fatigue_04"", ""LOP_U_TAK_Civ_Fatigue_12"", ""LOP_U_TAK_Civ_Fatigue_11"", ""LOP_U_TAK_Civ_Fatigue_09"", ""LOP_U_TAK_Civ_Fatigue_02"", ""LOP_U_TAK_Civ_Fatigue_10"", ""LOP_U_TAK_Civ_Fatigue_01"",""LOP_U_TAK_Civ_Fatigue_05"",""LOP_U_TAK_Civ_Fatigue_07"",""LOP_U_TAK_Civ_Fatigue_08"",""LOP_U_TAK_Civ_Fatigue_06Z""] call BIS_fnc_selectRandom);this setFace ([""PersianHead_A3_01"",""PersianHead_A3_02"",""PersianHead_A3_03""] call BIS_fnc_selectRandom)";
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="LOP_U_TAK_Civ_Fatigue_08";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							headgear="H_Hat_Taqiyah_D";
+						};
+					};
+					id=30;
+					type="C_man_polo_1_F";
+					atlOffset=-0.048858643;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Waypoint";
+					position[]={4076.3765,368.07651,6195.0479};
+					type="Dismiss";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=31;
+					atlOffset=-0.1522522;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=29;
+			atlOffset=-0.048858643;
+		};
+		class Item3
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3991.1118,388.95105,6126.7271};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="this addHeadgear ([""LOP_H_Turban"",""LOP_H_Pakol"",""H_Hat_Turban_D"",""H_Hat_Pagri"",""H_Hat_Turban_A"",""H_Hat_Turban_C"",""H_Hat_Pagri_C"",""H_Hat_Turban_E"",""H_Hat_Pagri_B"",""H_Hat_Turban_B"",""H_Hat_Taqiyah_B"",""H_Hat_Taqiyah_D"",""H_Hat_Taqiyah_E"",""H_Hat_Taqiyah_C"",""H_Hat_Taqiyah_A"",""H_Hat_Pakol"",""H_Hat_Ghutra"",""H_Hat_Ghutra_A""] call BIS_fnc_selectRandom); this addUniform ([""LOP_U_TAK_Civ_Fatigue_15"", ""LOP_U_TAK_Civ_Fatigue_16"", ""LOP_U_TAK_Civ_Fatigue_13"", ""LOP_U_TAK_Civ_Fatigue_14"", ""LOP_U_TAK_Civ_Fatigue_04"", ""LOP_U_TAK_Civ_Fatigue_12"", ""LOP_U_TAK_Civ_Fatigue_11"", ""LOP_U_TAK_Civ_Fatigue_09"", ""LOP_U_TAK_Civ_Fatigue_02"", ""LOP_U_TAK_Civ_Fatigue_10"", ""LOP_U_TAK_Civ_Fatigue_01"",""LOP_U_TAK_Civ_Fatigue_05"",""LOP_U_TAK_Civ_Fatigue_07"",""LOP_U_TAK_Civ_Fatigue_08"",""LOP_U_TAK_Civ_Fatigue_06Z""] call BIS_fnc_selectRandom);this setFace ([""PersianHead_A3_01"",""PersianHead_A3_02"",""PersianHead_A3_03""] call BIS_fnc_selectRandom)";
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="LOP_U_TAK_Civ_Fatigue_08";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							headgear="H_Hat_Taqiyah_D";
+						};
+					};
+					id=33;
+					type="C_man_polo_1_F";
+					atlOffset=-0.00021362305;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Waypoint";
+					position[]={3986.4431,388.14899,6128.6538};
+					type="Dismiss";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=34;
+					atlOffset=-0.19772339;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=32;
+			atlOffset=-0.00021362305;
+		};
+		class Item4
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4053.3323,389.54529,6061.4536};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="this addHeadgear ([""LOP_H_Turban"",""LOP_H_Pakol"",""H_Hat_Turban_D"",""H_Hat_Pagri"",""H_Hat_Turban_A"",""H_Hat_Turban_C"",""H_Hat_Pagri_C"",""H_Hat_Turban_E"",""H_Hat_Pagri_B"",""H_Hat_Turban_B"",""H_Hat_Taqiyah_B"",""H_Hat_Taqiyah_D"",""H_Hat_Taqiyah_E"",""H_Hat_Taqiyah_C"",""H_Hat_Taqiyah_A"",""H_Hat_Pakol"",""H_Hat_Ghutra"",""H_Hat_Ghutra_A""] call BIS_fnc_selectRandom); this addUniform ([""LOP_U_TAK_Civ_Fatigue_15"", ""LOP_U_TAK_Civ_Fatigue_16"", ""LOP_U_TAK_Civ_Fatigue_13"", ""LOP_U_TAK_Civ_Fatigue_14"", ""LOP_U_TAK_Civ_Fatigue_04"", ""LOP_U_TAK_Civ_Fatigue_12"", ""LOP_U_TAK_Civ_Fatigue_11"", ""LOP_U_TAK_Civ_Fatigue_09"", ""LOP_U_TAK_Civ_Fatigue_02"", ""LOP_U_TAK_Civ_Fatigue_10"", ""LOP_U_TAK_Civ_Fatigue_01"",""LOP_U_TAK_Civ_Fatigue_05"",""LOP_U_TAK_Civ_Fatigue_07"",""LOP_U_TAK_Civ_Fatigue_08"",""LOP_U_TAK_Civ_Fatigue_06Z""] call BIS_fnc_selectRandom);this setFace ([""PersianHead_A3_01"",""PersianHead_A3_02"",""PersianHead_A3_03""] call BIS_fnc_selectRandom)";
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="LOP_U_TAK_Civ_Fatigue_08";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							headgear="H_Hat_Taqiyah_D";
+						};
+					};
+					id=36;
+					type="C_man_polo_1_F";
+					atlOffset=-0.022125244;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Waypoint";
+					position[]={4051.5637,389.28131,6064.6914};
+					type="Dismiss";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=37;
+					atlOffset=-0.048339844;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=35;
+			atlOffset=-0.022125244;
+		};
+		class Item5
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4101.1396,385.04721,6024.8501};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="this addHeadgear ([""LOP_H_Turban"",""LOP_H_Pakol"",""H_Hat_Turban_D"",""H_Hat_Pagri"",""H_Hat_Turban_A"",""H_Hat_Turban_C"",""H_Hat_Pagri_C"",""H_Hat_Turban_E"",""H_Hat_Pagri_B"",""H_Hat_Turban_B"",""H_Hat_Taqiyah_B"",""H_Hat_Taqiyah_D"",""H_Hat_Taqiyah_E"",""H_Hat_Taqiyah_C"",""H_Hat_Taqiyah_A"",""H_Hat_Pakol"",""H_Hat_Ghutra"",""H_Hat_Ghutra_A""] call BIS_fnc_selectRandom); this addUniform ([""LOP_U_TAK_Civ_Fatigue_15"", ""LOP_U_TAK_Civ_Fatigue_16"", ""LOP_U_TAK_Civ_Fatigue_13"", ""LOP_U_TAK_Civ_Fatigue_14"", ""LOP_U_TAK_Civ_Fatigue_04"", ""LOP_U_TAK_Civ_Fatigue_12"", ""LOP_U_TAK_Civ_Fatigue_11"", ""LOP_U_TAK_Civ_Fatigue_09"", ""LOP_U_TAK_Civ_Fatigue_02"", ""LOP_U_TAK_Civ_Fatigue_10"", ""LOP_U_TAK_Civ_Fatigue_01"",""LOP_U_TAK_Civ_Fatigue_05"",""LOP_U_TAK_Civ_Fatigue_07"",""LOP_U_TAK_Civ_Fatigue_08"",""LOP_U_TAK_Civ_Fatigue_06Z""] call BIS_fnc_selectRandom);this setFace ([""PersianHead_A3_01"",""PersianHead_A3_02"",""PersianHead_A3_03""] call BIS_fnc_selectRandom)";
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="LOP_U_TAK_Civ_Fatigue_08";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							headgear="H_Hat_Taqiyah_D";
+						};
+					};
+					id=39;
+					type="C_man_polo_1_F";
+					atlOffset=-0.00033569336;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Waypoint";
+					position[]={4099.3711,385.24094,6028.0879};
+					type="Dismiss";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=40;
+					atlOffset=3.0517578e-005;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=38;
+			atlOffset=-0.00033569336;
+		};
+		class Item6
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4140.2485,376.47717,6093.9326};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="this addHeadgear ([""LOP_H_Turban"",""LOP_H_Pakol"",""H_Hat_Turban_D"",""H_Hat_Pagri"",""H_Hat_Turban_A"",""H_Hat_Turban_C"",""H_Hat_Pagri_C"",""H_Hat_Turban_E"",""H_Hat_Pagri_B"",""H_Hat_Turban_B"",""H_Hat_Taqiyah_B"",""H_Hat_Taqiyah_D"",""H_Hat_Taqiyah_E"",""H_Hat_Taqiyah_C"",""H_Hat_Taqiyah_A"",""H_Hat_Pakol"",""H_Hat_Ghutra"",""H_Hat_Ghutra_A""] call BIS_fnc_selectRandom); this addUniform ([""LOP_U_TAK_Civ_Fatigue_15"", ""LOP_U_TAK_Civ_Fatigue_16"", ""LOP_U_TAK_Civ_Fatigue_13"", ""LOP_U_TAK_Civ_Fatigue_14"", ""LOP_U_TAK_Civ_Fatigue_04"", ""LOP_U_TAK_Civ_Fatigue_12"", ""LOP_U_TAK_Civ_Fatigue_11"", ""LOP_U_TAK_Civ_Fatigue_09"", ""LOP_U_TAK_Civ_Fatigue_02"", ""LOP_U_TAK_Civ_Fatigue_10"", ""LOP_U_TAK_Civ_Fatigue_01"",""LOP_U_TAK_Civ_Fatigue_05"",""LOP_U_TAK_Civ_Fatigue_07"",""LOP_U_TAK_Civ_Fatigue_08"",""LOP_U_TAK_Civ_Fatigue_06Z""] call BIS_fnc_selectRandom);this setFace ([""PersianHead_A3_01"",""PersianHead_A3_02"",""PersianHead_A3_03""] call BIS_fnc_selectRandom)";
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="LOP_U_TAK_Civ_Fatigue_08";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							headgear="H_Hat_Taqiyah_D";
+						};
+					};
+					id=42;
+					type="C_man_polo_1_F";
+					atlOffset=0.011413574;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Waypoint";
+					position[]={4138.48,375.81857,6097.1704};
+					type="Dismiss";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=43;
+					atlOffset=0.022796631;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=41;
+			atlOffset=0.011413574;
+		};
+		class Item7
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4050.7104,387.41321,6078.8188};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="this addHeadgear ([""LOP_H_Turban"",""LOP_H_Pakol"",""H_Hat_Turban_D"",""H_Hat_Pagri"",""H_Hat_Turban_A"",""H_Hat_Turban_C"",""H_Hat_Pagri_C"",""H_Hat_Turban_E"",""H_Hat_Pagri_B"",""H_Hat_Turban_B"",""H_Hat_Taqiyah_B"",""H_Hat_Taqiyah_D"",""H_Hat_Taqiyah_E"",""H_Hat_Taqiyah_C"",""H_Hat_Taqiyah_A"",""H_Hat_Pakol"",""H_Hat_Ghutra"",""H_Hat_Ghutra_A""] call BIS_fnc_selectRandom); this addUniform ([""LOP_U_TAK_Civ_Fatigue_15"", ""LOP_U_TAK_Civ_Fatigue_16"", ""LOP_U_TAK_Civ_Fatigue_13"", ""LOP_U_TAK_Civ_Fatigue_14"", ""LOP_U_TAK_Civ_Fatigue_04"", ""LOP_U_TAK_Civ_Fatigue_12"", ""LOP_U_TAK_Civ_Fatigue_11"", ""LOP_U_TAK_Civ_Fatigue_09"", ""LOP_U_TAK_Civ_Fatigue_02"", ""LOP_U_TAK_Civ_Fatigue_10"", ""LOP_U_TAK_Civ_Fatigue_01"",""LOP_U_TAK_Civ_Fatigue_05"",""LOP_U_TAK_Civ_Fatigue_07"",""LOP_U_TAK_Civ_Fatigue_08"",""LOP_U_TAK_Civ_Fatigue_06Z""] call BIS_fnc_selectRandom);this setFace ([""PersianHead_A3_01"",""PersianHead_A3_02"",""PersianHead_A3_03""] call BIS_fnc_selectRandom)";
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="LOP_U_TAK_Civ_Fatigue_08";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							headgear="H_Hat_Taqiyah_D";
+						};
+					};
+					id=45;
+					type="C_man_polo_1_F";
+					atlOffset=-0.066558838;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Waypoint";
+					position[]={4048.9419,386.63055,6082.0566};
+					type="Dismiss";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=46;
+					atlOffset=-0.13748169;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=44;
+			atlOffset=-0.066558838;
+		};
+		class Item8
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4054.1938,375.63,6155.8667};
+				angles[]={6.2513671,0.89290208,6.0879035};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="this engineOn true; this action[""lightOn"",this];";
+			};
+			id=50;
+			type="RDS_Gaz24_Civ_02";
+			atlOffset=0.00012207031;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="rds_blinkers";
+					expression="[_this,_value] spawn rds_fnc_migacze_Eden";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[1]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="Door_LF";
+					expression="_this animateDoor ['Door_LF',_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="Trunk";
+					expression="_this animateDoor ['Trunk',_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item9
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4007.4041,391.17935,6122.8579};
+				angles[]={0,1.9691502,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this, ""launchers""] call FNC_VehicleGearScript;";
+				name="crate1";
+			};
+			id=52;
+			type="Box_NATO_WpsLaunch_F";
+			atlOffset=0.014770508;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item10
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4047.7944,376.92874,6158.7012};
+				angles[]={6.251368,0,6.1120734};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=54;
+			type="RDS_Gaz24_Civ_03";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[1]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="Trunk";
+					expression="_this animateDoor ['Trunk',_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item11
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4009.2881,390.94904,6122.5024};
+						angles[]={0,2.2197273,0};
+					};
+					side="Civilian";
+					flags=3;
+					class Attributes
+					{
+						health=0;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_aks74u";
+								muzzle="rhs_acc_dtk1983";
+								class primaryMuzzleMag
+								{
+									name="rhs_30Rnd_545x39_AK";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="U_TKLocalCombat_B";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_30Rnd_545x39_AK";
+										count=3;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							headgear="H_Hat_Kufiya_D";
+						};
+					};
+					id=59;
+					type="C_man_polo_1_F";
+					atlOffset=0.65527344;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=58;
+			atlOffset=0.65527344;
+		};
+		class Item12
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4011.48,390.99518,6120.4248};
+						angles[]={0,5.3866625,0};
+					};
+					side="Civilian";
+					flags=3;
+					class Attributes
+					{
+						init="[this,""B_CIA""] call FNC_GearScript;_nlop = [] spawn {cia forceWeaponFire [""rhsusf_weap_m9"", ""Single""];sleep 0.1;cia forceWeaponFire [""rhsusf_weap_m9"", ""Single""];sleep 0.3;cia forceWeaponFire [""rhsusf_weap_m9"", ""Single""];};";
+						name="cia";
+						description="CIA Agent";
+						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_aks74u";
+								muzzle="rhs_acc_dtk1983";
+								class primaryMuzzleMag
+								{
+									name="rhs_30Rnd_545x39_AK";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="U_TKLocalCombat_B";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_30Rnd_545x39_AK";
+										count=3;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							headgear="H_Hat_Kufiya_D";
+						};
+					};
+					id=65;
+					type="C_man_polo_1_F";
+					atlOffset=0.51141357;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4010.4399,390.98096,6119.7539};
+						angles[]={0,5.6659145,0};
+					};
+					side="Civilian";
+					flags=1;
+					class Attributes
+					{
+						init="[this,""B_CIA""] call FNC_GearScript;";
+						name="cia2";
+						description="CIA Agent";
+						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_aks74u";
+								muzzle="rhs_acc_dtk1983";
+								class primaryMuzzleMag
+								{
+									name="rhs_30Rnd_545x39_AK";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="U_TKLocalCombat_B";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_30Rnd_545x39_AK";
+										count=3;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							headgear="H_Hat_Kufiya_D";
+						};
+					};
+					id=85;
+					type="C_man_polo_1_F";
+					atlOffset=0.5274353;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=64;
+			atlOffset=0.51141357;
+		};
+		class Item13
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6114.7451,93.838631,530.71173};
+						angles[]={0.031818401,5.6844149,6.2513671};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						init="this setGroupId [""BARON 1""];[this,""B_PIL""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;[this, ""ACRE_PRC148"", 2] call FNC_SetRadio;" \n "";
+						description="BARON 1 - Pilot";
+						isPlayable=1;
+					};
+					id=68;
+					type="rhsusf_army_ucp_helipilot";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6120.1865,93.966187,525.75171};
+						angles[]={0.065838471,5.6844149,0.0090957033};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="this setGroupId [""BARON 1""];[this,""B_PIL""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						description="BARON 1 - Door Gunner";
+						isPlayable=1;
+					};
+					id=69;
+					type="rhsusf_army_ucp_helipilot";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male09ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6118.5264,93.705551,530.85974};
+						angles[]={0.031820275,5.6844149,6.249095};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="this setGroupId [""BARON 1""];[this,""B_PIL""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;[this, ""ACRE_PRC148"", 2] call FNC_SetRadio;" \n "";
+						description="BARON 1 - Co-Pilot";
+						isPlayable=1;
+					};
+					id=70;
+					type="rhsusf_army_ucp_helicrew";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male03ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6114.5674,94.028648,526.8147};
+						angles[]={0.052246332,5.6844149,6.264997};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="this setGroupId [""BARON 1""];[this,""B_PIL""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						description="BARON 1 - Crew Chief";
+						isPlayable=1;
+					};
+					id=71;
+					type="rhsusf_army_ucp_helicrew";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male03ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=66;
+		};
+		class Item14
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6161.2949,94.540901,570.42047};
+				angles[]={6.2763672,5.6290441,6.2740965};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=67;
+			type="RHS_UH60M";
+			atlOffset=7.6293945e-006;
+		};
+		class Item15
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6110.7798,96.696289,529.57056};
+				angles[]={0.052237704,6.0153995,6.2649989};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="helo1";
+			};
+			id=72;
+			type="RHS_UH60M";
+			atlOffset=-0.0029983521;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""rhs_weap_m4_carryhandle"",""FirstAidKit"",""Medikit""],[2,10,2]],[[""rhs_mag_30Rnd_556x45_M855A1_Stanag"",""rhs_mag_m67"",""rhs_mag_m18_green"",""rhs_mag_m18_red"",""rhs_mag_an_m8hc""],[12,4,2,2,4]],[[],[]],[[""B_Parachute""],[4]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_fastroping_equipFRIES";
+					expression="[_this] call ace_fastroping_fnc_equipFRIES";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item16
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4667.9463,273.99451,6416.4658};
+				angles[]={0.1511693,4.5593195,6.199264};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=76;
+			type="RDS_Gaz24_Civ_02";
+			atlOffset=-0.015808105;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[1]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="Trunk";
+					expression="_this animateDoor ['Trunk',_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item17
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4678.708,273.34711,6418.7451};
+				angles[]={0.25147644,4.469419,0.0090957033};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=79;
+			type="RDS_Lada_Civ_03";
+			atlOffset=-3.0517578e-005;
+		};
+		class Item18
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4685.166,272.77393,6420.7236};
+				angles[]={0.19308993,4.3555775,0.11543855};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=82;
+			type="RDS_Golf4_Civ_01";
+			atlOffset=3.0517578e-005;
+		};
+		class Item19
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4680.9326,273.57086,6414.2617};
+						angles[]={0,4.6205387,0};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						init="[this,""O_WARLORD"",""Arms Dealer""] call FNC_GearScript;_yell = this addaction [""YELL LOUDLY"", ""allah.sqf"", [this], 6, false, true, """", ""(_target == _this)""];";
+						name="dealer";
+						description="Kamel Al-Adwar The Arms Dealer";
+						isPlayable=1;
+					};
+					id=87;
+					type="O_Soldier_F";
+					atlOffset=0.00042724609;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male03PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4681.1812,272.80844,6415.7739};
+						angles[]={0,4.6205387,0};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						init="[this,""O_MED"",""Arms Dealer""] call FNC_GearScript; _yell = this addaction [""YELL LOUDLY"", ""allah.sqf"", [this], 6, false, true, """", ""(_target == _this)""];";
+						name="dealer_2";
+						description="The Bonesetter";
+						isPlayable=1;
+					};
+					id=88;
+					type="O_Soldier_F";
+					atlOffset=0.00018310547;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male02PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=86;
+			atlOffset=0.00042724609;
+		};
+		class Item20
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=5;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4698.0259,270.45255,6428.2231};
+						angles[]={0,4.0211334,0};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						init="[this,""O_FTL"",""First Team""] call FNC_GearScript;_yell = this addaction [""YELL LOUDLY"", ""allah.sqf"", [this], 6, false, true, """", ""(_target == _this)""]; ";
+						description="First Team Leader";
+						isPlayable=1;
+					};
+					id=90;
+					type="O_Soldier_F";
+					atlOffset=0.0015258789;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male02PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4699.853,270.57953,6427.9839};
+						angles[]={0,4.0211334,0};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						init="[this,""O_MG"",""First Team""] call FNC_GearScript; _yell = this addaction [""YELL LOUDLY"", ""allah.sqf"", [this], 6, false, true, """", ""(_target == _this)""];";
+						description="First Team Fighter (MG)";
+						isPlayable=1;
+					};
+					id=91;
+					type="O_Soldier_F";
+					atlOffset=0.0015869141;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4701.2842,270.18094,6429.625};
+						angles[]={0,4.0211334,0};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						init="[this,""O_RIF"",""First Team""] call FNC_GearScript; _yell = this addaction [""YELL LOUDLY"", ""allah.sqf"", [this], 6, false, true, """", ""(_target == _this)""];";
+						description="First Team Fighter ";
+						isPlayable=1;
+					};
+					id=92;
+					type="O_Soldier_F";
+					atlOffset=6.1035156e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4699.0913,269.65414,6430.6035};
+						angles[]={0,4.0211334,0};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						init="[this,""O_AT"",""First Team""] call FNC_GearScript; _yell = this addaction [""YELL LOUDLY"", ""allah.sqf"", [this], 6, false, true, """", ""(_target == _this)""];";
+						description="First Team Fighter (MG)";
+						isPlayable=1;
+					};
+					id=93;
+					type="O_Soldier_F";
+					atlOffset=6.1035156e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4700.521,269.19193,6432.2432};
+						angles[]={0,4.0211334,0};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						init="[this,""O_AAT"",""First Team""] call FNC_GearScript; _yell = this addaction [""YELL LOUDLY"", ""allah.sqf"", [this], 6, false, true, """", ""(_target == _this)""];";
+						description="First Team Fighter (AMG)";
+						isPlayable=1;
+					};
+					id=94;
+					type="O_Soldier_F";
+					atlOffset=6.1035156e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=89;
+			atlOffset=0.0015258789;
+		};
+		class Item21
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=5;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4678.1646,271.08456,6422.0479};
+						angles[]={0,4.4559979,0};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						init="[this,""O_FTL"",""Second Team""] call FNC_GearScript; _yell = this addaction [""YELL LOUDLY"", ""allah.sqf"", [this], 6, false, true, """", ""(_target == _this)""];";
+						description="Second Team Leader";
+						isPlayable=1;
+					};
+					id=96;
+					type="O_Soldier_F";
+					atlOffset=0.0002746582;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male02PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4679.7212,271.27341,6421.062};
+						angles[]={0,4.4559979,0};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						init="[this,""O_RIF"",""Second Team""] call FNC_GearScript; _yell = this addaction [""YELL LOUDLY"", ""allah.sqf"", [this], 6, false, true, """", ""(_target == _this)""];";
+						description="Second Team Fighter";
+						isPlayable=1;
+					};
+					id=97;
+					type="O_Soldier_F";
+					atlOffset=0.0002746582;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4678.9771,270.60046,6424.4131};
+						angles[]={0,4.4559979,0};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						init="[this,""O_RIF"",""Second Team""] call FNC_GearScript; _yell = this addaction [""YELL LOUDLY"", ""allah.sqf"", [this], 6, false, true, """", ""(_target == _this)""];";
+						description="Second Team Fighter";
+						isPlayable=1;
+					};
+					id=98;
+					type="O_Soldier_F";
+					atlOffset=0.0002746582;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4681.4678,271.24631,6421.2197};
+						angles[]={0,4.4559979,0};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						init="[this,""O_RIF"",""Second Team""] call FNC_GearScript; _yell = this addaction [""YELL LOUDLY"", ""allah.sqf"", [this], 6, false, true, """", ""(_target == _this)""];";
+						description="Second Team Fighter";
+						isPlayable=1;
+					};
+					id=99;
+					type="O_Soldier_F";
+					atlOffset=0.00024414063;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4681.7227,270.5329,6424.8008};
+						angles[]={0,4.4559979,0};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						init="[this,""O_RIF"",""Second Team""] call FNC_GearScript; _yell = this addaction [""YELL LOUDLY"", ""allah.sqf"", [this], 6, false, true, """", ""(_target == _this)""];";
+						description="Second Team Fighter";
+						isPlayable=1;
+					};
+					id=100;
+					type="O_Soldier_F";
+					atlOffset=0.00024414063;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=95;
+			atlOffset=0.0002746582;
+		};
+		class Item22
+		{
+			dataType="Marker";
+			position[]={4013.793,0.44384766,6124.3398};
+			name="marker_0";
+			text="WASP";
+			type="mil_marker";
+			id=101;
+			atlOffset=-385.53482;
+		};
+		class Item23
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4008.3813,390.98813,6121.8613};
+						angles[]={0,2.3263347,0};
+					};
+					side="Civilian";
+					flags=3;
+					class Attributes
+					{
+						health=0;
+						class Inventory
+						{
+							class handgun
+							{
+								name="rhs_weap_makarov_pm";
+								class primaryMuzzleMag
+								{
+									name="rhs_mag_9x18_8_57N181S";
+									ammoLeft=8;
+								};
+							};
+							class uniform
+							{
+								typeName="U_TerrorCombat_A";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_9x18_8_57N181S";
+										count=3;
+										ammoLeft=8;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							headgear="H_Hat_Face_Cover";
+						};
+					};
+					id=155;
+					type="C_man_polo_1_F";
+					atlOffset=0.74029541;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=154;
+			atlOffset=0.74029541;
+		};
+		class Item24
+		{
+			dataType="Marker";
+			position[]={6111.4751,0,560.84998};
+			name="usa";
+			type="rhs_flag_USA";
+			id=156;
+			atlOffset=-92.514206;
+		};
+		class Item25
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4692.9961,273.66473,6424.0596};
+				angles[]={0.28319967,4.1606073,0.061311752};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=158;
+			type="LOP_ISTS_OPF_Landrover_M2";
+			atlOffset=3.0517578e-005;
+		};
+		class Item26
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6149.7983,97.212135,482.40576};
+						angles[]={0.031820275,5.9752717,0.049978349};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="LIEUTENANT";
+						init="this setGroupId [""1'6 HQ""];" \n "[this, ""ACRE_PRC343"", 6] call FNC_SetRadio;" \n "[this, ""ACRE_PRC148"", 1] call FNC_SetRadio;" \n "[this,""B_PC"",""1'6""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b1";
+						description="1'6 | Platoon Leader";
+						isPlayer=1;
+						isPlayable=1;
+					};
+					id=166;
+					type="B_Soldier_SL_F";
+					atlOffset=0.023841858;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male09ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6151.7109,97.279945,482.48444};
+						angles[]={0.031820275,5.975276,0.025005706};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="SERGEANT";
+						init="this setGroupId [""1'6 HQ""];" \n "[this, ""ACRE_PRC343"", 6] call FNC_SetRadio;" \n "[this, ""ACRE_PRC148"", 1] call FNC_SetRadio;" \n "[this,""B_SGT"",""1'6""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b2";
+						description="1'7 | Platoon Sergeant";
+						isPlayable=1;
+					};
+					id=167;
+					type="B_officer_F";
+					atlOffset=0.041297913;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6148.0752,97.160194,481.28076};
+						angles[]={0.027276937,5.975276,0.054510836};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this setGroupId [""1'6 HQ""];" \n "[this, ""ACRE_PRC343"", 6] call FNC_SetRadio;" \n "[this,""B_MED"",""1'6""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b3";
+						description="1'6 | Platoon Medic";
+						isPlayable=1;
+					};
+					id=168;
+					type="B_medic_F";
+					atlOffset=0.025428772;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=-1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6147.0977,97.159225,479.68317};
+						angles[]={0,5.9752717,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="this setGroupId [""1'6 HQ""];" \n "[this, ""ACRE_PRC343"", 6] call FNC_SetRadio;" \n "[this, ""ACRE_PRC117F"", 2] call FNC_SetRadio;" \n "[this,""B_RTO"",""1'6""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b4";
+						description="1'6'R | Platoon JTAC";
+						isPlayable=1;
+					};
+					id=169;
+					type="B_Soldier_F";
+					atlOffset=0.027557373;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male06ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=165;
+			atlOffset=0.023841858;
+		};
+		class Item27
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=9;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6156.4912,94.15683,511.02045};
+						angles[]={0.059043173,2.3444045,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="SERGEANT";
+						init="this setGroupId [""1'1""];" \n "[this, ""ACRE_PRC343"", 1] call FNC_SetRadio;" \n "[this, ""ACRE_PRC148"", 1] call FNC_SetRadio;" \n "[this,""B_SL""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b5";
+						description="1'1 | Squad Leader";
+						isPlayable=1;
+					};
+					id=171;
+					type="B_Soldier_SL_F";
+					atlOffset=0.010192871;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6155.6099,94.337692,508.82538};
+						angles[]={0.11768034,1.0691757,6.2650003};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="SERGEANT";
+						init="this setGroupId [""1'1""];" \n "[this, ""RED""] call FNC_SetTeamColor;" \n "[this, ""ACRE_PRC343"", 1] call FNC_SetRadio;" \n "[this, ""ACRE_PRC148"", 1] call FNC_SetRadio;" \n "[this,""B_FTL""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b6";
+						description="1'1'A | Team Leader";
+						isPlayable=1;
+					};
+					id=172;
+					type="B_Soldier_TL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6157.0391,94.420296,507.99304};
+						angles[]={0.11768034,0.81362462,6.2650003};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this setGroupId [""1'1""];" \n "[this, ""RED""] call FNC_SetTeamColor;" \n "[this, ""ACRE_PRC343"", 1] call FNC_SetRadio;" \n "[this,""B_AR""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b7";
+						description="1'1'A | Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=173;
+					type="B_soldier_AR_F";
+					atlOffset=0.0102005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6157.7339,94.498734,507.13647};
+						angles[]={0.11768034,0.69290018,6.2650003};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this setGroupId [""1'1""];" \n "[this, ""YELLOW""] call FNC_SetTeamColor;" \n "[this, ""ACRE_PRC343"", 1] call FNC_SetRadio;" \n "[this,""B_GRE""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b8";
+						description="1'1'A | Grenadier";
+						isPlayable=1;
+					};
+					id=174;
+					type="B_Soldier_GL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6158.5894,94.601891,506.13232};
+						angles[]={0.11768034,0.84139276,6.2650003};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this setGroupId [""1'1""];" \n "[this, ""YELLOW""] call FNC_SetTeamColor;" \n "[this, ""ACRE_PRC343"", 1] call FNC_SetRadio;" \n "[this,""B_RAT""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b9";
+						description="1'1'A | Rifleman";
+						isPlayable=1;
+					};
+					id=175;
+					type="B_soldier_LAT_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6158.6938,94.125687,511.37299};
+						angles[]={0.065837562,3.7562673,6.2763672};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="SERGEANT";
+						init="this setGroupId [""1'1""];" \n "[this, ""GREEN""] call FNC_SetTeamColor;" \n "[this, ""ACRE_PRC343"", 1] call FNC_SetRadio;" \n "[this, ""ACRE_PRC148"", 1] call FNC_SetRadio;" \n "[this,""B_FTL""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b10";
+						description="1'1'B | Team Leader";
+						isPlayable=1;
+					};
+					id=176;
+					type="B_Soldier_TL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6159.4854,94.194489,510.21094};
+						angles[]={0.059043173,4.2875109,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this setGroupId [""1'1""];" \n "[this, ""GREEN""] call FNC_SetTeamColor;" \n "[this, ""ACRE_PRC343"", 1] call FNC_SetRadio;" \n "[this,""B_AR""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b11";
+						description="1'1'B | Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=177;
+					type="B_soldier_AR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.05;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6160.4805,94.270737,509.2301};
+						angles[]={0.099706307,4.445672,6.2513671};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this setGroupId [""1'1""];" \n "[this, ""BLUE""] call FNC_SetTeamColor;" \n "[this, ""ACRE_PRC343"", 1] call FNC_SetRadio;" \n "[this,""B_GRE""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b12";
+						description="1'1'B | Grenadier";
+						isPlayable=1;
+					};
+					id=178;
+					type="B_Soldier_GL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6161.2412,94.340637,508.28918};
+						angles[]={0.099706307,4.334774,6.2513671};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this setGroupId [""1'1""];" \n "[this, ""BLUE""] call FNC_SetTeamColor;" \n "[this, ""ACRE_PRC343"", 1] call FNC_SetRadio;" \n "[this,""B_RAT""] call FNC_GearScript;  [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b13";
+						description="1'1'B | Rifleman";
+						isPlayable=1;
+					};
+					id=179;
+					type="B_soldier_LAT_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=170;
+			atlOffset=0.010192871;
+		};
+		class Item28
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=9;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6164.4399,93.749908,517.20013};
+						angles[]={0.045440309,2.2183971,6.2740898};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="SERGEANT";
+						init="this setGroupId [""1'2""];" \n "[this, ""ACRE_PRC343"", 2] call FNC_SetRadio;" \n "[this, ""ACRE_PRC148"", 1] call FNC_SetRadio;" \n "[this,""B_SL""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b14";
+						description="1'2 | Squad Leader";
+						isPlayable=1;
+					};
+					id=181;
+					type="B_Soldier_SL_F";
+					atlOffset=0.025100708;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6163.8662,93.843369,515.1922};
+						angles[]={0.047708876,1.0691757,6.2718177};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="SERGEANT";
+						init="this setGroupId [""1'2""];" \n "[this, ""RED""] call FNC_SetTeamColor;" \n "[this, ""ACRE_PRC343"", 2] call FNC_SetRadio;" \n "[this, ""ACRE_PRC148"", 1] call FNC_SetRadio;" \n "[this,""B_FTL""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b15";
+						description="1'2'A | Team Leader";
+						isPlayable=1;
+					};
+					id=182;
+					type="B_Soldier_TL_F";
+					atlOffset=0.01978302;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6164.9883,93.876541,514.17365};
+						angles[]={0.045440309,0.81362462,6.2718177};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this setGroupId [""1'2""];" \n "[this, ""RED""] call FNC_SetTeamColor;" \n "[this, ""ACRE_PRC343"", 2] call FNC_SetRadio;" \n "[this,""B_AR""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b16";
+						description="1'2'A | Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=183;
+					type="B_soldier_AR_F";
+					atlOffset=0.019073486;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6165.6826,93.904091,513.31641};
+						angles[]={0.04544162,0.69290018,6.264997};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this setGroupId [""1'2""];" \n "[this, ""YELLOW""] call FNC_SetTeamColor;" \n "[this, ""ACRE_PRC343"", 2] call FNC_SetRadio;" \n "[this,""B_GRE""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b17";
+						description="1'2'A | Grenadier";
+						isPlayable=1;
+					};
+					id=184;
+					type="B_Soldier_GL_F";
+					atlOffset=0.020187378;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6166.5376,93.91687,512.31171};
+						angles[]={0.04544162,0.84139276,6.264997};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this setGroupId [""1'2""];" \n "[this, ""YELLOW""] call FNC_SetTeamColor;" \n "[this, ""ACRE_PRC343"", 2] call FNC_SetRadio;" \n "[this,""B_RAT""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b18";
+						description="1'2'A | Rifleman";
+						isPlayable=1;
+					};
+					id=185;
+					type="B_soldier_LAT_F";
+					atlOffset=0.002822876;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6166.6416,93.715828,517.55371};
+						angles[]={0.045438997,3.7562673,6.2718177};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="SERGEANT";
+						init="this setGroupId [""1'2""];" \n "[this, ""GREEN""] call FNC_SetTeamColor;" \n "[this, ""ACRE_PRC343"", 2] call FNC_SetRadio;" \n "[this,""B_FTL""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b19";
+						description="1'2'B | Team Leader";
+						isPlayable=1;
+					};
+					id=186;
+					type="B_Soldier_TL_F";
+					atlOffset=0.030845642;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6167.4336,93.740204,516.39087};
+						angles[]={0.045438997,4.2875109,6.2718177};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this setGroupId [""1'2""];" \n "[this, ""GREEN""] call FNC_SetTeamColor;" \n "[this, ""ACRE_PRC343"", 2] call FNC_SetRadio;" \n "[this,""B_AR""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b20";
+						description="1'2'B | Automatic Rifleman";
+						isPlayable=1;
+					};
+					id=187;
+					type="B_soldier_AR_F";
+					atlOffset=0.011352539;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.05;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6168.4287,93.773453,515.41119};
+						angles[]={0.045438997,4.445672,6.2718177};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this setGroupId [""1'2""];" \n "[this, ""BLUE""] call FNC_SetTeamColor;" \n "[this, ""ACRE_PRC343"", 2] call FNC_SetRadio;" \n "[this,""B_GRE""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b21";
+						description="1'2'B | Grenadier";
+						isPlayable=1;
+					};
+					id=188;
+					type="B_Soldier_GL_F";
+					atlOffset=0.011367798;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6169.189,93.803642,514.46991};
+						angles[]={0.038632207,4.334774,6.2718177};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this setGroupId [""1'2""];" \n "[this, ""BLUE""] call FNC_SetTeamColor;" \n "[this, ""ACRE_PRC343"", 2] call FNC_SetRadio;" \n "[this,""B_RAT""] call FNC_GearScript;  [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						name="b22";
+						description="1'2'B | Rifleman";
+						isPlayable=1;
+					};
+					id=189;
+					type="B_soldier_LAT_F";
+					atlOffset=0.01134491;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=180;
+			atlOffset=0.025100708;
+		};
+		class Item29
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6154.7173,91.959015,567.51593};
+						angles[]={6.2264056,5.6844149,6.2354765};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						init="this setGroupId [""BARON 2""];[this,""B_PIL""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;[this, ""ACRE_PRC148"", 2] call FNC_SetRadio;" \n "";
+						description="BARON 2 - Pilot";
+						isPlayable=1;
+					};
+					id=191;
+					type="rhsusf_army_ucp_helipilot";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6160.1582,91.588348,562.55591};
+						angles[]={6.2650003,5.6844149,0.01818504};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="this setGroupId [""BARON 2""];[this,""B_PIL""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						description="BARON 2 - Door Gunner";
+						isPlayable=1;
+					};
+					id=192;
+					type="rhsusf_army_ucp_helipilot";
+					atlOffset=0.0073623657;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male09ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6158.498,91.80748,567.66394};
+						angles[]={6.2468252,5.6844149,6.2264056};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="this setGroupId [""BARON 2""];[this,""B_PIL""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;[this, ""ACRE_PRC148"", 2] call FNC_SetRadio;" \n "";
+						description="BARON 2 - Co-Pilot";
+						isPlayable=1;
+					};
+					id=193;
+					type="rhsusf_army_ucp_helicrew";
+					atlOffset=0.0035400391;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male03ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6154.5391,91.748131,563.61896};
+						angles[]={6.226408,5.6844149,6.2309389};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						init="this setGroupId [""BARON 2""];[this,""B_PIL""] call FNC_GearScript; [this,""9thifid_normal""] call BIS_fnc_setUnitInsignia;";
+						description="BARON 2 - Crew Chief";
+						isPlayable=1;
+					};
+					id=194;
+					type="rhsusf_army_ucp_helicrew";
+					atlOffset=7.6293945e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male03ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=190;
+		};
+		class Item30
+		{
+			dataType="Marker";
+			position[]={4889.0352,43.073242,4659.9253};
+			name="AO";
+			markerType="RECTANGLE";
+			type="rectangle";
+			fillName="Border";
+			a=4433.9399;
+			b=4482.4248;
+			drawBorder=1;
+			id=195;
+			atlOffset=-163.74054;
+		};
+	};
+};

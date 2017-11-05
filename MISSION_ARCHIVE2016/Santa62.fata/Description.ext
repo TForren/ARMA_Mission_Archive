@@ -1,0 +1,46 @@
+enableDebugConsole  = 1;
+#include "sounds\config.cpp"
+
+
+#define description
+
+#include "core\description.hpp" //DO NOT REMOVE
+#include "modules\modules.sqf" //DO NOT REMOVE
+
+#undef description
+#define description_functions
+
+class CfgFunctions {
+
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+
+};
+	
+#undef description_functions
+#define description_titles
+	
+class rscTitles {
+
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+
+};
+
+#undef description_titles
+#define description_params
+
+class Params {
+		
+	class CIVS
+	{
+		title = "Hoizen Civilians"; // Param name visible in the list
+		values[] = {0, 1}; // Values; must be integers; has to have the same number of elements as 'texts'
+		texts[] = {"Disabled","Enabled"}; // Description of each selectable item
+		default = 1; // Default value; must be listed in 'values' array, otherwise 0 is used
+
+	};
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+	
+};

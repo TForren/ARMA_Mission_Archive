@@ -1,0 +1,96 @@
+enableDebugConsole = 1;
+onLoadMission = $STR_A3_combatpatrol_mission_2;
+onLoadName = $STR_A3_combatpatrol_mission_1;
+briefingName = $STR_A3_combatpatrol_mission_1d;
+loadScreen = "a3\missions_f_patrol\data\img\mp_moutm_ca.paa";
+overviewPicture = "a3\missions_f_patrol\data\img\mp_moutm_ca.paa";
+overviewText = $STR_A3_combatpatrol_mission_2;
+dev = "Jezuro";
+author = "basstard420";
+saving = 0;
+respawn = 3;
+respawnOnStart = -1;
+respawnDialog = 0;
+respawnDelay = 10;
+disabledAI = 1;
+
+briefing = 0;
+debriefing = 0;
+
+respawnTemplates[] = {"MenuPosition", "Tickets", "Spectator"};
+
+class Params
+{
+	class BIS_CP_startingDaytime
+	{
+		title = $STR_A3_combatpatrol_params_1;
+		values[] = {-1, 0, 1, 2, 3, 4};
+		texts[] = {$STR_A3_bis_fnc_respawnmenuposition_random, $STR_A3_combatpatrol_params_2, $STR_A3_combatpatrol_params_3, $STR_A3_combatpatrol_params_4, $STR_A3_combatpatrol_params_5, $STR_A3_combatpatrol_params_6};
+		default = 1;
+	};
+	class BIS_CP_weather
+	{
+		title = $STR_A3_rscattributeovercast_title;
+		values[] = {-1, 0, 1, 2, 3};
+		texts[] = {$STR_A3_bis_fnc_respawnmenuposition_random, $STR_A3_combatpatrol_params_7, $STR_A3_combatpatrol_params_8, $STR_A3_combatpatrol_params_9, $STR_A3_combatpatrol_params_10};
+		default = 1;
+	};
+	class BIS_CP_garrison
+	{
+		title = $STR_A3_combatpatrol_params_11;
+		values[] = {0, 1, 2};
+		texts[] = {$STR_A3_combatpatrol_params_12, $STR_A3_combatpatrol_params_13, $STR_A3_combatpatrol_params_14};
+		default = 0;
+	};
+	class BIS_CP_reinforcements
+	{
+		title = $STR_A3_combatpatrol_params_15;
+		values[] = {0, 1, 2};
+		texts[] = {$STR_A3_combatpatrol_params_12, $STR_A3_combatpatrol_params_13, $STR_A3_combatpatrol_params_16};
+		default = 0;
+	};
+	class BIS_CP_showInsertion
+	{
+		title = $STR_A3_combatpatrol_params_17;
+		values[] = {1, 0};
+		texts[] = {$STR_A3_cfgvehicles_modulestrategicmapimage_f_arguments_shadow_values_yes_0, $STR_A3_cfgvehicles_modulestrategicmapimage_f_arguments_shadow_values_no_0};
+		default = 0;
+	};
+	class BIS_CP_tickets
+	{
+		title = $STR_A3_combatpatrol_params_18;
+		values[] = {5, 10, 20, 50, 100};
+		texts[] = {"5", "10", "20", "50", "100"};
+		default = 20;
+	};
+	class BIS_CP_locationSelection
+	{
+		title = $STR_A3_combatpatrol_params_20;
+		values[] = {0, 1};
+		texts[] = {$STR_A3_combatpatrol_params_21, $STR_A3_bis_fnc_respawnmenuposition_random};
+		default = 0;
+	};
+	class BIS_CP_objective
+	{
+		title = $STR_A3_combatpatrol_params_22;
+		values[] = {-1, 1, 2, 3};
+		texts[] = {$STR_A3_bis_fnc_respawnmenuposition_random, $STR_A3_combatpatrol_params_26, $STR_A3_combatpatrol_params_27, $STR_A3_combatpatrol_params_28};
+		default = -1;
+	};
+	class BAS_CCP_respawnInsertion
+	{
+		title = $STR_customcombatpatrol_params_1;
+		values[] = {1, 0};
+		texts[] = {$STR_A3_cfgvehicles_modulestrategicmapimage_f_arguments_shadow_values_yes_0, $STR_A3_cfgvehicles_modulestrategicmapimage_f_arguments_shadow_values_no_0};
+		default = 1;
+	};
+};
+
+class CfgTaskEnhancements
+{
+	enable       = 1;	//0: disable new task features (default), 1: enable new task features & add new task markers and task widgets into the map
+	3d           = 1;	//0: do not use new 3D markers (default), 1: replace task waypoints with new 3D markers
+	3dDrawDist   = 0;	//3d marker draw distance (default: 2000)
+	share        = 1;	//0: do not count assigned players (default), 1: count how many players have the task assigned
+	propagate    = 1;	//0: do not propagate (default), 1: propagate shared tasks to subordinates
+};

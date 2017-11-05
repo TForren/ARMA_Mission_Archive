@@ -1,0 +1,203 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, NMD Sandbox West Airstrip">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Init",0,250,-50.000000,-125.000000,50.000000,-75.000000,0.000000,"Init"};
+item1[] = {"AI_Enabled",4,218,-50.000000,125.000000,50.000000,175.000000,0.000000,"AI Enabled"};
+item2[] = {"Setup_Airbase",2,4346,-50.000000,200.000000,50.000000,250.000000,0.000000,"Setup Airbase"};
+item3[] = {"Alerted",4,218,-50.000000,275.000000,50.000000,325.000000,0.000000,"Alerted"};
+item4[] = {"Scramble",1,250,-50.000000,350.000000,50.000000,400.000000,0.000000,"Scramble"};
+item5[] = {"AI_Disabled",4,218,-175.000000,25.000000,-75.000000,75.000000,0.000000,"AI Disabled"};
+item6[] = {"Delete_Base",1,250,-300.000000,25.000000,-200.000000,75.000000,0.000000,"Delete Base"};
+item7[] = {"Is_Server",4,218,-50.000000,-50.000000,50.000000,0.000000,0.000000,"Is Server"};
+item8[] = {"_",2,250,-50.000000,25.000000,50.000000,75.000000,0.000000,""};
+item9[] = {"Is_Client",4,218,-50.000000,-200.000000,50.000000,-150.000000,0.000000,"Is Client"};
+item10[] = {"Terminate",1,250,-50.000000,-275.000000,50.000000,-225.000000,0.000000,"Terminate"};
+link0[] = {0,7};
+link1[] = {0,9};
+link2[] = {1,2};
+link3[] = {2,3};
+link4[] = {3,4};
+link5[] = {5,6};
+link6[] = {7,8};
+link7[] = {8,1};
+link8[] = {8,5};
+link9[] = {9,10};
+globals[] = {25.000000,1,0,0,0,640,480,1,16,6316128,1,-408.912811,491.139587,471.534210,-249.188751,1586,1270,1};
+window[] = {2,-1,-1,-1,-1,1081,148,2068,52,3,1604};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "NMD Sandbox West Airstrip";
+  class States
+  {
+    /*%FSM<STATE "Init">*/
+    class Init
+    {
+      name = "Init";
+      init = /*%FSM<STATEINIT""">*/"//--- Open garage doors" \n
+       "private ""_garage"";" \n
+       "_garage = ( [ 9150, 21648, 0 ] nearObjects [ ""Land_i_Shed_Ind_F"", 10 ] ) select 0;" \n
+       "[ _garage, ""Door_1_rot"", ""Door_Handle_1_rot_1"", ""Door_Handle_1_rot_2"" ] execVM ""\A3\Structures_F\scripts\Door_open.sqf"";" \n
+       "[ _garage, ""Door_2_rot"", ""Door_Handle_2_rot_1"", ""Door_Handle_2_rot_2"" ] execVM ""\A3\Structures_F\scripts\Door_open.sqf"";"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Is_Client">*/
+        class Is_Client
+        {
+          priority = 0.000000;
+          to="Terminate";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!isServer"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Is_Server">*/
+        class Is_Server
+        {
+          priority = 0.000000;
+          to="_";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"isServer"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Setup_Airbase">*/
+    class Setup_Airbase
+    {
+      name = "Setup_Airbase";
+      init = /*%FSM<STATEINIT""">*/"private ""_units"";" \n
+       "_units = ( NMD_west_airstrip nearEntities [ [ ""Man"", ""LandVehicle"", ""Air"" ], 350 ] );" \n
+       "" \n
+       "//--- Set AI skill" \n
+       "{ if( _x isKindOf ""Man"" ) then { _x setSkill ( 0.3 + ( random 0.4 ) ) } } forEach _units;" \n
+       "" \n
+       "//--- Create marker" \n
+       "private ""_marker"";" \n
+       "_marker = createMarker [ ""NMD_west_airstrip"", position NMD_west_airstrip ];" \n
+       """NMD_west_airstrip"" setMarkerType ""b_plane"";" \n
+       """NMD_west_airstrip"" setMarkerSize [ 1.4, 1.4 ];" \n
+       "" \n
+       "//--- Add units to editable curator objects" \n
+       "//NMD_curator addCuratorEditableObjects [ _units, false ];"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Alerted">*/
+        class Alerted
+        {
+          priority = 0.000000;
+          to="Scramble";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"behaviour NMD_west_airstrip_pilot == ""COMBAT"""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Scramble">*/
+    class Scramble
+    {
+      name = "Scramble";
+      init = /*%FSM<STATEINIT""">*/"//--- Scramble fighter pilot" \n
+       "private ""_pilot"";" \n
+       "_pilot = group NMD_west_airstrip_pilot;" \n
+       "_pilot addVehicle NMD_west_airstrip_heli;" \n
+       "" \n
+       "private ""_wp1"";" \n
+       "_wp1 = _pilot addWaypoint [ NMD_west_airstrip_heli, 0 ];" \n
+       "_wp1 setWaypointType ""GETIN"";" \n
+       "_wp1 setWaypointBehaviour ""CARELESS"";" \n
+       "_wp1 setWaypointStatements [ ""true"", """" ];" \n
+       "" \n
+       "private ""_wp2"";" \n
+       "_wp2 = _pilot addWaypoint [ NMD_west_airstrip, 0 ];" \n
+       "_wp2 setWaypointType ""LOITER"";" \n
+       "_wp2 setWaypointBehaviour ""COMBAT"";" \n
+       "_wp1 setWaypointStatements [ ""true"", """" ];"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Delete_Base">*/
+    class Delete_Base
+    {
+      name = "Delete_Base";
+      init = /*%FSM<STATEINIT""">*/"private ""_radius"";" \n
+       "_radius = 350;" \n
+       "" \n
+       "//--- Delete synchronized objects" \n
+       "{ deleteVehicle _x } forEach ( synchronizedObjects NMD_west_airstrip );" \n
+       "" \n
+       "//--- Delete vehicles" \n
+       "{ deleteVehicle _x } forEach ( NMD_west_airstrip nearEntities [ [ ""LandVehicle"", ""Air"" ], _radius ] );" \n
+       "" \n
+       "//--- Delete AI" \n
+       "{ deleteVehicle _x } forEach ( NMD_west_airstrip nearEntities [ ""Man"", _radius ] );" \n
+       "" \n
+       "//--- Delete logic " \n
+       "deleteVehicle NMD_west_airstrip;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "_">*/
+    class _
+    {
+      name = "_";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "AI_Disabled">*/
+        class AI_Disabled
+        {
+          priority = 0.000000;
+          to="Delete_Base";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"( ""AIBases"" call BIS_fnc_getParamValue ) <= 0"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "AI_Enabled">*/
+        class AI_Enabled
+        {
+          priority = 0.000000;
+          to="Setup_Airbase";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"( ""AIBases"" call BIS_fnc_getParamValue ) >= 1"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Terminate">*/
+    class Terminate
+    {
+      name = "Terminate";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="Init";
+  finalStates[] =
+  {
+    "Scramble",
+    "Delete_Base",
+    "Terminate",
+  };
+};
+/*%FSM</COMPILE>*/

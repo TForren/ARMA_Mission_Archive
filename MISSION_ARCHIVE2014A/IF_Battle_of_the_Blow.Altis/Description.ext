@@ -1,0 +1,73 @@
+author = "Hoizen - RV2"; // Author
+onLoadName = "TvT12 Gold Darkness";
+onLoadMission = "Recover the gold among trees and shadows.";
+//loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "overview.paa";
+
+
+
+class Header
+{
+ gameType = TDM;            
+ minPlayers = 1;             
+ maxPlayers = 12;      
+
+};
+
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+respawn = 0; 
+enableDebugConsole = 2;
+
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Blufor Victory";
+		subtitle = "Blufor Captured the Goods";
+		description = "The Blufor have successfully recovered the golden desert eagle and returned it to their truck.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+		class End2
+	{
+		title = "Opfor Victory";
+		subtitle = "Opfor Captured the Goods";
+		description = "The Opfor have successfully recovered the golden desert eagle and returned it to their truck.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+	
+		class End3
+	{
+		title = "Ya'll lose";
+		subtitle = "Time Limit Reached";
+		description = "Big Foot now has a golden desert eagle. I hope you guys are happy because some poor farmer is going to have to deal with Big Foot with a fucking golden desert eagle.";
+		pictureBackground = "bigfoot.paa";
+		picture = "KIA";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+
+		class End4
+	{
+		title = "Blufor Victory";
+		subtitle = "All Opfor Eliminated";
+		description = "The Opfor team has been wiped out.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};		
+	
+		class End5
+	{
+		title = "Opfor Victory";
+		subtitle = "All Blufor Eliminated";
+		description = "The Blufor team has been wiped out.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+};

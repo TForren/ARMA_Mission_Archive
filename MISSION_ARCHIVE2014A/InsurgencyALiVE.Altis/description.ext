@@ -1,0 +1,61 @@
+class CfgSounds {
+	sounds[] = {news};
+	
+	class News
+	{
+		name = "news";
+		sound[] = {"core\scripts\sounds\news.ogg", db+0, 1.0};
+		titles[] = {};
+	};
+};
+
+class header {
+	gametype = COOP;
+	minplayers = 1;
+	maxplayers = 24;
+	playerCountMultipleOf = 1;  //Coop type missions use 1, Team type missions use 2
+};
+
+class Params {
+		
+	class EmtpyLine1 {
+	//paramsArray[0]
+		title = ":: Game Settings";
+		values[]={0,0};
+		texts[]={ "",""};
+		default = 0;			
+	};
+	
+    class cachesLimit {
+	//paramsArray[1]
+		title = "Number of caches to hunt";
+		values[] = {2,4,6,8,10,12,14,16};
+		texts[] = {"Two","Four","Six","Eight","Ten","Twelve","Fourteen","Sixteen"};
+		default = 6;
+	};
+	
+	class intelItems {
+	//paramsArray[2]
+		title = "Number of Intel Items to spawn per town";
+		values[] = {1,2,3,4,5,6,7,8};
+		texts[] = {"1 - Extreme","2 - Very Hard","3 - Hard","4 - Hard\Medium","5 - Medium","6 - Medium/Easy","7 - Easy","8 - Very Easy"};
+		default = 5;
+	};
+
+};
+
+author = "Sacha Ligthert + MPhillips'Hazey'";
+onLoadMission = "Welcome to Insurgency | ALiVE. Find and destroy the hidden weapons caches. Use your map to find possible cache locations.";
+onLoadIntroTime = true;
+onLoadMissionTime = true;
+onLoadName = Insurgency | ALiVE;
+loadScreen = "x\alive\addons\mil_opcom\showcases\foursome.Altis\rsc\logo_alive.paa";
+
+briefing = 1;
+debriefing = 1;
+respawn = 3;
+respawnDelay = 10;
+RespawnDialog = 0;
+disabledAI = 1;
+enableDebugConsole = 1;
+allowFunctionsRecompile = 1;

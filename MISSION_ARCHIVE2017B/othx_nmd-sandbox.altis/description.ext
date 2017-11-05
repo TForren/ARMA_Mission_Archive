@@ -1,0 +1,101 @@
+/* 
+* @Author:  DnA
+* @Profile: http://steamcommunity.com/id/dna_uk
+* @Date:    2014-04-24 09:20:06
+* @Last Modified by:   DnA
+* @Last Modified time: 2014-09-28 19:55:07
+*/
+ 
+class Header
+{
+	gameType = Sandbox;
+	minPlayers = 1;
+	maxPlayers = 120;
+};
+
+//--- Meta
+author = "DnA";
+onLoadName = "NMD Sandbox";
+onLoadMission = "Website: nomandown.co.uk";
+loadScreen = "loadScreen.paa";
+
+//--- Settings
+respawn = 3;
+respawnDelay = 10;
+respawnOnStart = 1;
+respawnTemplates[] = { "MenuPosition" };
+disabledAI = 1;
+joinUnassigned = 0;
+enableDebugConsole = 1;
+
+//--- NMD
+#include "nmd\include.hpp"
+#include "nmd\modules\admin\include.hpp"
+#include "nmd\modules\map\include.hpp"
+#include "nmd\modules\vehicles\include.hpp"
+
+//--- Functions
+class CfgFunctions
+{
+	#include "nmd\cfgFunctions.hpp"
+	#include "nmd\modules\admin\cfgFunctions.hpp"
+	#include "nmd\modules\map\cfgFunctions.hpp"
+	#include "nmd\modules\vehicles\cfgFunctions.hpp"
+};
+
+//--- Params
+class Params
+{
+	class Fatigue
+	{
+		title = "Player Fatigue";
+		values[] = { 1, 0 };
+		texts[] = { "Enabled", "Disabled" };
+		default = 1;
+	};
+	class RespawnInventory
+	{
+		title = "Respawn With Same Gear";
+		values[] = { 1, 0 };
+		texts[] = { "Enabled", "Disabled" };
+		default = 1;
+	};
+	class FriendlyFire
+	{
+		title = "Punish Friendly Fire";
+		values[] = { 1, 0 };
+		texts[] = { "Enabled", "Disabled" };
+		default = 0;
+	};
+	class AIBases
+	{
+		title = "AI Bases";
+		values[] = { 1, 0 };
+		texts[] = { "Enabled", "Disabled" };
+		default = 1;
+	};
+	
+	#include "nmd\modules\vehicles\params.hpp"
+};
+
+class CfgHints
+{
+	class Sandbox
+	{
+		displayName = "NMD Sandbox";
+		class AccessMenu
+		{
+			displayName = "Accessing the menu";
+			description = "NMD Sandbox provides an easy to access menu, giving the player a variety of tools and utilites to enrich the sandbox experience.";
+            tip = "%2Use %12 and %13 to select %14 from the actions menu. %1%2Once selected, use %11 to open the menu.";
+            arguments[] = {
+				{ { "action" } },
+				{ { "prevAction" } },
+				{ { "nextAction" } },
+				{ "NMD Menu" }
+			};
+			image = "nmd\data\logo.paa";
+			scope = 2;
+		};
+	};
+};

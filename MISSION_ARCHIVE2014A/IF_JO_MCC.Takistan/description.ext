@@ -1,0 +1,47 @@
+//Description.ext
+
+class Header
+{	
+	
+	gameType = Coop;
+	minPlayers = 1;
+	maxPlayers = 1;
+};
+onLoadMission = "MCC Template";
+OnLoadMissionTime = FALSE;
+author="Hoizen";
+OnLoadName = "JO MCC";
+
+loadScreen = "JO4.paa"; // Preview picture
+overviewPicture = "JO4.paa";
+
+#include "anyspectator\spectating.hpp"
+
+
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+respawn = 3; 
+enableDebugConsole = 1;
+respawnDelay = 3;
+
+class CfgDebriefing
+{  
+	class HEnd1
+	{
+		title = "Heroic Blufor Victory";
+		subtitle = "Blufor operated hard";
+		description = "Congrats to blufor for being operator as fuck.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+		class HEnd2
+	{
+		title = "Heroic Opfor Victory";
+		subtitle = "Opfor operated hard";
+		description = "Congrats to opfor for opforing the shit out of the mission.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.6,0.3,0.0,1};
+	};
+};

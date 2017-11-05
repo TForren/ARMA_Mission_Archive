@@ -1,0 +1,45 @@
+author="Cuel";
+OnLoadName = "VIP Escort";
+onLoadIntro="The VIP is visiting Stratis for some errands. <br/>A group of assassins is out to get him.";
+onLoadIntroTime=false;
+onLoadMission="The VIP is visiting Stratis for some errands. <br/>A group of assassins is out to get him.";
+onLoadMissionTime=false;
+loadScreen = "load.paa";
+
+
+//Mission and map
+disabledAI = 1;
+showCompass   = 1; 
+showGPS       = 1; 
+showMap       = 1; 
+showWatch     = 1; 
+enableItemsDropping = 0;
+
+// Mission Header
+class Header
+{
+  gameType = Team ;
+  minPlayers = 1;
+  maxPlayers = 31;
+};
+
+// description.ext settings for respawn
+///////////////////////////////////////////////////////////////////////////////////////////
+respawn = "BASE";
+respawndelay = 15;
+respawnDialog = true;
+///////////////////////////////////////////////////////////////////////////////////////////
+class CfgDebriefing
+{  	
+	class End1
+	{
+		title = "Opfor Victory";
+		subtitle = "VIP Killed";
+		description = "The Blufor were unable to keep the life of the VIP intact.";
+		pictureBackground = "overview.paa";
+		picture = "o_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+
+
+};

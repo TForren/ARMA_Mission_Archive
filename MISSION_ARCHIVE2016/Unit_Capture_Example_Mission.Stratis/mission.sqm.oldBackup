@@ -1,0 +1,213 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"A3_Air_F_Heli_Light_01",
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Air_F_Heli_Light_01",
+		"a3_map_stratis"
+	};
+	randomSeed=15438915;
+	class Intel
+	{
+		briefingName="Unit_Capture_Example_Mission";
+		startWeather=0.29999998;
+		startWind=0.099999994;
+		startWaves=0.099999994;
+		forecastWeather=0.29999998;
+		forecastWind=0.099999994;
+		forecastWaves=0.099999994;
+		forecastLightnings=0.099999994;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Groups
+	{
+		items=1;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2608.321,-0.13734968,5906.0757};
+					azimut=53.906174;
+					special="FLY";
+					id=0;
+					side="WEST";
+					vehicle="B_Heli_Light_01_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+	};
+	class Markers
+	{
+		items=4;
+		class Item0
+		{
+			position[]={2197.3926,0.0062657148,6373.8091};
+			name="1";
+			text="Start Recording with Radio Alpha trigger";
+			type="mil_dot";
+		};
+		class Item1
+		{
+			position[]={2197.3762,0.025936067,6353.7651};
+			name="2";
+			text="Stop Recording with Esc key";
+			type="mil_dot";
+		};
+		class Item2
+		{
+			position[]={2197.449,-0.11560646,6334.3442};
+			name="3";
+			text="After Path Recording is stopped, use F1 key to copy data to clipboard";
+			type="mil_dot";
+		};
+		class Item3
+		{
+			position[]={2197.4382,0.14083667,6315.1284};
+			name="4";
+			text="Once path data has been copied to path.sqf call recorded script with Radio Bravo trigger";
+			type="mil_dot";
+		};
+	};
+	class Sensors
+	{
+		items=2;
+		class Item0
+		{
+			position[]={2584.0417,-0.0088936388,5930.9155};
+			a=0;
+			b=0;
+			angle=53.9062;
+			activationBy="ALPHA";
+			interruptable=1;
+			age="UNKNOWN";
+			text="Start Path Recording (Esc to Stop)";
+			expActiv="rec = [unit1,180] spawn BIS_fnc_UnitCapture;";
+			class Effects
+			{
+			};
+		};
+		class Item1
+		{
+			position[]={2571.7366,-0.10906145,5937.2104};
+			a=0;
+			b=0;
+			angle=53.9062;
+			activationBy="BRAVO";
+			interruptable=1;
+			age="UNKNOWN";
+			text="Call Recorded Script Ingame";
+			expActiv="rec = [] spawn Mypath;";
+			class Effects
+			{
+			};
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=7738119;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=7389499;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=16506393;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};

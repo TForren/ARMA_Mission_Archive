@@ -1,0 +1,44 @@
+#define description
+
+#include "core\description.hpp" //DO NOT REMOVE
+#include "customization\missionSettings.hpp" //DO NOT REMOVE
+#include "modules\modules.sqf" //DO NOT REMOVE
+#include "sounds\config.cpp"
+
+#undef description
+#define description_functions
+
+class CfgFunctions {
+
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+
+};
+	
+#undef description_functions
+#define description_titles
+	
+class rscTitles {
+
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+
+};
+
+#undef description_titles
+#define description_params
+
+class Params {
+
+	// paramsArray[0]
+   class initialWeatherParam {
+	  title = "Starting Weather";
+	  values[] = {0,1,2,3,4};
+	  texts[] = {"Clear","Overcast","Rain","Fog","Random"};
+	  default = 4;
+   };
+	   
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+	
+};

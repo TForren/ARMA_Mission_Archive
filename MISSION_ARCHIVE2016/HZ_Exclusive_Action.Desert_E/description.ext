@@ -1,0 +1,38 @@
+#define description
+
+#include "core\description.hpp" //DO NOT REMOVE
+#include "customization\missionSettings.hpp" //DO NOT REMOVE
+#include "modules\modules.sqf" //DO NOT REMOVE
+#include "sounds\config.cpp"
+
+#undef description
+#define description_functions
+
+__EXEC(_loadscreenpicture = ["exclusive1.jpg","exclusive2.jpg","exclusive3.jpg"]);
+loadScreen = __EVAL(_loadscreenpicture select round random (count _loadscreenpicture - 1));
+
+class CfgFunctions {
+
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+
+};
+	
+#undef description_functions
+#define description_titles
+	
+class rscTitles {
+
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+
+};
+
+#undef description_titles
+#define description_params
+
+class Params {
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+	
+};

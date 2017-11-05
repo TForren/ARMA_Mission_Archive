@@ -1,0 +1,36 @@
+author = "Hoizen"; // Author
+onLoadName = "CO-07(14) Pickle Surprise";
+onLoadMission = "FIA ambush an AAF convoy";
+loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "overview.paa";
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+
+class Header {
+   gameType = Coop;
+   playerCountMultipleOf = 1; //Disables auto balance
+};
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission Completed";
+		subtitle = "The AAF convoy has been eliminated";
+		description = "The AAF convoy has successfully eliminated the HVT and destroyed all assets of the convoy.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class End2
+	{
+		title = "Mission Failed";
+		subtitle = "the Convoy made it to the Power Plant";
+		description = "The FIA were unable to stop the convoy";
+		pictureBackground = "overview.paa";
+		picture = "o_inf";
+		pictureColor[] = {0.0,0.6,0.0,1};
+	};
+
+
+};

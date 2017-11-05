@@ -1,0 +1,939 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"A3_Characters_F_BLUFOR",
+		"a3_map_stratis",
+		"A3_Structures_F_Mil_Flags",
+		"A3_Air_F_Beta_Heli_Transport_01",
+		"A3_Structures_F_Mil_Helipads",
+		"a3_roads_f",
+		"A3_Misc_F_Helpers",
+		"A3_Soft_F_Quadbike",
+		"A3_Weapons_F_Ammoboxes",
+		"a3_weapons_f_beta_ammoboxes",
+		"A3_Air_F_Beta_Heli_Transport_02"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Air_F_Beta_Heli_Transport_01",
+		"A3_Characters_F_BLUFOR",
+		"A3_Air_F_Beta_Heli_Transport_02",
+		"A3_Structures_F_Mil_Flags",
+		"A3_Structures_F_Mil_Helipads",
+		"A3_Misc_F_Helpers",
+		"a3_roads_f",
+		"A3_Soft_F_Quadbike",
+		"A3_Weapons_F_Ammoboxes",
+		"a3_weapons_f_beta_ammoboxes",
+		"a3_map_stratis"
+	};
+	randomSeed=4161396;
+	class Intel
+	{
+		briefingName="HALO Training";
+		overviewText="We are doing a training mission tonight, jumping at 2000 feet above Stratis Airbase.";
+		startWeather=0.1;
+		startWind=0;
+		forecastWeather=0.1;
+		forecastWind=0;
+		forecastWaves=0;
+		year=2035;
+		month=6;
+		day=12;
+		hour=4;
+		minute=20;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+	class Groups
+	{
+		items=9;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1910.0883,-0.28513834,5232.1855};
+					azimut=-439.45801;
+					offsetY=2000;
+					special="FLY";
+					id=0;
+					side="WEST";
+					vehicle="B_Heli_Transport_01_camo_F";
+					leader=1;
+					lock="LOCKED";
+					rank="CAPTAIN";
+					skill=1;
+					text="heli";
+					init="clearItemCargoGlobal this;   clearMagazineCargoGlobal this;   clearWeaponCargoGlobal this;   clearBackpackCargoGlobal this; this flyInHeight 2000; {this animateDoor [_x, 1]} forEach [""door_L"",""door_R""]; this attachTo [heliHolder,[0,0,0]]; this allowDamage false; this addAction [""<t color='#2bf000'>HALO JUMP</t><br/><img size='3' image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa'/>"", ""scripts\heliHALO.sqf"", [], 1, false, true, """", ""_this in _target""];     this addAction [""<t color='#2bf000'>HAHO JUMP</t><br/><img size='3' image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa'/>"", {[player, vehicle player, true] call COB_fnc_paradrop}, [], 1, false, true, """", ""_this in _target""]; ";
+					description="HALO Helicopter dont delete me";
+				};
+			};
+		};
+		class Item1
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1704.327,5.5,5141.4463};
+					azimut=-172.25999;
+					special="NONE";
+					id=1;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.2;
+					text="theDude";
+					init="removeAllWeapons this; this removeWeapon ""nvgoggles""; [this,""GUARD"",""ASIS""] call BIS_fnc_ambientAnim; this allowDamage false";
+				};
+			};
+		};
+		class Item2
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1711.1719,5.5,5152.1748};
+					azimut=10.576;
+					special="NONE";
+					id=2;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					lock="UNLOCKED";
+					rank="SERGEANT";
+					skill=1;
+				};
+			};
+		};
+		class Item3
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={1461.5221,4.2765427,5003.7231};
+					azimut=-305.81601;
+					offsetY=2000;
+					special="NONE";
+					id=3;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					leader=1;
+					lock="UNLOCKED";
+					rank="SERGEANT";
+					skill=1;
+					init="[this, 4000, true] call COB_fnc_HALO";
+				};
+				class Item1
+				{
+					position[]={1460.6791,4.5972862,4982.6235};
+					azimut=-305.81601;
+					offsetY=2000;
+					special="NONE";
+					id=4;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					lock="UNLOCKED";
+					skill=0.2;
+					init="[this, 4000, true] call COB_fnc_HALO";
+				};
+				class Item2
+				{
+					position[]={1442.8859,4.4458714,5004.7188};
+					azimut=-305.81601;
+					offsetY=2000;
+					special="NONE";
+					id=5;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					lock="UNLOCKED";
+					skill=0.2;
+					init="[this, 4000, true] call COB_fnc_HALO";
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3201.0596,3.7446043,5887.9136};
+					formation="DIAMOND";
+					speed="LIMITED";
+					combat="CARELESS";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item4
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=15;
+				class Item0
+				{
+					position[]={2331.8711,-0.096740723,6584.2852};
+					azimut=-161.366;
+					special="NONE";
+					id=6;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					lock="UNLOCKED";
+					skill=0.2;
+					init="paraGrp = group this;";
+				};
+				class Item1
+				{
+					position[]={2332.5029,-0.098855749,6584.1514};
+					azimut=-161.366;
+					special="NONE";
+					id=7;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					lock="UNLOCKED";
+					skill=0.2;
+					init="paraGrp = group this;";
+				};
+				class Item2
+				{
+					position[]={2334.0593,-0.10695306,6583.4155};
+					azimut=-161.366;
+					special="NONE";
+					id=8;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					lock="UNLOCKED";
+					skill=0.2;
+					init="paraGrp = group this;";
+				};
+				class Item3
+				{
+					position[]={2339.3218,-0.0057828724,6583.8359};
+					azimut=-161.366;
+					special="NONE";
+					id=9;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					lock="UNLOCKED";
+					skill=0.2;
+					init="paraGrp = group this;";
+				};
+				class Item4
+				{
+					position[]={2333.7158,-0.10438029,6583.6709};
+					azimut=-161.366;
+					special="NONE";
+					id=10;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					lock="UNLOCKED";
+					skill=0.2;
+					init="paraGrp = group this;";
+				};
+				class Item5
+				{
+					position[]={2332.9336,-0.10227647,6583.9731};
+					azimut=-161.366;
+					offsetY=300;
+					special="NONE";
+					id=11;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					lock="UNLOCKED";
+					skill=0.2;
+					init="paraGrp = group this;";
+				};
+				class Item6
+				{
+					position[]={2333.3481,-0.10180463,6583.8823};
+					azimut=-161.366;
+					special="CARGO";
+					id=12;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					lock="UNLOCKED";
+					skill=0.2;
+					init="paraGrp = group this;";
+				};
+				class Item7
+				{
+					position[]={2335.5642,-0.10550716,6581.0835};
+					azimut=-161.366;
+					special="NONE";
+					id=13;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					leader=1;
+					lock="UNLOCKED";
+					rank="SERGEANT";
+					skill=0.2;
+					init="paraGrp = group this; {_x assignAsCargo paraHeli; _x moveInCargo paraHeli} forEach (units this)";
+				};
+				class Item8
+				{
+					position[]={2338.8823,-0.014945775,6583.686};
+					azimut=-248.11301;
+					special="NONE";
+					id=14;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					lock="UNLOCKED";
+					skill=0.2;
+					init="paraGrp = group this;";
+				};
+				class Item9
+				{
+					position[]={2338.0635,-0.033160567,6583.3442};
+					azimut=-248.11301;
+					special="CARGO";
+					id=15;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					lock="UNLOCKED";
+					skill=0.2;
+					init="paraGrp = group this;";
+				};
+				class Item10
+				{
+					position[]={2337.248,-0.05278036,6583.0747};
+					azimut=-248.11301;
+					offsetY=300;
+					special="NONE";
+					id=16;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					lock="UNLOCKED";
+					skill=0.2;
+					init="paraGrp = group this;";
+				};
+				class Item11
+				{
+					position[]={2337.6155,-0.043765731,6583.2153};
+					azimut=-248.11301;
+					special="NONE";
+					id=17;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					lock="UNLOCKED";
+					skill=0.2;
+					init="paraGrp = group this;";
+				};
+				class Item12
+				{
+					position[]={2338.4434,-0.024562523,6583.5576};
+					azimut=-248.11301;
+					special="NONE";
+					id=18;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					lock="UNLOCKED";
+					skill=0.2;
+					init="paraGrp = group this;";
+				};
+				class Item13
+				{
+					position[]={2336.7866,-0.064265177,6582.9287};
+					azimut=-248.11301;
+					special="NONE";
+					id=19;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					lock="UNLOCKED";
+					skill=0.2;
+					init="paraGrp = group this;";
+				};
+				class Item14
+				{
+					position[]={2334.3911,-0.10621323,6583.2446};
+					azimut=-248.11301;
+					special="NONE";
+					id=20;
+					side="WEST";
+					vehicle="B_soldier_exp_F";
+					lock="UNLOCKED";
+					skill=0.2;
+					init="paraGrp = group this;";
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3166.0815,3.3643885,5906.5083};
+					formation="STAG COLUMN";
+					speed="LIMITED";
+					combat="CARELESS";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item5
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1698.8333,5.5,5117.8745};
+					azimut=-172.25999;
+					special="NONE";
+					id=21;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.2;
+					text="theDude2";
+					init="removeAllWeapons this; this removeWeapon ""nvgoggles""; [this,""GUARD"",""ASIS""] call BIS_fnc_ambientAnim; this allowDamage false";
+				};
+			};
+		};
+		class Item6
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1704.8948,5.5,5145.5732};
+					azimut=5.8228502;
+					special="NONE";
+					id=22;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.2;
+					text="theDude_1";
+					init="removeAllWeapons this; this removeWeapon ""nvgoggles""; [this,""GUARD"",""ASIS""] call BIS_fnc_ambientAnim; this allowDamage false";
+				};
+			};
+		};
+		class Item7
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1699.7825,5.5,5122.0225};
+					azimut=11.7194;
+					special="NONE";
+					id=23;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.2;
+					text="theDude_2";
+					init="removeAllWeapons this; this removeWeapon ""nvgoggles""; [this,""GUARD"",""ASIS""] call BIS_fnc_ambientAnim; this allowDamage false";
+				};
+			};
+		};
+		class Item8
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2324.5432,-0.074339539,6584.3384};
+					azimut=-161.366;
+					offsetY=200;
+					special="FLY";
+					id=24;
+					side="GUER";
+					vehicle="I_Heli_Transport_02_F";
+					leader=1;
+					lock="UNLOCKED";
+					rank="CAPTAIN";
+					skill=1;
+					text="paraHeli";
+					init="this flyInHeight 200; {this animateDoor [_x, 1]} forEach [""Door_back_L"",""Door_back_R""]; this allowDamage false; this setVelocity [sin(direction this)*45,cos(direction this)*45,0];";
+				};
+			};
+			class Waypoints
+			{
+				items=2;
+				class Item0
+				{
+					position[]={1366.0281,-0.22714329,3159.6274};
+					speed="NORMAL";
+					combat="CARELESS";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item1
+				{
+					position[]={2426.7754,0.0019295525,372.5957};
+					speed="FULL";
+					expActiv="{deleteVehicle _x} forEach (crew vehicle this) + [vehicle this]";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=25;
+		class Item0
+		{
+			position[]={1706.5062,5.5,5200.9233};
+			azimut=-288.10599;
+			special="NONE";
+			id=25;
+			side="EMPTY";
+			vehicle="Flag_US_F";
+			lock="UNLOCKED";
+			skill=0.2;
+			text="flagpole";
+			init="this allowdamage false; this addAction [""<t color='#2bf000'>HALO JUMP</t><br/><img size='3' image='\a3\ui_f\data\gui\cfg\CommunicationMenu\supplydrop_ca.paa'/>"", ""scripts\flagHALO.sqf""];";
+		};
+		class Item1
+		{
+			position[]={1710.1454,5.5,5142.5308};
+			azimut=-439.004;
+			special="NONE";
+			id=26;
+			side="EMPTY";
+			vehicle="B_Heli_Transport_01_camo_F";
+			lock="LOCKED";
+			skill=0.2;
+			fuel=0;
+			ammo=0;
+			init="clearItemCargoGlobal this; clearMagazineCargoGlobal this; clearWeaponCargoGlobal this; clearBackpackCargoGlobal this; this allowDamage false; {this animateDoor [_x, 1]} forEach [""door_L"",""door_R""]; _light = this spawn {while {alive _this} do { player action [""collisionlightOn"", _this]; player action [""lightOn"", _this];  sleep 0.1;};}; this addAction [""<t color='#2bf000'>GET IN - HALO/HAHO</t><br/><img size='3' image='\a3\ui_f\data\gui\cfg\Hints\takeoff_ca'/>"", ""scripts\heliLOAD.sqf""];";
+		};
+		class Item2
+		{
+			position[]={1709.0538,5.5,5142.9717};
+			azimut=-347.59952;
+			special="NONE";
+			id=27;
+			side="EMPTY";
+			vehicle="Land_HelipadSquare_F";
+			lock="LOCKED";
+			skill=0.2;
+		};
+		class Item3
+		{
+			position[]={1908.7408,-0.25586361,5232.5093};
+			azimut=-439.45801;
+			offsetY=2000;
+			special="NONE";
+			id=28;
+			side="EMPTY";
+			vehicle="Sign_Sphere25cm_F";
+			leader=1;
+			lock="UNLOCKED";
+			skill=1;
+			text="heliHolder";
+			init="hideObject this";
+			description="Keeps helicopter at 2000m";
+		};
+		class Item4
+		{
+			position[]={1701.6392,5.5,5138.3271};
+			azimut=-78.401558;
+			id=29;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight_blue_F";
+			skill=0.60000002;
+		};
+		class Item5
+		{
+			position[]={1713.7423,5.5,5135.5879};
+			azimut=-78.401558;
+			id=30;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight_blue_F";
+			skill=0.60000002;
+		};
+		class Item6
+		{
+			position[]={1716.3899,5.5,5147.6973};
+			azimut=-78.401558;
+			id=31;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight_blue_F";
+			skill=0.60000002;
+		};
+		class Item7
+		{
+			position[]={1704.4413,5.5,5150.397};
+			azimut=-78.401558;
+			id=32;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight_blue_F";
+			skill=0.60000002;
+		};
+		class Item8
+		{
+			position[]={1699.1154,5.5,5196.2241};
+			azimut=-77.918091;
+			id=33;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight_blue_F";
+			skill=0.60000002;
+		};
+		class Item9
+		{
+			position[]={1711.1951,5.5,5193.3813};
+			azimut=-77.918091;
+			id=34;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight_blue_F";
+			skill=0.60000002;
+		};
+		class Item10
+		{
+			position[]={1713.9448,5.5,5205.4692};
+			azimut=-77.918091;
+			id=35;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight_blue_F";
+			skill=0.60000002;
+		};
+		class Item11
+		{
+			position[]={1702.0193,5.5,5208.2705};
+			azimut=-77.918091;
+			id=36;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight_blue_F";
+			skill=0.60000002;
+		};
+		class Item12
+		{
+			position[]={1725.049,5.5,5199.8433};
+			azimut=-75.381203;
+			special="NONE";
+			id=37;
+			side="EMPTY";
+			vehicle="B_Quadbike_01_F";
+			leader=1;
+			lock="UNLOCKED";
+			skill=1;
+			text="car";
+		};
+		class Item13
+		{
+			position[]={1704.6511,5.5,5118.958};
+			azimut=-439.004;
+			special="NONE";
+			id=38;
+			side="EMPTY";
+			vehicle="B_Heli_Transport_01_camo_F";
+			lock="LOCKED";
+			skill=0.2;
+			fuel=0;
+			ammo=0;
+			init="clearItemCargoGlobal this; clearMagazineCargoGlobal this; clearWeaponCargoGlobal this; clearBackpackCargoGlobal this; {this animateDoor [_x, 1]} forEach [""door_L"",""door_R""]; this allowDamage false; _light = this spawn {while {alive _this} do { player action [""collisionlightOn"", _this];  player action [""lightOn"", _this]; sleep 0.1;};}; this addAction [""<t color='#2bf000'>GET IN - PARADROP</t><br/><img size='3' image='\a3\ui_f\data\gui\cfg\Hints\takeoff_ca'/>"", ""scripts\heliPARA.sqf""];";
+		};
+		class Item14
+		{
+			position[]={1703.5598,5.5,5119.4004};
+			azimut=-347.59952;
+			special="NONE";
+			id=39;
+			side="EMPTY";
+			vehicle="Land_HelipadSquare_F";
+			lock="LOCKED";
+			skill=0.2;
+		};
+		class Item15
+		{
+			position[]={1696.1449,5.5,5114.7554};
+			azimut=-78.401558;
+			id=40;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight_blue_F";
+			skill=0.60000002;
+		};
+		class Item16
+		{
+			position[]={1708.2478,5.5,5112.0166};
+			azimut=-78.401558;
+			id=41;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight_blue_F";
+			skill=0.60000002;
+		};
+		class Item17
+		{
+			position[]={1710.8956,5.5,5124.127};
+			azimut=-78.401558;
+			id=42;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight_blue_F";
+			skill=0.60000002;
+		};
+		class Item18
+		{
+			position[]={1698.9474,5.5,5126.8262};
+			azimut=-78.401558;
+			id=43;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight_blue_F";
+			skill=0.60000002;
+		};
+		class Item19
+		{
+			position[]={1723.7537,14.104426,5196.5459};
+			azimut=-437.23999;
+			special="NONE";
+			id=44;
+			side="EMPTY";
+			vehicle="Box_NATO_Wps_F";
+			lock="UNLOCKED";
+			skill=0.2;
+		};
+		class Item20
+		{
+			position[]={1724.8007,5.5,5196.3081};
+			azimut=-437.23999;
+			special="NONE";
+			id=45;
+			side="EMPTY";
+			vehicle="Box_NATO_Ammo_F";
+			lock="UNLOCKED";
+			skill=0.2;
+		};
+		class Item21
+		{
+			position[]={1725.679,5.5,5196.1035};
+			azimut=-437.23999;
+			special="NONE";
+			id=46;
+			side="EMPTY";
+			vehicle="Box_NATO_AmmoOrd_F";
+			lock="UNLOCKED";
+			skill=0.2;
+		};
+		class Item22
+		{
+			position[]={1726.5238,5.5,5195.8975};
+			azimut=-437.23999;
+			special="NONE";
+			id=47;
+			side="EMPTY";
+			vehicle="Box_NATO_Grenades_F";
+			lock="UNLOCKED";
+			skill=0.2;
+		};
+		class Item23
+		{
+			position[]={1727.1826,5.5,5195.7441};
+			azimut=-437.23999;
+			special="NONE";
+			id=48;
+			side="EMPTY";
+			vehicle="Box_NATO_WpsLaunch_F";
+			lock="UNLOCKED";
+			skill=0.2;
+		};
+		class Item24
+		{
+			position[]={1727.6791,5.5,5195.6196};
+			azimut=-437.23999;
+			special="NONE";
+			id=49;
+			side="EMPTY";
+			vehicle="Box_NATO_WpsSpecial_F";
+			lock="UNLOCKED";
+			skill=0.2;
+		};
+	};
+	class Markers
+	{
+		items=5;
+		class Item0
+		{
+			position[]={1707.6919,5.5,5143.1494};
+			name="heliMrk";
+			text="Helicopter HALO";
+			type="hd_flag";
+			colorName="ColorBlue";
+			angle=-1.9797038;
+		};
+		class Item1
+		{
+			position[]={1706.8228,5.5,5200.8623};
+			name="flagMrk";
+			text="Flagpole HALO";
+			type="hd_flag";
+			colorName="ColorBlue";
+			angle=-1.6121194;
+		};
+		class Item2
+		{
+			position[]={1702.3014,5.5,5118.9819};
+			name="heliMrk_1";
+			text="Helicopter PARADROP";
+			type="hd_flag";
+			colorName="ColorBlue";
+			angle=-1.9797038;
+		};
+		class Item3
+		{
+			position[]={2155.9683,0.077425569,6728.6606};
+			name="spawnMrk";
+			type="Empty";
+		};
+		class Item4
+		{
+			position[]={1361.8984,-0.060277347,1992.9546};
+			name="deleteMrk";
+			type="Empty";
+		};
+	};
+	class Sensors
+	{
+		items=1;
+		class Item0
+		{
+			position[]={1816.8201,5.5,5624.8081};
+			a=600;
+			b=15;
+			angle=13.6442;
+			rectangular=1;
+			activationBy="VEHICLE";
+			interruptable=1;
+			age="UNKNOWN";
+			idVehicle=24;
+			expActiv="_null = [] spawn { {[_x, paraHeli,true,true] call COB_fnc_paradrop; sleep 0.3} forEach (units paraGrp); };";
+			class Effects
+			{
+			};
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=11414498;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=8197049;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=1349490;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=12;
+		minute=0;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};

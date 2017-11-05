@@ -1,0 +1,36 @@
+author = "Hoizen"; // Author
+onLoadName = "CO-20 I See ISIS";
+onLoadMission = "US QRF reacts to ISIS Aggression in Tottah";
+loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "IFID.paa";
+
+
+
+class Header
+{
+ gameType = COOP;            
+ minPlayers = 1;             
+ maxPlayers = 20;      
+
+};
+
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+respawn = 1; 
+enableDebugConsole = 2;
+
+#include "Riflesquad.cpp"
+#include "WeaponsSquad.cpp"
+#include "ISIS.cpp"
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission Successful";
+		subtitle = "Local ISIS forces smothered";
+		description = "The Blufor have pushed back the ISIS forces and destroyed the munitions fueling their operations against the UN and the local civilian population.";
+		pictureBackground = "IFID.paa";
+		picture = "IFID.paa";
+		pictureColor[] = {1.0,1.0,1.0,1};
+	};
+};

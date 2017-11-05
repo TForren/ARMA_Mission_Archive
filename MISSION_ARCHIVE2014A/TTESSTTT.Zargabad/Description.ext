@@ -1,0 +1,50 @@
+author = "Hoizen"; // Author
+onLoadName = "TVT20 Hivemind";
+onLoadMission = "US Forces search for and attempt to destroy the Arms Dealers' vehicle.";
+
+
+class Header
+{
+ gameType = COOP;            
+ minPlayers = 1;             
+ maxPlayers = 20;      
+
+};
+
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+respawn = 1; 
+enableDebugConsole = 1;
+
+#include "Riflesquad.cpp"
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Blufor Victory";
+		subtitle = "Arms Dealer Weapon cache destroyed!";
+		description = "The Blufor have successfully found and destroyed arms dealer's weapons cache vehicle.";
+		pictureBackground = "IFID.paa";
+		picture = "IFID.paa";
+		pictureColor[] = {1.0,1.0,1.0,1};
+	};
+		class End2
+	{
+		title = "Arms Dealer Victory";
+		subtitle = "The Blufor have been eliminated!";
+		description = "The Arms Dealers have eliminated the Blufor units that were deployed to destroy their weapons. The Dealers may now freely continue their business in town.";
+		pictureBackground = "end.paa";
+		picture = "end.paa";
+		pictureColor[] = {1.0,1.0,1.0,1};
+	};
+			class End3
+	{
+		title = "Arms Dealer Victory";
+		subtitle = "Time Limit Reached";
+		description = "The Arms Dealers have held off the Blufor long enough for help to arrive.";
+		pictureBackground = "end.paa";
+		picture = "end.paa";
+		pictureColor[] = {1.0,1.0,1.0,1};
+	};
+};
+

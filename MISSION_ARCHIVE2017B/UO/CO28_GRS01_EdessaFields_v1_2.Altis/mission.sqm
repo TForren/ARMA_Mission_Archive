@@ -1,0 +1,7433 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 5.66
+//'now' is Fri Jun 09 17:56:46 2017 : 'file' last modified on Sun Apr 16 03:11:43 2017
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class CO28_GRS01_EdessaFields_v1_2.Altis : mission.sqm{
+version = 53;
+class EditorData
+{
+	moveGridStep = 1.0;
+	angleGridStep = 0.2617994;
+	scaleGridStep = 1.0;
+	autoGroupingDist = 10.0;
+	toggles = 641;
+	class ItemIDProvider
+	{
+		nextID = 493;
+	};
+	class MarkerIDProvider
+	{
+		nextID = 6;
+	};
+	class Camera
+	{
+		pos[] = {8250.658,38.274776,10640.646};
+		dir[] = {0.0,-0.7071068,0.7071068};
+		up[] = {0.0,0.70710677,0.70710677};
+		aside[] = {0.99999994,0.0,-0.0};
+	};
+};
+randomSeed = 7582733;
+class ScenarioData
+{
+	author = "TinfoilHate";
+	overviewText = "CSAT forces assault a FIA blocking position along the southern Altis coast while in pursuit of a fleeing AAF force.";
+	loadScreen = "core\uoLogo.jpg";
+	disabledAI = 1;
+	class Header
+	{
+		gameType = "Coop";
+		minPlayers = 20;
+		maxPlayers = 28;
+	};
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name = "Multiplayer";
+		class Attribute0
+		{
+			property = "RespawnTemplates";
+			expression = "true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[] = {"ARRAY"};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property = "ReviveRequiredTrait";
+			expression = "false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[] = {"SCALAR"};
+					};
+					value = 0.0;
+				};
+			};
+		};
+		class Attribute2
+		{
+			property = "ReviveMode";
+			expression = "false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[] = {"SCALAR"};
+					};
+					value = 0.0;
+				};
+			};
+		};
+		class Attribute3
+		{
+			property = "ReviveRequiredItemsFakConsumed";
+			expression = "false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[] = {"BOOL"};
+					};
+					value = 1;
+				};
+			};
+		};
+		class Attribute4
+		{
+			property = "SharedObjectives";
+			expression = "if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[] = {"SCALAR"};
+					};
+					value = 0.0;
+				};
+			};
+		};
+		class Attribute5
+		{
+			property = "ReviveMedicSpeedMultiplier";
+			expression = "false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[] = {"SCALAR"};
+					};
+					value = 2.0;
+				};
+			};
+		};
+		class Attribute6
+		{
+			property = "RespawnButton";
+			expression = "true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[] = {"SCALAR"};
+					};
+					value = 1.0;
+				};
+			};
+		};
+		class Attribute7
+		{
+			property = "ReviveForceRespawnDelay";
+			expression = "false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[] = {"SCALAR"};
+					};
+					value = 3.0;
+				};
+			};
+		};
+		class Attribute8
+		{
+			property = "ReviveBleedOutDelay";
+			expression = "false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[] = {"SCALAR"};
+					};
+					value = 120.0;
+				};
+			};
+		};
+		class Attribute9
+		{
+			property = "ReviveDelay";
+			expression = "false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[] = {"SCALAR"};
+					};
+					value = 6.0;
+				};
+			};
+		};
+		class Attribute10
+		{
+			property = "ReviveUnconsciousStateMode";
+			expression = "false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[] = {"SCALAR"};
+					};
+					value = 0.0;
+				};
+			};
+		};
+		class Attribute11
+		{
+			property = "ReviveRequiredItems";
+			expression = "false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[] = {"SCALAR"};
+					};
+					value = 0.0;
+				};
+			};
+		};
+		nAttributes = 12;
+	};
+	class Category1
+	{
+		name = "Scenario";
+		class Attribute0
+		{
+			property = "EnableDebugConsole";
+			expression = "true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[] = {"SCALAR"};
+					};
+					value = 0.0;
+				};
+			};
+		};
+		nAttributes = 1;
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		briefingName = "CO28 - GRS01 - Edessa Fields v1.2";
+		overviewText = "CSAT forces assault a FIA blocking position along the southern Altis coast while in pursuit of a fleeing AAF force. # = DLC slot.";
+		resistanceEast = 1.0;
+		timeOfChanges = 1800.0002;
+		startWeather = 0.58;
+		startWind = 0.1;
+		startWaves = 0.1;
+		forecastWeather = 0.58;
+		forecastWind = 0.1;
+		forecastWaves = 0.1;
+		forecastLightnings = 0.1;
+		rainForced = 1;
+		lightningsForced = 1;
+		wavesForced = 1;
+		windForced = 1;
+		year = 2035;
+		day = 7;
+		hour = 5;
+		minute = 24;
+		startFogDecay = 0.01;
+		forecastFogDecay = 0.014;
+	};
+	class Entities
+	{
+		items = 61;
+		class Item0
+		{
+			dataType = "Group";
+			side = "East";
+			class Entities
+			{
+				items = 7;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8253.619,13.25208,10669.41};
+						angles[] = {0.0,0.30792844,0.0};
+					};
+					side = "East";
+					flags = 7;
+					class Attributes
+					{
+						rank = "LIEUTENANT";
+						init = "[this, ""CSAT_PL"", ""Kilo'01""] call FNC_GearScript; [this, ""ACRE_PRC343"", 4, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Platoon Leader";
+						isPlayable = 1;
+					};
+					id = 1;
+					type = "rhs_msv_officer";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8254.248,13.2553,10667.336};
+						angles[] = {0.003996804,0.30792844,6.279188};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						rank = "SERGEANT";
+						init = "[this, ""CSAT_SL"", ""Kilo'01""] call FNC_GearScript; [this, ""BLUE""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 4, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Platoon 2IC";
+						isPlayable = 1;
+					};
+					id = 6;
+					type = "rhs_msv_sergeant";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8254.858,13.261231,10665.242};
+						angles[] = {0.003996804,0.30792844,6.279188};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						init = "[this, ""CSAT_MD"", ""Kilo'01""] call FNC_GearScript; _setMed = [this,2] call FNC_assignMedic; [this, ""BLUE""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 4, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Platoon Medic";
+						isPlayable = 1;
+					};
+					id = 10;
+					type = "rhs_msv_medic";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8242.13,13.33522,10650.233};
+						angles[] = {6.253864,1.7700605,6.260531};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						init = "[this, ""CSAT_DR"", ""Kilo'01""] call FNC_GearScript; [this, ""GREEN""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 4, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						name = "PLT_DRIVER";
+						description = "Platoon Driver";
+						isPlayable = 1;
+					};
+					id = 13;
+					type = "rhs_msv_rifleman";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item4
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8250.013,13.273554,10667.008};
+						angles[] = {0.003996804,0.30792844,6.279188};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						init = "[this, ""CSAT_MM"", ""Kilo'01""] call FNC_GearScript; [this, ""RED""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 4, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Platoon Marksman #";
+						isPlayable = 1;
+					};
+					id = 16;
+					type = "rhs_msv_marksman";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "acex_headless_blacklist";
+							expression = "_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"BOOL"};
+									};
+									value = 0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "speaker";
+							expression = "_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "RHS_Male02RUS";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						nAttributes = 5;
+					};
+				};
+				class Item5
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8248.329,13.269745,10665.927};
+						angles[] = {0.013334315,0.30792844,0.0};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						rank = "CORPORAL";
+						init = "[this, ""CSAT_MG"", ""Kilo'01""] call FNC_GearScript; [this, ""RED""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 4, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Machinegunner #";
+						isPlayer = 1;
+						isPlayable = 1;
+					};
+					id = 66;
+					type = "rhs_msv_machinegunner";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "acex_headless_blacklist";
+							expression = "_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"BOOL"};
+									};
+									value = 0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "speaker";
+							expression = "_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "RHS_Male02RUS";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						nAttributes = 5;
+					};
+				};
+				class Item6
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8246.941,13.281487,10665.013};
+						angles[] = {0.0012915437,0.30792844,0.0};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						init = "[this, ""CSAT_MGA"", ""Kilo'01""] call FNC_GearScript; [this, ""RED""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 4, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Asst. Machinegunner";
+						isPlayable = 1;
+					};
+					id = 67;
+					type = "rhs_msv_machinegunner_assistant";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+			};
+			class Attributes{};
+			id = 0;
+		};
+		class Item1
+		{
+			dataType = "Group";
+			side = "East";
+			class Entities
+			{
+				items = 7;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8264.989,13.333809,10704.307};
+						angles[] = {6.2818413,0.30792844,6.2805324};
+					};
+					side = "East";
+					flags = 6;
+					class Attributes
+					{
+						rank = "SERGEANT";
+						init = "[this, ""CSAT_SL"", ""Kilo'10""] call FNC_GearScript; [this, ""ACRE_PRC343"", 1, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "1 Section Leader";
+						isPlayable = 1;
+					};
+					id = 19;
+					type = "rhs_msv_junior_sergeant";
+					atlOffset = -9.536743e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8265.708,13.331538,10702.623};
+						angles[] = {6.2818937,0.30792844,0.0};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						init = "[this, ""CSAT_AT"", ""Kilo'10""] call FNC_GearScript; [this, ""BLUE""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 1, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Grenadier (RPG-29)";
+						isPlayable = 1;
+					};
+					id = 22;
+					type = "rhs_msv_grenadier_rpg";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8266.366,13.327159,10700.944};
+						angles[] = {6.2805324,0.30792844,0.0};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						init = "[this, ""CSAT_ATA"", ""Kilo'10""] call FNC_GearScript; [this, ""BLUE""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 1, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Asst. Grenadier";
+						isPlayable = 1;
+					};
+					id = 25;
+					type = "rhs_msv_strelok_rpg_assist";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8261.514,13.285652,10702.59};
+						angles[] = {6.265854,0.30792844,0.013334315};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						rank = "CORPORAL";
+						init = "[this, ""CSAT_TL"", ""Kilo'10""] call FNC_GearScript; [this, ""RED""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 1, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Asst. Section Leader";
+						isPlayable = 1;
+					};
+					id = 28;
+					type = "rhs_msv_efreitor";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item4
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8259.976,13.262546,10701.836};
+						angles[] = {6.2805324,0.30792844,0.013334315};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						init = "[this, ""CSAT_AR"", ""Kilo'10""] call FNC_GearScript; [this, ""RED""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 1, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Automatic Rifleman";
+						isPlayable = 1;
+					};
+					id = 31;
+					type = "rhs_msv_arifleman";
+					atlOffset = 9.536743e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item5
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8258.403,13.246136,10701.104};
+						angles[] = {0.009320058,0.30792844,0.0013439035};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						init = "[this, ""CSAT_RFCLS"", ""Kilo'10""] call FNC_GearScript; _setMed = [this,1] call FNC_assignMedic; [this, ""RED""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 1, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Rifleman [CLS]";
+						isPlayable = 1;
+					};
+					id = 34;
+					type = "rhs_msv_rifleman";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item6
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8262.313,13.291565,10701.026};
+						angles[] = {6.2805324,0.30792844,0.013334315};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						init = "[this, ""CSAT_RFAT"", ""Kilo'10""] call FNC_GearScript; [this, ""RED""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 1, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Rifleman";
+						isPlayable = 1;
+					};
+					id = 37;
+					type = "rhs_msv_rifleman";
+					atlOffset = 9.536743e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+			};
+			class Attributes{};
+			id = 17;
+			atlOffset = -9.536743e-007;
+		};
+		class Item2
+		{
+			dataType = "Group";
+			side = "East";
+			class Entities
+			{
+				items = 7;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8247.604,13.459513,10692.415};
+						angles[] = {6.251193,0.30792844,6.2738476};
+					};
+					side = "East";
+					flags = 6;
+					class Attributes
+					{
+						rank = "SERGEANT";
+						init = "[this, ""CSAT_SL"", ""Kilo'20""] call FNC_GearScript; [this, ""ACRE_PRC343"", 2, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "2 Section Leader";
+						isPlayable = 1;
+					};
+					id = 47;
+					type = "rhs_msv_junior_sergeant";
+					atlOffset = -9.536743e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8248.322,13.398987,10690.733};
+						angles[] = {6.251193,0.30792844,6.2738476};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.8112841;
+						init = "[this, ""CSAT_AT"", ""Kilo'20""] call FNC_GearScript; [this, ""BLUE""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 2, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Grenadier (RPG-29)";
+						isPlayable = 1;
+					};
+					id = 48;
+					type = "rhs_msv_grenadier_rpg";
+					atlOffset = -9.536743e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8248.98,13.339053,10689.053};
+						angles[] = {6.251193,0.30792844,6.2738476};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						init = "[this, ""CSAT_ATA"", ""Kilo'20""] call FNC_GearScript; [this, ""BLUE""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 2, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Asst. Grenadier";
+						isPlayable = 1;
+					};
+					id = 49;
+					type = "rhs_msv_strelok_rpg_assist";
+					atlOffset = -9.536743e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8244.133,13.70496,10690.7};
+						angles[] = {0.066566855,0.30792844,6.175603};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						rank = "CORPORAL";
+						init = "[this, ""CSAT_TL"", ""Kilo'20""] call FNC_GearScript; [this, ""RED""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 2, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Asst. Section Leader";
+						isPlayable = 1;
+					};
+					id = 50;
+					type = "rhs_msv_efreitor";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item4
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8242.594,13.921587,10689.944};
+						angles[] = {0.066566855,0.30792844,6.175603};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						init = "[this, ""CSAT_AR"", ""Kilo'20""] call FNC_GearScript; [this, ""RED""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 2, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Automatic Rifleman";
+						isPlayable = 1;
+					};
+					id = 51;
+					type = "rhs_msv_arifleman";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item5
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8241.016,13.895146,10689.218};
+						angles[] = {0.066566855,0.30792844,0.05726425};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						init = "[this, ""CSAT_RFCLS"", ""Kilo'20""] call FNC_GearScript; _setMed = [this,1] call FNC_assignMedic; [this, ""RED""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 2, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Rifleman [CLS]";
+						isPlayable = 1;
+					};
+					id = 52;
+					type = "rhs_msv_rifleman";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item6
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8244.926,13.723458,10689.139};
+						angles[] = {0.066566855,0.30792844,6.175603};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						init = "[this, ""CSAT_RFAT"", ""Kilo'20""] call FNC_GearScript; [this, ""RED""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 2, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Rifleman";
+						isPlayable = 1;
+					};
+					id = 53;
+					type = "rhs_msv_rifleman";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+			};
+			class Attributes{};
+			id = 46;
+			atlOffset = -9.536743e-007;
+		};
+		class Item3
+		{
+			dataType = "Group";
+			side = "East";
+			class Entities
+			{
+				items = 7;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8275.422,13.295599,10683.898};
+						angles[] = {6.2805324,0.30792844,0.0013439035};
+					};
+					side = "East";
+					flags = 6;
+					class Attributes
+					{
+						rank = "SERGEANT";
+						init = "[this, ""CSAT_SL"", ""Kilo'30""] call FNC_GearScript; [this, ""ACRE_PRC343"", 3, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "3 Section Leader";
+						isPlayable = 1;
+					};
+					id = 55;
+					type = "rhs_msv_junior_sergeant";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8276.146,13.292069,10682.213};
+						angles[] = {6.2805324,0.30792844,0.0013439035};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						init = "[this, ""CSAT_AT"", ""Kilo'30""] call FNC_GearScript; [this, ""BLUE""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 3, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Grenadier (RPG-29)";
+						isPlayable = 1;
+					};
+					id = 56;
+					type = "rhs_msv_grenadier_rpg";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8276.8,13.292479,10680.539};
+						angles[] = {6.2805324,0.30792844,0.0013439035};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						init = "[this, ""CSAT_ATA"", ""Kilo'30""] call FNC_GearScript; [this, ""BLUE""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 3, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Asst. Grenadier";
+						isPlayable = 1;
+					};
+					id = 57;
+					type = "rhs_msv_strelok_rpg_assist";
+					atlOffset = 0.00399971;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8271.952,13.286393,10682.181};
+						angles[] = {6.2805324,0.30792844,0.0013439035};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						rank = "CORPORAL";
+						init = "[this, ""CSAT_TL"", ""Kilo'30""] call FNC_GearScript; [this, ""RED""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 3, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Asst. Section Leader";
+						isPlayable = 1;
+					};
+					id = 58;
+					type = "rhs_msv_efreitor";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item4
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8270.412,13.283275,10681.426};
+						angles[] = {6.2818937,0.30792844,0.0};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						init = "[this, ""CSAT_AR"", ""Kilo'30""] call FNC_GearScript; [this, ""RED""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 3, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Automatic Rifleman";
+						isPlayable = 1;
+					};
+					id = 59;
+					type = "rhs_msv_arifleman";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item5
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8268.838,13.292306,10680.699};
+						angles[] = {6.2818937,0.30792844,0.0};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						init = "[this, ""CSAT_RFCLS"", ""Kilo'30""] call FNC_GearScript; _setMed = [this,1] call FNC_assignMedic; [this, ""RED""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 3, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Rifleman [CLS]";
+						isPlayable = 1;
+					};
+					id = 60;
+					type = "rhs_msv_rifleman";
+					atlOffset = 0.010000229;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+				class Item6
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {8272.748,13.292286,10680.618};
+						angles[] = {6.2805324,0.30792844,0.0013439035};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						init = "[this, ""CSAT_RFAT"", ""Kilo'30""] call FNC_GearScript; [this, ""RED""] call FNC_SetTeamColor; [this, ""ACRE_PRC343"", 3, ""LEFT""] call FNC_SetRadio; [this, ""ACRE_PRC152"", 1, ""RIGHT""] call FNC_SetRadio;";
+						description = "Rifleman";
+						isPlayable = 1;
+					};
+					id = 61;
+					type = "rhs_msv_rifleman";
+					atlOffset = 0.0089998245;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						nAttributes = 3;
+					};
+				};
+			};
+			class Attributes{};
+			id = 54;
+		};
+		class Item4
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {10028.752,17.678123,11245.068};
+				angles[] = {6.2711854,2.273159,0.0013372133};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes{};
+			id = 70;
+			type = "CamoNet_OPFOR_F";
+		};
+		class Item5
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {10042.603,17.316559,11263.988};
+				angles[] = {6.2152915,5.5515604,6.2205977};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes
+			{
+				lock = "UNLOCKED";
+				init = "[this, ""PLT_TRUCK""] call FNC_VehicleGearScript;";
+				name = "PLT_TRUCK";
+			};
+			id = 72;
+			type = "O_Truck_02_transport_F";
+			atlOffset = -0.010000229;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property = "uo_unitDescription";
+					expression = "_this setVariable ['uo_unitDescription', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "true";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property = "ammoBox";
+					expression = "[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes = 2;
+			};
+		};
+		class Item6
+		{
+			dataType = "Logic";
+			class PositionInfo
+			{
+				position[] = {10033.119,15.62277,11265.914};
+				angles[] = {6.2751846,0.753243,6.200706};
+			};
+			name = "fw_east_respawn";
+			id = 76;
+			type = "Logic";
+		};
+		class Item7
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 4;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7288.733,6.372029,11045.758};
+						angles[] = {0.0,1.3926157,0.0};
+					};
+					side = "West";
+					flags = 7;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""MIDDLE"";[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 261;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.11045027;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 1.02;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7289.57,6.388773,11042.72};
+						angles[] = {0.0,0.7386582,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""MIDDLE"";[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 263;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.1271944;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7291.177,6.378252,11049.121};
+						angles[] = {0.0,0.4957433,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""UP"";[this,""FIA_TL""] call FNC_GearScript;";
+					};
+					id = 265;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.11667347;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.95;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7288.025,9.622529,11044.412};
+						angles[] = {0.0,2.427369,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""MIDDLE"";[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 360;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.00020503998;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+			};
+			class Attributes{};
+			id = 260;
+			atlOffset = 0.11045027;
+		};
+		class Item8
+		{
+			dataType = "Trigger";
+			position[] = {7356.6724,7.349116,11065.834};
+			class Attributes
+			{
+				onActivation = "lynx_objEnemy = false; publicVariable ""lynx_objEnemy"";";
+				onDeactivation = "lynx_objEnemy = true; publicVariable ""lynx_objEnemy"";";
+				sizeA = 200.0;
+				sizeB = 200.0;
+				repeatable = 1;
+				activationType = "NOT PRESENT";
+				activationBy = "WEST";
+				isServerOnly = 1;
+			};
+			id = 325;
+			type = "EmptyDetector";
+		};
+		class Item9
+		{
+			dataType = "Trigger";
+			position[] = {7356.71,7.350882,11065.851};
+			class Attributes
+			{
+				onActivation = "lynx_objFriendly = true; publicVariable ""lynx_objFriendly"";";
+				onDeactivation = "lynx_objFriendly = false; publicVariable ""lynx_objFriendly"";";
+				sizeA = 200.0;
+				sizeB = 200.0;
+				repeatable = 1;
+				activationBy = "EAST";
+				isServerOnly = 1;
+			};
+			id = 326;
+			type = "EmptyDetector";
+		};
+		class Item10
+		{
+			dataType = "Marker";
+			position[] = {7807.1235,10.399292,11021.913};
+			name = "OP-100";
+			text = "OP-100";
+			type = "mil_triangle";
+			id = 330;
+			atlOffset = -3.2319927;
+		};
+		class Item11
+		{
+			dataType = "Marker";
+			position[] = {7552.2397,-3.8815918,10895.36};
+			name = "OP-101";
+			text = "OP-101";
+			type = "mil_triangle";
+			id = 332;
+			atlOffset = -18.84005;
+		};
+		class Item12
+		{
+			dataType = "Marker";
+			position[] = {7629.9834,25.486938,11208.65};
+			name = "OP-102";
+			text = "OP-102";
+			type = "mil_triangle";
+			id = 333;
+			atlOffset = -0.41872025;
+		};
+		class Item13
+		{
+			dataType = "Marker";
+			position[] = {7094.6665,4.269437,10972.557};
+			name = "OP-103";
+			text = "OP-103";
+			type = "mil_triangle";
+			id = 334;
+			atlOffset = 1.2425411;
+		};
+		class Item14
+		{
+			dataType = "Marker";
+			position[] = {7147.406,15.462376,11503.483};
+			name = "OP-104";
+			text = "OP-104";
+			type = "mil_triangle";
+			id = 335;
+		};
+		class Item15
+		{
+			dataType = "Marker";
+			position[] = {8257.32,13.297941,10689.508};
+			name = "PLT_1_Marker";
+			type = "Empty";
+			id = 339;
+		};
+		class Item16
+		{
+			dataType = "Marker";
+			position[] = {7502.8506,19.071484,11978.696};
+			name = "PLT_2_Marker";
+			type = "Empty";
+			id = 340;
+		};
+		class Item17
+		{
+			dataType = "Marker";
+			position[] = {8229.266,14.178959,10889.015};
+			name = "COY_HQ";
+			type = "Empty";
+			id = 341;
+		};
+		class Item18
+		{
+			dataType = "Marker";
+			position[] = {7447.2407,1.7029199e+025,11223.069};
+			name = "red_1_marker";
+			type = "Empty";
+			id = 342;
+			atlOffset = 1.7029199e+025;
+		};
+		class Item19
+		{
+			dataType = "Logic";
+			class PositionInfo
+			{
+				position[] = {10047.77,15.332332,11271.867};
+				angles[] = {6.200706,0.0,6.213963};
+			};
+			id = 346;
+			type = "ModuleRespawnVehicle_F";
+			atlOffset = 9.536743e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property = "ModuleRespawnVehicle_F_ForcedRespawn";
+					expression = "_this setVariable ['ForcedRespawn',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "0";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property = "ModuleRespawnVehicle_F_Init";
+					expression = "_this setVariable ['Init',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "[_this select 0, ""EMPTY""] call FNC_VehicleGearScript;";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property = "ModuleRespawnVehicle_F_RespawnWhenDisabled";
+					expression = "_this setVariable ['RespawnWhenDisabled',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"BOOL"};
+							};
+							value = 1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property = "ModuleRespawnVehicle_F_DesertedDistance";
+					expression = "_this setVariable ['DesertedDistance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property = "ModuleRespawnVehicle_F_PositionType";
+					expression = "_this setVariable ['PositionType',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "0";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property = "ModuleRespawnVehicle_F_RespawnCount";
+					expression = "_this setVariable ['RespawnCount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property = "ModuleRespawnVehicle_F_Position";
+					expression = "_this setVariable ['Position',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "0";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property = "ModuleRespawnVehicle_F_Wreck";
+					expression = "_this setVariable ['Wreck',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "0";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property = "ModuleRespawnVehicle_F_Delay";
+					expression = "_this setVariable ['Delay',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "10";
+						};
+					};
+				};
+				class Attribute9
+				{
+					property = "ModuleRespawnVehicle_F_ShowNotification";
+					expression = "_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "0";
+						};
+					};
+				};
+				nAttributes = 10;
+			};
+		};
+		class Item20
+		{
+			dataType = "Logic";
+			class PositionInfo
+			{
+				position[] = {8245.197,13.318443,10649.234};
+				angles[] = {0.0026520467,0.27685562,6.2818484};
+			};
+			name = "PLT_TRUCK_HOME";
+			id = 347;
+			type = "Logic";
+		};
+		class Item21
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {7297.1724,9.621657,11044.714};
+				angles[] = {0.0,1.9865131,0.0};
+			};
+			side = "West";
+			flags = 6;
+			class Attributes{};
+			id = 356;
+			type = "UK3CB_BAF_Static_L7A2_Deployed_High_Tropical";
+		};
+		class Item22
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7297.39,9.6223345,11044.15};
+						angles[] = {0.0,1.6648695,0.0};
+					};
+					side = "West";
+					flags = 7;
+					class Attributes
+					{
+						init = "[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 358;
+					type = "B_G_Soldier_F";
+					atlOffset = 1.04904175e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+			};
+			class Attributes{};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID = 1;
+				};
+				class Links
+				{
+					items = 1;
+					class Item0
+					{
+						linkID = 0;
+						item0 = 358;
+						item1 = 356;
+						class CustomData
+						{
+							role = 2;
+							turretPath[] = {0};
+						};
+					};
+				};
+			};
+			id = 357;
+		};
+		class Item23
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 4;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7267.8267,8.965229,11047.713};
+						angles[] = {0.0,2.6277726,0.0};
+					};
+					side = "West";
+					flags = 7;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""MIDDLE"";[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 362;
+					type = "B_G_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 1.02;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7273.0815,7.3552284,11040.394};
+						angles[] = {0.0,5.1778955,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""MIDDLE"";[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 363;
+					type = "B_G_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7272.273,8.965229,11048.742};
+						angles[] = {0.0,0.4957433,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""UP"";[this,""FIA_TL""] call FNC_GearScript;";
+					};
+					id = 364;
+					type = "B_G_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.95;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7266.799,8.965229,11045.389};
+						angles[] = {0.0,2.2435138,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""MIDDLE"";[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 365;
+					type = "B_G_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+			};
+			class Attributes{};
+			id = 361;
+		};
+		class Item24
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 5;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7243.8535,4.6352644,11048.614};
+						angles[] = {0.0,2.1029375,0.0};
+					};
+					side = "West";
+					flags = 3;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""MIDDLE"";[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 367;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.25571728;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 1.02;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7253.1816,8.464561,11057.262};
+						angles[] = {0.0,1.4117827,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""MIDDLE"";[this,""FIA_MG""] call FNC_GearScript;";
+					};
+					id = 368;
+					type = "B_G_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7250.021,4.969561,11057.172};
+						angles[] = {0.0,0.4957433,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""UP"";[this,""FIA_TL""] call FNC_GearScript;";
+					};
+					id = 369;
+					type = "B_G_Soldier_F";
+					atlOffset = 4.7683716e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.95;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7247.216,8.464474,11050.598};
+						angles[] = {0.0,1.4889054,0.0};
+					};
+					side = "West";
+					flags = 1;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""DOWN"";[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 370;
+					type = "B_G_Soldier_F";
+					atlOffset = 3.4949126;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item4
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7253.006,11.762126,11055.967};
+						angles[] = {0.0,1.3962634,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""DOWN"";[this,""FIA_MM""] call FNC_GearScript; this doWatch target_hilltop;";
+						stance = "Down";
+					};
+					id = 456;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.00025463104;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+			};
+			class Attributes{};
+			id = 366;
+			atlOffset = 0.25571728;
+		};
+		class Item25
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {7263.3267,6.6202297,11047.928};
+				angles[] = {0.030656165,0.32505375,0.035984326};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes
+			{
+				lock = "LOCKED";
+				textures = "Guerilla_06";
+			};
+			id = 371;
+			type = "B_G_Offroad_01_F";
+			atlOffset = 0.00027036667;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property = "VehicleCustomization";
+					expression = "if (local _this) then {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"ARRAY"};
+							};
+							class value
+							{
+								items = 2;
+								class Item0
+								{
+									class data
+									{
+										class type
+										{
+											type[] = {"ARRAY"};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										class type
+										{
+											type[] = {"ARRAY"};
+										};
+										class value
+										{
+											items = 18;
+											class Item0
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "HideDoor1";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 1.0;
+												};
+											};
+											class Item2
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "HideDoor2";
+												};
+											};
+											class Item3
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 1.0;
+												};
+											};
+											class Item4
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "HideGlass2";
+												};
+											};
+											class Item5
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 1.0;
+												};
+											};
+											class Item6
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "HideDoor3";
+												};
+											};
+											class Item7
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 1.0;
+												};
+											};
+											class Item8
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "HideBackpacks";
+												};
+											};
+											class Item9
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 0.0;
+												};
+											};
+											class Item10
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "HideBumper1";
+												};
+											};
+											class Item11
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 0.0;
+												};
+											};
+											class Item12
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "HideConstruction";
+												};
+											};
+											class Item13
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 0.0;
+												};
+											};
+											class Item14
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "Proxy";
+												};
+											};
+											class Item15
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 0.0;
+												};
+											};
+											class Item16
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "Destruct";
+												};
+											};
+											class Item17
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 0.0;
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute1
+				{
+					property = "ammoBox";
+					expression = "[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property = "uo_unitDescription";
+					expression = "_this setVariable ['uo_unitDescription', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "true";
+						};
+					};
+				};
+				nAttributes = 3;
+			};
+		};
+		class Item26
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {7241.3965,5.7004247,11053.627};
+				angles[] = {0.041309625,0.39396378,0.033321146};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes
+			{
+				lock = "LOCKED";
+				textures = "Guerilla_06";
+			};
+			id = 372;
+			type = "B_G_Offroad_01_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property = "VehicleCustomization";
+					expression = "if (local _this) then {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"ARRAY"};
+							};
+							class value
+							{
+								items = 2;
+								class Item0
+								{
+									class data
+									{
+										class type
+										{
+											type[] = {"ARRAY"};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										class type
+										{
+											type[] = {"ARRAY"};
+										};
+										class value
+										{
+											items = 14;
+											class Item0
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "HideDoor1";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 1.0;
+												};
+											};
+											class Item2
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "HideDoor2";
+												};
+											};
+											class Item3
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 1.0;
+												};
+											};
+											class Item4
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "HideGlass2";
+												};
+											};
+											class Item5
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 1.0;
+												};
+											};
+											class Item6
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "HideBackpacks";
+												};
+											};
+											class Item7
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 0.0;
+												};
+											};
+											class Item8
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "HideBumper2";
+												};
+											};
+											class Item9
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 0.0;
+												};
+											};
+											class Item10
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "Proxy";
+												};
+											};
+											class Item11
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 0.0;
+												};
+											};
+											class Item12
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "Destruct";
+												};
+											};
+											class Item13
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 0.0;
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute1
+				{
+					property = "ammoBox";
+					expression = "[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property = "uo_unitDescription";
+					expression = "_this setVariable ['uo_unitDescription', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "true";
+						};
+					};
+				};
+				nAttributes = 3;
+			};
+		};
+		class Item27
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {7335.6963,15.489822,11220.18};
+				angles[] = {0.0,5.3125277,6.282697};
+			};
+			side = "Empty";
+			class Attributes
+			{
+				lock = "LOCKED";
+				textures = "Guerilla_06";
+			};
+			id = 373;
+			type = "B_G_Offroad_01_F";
+			atlOffset = 0.3722849;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property = "VehicleCustomization";
+					expression = "if (local _this) then {([_this] + _value) call (uinamespace getvariable 'bis_fnc_initVehicle');};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"ARRAY"};
+							};
+							class value
+							{
+								items = 2;
+								class Item0
+								{
+									class data
+									{
+										class type
+										{
+											type[] = {"ARRAY"};
+										};
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										class type
+										{
+											type[] = {"ARRAY"};
+										};
+										class value
+										{
+											items = 18;
+											class Item0
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "HideDoor1";
+												};
+											};
+											class Item1
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 1.0;
+												};
+											};
+											class Item2
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "HideDoor2";
+												};
+											};
+											class Item3
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 1.0;
+												};
+											};
+											class Item4
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "HideGlass2";
+												};
+											};
+											class Item5
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 1.0;
+												};
+											};
+											class Item6
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "HideDoor3";
+												};
+											};
+											class Item7
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 1.0;
+												};
+											};
+											class Item8
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "HideBackpacks";
+												};
+											};
+											class Item9
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 0.0;
+												};
+											};
+											class Item10
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "HideBumper1";
+												};
+											};
+											class Item11
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 0.0;
+												};
+											};
+											class Item12
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "HideConstruction";
+												};
+											};
+											class Item13
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 0.0;
+												};
+											};
+											class Item14
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "Proxy";
+												};
+											};
+											class Item15
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 0.0;
+												};
+											};
+											class Item16
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"STRING"};
+													};
+													value = "Destruct";
+												};
+											};
+											class Item17
+											{
+												class data
+												{
+													class type
+													{
+														type[] = {"SCALAR"};
+													};
+													value = 0.0;
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute1
+				{
+					property = "ammoBox";
+					expression = "[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property = "uo_unitDescription";
+					expression = "_this setVariable ['uo_unitDescription', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "true";
+						};
+					};
+				};
+				nAttributes = 3;
+			};
+		};
+		class Item28
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {7339.176,14.770284,11218.482};
+				angles[] = {0.0,5.413085,6.282697};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes{};
+			id = 374;
+			type = "IG_supplyCrate_F";
+		};
+		class Item29
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {7340.267,14.769631,11217.81};
+				angles[] = {0.0,2.1989317,6.282697};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes{};
+			id = 375;
+			type = "IG_supplyCrate_F";
+		};
+		class Item30
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 4;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7325.02,13.233333,11207.565};
+						angles[] = {0.0,2.6277676,0.0};
+					};
+					side = "West";
+					flags = 7;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""MIDDLE"";[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 377;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.038000107;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 1.02;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7334.315,13.636908,11206.725};
+						angles[] = {0.0,0.90649056,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""MIDDLE"";[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 378;
+					type = "B_G_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7331.358,13.536565,11219.016};
+						angles[] = {0.0,2.1696713,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""MIDDLE"";[this,""FIA_TL""] call FNC_GearScript;";
+					};
+					id = 379;
+					type = "B_G_Soldier_F";
+					atlOffset = 9.536743e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.95;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7335.1504,13.881707,11222.59};
+						angles[] = {0.0,2.0562806,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""MIDDLE"";[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 380;
+					type = "B_G_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+			};
+			class Attributes{};
+			id = 376;
+			atlOffset = 0.038000107;
+		};
+		class Item31
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 4;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7636.37,26.08416,11212.479};
+						angles[] = {0.0,3.8397243,0.0};
+					};
+					side = "West";
+					flags = 7;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""MIDDLE"";[this,""FIA_RF""] call FNC_GearScript; this doWatch target_chapelDoor;";
+					};
+					id = 382;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.0002708435;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 1.02;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7645.787,26.070189,11232.008};
+						angles[] = {0.0,2.3364024,0.0};
+					};
+					side = "West";
+					flags = 1;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""UP"";[this,""FIA_MG""] call FNC_GearScript;";
+						stance = "Up";
+					};
+					id = 383;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.38299942;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7646.721,26.062794,11234.953};
+						angles[] = {0.0,1.9778246,0.0};
+					};
+					side = "West";
+					flags = 1;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""DOWN"";[this,""FIA_TL""] call FNC_GearScript;";
+						stance = "Down";
+					};
+					id = 384;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.41975784;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.95;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7632.141,25.200342,11245.417};
+						angles[] = {0.0,1.8762289,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""DOWN"";[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 385;
+					type = "B_G_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+			};
+			class Attributes{};
+			id = 381;
+			atlOffset = 0.0002708435;
+		};
+		class Item32
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 4;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7629.092,17.681812,11010.168};
+						angles[] = {0.0,1.8887743,0.0};
+					};
+					side = "West";
+					flags = 7;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""MIDDLE"";[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 387;
+					type = "B_G_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 1.02;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7637.324,17.681915,11014.263};
+						angles[] = {0.0,1.5663283,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""UP"";[this,""FIA_MG""] call FNC_GearScript;";
+						stance = "Middle";
+					};
+					id = 388;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.000102996826;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7634.262,14.171942,11005.58};
+						angles[] = {0.0,1.5962083,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""MIDDLE"";[this,""FIA_TL""] call FNC_GearScript;";
+						stance = "Middle";
+					};
+					id = 389;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.0001296997;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.95;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7634.9023,14.45002,11010.014};
+						angles[] = {0.0,4.208174,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""MIDDLE"";[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 390;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.12895298;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+			};
+			class Attributes{};
+			id = 386;
+		};
+		class Item33
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 4;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7552.1523,15.035614,10891.069};
+						angles[] = {0.0,1.3443224,0.0};
+					};
+					side = "West";
+					flags = 7;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""DOWN"";[this,""FIA_RF""] call FNC_GearScript;";
+						stance = "Down";
+					};
+					id = 392;
+					type = "B_G_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 1.02;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7574.582,13.079988,10864.462};
+						angles[] = {0.0,1.2273504,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""MIDDLE"";[this,""FIA_RF""] call FNC_GearScript;";
+						stance = "Middle";
+					};
+					id = 393;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.00019073486;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7544.058,14.533406,10893.4375};
+						angles[] = {0.0,0.95523614,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""UP"";[this,""FIA_TL""] call FNC_GearScript;";
+					};
+					id = 394;
+					type = "B_G_Soldier_F";
+					atlOffset = 9.536743e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.95;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7574.263,13.05712,10862.251};
+						angles[] = {0.0,1.9098614,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""DOWN"";[this,""FIA_RF""] call FNC_GearScript;";
+						stance = "Down";
+					};
+					id = 395;
+					type = "B_G_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+			};
+			class Attributes{};
+			id = 391;
+		};
+		class Item34
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 4;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7468.613,8.997277,10953.169};
+						angles[] = {0.0,0.753511,0.0};
+					};
+					side = "West";
+					flags = 7;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""UP"";[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 397;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.23299885;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 1.02;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7423.134,4.755421,10884.997};
+						angles[] = {0.0,2.0061512,0.0};
+					};
+					side = "West";
+					flags = 1;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""UP"";[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 398;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.35199976;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7439.847,6.320748,10901.231};
+						angles[] = {0.0,2.2452962,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""MIDDLE"";[this,""FIA_TL""] call FNC_GearScript;";
+						stance = "Middle";
+					};
+					id = 399;
+					type = "B_G_Soldier_F";
+					atlOffset = -4.7683716e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.95;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7461.817,7.1380444,10910.693};
+						angles[] = {0.0,3.850336,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""UP"";[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 400;
+					type = "B_G_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+			};
+			class Attributes{};
+			id = 396;
+			atlOffset = 0.23299885;
+		};
+		class Item35
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 22;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7259.495,8.569116,11144.95};
+						angles[] = {0.0,2.877437,0.0};
+					};
+					side = "West";
+					flags = 7;
+					class Attributes
+					{
+						rank = "SERGEANT";
+						init = "[this,""FIA_AR""] call FNC_GearScript;";
+					};
+					id = 402;
+					type = "B_G_Soldier_F";
+					atlOffset = 1.9073486e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 1.02;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7261.3105,8.060555,11136.46};
+						angles[] = {0.0,5.4275723,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						rank = "CORPORAL";
+						init = "[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 403;
+					type = "B_G_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7264.0576,8.824257,11144.849};
+						angles[] = {0.0,0.7454206,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "[this,""FIA_TL""] call FNC_GearScript;";
+					};
+					id = 404;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.016996384;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.95;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7257.9243,8.382366,11142.952};
+						angles[] = {0.0,2.4931934,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 405;
+					type = "B_G_Soldier_F";
+					atlOffset = 9.536743e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item4
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7249.892,7.4128137,11132.632};
+						angles[] = {6.155881,4.132713,0.0731991};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "[this,""FIA_RF""] call FNC_GearScript; this doWatch target_hilltop;";
+					};
+					id = 454;
+					type = "B_G_Soldier_F";
+					atlOffset = -0.027999878;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item5
+				{
+					dataType = "Waypoint";
+					position[] = {7271.543,11.117859,11195.914};
+					formation = "COLUMN";
+					speed = "LIMITED";
+					class Effects{};
+					showWP = "NEVER";
+					id = 406;
+					type = "Move";
+					atlOffset = -1.9073486e-006;
+				};
+				class Item6
+				{
+					dataType = "Waypoint";
+					position[] = {7300.359,12.276329,11252.403};
+					class Effects{};
+					showWP = "NEVER";
+					id = 407;
+					type = "Move";
+					atlOffset = -4.863739e-005;
+				};
+				class Item7
+				{
+					dataType = "Waypoint";
+					position[] = {7577.0605,15.606323,11339.383};
+					class Effects{};
+					showWP = "NEVER";
+					id = 408;
+					type = "Move";
+					atlOffset = -0.00061511993;
+				};
+				class Item8
+				{
+					dataType = "Waypoint";
+					position[] = {7773.2573,36.63095,11357.24};
+					class Effects{};
+					showWP = "NEVER";
+					id = 409;
+					type = "Move";
+					atlOffset = -0.0010871887;
+				};
+				class Item9
+				{
+					dataType = "Waypoint";
+					position[] = {7825.753,16.668991,11124.647};
+					class Effects{};
+					showWP = "NEVER";
+					id = 410;
+					type = "Move";
+					atlOffset = -0.0006942749;
+				};
+				class Item10
+				{
+					dataType = "Waypoint";
+					position[] = {7782.7993,13.06543,11046.513};
+					class Effects{};
+					showWP = "NEVER";
+					id = 411;
+					type = "Move";
+					atlOffset = -4.7683716e-006;
+				};
+				class Item11
+				{
+					dataType = "Waypoint";
+					position[] = {7779.38,12.842209,10987.977};
+					class Effects{};
+					showWP = "NEVER";
+					id = 412;
+					type = "Move";
+					atlOffset = -2.002716e-005;
+				};
+				class Item12
+				{
+					dataType = "Waypoint";
+					position[] = {7758.332,11.553909,10901.1045};
+					class Effects{};
+					showWP = "NEVER";
+					id = 413;
+					type = "Move";
+					atlOffset = -6.771088e-005;
+				};
+				class Item13
+				{
+					dataType = "Waypoint";
+					position[] = {7671.064,2.6655807,10809.765};
+					class Effects{};
+					showWP = "NEVER";
+					id = 414;
+					type = "Move";
+					atlOffset = -0.00024437904;
+				};
+				class Item14
+				{
+					dataType = "Waypoint";
+					position[] = {7614.404,2.3422623,10803.938};
+					class Effects{};
+					showWP = "NEVER";
+					id = 415;
+					type = "Move";
+					atlOffset = 3.3140182e-005;
+				};
+				class Item15
+				{
+					dataType = "Waypoint";
+					position[] = {7569.273,2.4974136,10808.357};
+					class Effects{};
+					showWP = "NEVER";
+					id = 416;
+					type = "Move";
+					atlOffset = -0.00013017654;
+				};
+				class Item16
+				{
+					dataType = "Waypoint";
+					position[] = {7530.7603,4.1501007,10847.455};
+					class Effects{};
+					showWP = "NEVER";
+					id = 417;
+					type = "Move";
+					atlOffset = -4.2915344e-006;
+				};
+				class Item17
+				{
+					dataType = "Waypoint";
+					position[] = {7445.4966,6.1392517,10893.586};
+					class Effects{};
+					showWP = "NEVER";
+					id = 418;
+					type = "Move";
+					atlOffset = 0.00050878525;
+				};
+				class Item18
+				{
+					dataType = "Waypoint";
+					position[] = {7271.345,4.1541214,10964.181};
+					class Effects{};
+					showWP = "NEVER";
+					id = 419;
+					type = "Move";
+					atlOffset = -0.00021505356;
+				};
+				class Item19
+				{
+					dataType = "Waypoint";
+					position[] = {7297.215,5.738495,11006.551};
+					class Effects{};
+					showWP = "NEVER";
+					id = 420;
+					type = "Move";
+					atlOffset = 1.4305115e-005;
+				};
+				class Item20
+				{
+					dataType = "Waypoint";
+					position[] = {7229.608,4.2014694,11038.475};
+					class Effects{};
+					showWP = "NEVER";
+					id = 421;
+					type = "Move";
+					atlOffset = 1.4305115e-005;
+				};
+				class Item21
+				{
+					dataType = "Waypoint";
+					position[] = {7244.884,5.5327234,11109.602};
+					type = "Cycle";
+					class Effects{};
+					showWP = "NEVER";
+					id = 422;
+				};
+			};
+			class Attributes{};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID = 1;
+				};
+				class Links
+				{
+					items = 1;
+					class Item0
+					{
+						linkID = 0;
+						item0 = 454;
+						item1 = 452;
+						class CustomData
+						{
+							role = 2;
+							turretPath[] = {0};
+						};
+					};
+				};
+			};
+			id = 401;
+			atlOffset = 1.9073486e-006;
+		};
+		class Item36
+		{
+			dataType = "Trigger";
+			position[] = {7453.319,11.549149,11042.811};
+			class Attributes
+			{
+				onActivation = "[{_fm = [AI_MORTAR_1, AI_FM_START_1, 100, 320, 0] execVM ""customization\fires\fire_linear.sqf""},30] call CBA_fnc_waitAndExecute;";
+				activationBy = "EAST";
+				isServerOnly = 1;
+			};
+			id = 423;
+			type = "EmptyDetector";
+		};
+		class Item37
+		{
+			dataType = "Logic";
+			class PositionInfo
+			{
+				position[] = {7481.715,10.732235,11001.466};
+				angles[] = {6.2299004,0.0,0.037315138};
+			};
+			name = "AI_FM_START_1";
+			id = 425;
+			type = "Logic";
+			atlOffset = -9.536743e-007;
+		};
+		class Item38
+		{
+			dataType = "Marker";
+			position[] = {7451.408,5.9739665e+024,11038.882};
+			name = "marker_4";
+			markerType = "RECTANGLE";
+			type = "rectangle";
+			alpha = 0.0;
+			a = 5.0;
+			b = 50.0;
+			angle = 319.99988;
+			id = 426;
+			atlOffset = 5.9739665e+024;
+		};
+		class Item39
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {5826.819,23.324907,10778.975};
+				angles[] = {6.263184,1.360711,6.2778444};
+			};
+			side = "West";
+			flags = 6;
+			class Attributes
+			{
+				name = "AI_MORTAR_1";
+			};
+			id = 427;
+			type = "UO_O_Mortar_60mm";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property = "uo_unitDescription";
+					expression = "_this setVariable ['uo_unitDescription', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "true";
+						};
+					};
+				};
+				nAttributes = 1;
+			};
+		};
+		class Item40
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {5826.816,22.604897,10779.04};
+						angles[] = {6.263184,1.360711,6.2778444};
+					};
+					side = "West";
+					flags = 7;
+					class Attributes
+					{
+						name = "AI_MORTAR_1G";
+					};
+					id = 429;
+					type = "B_G_Soldier_F";
+					atlOffset = 1.9073486e-006;
+				};
+			};
+			class Attributes{};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID = 1;
+				};
+				class Links
+				{
+					items = 1;
+					class Item0
+					{
+						linkID = 0;
+						item0 = 429;
+						item1 = 427;
+						class CustomData
+						{
+							role = 2;
+							turretPath[] = {0};
+						};
+					};
+				};
+			};
+			id = 428;
+		};
+		class Item41
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 18;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7305.8896,6.6836486,11087.591};
+						angles[] = {0.0,2.8774447,0.0};
+					};
+					side = "West";
+					flags = 7;
+					class Attributes
+					{
+						init = "[this,""FIA_AR""] call FNC_GearScript;";
+					};
+					id = 432;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.017663956;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 1.02;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7309.173,6.5834455,11079.199};
+						angles[] = {0.0,5.4275804,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 433;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.017660618;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7310.452,6.8417964,11087.489};
+						angles[] = {0.0,0.7454206,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "[this,""FIA_TL""] call FNC_GearScript;";
+					};
+					id = 434;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.030659199;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.95;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7304.319,6.5561414,11085.593};
+						angles[] = {0.0,2.4931934,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 435;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.018544197;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item4
+				{
+					dataType = "Waypoint";
+					position[] = {7338.023,7.568843,11086.36};
+					formation = "COLUMN";
+					speed = "LIMITED";
+					class Effects{};
+					showWP = "NEVER";
+					id = 436;
+					type = "Move";
+					atlOffset = 0.0006546974;
+				};
+				class Item5
+				{
+					dataType = "Waypoint";
+					position[] = {7422.841,13.8652725,11189.769};
+					class Effects{};
+					showWP = "NEVER";
+					id = 437;
+					type = "Move";
+					atlOffset = -0.00013256073;
+				};
+				class Item6
+				{
+					dataType = "Waypoint";
+					position[] = {7466.0093,13.96077,11240.953};
+					class Effects{};
+					showWP = "NEVER";
+					id = 438;
+					type = "Move";
+					atlOffset = -7.247925e-005;
+				};
+				class Item7
+				{
+					dataType = "Waypoint";
+					position[] = {7576.336,21.541847,11199.127};
+					class Effects{};
+					showWP = "NEVER";
+					id = 439;
+					type = "Move";
+					atlOffset = -0.00012779236;
+				};
+				class Item8
+				{
+					dataType = "Waypoint";
+					position[] = {7524.904,17.947556,11169.809};
+					class Effects{};
+					showWP = "NEVER";
+					id = 440;
+					type = "Move";
+					atlOffset = -0.00019454956;
+				};
+				class Item9
+				{
+					dataType = "Waypoint";
+					position[] = {7522.8726,18.172289,11119.882};
+					class Effects{};
+					showWP = "NEVER";
+					id = 441;
+					type = "Move";
+					atlOffset = 7.43866e-005;
+				};
+				class Item10
+				{
+					dataType = "Waypoint";
+					position[] = {7518.6226,14.326399,11027.765};
+					class Effects{};
+					showWP = "NEVER";
+					id = 442;
+					type = "Move";
+					atlOffset = -0.0005941391;
+				};
+				class Item11
+				{
+					dataType = "Waypoint";
+					position[] = {7568.321,12.309408,10997.0};
+					class Effects{};
+					showWP = "NEVER";
+					id = 443;
+					type = "Move";
+					atlOffset = -8.869171e-005;
+				};
+				class Item12
+				{
+					dataType = "Waypoint";
+					position[] = {7584.9126,10.856304,10982.971};
+					class Effects{};
+					showWP = "NEVER";
+					id = 444;
+					type = "Move";
+					atlOffset = 3.528595e-005;
+				};
+				class Item13
+				{
+					dataType = "Waypoint";
+					position[] = {7497.604,14.596088,11040.952};
+					class Effects{};
+					showWP = "NEVER";
+					id = 445;
+					type = "Move";
+					atlOffset = -3.1471252e-005;
+				};
+				class Item14
+				{
+					dataType = "Waypoint";
+					position[] = {7470.95,12.919422,11050.421};
+					class Effects{};
+					showWP = "NEVER";
+					id = 446;
+					type = "Move";
+					atlOffset = -0.00039577484;
+				};
+				class Item15
+				{
+					dataType = "Waypoint";
+					position[] = {7423.8057,9.431305,11038.182};
+					class Effects{};
+					showWP = "NEVER";
+					id = 447;
+					type = "Move";
+					atlOffset = 5.722046e-005;
+				};
+				class Item16
+				{
+					dataType = "Waypoint";
+					position[] = {7380.9507,7.8485985,11061.338};
+					class Effects{};
+					showWP = "NEVER";
+					id = 448;
+					type = "Move";
+					atlOffset = -0.0003066063;
+				};
+				class Item17
+				{
+					dataType = "Waypoint";
+					position[] = {7332.183,6.7354045,11076.885};
+					type = "Cycle";
+					class Effects{};
+					showWP = "NEVER";
+					id = 449;
+					atlOffset = 4.7683716e-007;
+				};
+			};
+			class Attributes{};
+			id = 431;
+			atlOffset = 0.017663956;
+		};
+		class Item42
+		{
+			dataType = "Marker";
+			position[] = {10038.662,1.3146267e+019,11269.063};
+			name = "PLT_3_Marker";
+			type = "Empty";
+			id = 451;
+			atlOffset = 1.3146267e+019;
+		};
+		class Item43
+		{
+			dataType = "Marker";
+			position[] = {9388.27,10825964.0,11494.045};
+			name = "redAO_1";
+			markerType = "RECTANGLE";
+			type = "rectangle";
+			colorName = "ColorEAST";
+			alpha = 0.0;
+			fillName = "Border";
+			a = 900.0;
+			b = 600.0;
+			angle = 359.56787;
+			drawBorder = 1;
+			id = 355;
+			atlOffset = 10825905.0;
+		};
+		class Item44
+		{
+			dataType = "Marker";
+			position[] = {8064.807,4.3928188e+036,10879.207};
+			name = "redAO_2";
+			markerType = "RECTANGLE";
+			type = "rectangle";
+			colorName = "ColorEAST";
+			alpha = 0.0;
+			fillName = "Border";
+			a = 1300.0;
+			b = 600.0;
+			drawBorder = 1;
+			id = 69;
+			atlOffset = 4.3928188e+036;
+		};
+		class Item45
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {7249.735,9.557825,11132.349};
+				angles[] = {6.155881,4.132713,0.0731991};
+			};
+			side = "West";
+			flags = 4;
+			class Attributes
+			{
+				lock = "LOCKED";
+				fuel = 0.0;
+				init = "this allowCrewInImmobile true;";
+			};
+			id = 452;
+			type = "B_G_Offroad_01_armed_F";
+			atlOffset = -0.028000355;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property = "uo_unitDescription";
+					expression = "_this setVariable ['uo_unitDescription', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "true";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property = "ammoBox";
+					expression = "[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes = 2;
+			};
+		};
+		class Item46
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {7253.4434,11.752589,11053.462};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes{};
+			id = 457;
+			type = "Land_Bricks_V1_F";
+		};
+		class Item47
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {7253.199,11.760432,11057.751};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes{};
+			id = 460;
+			type = "Land_Bricks_V4_F";
+		};
+		class Item48
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {7252.0396,11.752589,11053.42};
+				angles[] = {0.0,3.0300114,0.0};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes{};
+			id = 461;
+			type = "Land_Bricks_V1_F";
+		};
+		class Item49
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {7251.904,11.766188,11056.726};
+				angles[] = {0.0,6.2395062,0.0};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes{};
+			id = 463;
+			type = "Land_WorkStand_F";
+		};
+		class Item50
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {7250.2515,11.760432,11055.364};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes{};
+			id = 464;
+			type = "Land_Bricks_V4_F";
+		};
+		class Item51
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 4;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7157.039,3.962931,11000.874};
+						angles[] = {0.0,1.6477304,0.0};
+					};
+					side = "West";
+					flags = 3;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""UP"";[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 466;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.62300014;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 1.02;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7160.061,4.4816914,11074.845};
+						angles[] = {0.0,1.8896855,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""MIDDLE"";[this,""FIA_RF""] call FNC_GearScript;";
+						stance = "Middle";
+					};
+					id = 467;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.00029039383;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7182.0103,4.9828167,11111.321};
+						angles[] = {0.0,1.9690475,0.0};
+					};
+					side = "West";
+					flags = 5;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""UP"";[this,""FIA_TL""] call FNC_GearScript;";
+					};
+					id = 468;
+					type = "B_G_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.95;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {7155.025,4.8420763,11024.179};
+						angles[] = {0.0,1.5972556,0.0};
+					};
+					side = "West";
+					flags = 1;
+					class Attributes
+					{
+						init = "this disableAI ""PATH""; this setUnitPos ""UP"";[this,""FIA_RF""] call FNC_GearScript;";
+					};
+					id = 469;
+					type = "B_G_Soldier_F";
+					atlOffset = 0.872;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 0.98;
+								};
+							};
+						};
+						nAttributes = 2;
+					};
+				};
+			};
+			class Attributes{};
+			id = 465;
+			atlOffset = 0.62300014;
+		};
+		class Item52
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {8230.371,16.545616,10898.13};
+				angles[] = {6.2711854,4.6874685,6.2818484};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes
+			{
+				lock = "LOCKED";
+				init = "[this, ""EMPTY""] call FNC_VehicleGearScript;";
+			};
+			id = 470;
+			type = "O_Truck_02_Ammo_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property = "uo_unitDescription";
+					expression = "_this setVariable ['uo_unitDescription', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "true";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property = "ammoBox";
+					expression = "[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes = 2;
+			};
+		};
+		class Item53
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {8243.035,15.96188,10896.505};
+				angles[] = {0.012007865,3.9417913,0.0};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes
+			{
+				lock = "LOCKED";
+				init = "[this, ""EMPTY""] call FNC_VehicleGearScript;";
+			};
+			id = 477;
+			type = "O_LSV_02_unarmed_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property = "uo_unitDescription";
+					expression = "_this setVariable ['uo_unitDescription', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "true";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property = "ammoBox";
+					expression = "[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "[[[[""arifle_Katiba_F"",""FirstAidKit""],[2,10]],[[""30Rnd_65x39_caseless_green"",""150Rnd_762x54_Box"",""HandGrenade"",""SmokeShell"",""SmokeShellRed"",""SmokeShellYellow"",""SmokeShellOrange"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeYellow_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""16Rnd_9x21_Mag"",""RPG32_F""],[16,4,10,4,4,4,4,10,4,4,4,4,12,2]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes = 2;
+			};
+		};
+		class Item54
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {8222.644,14.532024,10927.628};
+				angles[] = {0.005326526,5.1582546,6.243208};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes
+			{
+				lock = "LOCKED";
+				init = "[this, ""EMPTY""] call FNC_VehicleGearScript;";
+				textures = "rhs_sand";
+			};
+			id = 478;
+			type = "rhs_gaz66_r142_msv";
+			atlOffset = 0.003821373;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property = "rhs_decalNumber_type";
+					expression = "_this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cTrucksGaz4NumberPlaces, _value]]] call rhs_fnc_decalsInit";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "Default";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property = "uo_unitDescription";
+					expression = "_this setVariable ['uo_unitDescription', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "true";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property = "rhs_decalPlatoon_type";
+					expression = "_this setVariable ['rhs_decalPlatoon_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "Army";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property = "ammoBox";
+					expression = "[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property = "rhs_decalArmy_type";
+					expression = "_this setVariable ['rhs_decalArmy_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "Army";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property = "rhs_decalArmy";
+					expression = "if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cTrucksGazRightArmyPlaces,  _this getVariable ['rhs_decalArmy_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "0";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property = "rhs_radioDeploy";
+					expression = "[_this,_value,true] call rhs_fnc_gaz66_radioDeploy";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"SCALAR"};
+							};
+							value = 1.0;
+						};
+					};
+				};
+				class Attribute7
+				{
+					property = "rhs_decalNumber";
+					expression = "if( _value >= 0)then{[_this,[['Number', cTrucksGaz4NumberPlaces, _this getVariable ['rhs_decalNumber_type','Default'], _value]]] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "-1";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property = "rhs_decalPlatoon";
+					expression = "if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cTrucksGazRightPlatoonPlaces,  _this getVariable ['rhs_decalPlatoon_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "-1";
+						};
+					};
+				};
+				nAttributes = 9;
+			};
+		};
+		class Item55
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {8235.838,15.506393,10922.862};
+				angles[] = {0.035984326,3.6761231,0.0013372133};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes{};
+			id = 480;
+			type = "rhs_v2";
+			atlOffset = -0.0006504059;
+		};
+		class Item56
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {8238.047,15.352897,10929.149};
+				angles[] = {6.2791886,3.3170512,0.0026520467};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes{};
+			id = 481;
+			type = "rhs_v3";
+		};
+		class Item57
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {8249.795,15.904231,10896.467};
+				angles[] = {0.021327924,4.223784,6.2738476};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes
+			{
+				lock = "LOCKED";
+			};
+			id = 482;
+			type = "O_LSV_02_unarmed_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property = "uo_unitDescription";
+					expression = "_this setVariable ['uo_unitDescription', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "true";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property = "ammoBox";
+					expression = "[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[] = {"STRING"};
+							};
+							value = "[[[[""arifle_Katiba_F"",""FirstAidKit""],[2,10]],[[""30Rnd_65x39_caseless_green"",""150Rnd_762x54_Box"",""HandGrenade"",""SmokeShell"",""SmokeShellRed"",""SmokeShellYellow"",""SmokeShellOrange"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeYellow_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""16Rnd_9x21_Mag"",""RPG32_F""],[16,4,10,4,4,4,4,10,4,4,4,4,12,2]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes = 2;
+			};
+		};
+		class Item58
+		{
+			dataType = "Logic";
+			class PositionInfo
+			{
+				position[] = {7625.654,26.087454,11204.945};
+				angles[] = {0.0,0.0,6.2826962};
+			};
+			name = "target_chapelDoor";
+			id = 483;
+			type = "Logic";
+			atlOffset = 0.12900162;
+		};
+		class Item59
+		{
+			dataType = "Logic";
+			class PositionInfo
+			{
+				position[] = {7915.238,36.74833,11145.553};
+				angles[] = {6.2618575,0.0,0.097022854};
+			};
+			name = "target_hilltop";
+			id = 484;
+			type = "Logic";
+		};
+		class Item60
+		{
+			dataType = "Logic";
+			class PositionInfo
+			{
+				position[] = {8514.259,23.037981,11188.694};
+				angles[] = {6.221929,0.0,6.213963};
+			};
+			areaSize[] = {1750.0,0.0,900.0};
+			areaIsRectangle = 1;
+			flags = 1;
+			id = 492;
+			type = "ModuleCoverMap_F";
+		};
+	};
+	class Connections
+	{
+		class LinkIDProvider
+		{
+			nextID = 1;
+		};
+		class Links
+		{
+			items = 1;
+			class Item0
+			{
+				linkID = 0;
+				item0 = 72;
+				item1 = 346;
+				class CustomData
+				{
+					type = "Sync";
+				};
+			};
+		};
+	};
+};
+//};

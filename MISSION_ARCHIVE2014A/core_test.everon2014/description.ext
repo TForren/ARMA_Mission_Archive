@@ -1,0 +1,33 @@
+
+/* DO NOT EDIT BELOW THIS COMMENT */
+
+#define CONFIG_ENV
+
+#include "core\headers\macros.h"
+#include "settings.cpp"
+
+class Modules {
+	#define MODULES
+	#include "modules\modules.cpp"
+	#undef MODULES
+};
+
+class Params {
+	#define PARAMS
+	#include "modules\modules.cpp"
+	#undef PARAMS
+};
+
+#define ROOT
+#include "modules\modules.cpp"
+#undef ROOT
+
+class Extended_PreInit_EventHandlers {
+	mission_preInit = "call compile preProcessFileLineNumbers 'core\boot.sqf'";
+};
+
+class Mission {
+	#include "mission.sqm"
+};
+
+/* DO NOT EDIT ABOVE THIS COMMENT */

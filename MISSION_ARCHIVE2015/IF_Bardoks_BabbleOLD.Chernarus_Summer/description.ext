@@ -1,0 +1,87 @@
+#include "tb3\defines.hpp"
+
+	/* Adds screen when loading. */
+	author = Hoizen;
+	onLoadName = "Bardok's Babble";
+	loadScreen = "babble.jpg";
+	onLoadMission = "It reminds me of the hunt.";	
+	onLoadMissionTime = true;
+	
+	respawnDelay = 9999999; // 9999999 = No Respawn;
+	#include "CSSA3\CSSA3_header.hpp"
+	disabledAI = 1;
+	ShowGPS = 1;
+	enableDebugConsole = 1; //2 for all, 1 for logged in only, 0 for disabled.
+	
+	class Header {
+		gameType = Coop;            // (https://community.bistudio.com/wiki/Multiplayer_Game_Types) for list if game types
+		minPlayers = 1;             //min # of players the mission supports
+		maxPlayers = 50;            //Max # of players the mission supports
+		playerCountMultipleOf = 1; //Unknown
+	};
+	class Extended_PreInit_EventHandlers {
+		class tb3 {
+			init = "call ('tb3\preInit.sqf' call SLX_XEH_COMPILE)";
+		};
+	};
+	class CfgSettings {
+		class CBA {
+			class Caching {
+				compile = 0;
+				xeh = 0;
+				functions = 0;
+			};
+		};
+	};
+	class TB3_Settings {
+		class General {
+			version = 3;
+			processParams = 1;
+			enableSaving = 0;
+			missionMonitor = 1;
+		};
+		class MissionMonitor {
+			initDelay 			= 5; 		// delay (in secs) before starting the mission monitor
+			updateDelay 		= 2; 		// delay (in secs) between each update
+		}; 
+	};	
+
+//Separated Loadouts into its own cpp file
+//If you are just editing loadouts, you shouldn't mess with this. 
+#include "loadouts\IncludedLoadouts.cpp"
+#include "sounds\config.cpp"
+
+//ADD ENDING CONDITIONS BELOW
+
+class CfgDebriefing {  
+	class End1 {
+		title = "Mission Accomplished";
+		subtitle = "All Guerrilla Camps Neutralized";
+		description = "The CDF have successfully located and eliminated all the guerrilla camps to the east.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.1,0.4,1,1};
+		condition[] = {false};
+	};
+	class End2 {
+		title = "Mission Failed";
+		subtitle = "Platoon Combat Ineffective";
+		description = "The CDF have suffered too many casualties to continue the mission.";
+		pictureBackground = "";
+		picture = "waypoint";
+		pictureColor[] = {1.0,0.0,0.0,1};
+		condition[] = {(WCasRate > 70)}; // - for Blufor death rate, ECasRate for Opfor, RCasRate to Indfor, CCasRate for Civvies
+	};	
+	class TimeLimitEnding {
+		title = "Mission Failed";
+		subtitle = "Time Limit Reached!";
+		description = "Mission was not completed within the given time limit";
+		pictureBackground = "";
+		picture = "waypoint";
+		pictureColor[] = {1.0,0.0,0.0,1};
+		condition[] = {false};
+	};
+};
+
+
+	

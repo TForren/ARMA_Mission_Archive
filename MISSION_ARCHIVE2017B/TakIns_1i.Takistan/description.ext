@@ -1,0 +1,171 @@
+author="Hustler (ATCAG)";
+OverviewTextLocked="Search buildings / question locals for intel, destroy caches, and eliminate Taliban insurgents in <t color='#ff0000'>RED</t> grid squares!";
+OverviewPicture="images\load.paa";
+onLoadMission="Search buildings / question locals for intel, destroy caches, and eliminate Taliban insurgents in <t color='#ff0000'>RED</t> grid squares!";
+onLoadIntroTime=1;
+onLoadMissionTime=1;
+onLoadName="INSURGENCY: Takistan";
+loadScreen="images\load.paa";
+
+class Header {gameType=COOP;minPlayers=1;maxPlayers=27;playerCountMultipleOf=1;};
+
+enableDebugConsole=1;
+allowFunctionsRecompile=0;
+allowFunctionsLog=0;
+DisabledAI=1;
+joinUnassigned=1;
+skipLobby=0;
+briefing=0;
+debriefing=0;
+enableTeamSwitch=0;
+disableChannels[]={{0,true,true},{1,false,true},{2,true,true},{5,true,false}};
+disableRandomization[]={"allUnits","O_G_Offroad_01_F","O_G_Offroad_01_armed_F","O_G_Offroad_01_repair_F","o_survivor_F","C_man_1"};
+showUAVFeed=1;
+//showSquadRadar=1;
+respawnButton=1;
+respawnDialog=0;
+respawn=3;
+respawnDelay=7;
+respawnOnStart=-1;
+corpseManagerMode=1;
+corpseLimit=5;
+corpseRemovalMinTime=60;
+corpseRemovalMaxTime=300;
+wreckManagerMode=1; 
+wreckLimit=3;
+wreckRemovalMinTime=60;
+wreckRemovalMaxTime=300;
+minPlayerDistance=35;
+taskManagement_markers2D=1;
+//taskManagement_markers3D=1;
+taskManagement_propagate=1;
+//taskManagement_drawDist=100;
+
+class Params {
+	class EmtpyLine1 {
+	//paramsArray[0]
+		title=":: M I S S I O N   S E T T I N G S ::";
+		values[]={0,0};
+		texts[]={"",""};
+		default=0;			
+	};
+    class cachesLimit {
+	//paramsArray[1]
+		title="Number of caches to hunt";
+		values[]={2,4,6,8,10,12};
+		texts[]={"2","4","6 (Default)","8","10","12"};
+		default=6;
+	};
+	class intelItems {
+	//paramsArray[2]
+		title="Number of INTEL items per town";
+		values[]={1,2,3,4,5,6,7,8};
+		texts[]={"1 - Extreme","2 - Very Hard (Default)","3 - Hard","4 - Hard\Medium","5 - Medium","6 - Medium/Easy","7 - Easy","8 - Very Easy"};
+		default=2;
+	};
+	class Civs {
+	//paramsArray[3]
+		title="Wandering Civilians / Traffic (On/Off)";
+		values[]={1,0};
+		texts[]={"On (Default)","Off"};
+		default=1;
+	};
+	class Daytime {
+	//paramsArray[4]
+		title="Time";
+		texts[]={"Dawn","Morning (Default)","Noon","Afternoon","Evening","Night"};
+		values[]={5,8,12,14,18,0};
+		default=5;
+		function="BIS_fnc_paramDaytime";
+ 		isGlobal=0;
+	};
+	class Weather {
+	//paramsArray[5]
+		title="Weather";
+		texts[]={"Clear","Partly Cloudy (Default)","Cloudy","Storm"};
+		values[]={0,40,55,100};
+		default=40;
+		function="BIS_fnc_paramWeather";
+		isGlobal=0;
+	};
+	class vDist {
+	//paramsArray[6]
+		title="View Distance (meters)";
+		texts[]={"750m","1000m (Default)","1200m","1600m","1800m","2000m","2500m","3000m","3500m","4000m"};
+		values[]={750,1000,1200,1600,1800,2000,2500,3000,3500,4000};
+		default=1000;
+	};
+	class noGrass {
+	//paramsArray[7]
+		title="Grass (On/Off)";
+		values[]={48,50};
+		texts[]={"On (Default)","Off"};
+		default=48;
+	};
+	class Shadows {
+	//paramsArray[8]
+		title="Shadows (On/Off)";
+		values[]={80,0};
+		texts[]={"On (Default)","Off"};
+		default=80;
+	};
+	class enableEnv {
+	//paramsArray[9]
+		title="Ambient Audio/Animals/Insects (On/Off)";
+		values[]={1,0};
+		texts[]={"On (Default)","Off"};
+		default=1;
+	};
+};
+	#include "common\client\BRS\defines.hpp"
+	#include "common\client\BRS\dialogs.hpp"
+	#include "common\client\VON_PLUS_GUI\description.hpp"
+	#include "common\client\ATM_airdrop\dialog.hpp"
+	#include "common\client\CAS\casDefine.hpp"
+	#include "common\client\CAS\casMenu.hpp"
+	#include "common\client\Strobe\defines.hpp"
+	#include "common\client\Strobe\dialogs.hpp"
+//class CfgRemoteExec {
+//class Commands {
+	//mode=1;
+	//class setFace{allowedTargets=0;};
+	//class removeAllActions{allowedTargets=0;};
+	//class say3D{allowedTargets=0;};
+	//class playMove{allowedTargets=0;};
+	//class switchMove{allowedTargets=0;};
+	//class addRating{allowedTargets=0;};
+	//class hideObjectGlobal{allowedTargets=0;};
+	//};
+//class Functions {
+	//mode=1;
+	//jip=0;
+    //};
+//};
+class RscTitles {
+	#include "common\client\ais_injury\dialogs\rscTitlesAIS.hpp"
+};
+class CfgFunctions {
+	#include "common\server\EPD\EPDcfgFunctions.hpp"
+	#include "common\client\ais_injury\cfgFunctionsAIS.hpp"
+	#include "common\client\vip_cmn\fn\vip_cmn_fnc.hpp"
+	#include "common\client\vip_lit\fn\vip_lit_fnc.hpp"
+};
+class CfgTaskTypes {
+	class Destroy {icon=\A3\Ui_f_data\IGUI\Cfg\simpleTasks\types\destroy_ca.paa;};
+	class Kill {icon=\A3\Ui_f_data\IGUI\Cfg\simpleTasks\types\kill_ca.paa;};
+	class Rifle {icon=\A3\Ui_f_data\IGUI\Cfg\simpleTasks\types\rifle_ca.paa;};
+	class Target {icon=\A3\Ui_f_data\IGUI\Cfg\simpleTasks\types\target_ca.paa;};
+};
+class CfgSounds {
+#include "common\client\vip_lit\resource\vip_lit_cfgSounds.hpp"
+sounds[]={introMusic,local_start,local_end,adhan,cantDo,shout,Vent,Vent2,Para};
+	class introMusic {name="introMusic";sound[]={"common\client\introMusic.ogg",db-8,1.0};titles[]={};};
+	class local_start {name="local_start";sound[]={"common\client\local_start.ogg",1,1};titles[]={};};
+	class local_end {name="local_end";sound[]={"common\client\local_end.ogg",1,1};titles[]={};};
+	class adhan {name="adhan";sound[]={"common\server\ctp\adhan.ogg",1.0,1.0};titles[]={};};
+	class cantDo {name="cantDo";sound[]={"common\client\CAS\cantDo.ogg",1.0,1.0};titles[]={};};
+	class shout {name="shout";sound[]={"eos\fn\shout.ogg",0.7,1.0};titles[]={};};
+	class Vent {name="Vent";sound[]={"common\client\ATM_airdrop\Vent.ogg",db-11,1.0};titles[]={};};
+	class Vent2 {name="Vent2";sound[]={"common\client\ATM_airdrop\Vent2.ogg",db-11,1.0};titles[]={};};
+	class Para {name="Para";sound[]={"common\client\ATM_airdrop\parachute.ogg",db-11,1.0};titles[]={};};
+};

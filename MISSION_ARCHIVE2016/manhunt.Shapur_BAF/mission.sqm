@@ -1,0 +1,1402 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"map_vr",
+		"A3_Modules_F",
+		"A3_Structures_F_Walls",
+		"agm_medical",
+		"agm_interaction",
+		"task_force_radio_items",
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
+		"maa_uniform",
+		"aia_shapur_baf_config",
+		"RDS_ag_faction_me_civ",
+		"rhsusf_vehicles",
+		"rhsusf_c_m113",
+		"AGM_Core",
+		"rhsusf_c_hmmwv"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Modules_F",
+		"agm_medical",
+		"task_force_radio_items",
+		"RDS_ag_faction_me_civ",
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
+		"maa_uniform",
+		"A3_Structures_F_Walls",
+		"rhsusf_c_hmmwv",
+		"rhsusf_vehicles",
+		"rhsusf_c_m113",
+		"AGM_Core",
+		"aia_shapur_baf_config"
+	};
+	randomSeed=14063691;
+	class Intel
+	{
+		startWeather=0;
+		startWind=0.099999994;
+		startWaves=0.099999994;
+		forecastWeather=0;
+		forecastWind=0.099999994;
+		forecastWaves=0.099999994;
+		forecastLightnings=0.099999994;
+		year=2035;
+		day=28;
+		hour=20;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Groups
+	{
+		items=19;
+		class Item0
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={10.668078,27.735378,13.240112};
+					id=0;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="specPen";
+				};
+			};
+		};
+		class Item1
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3.7972145,28.283768,29.483643};
+					special="FLY";
+					id=1;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="tb3";
+				};
+			};
+		};
+		class Item2
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1313.0226,41,976.25};
+					azimut=0.36279255;
+					special="NONE";
+					id=2;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="start";
+					description="1'3 | Senior Rifleman";
+				};
+			};
+		};
+		class Item3
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1404.6897,40.964008,887.88379};
+					class args
+					{
+						items=12;
+						class Item0
+						{
+							value="1.2";
+							parentCls="AGM_ModuleMedical";
+							typeName="CoefDamage";
+						};
+						class Item1
+						{
+							value="1.1";
+							parentCls="AGM_ModuleMedical";
+							typeName="CoefBleeding";
+						};
+						class Item2
+						{
+							value=".9";
+							parentCls="AGM_ModuleMedical";
+							typeName="CoefPain";
+						};
+						class Item3
+						{
+							value="2";
+							parentCls="AGM_ModuleMedical";
+							typeName="CoefNonMedic";
+						};
+						class Item4
+						{
+							value="-1";
+							parentCls="AGM_ModuleMedical";
+							typeName="MaxUnconsciousnessTime";
+						};
+						class Item5
+						{
+							value="1";
+							parentCls="AGM_ModuleMedical";
+							typeName="AllowNonmedics";
+						};
+						class Item6
+						{
+							value="0";
+							parentCls="AGM_ModuleMedical";
+							typeName="RequireDiagnosis";
+						};
+						class Item7
+						{
+							value="0";
+							parentCls="AGM_ModuleMedical";
+							typeName="PreventInstaDeath";
+						};
+						class Item8
+						{
+							value="0";
+							parentCls="AGM_ModuleMedical";
+							typeName="PreventDeathWhileUnconscious";
+						};
+						class Item9
+						{
+							value="1";
+							parentCls="AGM_ModuleMedical";
+							typeName="SingleBandage";
+						};
+						class Item10
+						{
+							value="0";
+							parentCls="AGM_ModuleMedical";
+							typeName="AllowChatWhileUnconscious";
+						};
+						class Item11
+						{
+							value="1";
+							parentCls="AGM_ModuleMedical";
+							typeName="EnableOverdosing";
+						};
+					};
+					id=3;
+					side="LOGIC";
+					vehicle="AGM_ModuleMedical";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item4
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1392.3909,40.881241,887.83105};
+					class args
+					{
+						items=7;
+						class Item0
+						{
+							value="0";
+							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
+							typeName="TeamLeaderRadio";
+						};
+						class Item1
+						{
+							value="0";
+							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
+							typeName="RiflemanRadio";
+						};
+						class Item2
+						{
+							value="7";
+							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
+							typeName="terrain_interception_coefficient";
+						};
+						class Item3
+						{
+							value="TaskForceRadio";
+							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
+							typeName="radio_channel_name";
+						};
+						class Item4
+						{
+							value="123";
+							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
+							typeName="radio_channel_password";
+						};
+						class Item5
+						{
+							value="1";
+							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
+							typeName="same_sw_frequencies_for_side";
+						};
+						class Item6
+						{
+							value="1";
+							parentCls="tfar_ModuleTaskForceRadioEnforceUsage";
+							typeName="same_lr_frequencies_for_side";
+						};
+					};
+					id=4;
+					side="LOGIC";
+					vehicle="tfar_ModuleTaskForceRadioEnforceUsage";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item5
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={22.497412,28.825125,29.056885};
+					azimut=0.96356577;
+					id=5;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="specLoc";
+				};
+			};
+		};
+		class Item6
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1399.7875,40.81356,875.35425};
+					class args
+					{
+						items=3;
+						class Item0
+						{
+							value="1";
+							parentCls="tfar_ModuleTaskForceRadioFrequencies";
+							typeName="Units";
+						};
+						class Item1
+						{
+							value="[""31"",""32"",""33"",""34"",""35"",""36"",""37"",""38""]";
+							parentCls="tfar_ModuleTaskForceRadioFrequencies";
+							typeName="PrFreq";
+						};
+						class Item2
+						{
+							value="[""51"",""52"",""53"",""54"",""55"",""56"",""57"",""58""]";
+							parentCls="tfar_ModuleTaskForceRadioFrequencies";
+							typeName="LrFreq";
+						};
+					};
+					id=6;
+					side="LOGIC";
+					vehicle="tfar_ModuleTaskForceRadioFrequencies";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=0;
+					synchronizations[]={1,2,4,5,6,7,8,9,10,11};
+				};
+			};
+		};
+		class Item7
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1504.834,43.484596,1282.5414};
+					azimut=-81.306396;
+					id=7;
+					side="CIV";
+					vehicle="CAF_AG_ME_CIV";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="VIP";
+					init="removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;  this forceAddUniform ""U_BG_Guerilla3_1""; this addItemToUniform ""AGM_Bandage""; this addItemToUniform ""AGM_Bandage""; this addItemToUniform ""AGM_Bandage""; this addItemToUniform ""AGM_Morphine""; this addItemToUniform ""AGM_Morphine""; this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";";
+					description="Escaped VIP";
+				};
+			};
+		};
+		class Item8
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1240.9515,43.393764,978.54285};
+					azimut=0.89771903;
+					id=8;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="SERVER";
+					init="null=[] execVM ""cos\cosInit.sqf"";";
+					description="1'0 US Platoon Commander";
+				};
+			};
+		};
+		class Item9
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={1399.7992,40.82811,876.96167};
+					azimut=-180.55;
+					id=9;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=0.60000002;
+					init="[this,""USA"",""PC""] call tb3_fLoadout;this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'0 US Platoon Commander";
+					syncId=1;
+					synchronizations[]={0};
+				};
+				class Item1
+				{
+					position[]={1400.9037,40.839417,877.26392};
+					azimut=-180.55;
+					special="NONE";
+					id=10;
+					side="WEST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="[this,""USA"",""MED""] call tb3_fLoadout; this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'0 Platoon Medic";
+				};
+				class Item2
+				{
+					position[]={1398.7758,40.824165,877.33472};
+					azimut=-180.55;
+					special="NONE";
+					id=11;
+					side="WEST";
+					vehicle="B_officer_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="[this,""USA"",""RTO""] call tb3_fLoadout;this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'0 Radio Operator";
+				};
+			};
+		};
+		class Item10
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={1395.5675,40.776463,874.48315};
+					azimut=139.56599;
+					id=12;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="[this,""USA"",""SL""] call tb3_fLoadout;this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'1 US Rifle Squad Leader";
+					syncId=2;
+					synchronizations[]={0};
+				};
+				class Item1
+				{
+					position[]={1397.6934,40.791534,874.51123};
+					azimut=228.67799;
+					special="NONE";
+					id=13;
+					side="WEST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="[this,""USA"",""MED""] call tb3_fLoadout; this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'1 Squad Medic";
+					syncId=3;
+					synchronizations[]={3};
+				};
+			};
+		};
+		class Item11
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={1395.2433,40.76236,872.81958};
+					azimut=183.153;
+					id=14;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="[this,""USA"",""FTL""] call tb3_fLoadout;this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'1'A Fire Team Leader";
+					syncId=4;
+					synchronizations[]={0};
+				};
+				class Item1
+				{
+					position[]={1394.7764,40.746593,871.43628};
+					azimut=50.889801;
+					special="NONE";
+					id=15;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[this,""USA"",""AR""] call tb3_fLoadout; this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'1'A Automatic Rifleman";
+				};
+				class Item2
+				{
+					position[]={1394.7432,40.741447,870.78345};
+					azimut=50.889801;
+					special="NONE";
+					id=16;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[this,""USA"",""GRE""] call tb3_fLoadout; this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'1'A Grenadier";
+				};
+				class Item3
+				{
+					position[]={1394.6709,40.735359,870.0437};
+					azimut=50.889801;
+					special="NONE";
+					id=17;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[this,""USA"",""RAT""] call tb3_fLoadout; this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'1'A Rifleman(AT)";
+				};
+			};
+		};
+		class Item12
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={1398.0615,40.781036,872.74365};
+					azimut=-181.258;
+					id=18;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="[this,""USA"",""FTL""] call tb3_fLoadout;this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'1'B Fire Team Leader";
+					syncId=5;
+					synchronizations[]={0};
+				};
+				class Item1
+				{
+					position[]={1398.3496,40.773163,871.40527};
+					azimut=-408.375;
+					special="NONE";
+					id=19;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[this,""USA"",""AR""] call tb3_fLoadout; this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'1'B Automatic Rifleman";
+				};
+				class Item2
+				{
+					position[]={1398.3076,40.767807,870.7334};
+					azimut=-400.047;
+					special="NONE";
+					id=20;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[this,""USA"",""GRE""] call tb3_fLoadout; this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'1'B Grenadier";
+				};
+				class Item3
+				{
+					position[]={1398.2754,40.762337,870.03613};
+					azimut=-409.82199;
+					special="NONE";
+					id=21;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[this,""USA"",""RAT""] call tb3_fLoadout; this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'1'B Rifleman(AT)";
+				};
+			};
+		};
+		class Item13
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={1395.4841,40.729874,868.4906};
+					azimut=139.56599;
+					id=22;
+					side="WEST";
+					vehicle="B_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="[this,""USA"",""SL""] call tb3_fLoadout;this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'2 US Rifle Squad Leader";
+					syncId=6;
+					synchronizations[]={0};
+				};
+				class Item1
+				{
+					position[]={1397.61,40.745964,868.51868};
+					azimut=228.67799;
+					special="NONE";
+					id=23;
+					side="WEST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="[this,""USA"",""MED""] call tb3_fLoadout; this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'2 Squad Medic";
+				};
+			};
+		};
+		class Item14
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={1395.2302,40.722397,867.24939};
+					azimut=183.153;
+					id=24;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="[this,""USA"",""FTL""] call tb3_fLoadout;this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'2'A Fire Team Leader";
+					syncId=7;
+					synchronizations[]={7,0};
+				};
+				class Item1
+				{
+					position[]={1394.7633,40.713146,865.86609};
+					azimut=50.889801;
+					special="NONE";
+					id=25;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[this,""USA"",""AR""] call tb3_fLoadout; this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'2'A Automatic Rifleman";
+				};
+				class Item2
+				{
+					position[]={1394.7301,40.709572,865.21326};
+					azimut=50.889801;
+					special="NONE";
+					id=26;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[this,""USA"",""GRE""] call tb3_fLoadout; this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'2'A Grenadier";
+				};
+				class Item3
+				{
+					position[]={1394.6578,40.703484,864.47351};
+					azimut=50.889801;
+					special="NONE";
+					id=27;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[this,""USA"",""RAT""] call tb3_fLoadout; this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'2'A Rifleman(AT)";
+				};
+			};
+		};
+		class Item15
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={1398.0485,40.74123,867.17346};
+					azimut=-181.258;
+					id=28;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="[this,""USA"",""FTL""] call tb3_fLoadout;this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'2'B Fire Team Leader";
+					syncId=8;
+					synchronizations[]={0};
+				};
+				class Item1
+				{
+					position[]={1398.3365,40.736702,865.83508};
+					azimut=-408.375;
+					special="NONE";
+					id=29;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[this,""USA"",""AR""] call tb3_fLoadout; this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'2'B Automatic Rifleman";
+				};
+				class Item2
+				{
+					position[]={1398.2946,40.733028,865.16321};
+					azimut=-400.047;
+					special="NONE";
+					id=30;
+					side="WEST";
+					vehicle="B_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[this,""USA"",""GRE""] call tb3_fLoadout; this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'2'B Grenadier";
+				};
+				class Item3
+				{
+					position[]={1398.2623,40.729298,864.46594};
+					azimut=-409.82199;
+					special="NONE";
+					id=31;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="[this,""USA"",""RAT""] call tb3_fLoadout; this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'2'B Rifleman(AT)";
+				};
+			};
+		};
+		class Item16
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=7;
+				class Item0
+				{
+					position[]={1405.4885,40.846775,874.08167};
+					azimut=182.14799;
+					id=32;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="[this,""USA"",""WSL""] call tb3_fLoadout;this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'2'A Fire Team Leader";
+					syncId=9;
+					synchronizations[]={0};
+				};
+				class Item1
+				{
+					position[]={1403.8557,40.823101,872.55774};
+					azimut=54.670399;
+					special="NONE";
+					id=33;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[this,""USA"",""MG""] call tb3_fLoadout; this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'2'A Machine Gunner";
+				};
+				class Item2
+				{
+					position[]={1403.7893,40.815128,871.56116};
+					azimut=59.8624;
+					special="NONE";
+					id=34;
+					side="WEST";
+					vehicle="B_Soldier_A_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[this,""USA"",""MGA""] call tb3_fLoadout; this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'2'A Assistant Machine Gunner";
+				};
+				class Item3
+				{
+					position[]={1403.7317,40.807331,870.57874};
+					azimut=49.603802;
+					special="NONE";
+					id=35;
+					side="WEST";
+					vehicle="B_BLK_TAN_R_soldier_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[this,""USA"",""AB""] call tb3_fLoadout; this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'2'A Ammo Bearer";
+				};
+				class Item4
+				{
+					position[]={1406.8362,40.845646,872.58362};
+					azimut=-61.494598;
+					special="NONE";
+					id=36;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[this,""USA"",""MG""] call tb3_fLoadout; this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'2'B Machine Gunner";
+				};
+				class Item5
+				{
+					position[]={1406.8928,40.838982,871.63831};
+					azimut=-52.624199;
+					special="NONE";
+					id=37;
+					side="WEST";
+					vehicle="B_Soldier_A_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[this,""USA"",""MGA""] call tb3_fLoadout; this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'2'B Assistant Machine Gunner";
+				};
+				class Item6
+				{
+					position[]={1406.8303,40.830761,870.60461};
+					azimut=-39.058399;
+					special="NONE";
+					id=38;
+					side="WEST";
+					vehicle="B_BLK_TAN_R_soldier_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[this,""USA"",""AB""] call tb3_fLoadout; this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="1'2'B Ammo Bearer";
+				};
+			};
+		};
+		class Item17
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={1409.9999,40.876137,874.15173};
+					special="NONE";
+					id=39;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[this,""USA"",""AT""] call tb3_fLoadout;this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="2'1 AT Specialist";
+					syncId=10;
+					synchronizations[]={0};
+				};
+				class Item1
+				{
+					position[]={1408.7125,40.863499,873.32495};
+					special="NONE";
+					id=40;
+					side="WEST";
+					vehicle="B_soldier_AR_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="[this,""USA"",""MATA""] call tb3_fLoadout;this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="2'1 Assistant AT Specialist";
+				};
+			};
+		};
+		class Item18
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={1410.0424,40.863853,872.48584};
+					azimut=-1.1243;
+					special="NONE";
+					id=41;
+					side="WEST";
+					vehicle="B_crew_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					init="this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="3'1 Vehicle Commander";
+					syncId=11;
+					synchronizations[]={0};
+				};
+				class Item1
+				{
+					position[]={1408.833,40.850677,871.30273};
+					azimut=-1.1243;
+					special="NONE";
+					id=42;
+					side="WEST";
+					vehicle="B_crew_F";
+					player="PLAY CDG";
+					rank="CORPORAL";
+					skill=0.60000002;
+					init="this addItemToBackpack ""AGM_CableTie"";  this linkItem ""NVGoggles"";";
+					description="3'1 Vehicle Driver";
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=20;
+		class Item0
+		{
+			position[]={3.7305765,28.056425,24.09021};
+			id=43;
+			side="EMPTY";
+			vehicle="Land_CncBarrierMedium4_F";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item1
+		{
+			position[]={11.107532,28.269291,24.09021};
+			id=44;
+			side="EMPTY";
+			vehicle="Land_CncBarrierMedium4_F";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item2
+		{
+			position[]={18.484499,28.482649,24.096069};
+			id=45;
+			side="EMPTY";
+			vehicle="Land_CncBarrierMedium4_F";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item3
+		{
+			position[]={21.677866,28.350275,19.77771};
+			azimut=90;
+			id=46;
+			side="EMPTY";
+			vehicle="Land_CncBarrierMedium4_F";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item4
+		{
+			position[]={21.677866,27.967766,12.400269};
+			azimut=90;
+			id=47;
+			side="EMPTY";
+			vehicle="Land_CncBarrierMedium4_F";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item5
+		{
+			position[]={0.59190464,27.053293,4.8104248};
+			azimut=90;
+			id=48;
+			side="EMPTY";
+			vehicle="Land_CncBarrierMedium4_F";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item6
+		{
+			position[]={0.59385777,27.775681,19.775757};
+			azimut=90;
+			id=49;
+			side="EMPTY";
+			vehicle="Land_CncBarrierMedium4_F";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item7
+		{
+			position[]={0.59190464,27.418613,12.290886};
+			azimut=90;
+			id=50;
+			side="EMPTY";
+			vehicle="Land_CncBarrierMedium4_F";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item8
+		{
+			position[]={21.779413,27.592672,4.9178467};
+			azimut=90;
+			id=51;
+			side="EMPTY";
+			vehicle="Land_CncBarrierMedium4_F";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item9
+		{
+			position[]={3.7305765,26.923483,0.60437012};
+			id=52;
+			side="EMPTY";
+			vehicle="Land_CncBarrierMedium4_F";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item10
+		{
+			position[]={11.107532,27.107906,0.60437012};
+			id=53;
+			side="EMPTY";
+			vehicle="Land_CncBarrierMedium4_F";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item11
+		{
+			position[]={18.484499,27.294149,0.61022949};
+			id=54;
+			side="EMPTY";
+			vehicle="Land_CncBarrierMedium4_F";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item12
+		{
+			position[]={1389.7838,40.950054,894.93414};
+			azimut=186.203;
+			special="NONE";
+			id=55;
+			side="EMPTY";
+			vehicle="rhsusf_m998_d_2dr_fulltop";
+			lock="UNLOCKED";
+			skill=0.60000002;
+			init="this additemCargo [""AGM_CableTie"",10];";
+			description="1'2'B Grenadier";
+		};
+		class Item13
+		{
+			position[]={1414.2302,41.077477,892.05981};
+			azimut=-173.386;
+			special="NONE";
+			id=56;
+			side="EMPTY";
+			vehicle="rhsusf_m113d_usarmy";
+			lock="UNLOCKED";
+			skill=0.60000002;
+			init="this additemCargo [""AGM_CableTie"",10];";
+			description="1'2'B Grenadier";
+		};
+		class Item14
+		{
+			position[]={1393.0912,40.967167,894.53687};
+			azimut=186.203;
+			special="NONE";
+			id=57;
+			side="EMPTY";
+			vehicle="rhsusf_m998_d_2dr_fulltop";
+			lock="UNLOCKED";
+			skill=0.60000002;
+			init="this additemCargo [""AGM_CableTie"",10];";
+			description="1'2'B Grenadier";
+		};
+		class Item15
+		{
+			position[]={1397.0365,40.983639,894.06915};
+			azimut=186.203;
+			special="NONE";
+			id=58;
+			side="EMPTY";
+			vehicle="rhsusf_m998_d_2dr_fulltop";
+			lock="UNLOCKED";
+			skill=0.60000002;
+			init="this additemCargo [""AGM_CableTie"",10];";
+			description="1'2'B Grenadier";
+		};
+		class Item16
+		{
+			position[]={1400.8654,41.006824,893.62683};
+			azimut=186.203;
+			special="NONE";
+			id=59;
+			side="EMPTY";
+			vehicle="rhsusf_m998_d_2dr_fulltop";
+			lock="UNLOCKED";
+			skill=0.60000002;
+			init="this additemCargo [""AGM_CableTie"",10];";
+			description="1'2'B Grenadier";
+		};
+		class Item17
+		{
+			position[]={1404.8033,41.025982,893.19678};
+			azimut=186.203;
+			special="NONE";
+			id=60;
+			side="EMPTY";
+			vehicle="rhsusf_m998_d_2dr_fulltop";
+			lock="UNLOCKED";
+			skill=0.60000002;
+			init="this additemCargo [""AGM_CableTie"",10];";
+			description="1'2'B Grenadier";
+		};
+		class Item18
+		{
+			position[]={1408.9836,41.043827,892.51593};
+			azimut=186.203;
+			special="NONE";
+			id=61;
+			side="EMPTY";
+			vehicle="rhsusf_m998_d_2dr_fulltop";
+			lock="UNLOCKED";
+			skill=0.60000002;
+			init="this additemCargo [""AGM_CableTie"",10];";
+			description="1'2'B Grenadier";
+		};
+		class Item19
+		{
+			position[]={1399.7523,41.081532,900.271};
+			azimut=184.79561;
+			id=62;
+			side="EMPTY";
+			vehicle="AGM_Box_Misc";
+			leader=1;
+			skill=0.60000002;
+			description="1'1 US Rifle Squad Leader";
+		};
+	};
+	class Markers
+	{
+		items=10;
+		class Item0
+		{
+			position[]={10.884875,27.663017,11.673706};
+			name="respawn_west";
+			type="Empty";
+		};
+		class Item1
+		{
+			position[]={10.886828,27.667858,11.769409};
+			name="respawn_east";
+			type="Empty";
+		};
+		class Item2
+		{
+			position[]={11.115352,27.687374,12.034058};
+			name="respawn_guerilla";
+			type="Empty";
+		};
+		class Item3
+		{
+			position[]={10.976672,27.667595,11.714722};
+			name="respawn_civilian";
+			type="Empty";
+		};
+		class Item4
+		{
+			position[]={1311.1476,41,976.63293};
+			name="start";
+			type="Empty";
+		};
+		class Item5
+		{
+			position[]={1281.9188,46.24654,1277.7209};
+			name="aomarksoyoucanseeit";
+			type="Empty";
+		};
+		class Item6
+		{
+			position[]={1282.0243,46.145943,1279.3792};
+			name="ao";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="Border";
+			a=600;
+			b=600;
+			drawBorder=1;
+		};
+		class Item7
+		{
+			position[]={1344.4945,42.501831,1339.0765};
+			name="EOSzone";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="Border";
+			a=300;
+			b=300;
+			angle=4.2311201;
+			drawBorder=1;
+		};
+		class Item8
+		{
+			position[]={1354.0228,40.481174,859.22363};
+			name="a";
+			text="NATO Base";
+			type="flag_USA";
+		};
+		class Item9
+		{
+			position[]={1387.4353,40.505489,833.94507};
+			name="h";
+			text="Capture Point";
+			type="selector_selectedMission";
+			colorName="ColorGreen";
+		};
+	};
+	class Sensors
+	{
+		items=4;
+		class Item0
+		{
+			position[]={1387.5485,40.505783,833.83423};
+			a=10;
+			b=5;
+			angle=186.25;
+			rectangular=1;
+			activationBy="CIV";
+			interruptable=1;
+			age="UNKNOWN";
+			expCond="VIP in thisList;";
+			expActiv="""end1"" call bis_fnc_endMission;";
+			class Effects
+			{
+			};
+		};
+		class Item1
+		{
+			position[]={1369.4482,40.475296,848.67029};
+			a=5;
+			b=5;
+			rectangular=1;
+			timeoutMin=1800;
+			timeoutMid=1800;
+			timeoutMax=1800;
+			age="UNKNOWN";
+			expCond="alive VIP;";
+			expActiv="""end3"" call bis_fnc_endMission;";
+			class Effects
+			{
+			};
+		};
+		class Item2
+		{
+			position[]={1380.1954,40.525051,848.81494};
+			a=5;
+			b=5;
+			rectangular=1;
+			age="UNKNOWN";
+			expCond="!alive VIP;";
+			expActiv="""end4"" call bis_fnc_endMission;";
+			class Effects
+			{
+			};
+		};
+		class Item3
+		{
+			position[]={1508.0505,43.523911,1286.7896};
+			a=0;
+			b=0;
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			expCond="(velocity VIP select 0) > 4 || (velocity VIP select 0) < -4 || (velocity VIP select 1) > 4 || (velocity VIP select 1) < -4";
+			expActiv="VIP setFatigue .595";
+			class Effects
+			{
+			};
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"map_vr",
+		"aia_shapur_baf_config"
+	};
+	addOnsAuto[]=
+	{
+		"aia_shapur_baf_config"
+	};
+	randomSeed=5762626;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		day=28;
+		hour=13;
+		minute=37;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"map_vr",
+		"aia_shapur_baf_config"
+	};
+	addOnsAuto[]=
+	{
+		"aia_shapur_baf_config"
+	};
+	randomSeed=2673389;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		day=28;
+		hour=13;
+		minute=37;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"map_vr",
+		"aia_shapur_baf_config"
+	};
+	addOnsAuto[]=
+	{
+		"aia_shapur_baf_config"
+	};
+	randomSeed=4419989;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		day=28;
+		hour=13;
+		minute=37;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};

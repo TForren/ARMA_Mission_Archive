@@ -1,0 +1,47 @@
+author = "Hoizen"; // Author
+onLoadName = "TvT-20 Ukrainian Pickle";
+onLoadMission = "US Soldiers Attack key Russian positions in Ukraine. Pro Russian Ukrainians join the fight.";
+//loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "overview.paa";
+
+
+
+class Header
+{
+ gameType = DM;            
+ minPlayers = 1;             
+ maxPlayers = 20;      
+
+};
+
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+respawn = 1; 
+enableDebugConsole = 2;
+
+#include "Riflesquad.cpp"
+#include "ukraine.cpp"
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Blufor Victory";
+		subtitle = "The HVT has been eliminated";
+		description = "The Blufor have successfully eliminated the HVT";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class End2
+	{
+		title = "Opfor Victory";
+		subtitle = "The HVT has escaped to Canada";
+		description = "The Blufor were unable to eliminate the HVT and he has escaped to Canada where he will enjoy all the Canadian Bacon he wants. Way to go, Blufor.";
+		pictureBackground = "overview.paa";
+		picture = "flag_canada";
+		pictureColor[] = {1.0,1.0,1.0,1};
+	};
+	
+
+};

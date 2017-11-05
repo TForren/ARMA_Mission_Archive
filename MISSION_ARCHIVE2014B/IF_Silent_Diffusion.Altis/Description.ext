@@ -1,0 +1,55 @@
+author = "Hoizen"; // Author
+onLoadName = "TvT 10 Silent Diffusion";
+onLoadMission = "Blufor Infiltration. Opfor Security";
+class Header
+{
+	gameType = Team; // MP misison type
+};
+disabledAI = true;
+
+loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "overview.paa";
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Blufor Victory";
+		subtitle = Three tasks have been completed by the Blufor";
+		description = "The Blufor accomplished what they set out to do. Opfor security have failed to maintain control over the AO.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class End2
+	{
+		title = "Opfor Victory";
+		subtitle = "All remaining Blufor have been eliminated";
+		description = "The Blufor were unable to accomplish their goals and the Opfor have successfully maintained security of the AO.";
+		pictureBackground = "overview.paa";
+		picture = "o_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+	
+	class End3
+	{
+		title = "Blufor Victory";
+		subtitle = "All remaining Opfor have been eliminated";
+		description = "The Blufor were able to render the AO unguarded by eliminating all Opfor or chasing them out of the AO.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+		class End4
+	{
+		title = "Opfor Victory";
+		subtitle = "Time limit reached";
+		description = "The Blufor were unable to accomplish their goals within the allowed time.";
+		pictureBackground = "overview.paa";
+		picture = "o_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+
+};

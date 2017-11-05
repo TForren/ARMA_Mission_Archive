@@ -1,0 +1,37 @@
+author = "Hoizen"; // Author
+onLoadName = "CO-12 UN Buzz Kill";
+onLoadMission = "UN Platoon raid Black Market";
+loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "overview.paa";
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+
+class Header {
+   gameType = Coop;
+   playerCountMultipleOf = 1; //Disables auto balance
+};
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission Completed";
+		subtitle = "Black Market Dismantled";
+		description = "The UN Forces have successfully dismantled the black market";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+};
+
+class CfgSounds
+{
+	
+	class cariboon
+	{
+		name = "cariboon"; 
+		sound[] = {sounds\cariboon.ogg, 0.4, 1.0};
+		titles[] = {}; 
+	};
+
+};

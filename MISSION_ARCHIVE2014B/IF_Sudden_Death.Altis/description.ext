@@ -1,0 +1,46 @@
+author = "Hoizen"; // Author
+onLoadName = "CO-18 Sudden Death";
+onLoadMission = "US Forces disrupt experimental weapon trade";
+loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "overview.paa";
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+
+class Header {
+   gameType = Coop;
+   playerCountMultipleOf = 1; //Disables auto balance
+};
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission Completed";
+		subtitle = "Experimental Weapon Transferred";
+		description = "The experimental weapon has been successfully transferred to the retrieval helo.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class End2
+	{
+		title = "Mission Failed";
+		subtitle = "Experimental Weapon Destroyed";
+		description = "The Experimental Weapon has been destroyed.";
+		pictureBackground = "overview.paa";
+		picture = "o_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+	
+		class End3
+	{
+		title = "Mission Failed";
+		subtitle = "Retrieval Helo Destroyed";
+		description = "The Retrieval Helo has been destroyed and is unable to retrieve the experimental weapon.";
+		pictureBackground = "overview.paa";
+		picture = "o_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+
+
+};

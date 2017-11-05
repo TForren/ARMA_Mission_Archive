@@ -1,0 +1,2 @@
+#define DEFAULT_MINDIST 1200
+#define DESERTCAMO false

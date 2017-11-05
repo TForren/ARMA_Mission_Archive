@@ -1,0 +1,21 @@
+enableDebugConsole = 1;
+
+
+class RscDisplayCurator 
+{
+    onLoad = "[_this select 0] call HZ_EH_zeusLoaded;";
+    onUnload = "[_this select 0] call HZ_EH_zeusUnloaded;";
+};
+
+class Params {
+	
+	class FOW
+	{
+		title = "Fog of War (EXPERIMENTAL LOL)"; // Param name visible in the list
+		values[] = {0, 1}; // Values; must be integers; has to have the same number of elements as 'texts'
+		texts[] = {"Disabled","Enabled"}; // Description of each selectable item
+		default = 1; // Default value; must be listed in 'values' array, otherwise 0 is used
+
+	};
+
+};

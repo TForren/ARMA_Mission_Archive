@@ -1,0 +1,36 @@
+author = "Hoizen"; // Author
+onLoadName = "CO-05(10) Relief";
+onLoadMission = "A band of Freedom Fighters assassinate an oppressive African Merc HVT";
+loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "overview.paa";
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+
+class Header {
+   gameType = Coop;
+   playerCountMultipleOf = 1; //Disables auto balance
+};
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission Completed";
+		subtitle = "HVT Killed";
+		description = "The Freedom fighters have succesfully killed their target and destroyed his expensive helicopter.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+		class End2
+	{
+		title = "Mission Failed";
+		subtitle = "No Blufor remain in the AO.";
+		description = "The Blufor have been made combat ineffective and can no longer accomplish their goals.";
+		pictureBackground = "overview.paa";
+		picture = "o_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+
+
+};

@@ -1,0 +1,1 @@
+_this execVM "classmenu.sqf";

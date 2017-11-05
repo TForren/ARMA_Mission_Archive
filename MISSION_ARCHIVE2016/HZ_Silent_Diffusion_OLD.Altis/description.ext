@@ -1,0 +1,78 @@
+#define description
+
+#include "core\description.hpp" //DO NOT REMOVE
+#include "customization\missionSettings.hpp" //DO NOT REMOVE
+#include "modules\modules.sqf" //DO NOT REMOVE
+#include "sounds\config.cpp"
+
+#undef description
+#define description_functions
+
+class CfgFunctions {
+
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+
+};
+	
+#undef description_functions
+#define description_titles
+	
+class rscTitles {
+
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+
+};
+
+#undef description_titles
+#define description_params
+
+class Params {
+	
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+	
+};
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Blufor Victory";
+		subtitle = "Blufor Objectives Complete";
+		description = "The Blufor have successfully completed the necessary number of objectives and have survived the mission.";
+		pictureBackground = "diffusion.jpg";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+		class End2
+	{
+		title = "Opfor Victory";
+		subtitle = "Time Limit Reached";
+		description = "The Blufor were unable to complete the necessary number of objectives before the time limit.";
+		pictureBackground = "diffusion.jpg";
+		picture = "b_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};		
+	
+	class End2B
+	{
+		title = "Blufor Victory";
+		subtitle = "All Opfor Eliminated";
+		description = "The Blufor eliminated all opfor in the area.";
+		pictureBackground = "diffusion.jpg";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+		class End3
+	{
+		title = "Opfor Victory";
+		subtitle = "All Blufor Eliminated";
+		description = "All Blufor in the AO have been eliminated or chased off into a state of insignificance.";
+		pictureBackground = "diffusion.jpg";
+		picture = "KIA";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+};

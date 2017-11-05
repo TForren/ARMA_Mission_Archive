@@ -1,0 +1,100 @@
+#define description
+
+#include "core\description.hpp" //DO NOT REMOVE
+#include "customization\missionSettings.hpp" //DO NOT REMOVE
+#include "modules\modules.sqf" //DO NOT REMOVE
+#include "sounds\config.cpp"
+
+#undef description
+#define description_functions
+
+class CfgFunctions {
+
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+
+};
+	
+#undef description_functions
+#define description_titles
+	
+class rscTitles {
+
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+
+};
+
+#undef description_titles
+#define description_params
+
+class Params {
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+	
+};
+
+
+class CfgCloudlets
+{
+	//class Default;
+	class jean_SleighSparkle //: Default
+	{
+		interval=0.0099999998;
+		circleRadius=0;
+		circleVelocity[]={0,0,0};
+		particleShape="\A3\data_f\ParticleEffects\Universal\Universal";
+		particleFSNtieth=16;
+		particleFSIndex=13;
+		particleFSFrameCount=2;
+		particleFSLoop=0;
+		angleVar=360;
+		animationName="";
+		particleType="Billboard";
+		timerPeriod=1;
+		lifeTime=7.5;
+		moveVelocity[]=
+		{
+			"speedX * 6",
+			"speedY * 6",
+			"speedZ * 6"
+		};
+		moveVelocityVar[]={0.2,1,0.2};
+		rotationVelocity=1;
+		weight=1;
+		volume=1;
+		rubbing=0;
+		size[]={0.1,0.1,0.1,0.1,0.1,0.079999998,0.079999998,0.079999998,0.079999998,0};
+		color[]=
+		{
+			{1,1,1,1},
+			{1,1,1,1},
+			{1,1,1,1},
+			{1,1,1,1}
+		};
+		emissiveColor[]=
+		{
+			{300,300,300,0},
+			{0,0,0,0}
+		};
+		animationSpeed[]={1000};
+		randomDirectionPeriod=0.5;
+		randomDirectionIntensity=0.55000001;
+		onTimerScript="";
+		beforeDestroyScript="";
+		blockAIVisibility=0;
+		lifeTimeVar=1.5;
+		position[]=
+		{
+			"positionX",
+			"positionY",
+			"positionZ"
+		};
+		positionVar[]={0.2,0.2,0};
+		rotationVelocityVar=2;
+		sizeVar=0.039999999;
+		colorVar[]={0,0.15000001,0.15000001,0};
+		randomDirectionPeriodVar=0.30000001;
+		randomDirectionIntensityVar=0.15000001;
+	};
+};

@@ -1,0 +1,51 @@
+author = "Hoizen"; // Author
+onLoadName = "CO-20 Round Robin";
+onLoadMission = "US Navy Seals on board the Nimitz Strike Key Enemy Locations";
+loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "overview.paa";
+
+
+
+class Header
+{
+ gameType = COOP;            
+ minPlayers = 1;             
+ maxPlayers = 20;      
+
+};
+
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+respawn = 3; 
+respawnDelay = 30;  
+enableDebugConsole = 2;
+
+#include "sounds\config.cpp"
+#include "VAS\menu.hpp"
+
+class CfgFunctions
+{
+	#include "VAS\cfgfunctions.hpp"
+};
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission Completed";
+		subtitle = "All Tasks Complete";
+		description = "All primary objects have been completed and the Russian forces have been crippled.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+		class End2
+	{
+		title = "Mission Completed";
+		subtitle = "All Tasks Complete";
+		description = "All primary objects have been completed and the Russian forces have been crippled. Additionally, the HVT has been eliminated and the Russian Forces will soon be forced to surrender.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+};

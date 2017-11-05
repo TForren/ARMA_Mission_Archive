@@ -1,0 +1,101 @@
+author = "Hustler (ATCAG)";
+loadScreen = "images\loadScreen.paa";
+onLoadMission = "Clear red grid squares and find intel in buildings to get clues on the whereabouts of a hidden Taliban weapons cache location.  Destroy the caches!";
+onLoadIntroTime = 0;
+onLoadMissionTime = 0;
+onLoadName = "INSURGENCY: Takistan";
+OverviewTextLocked = "Clear red grid squares and find intel in buildings to get clues on the whereabouts of a hidden Taliban weapons cache location.  Destroy the caches!";
+OverviewPicture = "images\loadScreen.paa";
+
+briefing = 1;
+debriefing = 1;
+respawn = 3;
+respawnDelay = 10;
+respawnDialog = 0;
+DisabledAI = 1;
+enableDebugConsole = 0;
+allowFunctionsRecompile = 0;
+
+class Header {
+	gameType = COOP;
+	minPlayers = 1;
+	maxPlayers = 22;
+	playerCountMultipleOf = 1;
+};
+
+class Params {
+		
+	class EmtpyLine1 {
+	//paramsArray[0]
+		title = ":: Game Settings";
+		values[]={0,0};
+		texts[]={ "",""};
+		default = 0;			
+	};
+	
+    class cachesLimit {
+	//paramsArray[1]
+		title = "Number of caches to hunt";
+		values[] = {2,4,6,8,10,12,14,16};
+		texts[] = {"Two","Four","Six","Eight","Ten","Twelve","Fourteen","Sixteen"};
+		default = 6;
+	};
+	
+	class intelItems {
+	//paramsArray[2]
+		title = "Number of Intel Items to spawn per town";
+		values[] = {1,2,3,4,5,6,7,8};
+		texts[] = {"1 - Extreme","2 - Very Hard","3 - Hard","4 - Hard\Medium","5 - Medium","6 - Medium/Easy","7 - Easy","8 - Very Easy"};
+		default = 5;
+	};
+	
+	class EmtpyLine2 {
+	//paramsArray[5]
+		title = ":: Time & Date Settings";
+		values[]={0,0};
+		texts[]={ "",""};
+		default = 0;			
+	};
+	
+	class TimeOfDay {
+	//paramsArray[6]
+		title = "Time of Day";
+		values[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19 ,20,21,22,23};
+		texts[] = {"0000","0100","0200","0300","0400","0500","0600", "0700","0800","0900","1000","1100","1200","1300"," 1400","1500","1600","1700","1800","1900","2000","2 100","2200","2300"};
+		default = 6;
+	};
+	
+};
+
+
+#include "common\client\VAS\menu.hpp"
+#include "common\client\BRS\defines.hpp"
+#include "common\client\BRS\dialogs.hpp"
+#include "common\client\ATM_airdrop\dialog.hpp"
+#include "R3F_LOG\desc_include.h"
+#include "common\client\JWC_CASFS\casDefine.hpp"
+#include "common\client\JWC_CASFS\casMenu.hpp"
+
+class RscTitles
+{
+	#include "common\client\ais_injury\dialogs\rscTitlesAIS.hpp"
+};
+
+class CfgFunctions
+{
+    #include "common\server\EPD\EPDcfgFunctions.hpp"
+	#include "common\client\ais_injury\cfgFunctionsAIS.hpp"
+	#include "common\client\VAS\cfgfunctions.hpp"
+};
+
+class CfgSounds
+{
+	sounds[] = {news,cantDo,Adhan,Vent,Vent2,Para};
+
+	class Vent {name="Vent";sound[]={"common\client\ATM_airdrop\data\Vent.ogg", db-11, 1.0};titles[] = {};};
+	class Vent2 {name="Vent2";sound[]={"common\client\ATM_airdrop\data\Vent2.ogg", db-11, 1.0};titles[] = {};};
+	class Para {name="Para";sound[]={"common\client\ATM_airdrop\data\parachute.ogg", db-11, 1.0};titles[] = {};};
+	class cantDo {name="cantDo";sound[]={"common\client\JWC_CASFS\cantDo.ogg", 1.0, 1.0};titles[]={};};
+	class Adhan {name = "Adhan";sound[] = {"core\scripts\sounds\Adhan.ogg", db+5, 1, 375};titles[] = {};};
+	class News {name = "news";sound[] = {"core\scripts\sounds\news.ogg", db-9, 1};titles[] = {};};
+};

@@ -1,0 +1,46 @@
+author = "Hoizen"; // Author
+onLoadName = "CO-20 Same ol' Cache";
+onLoadMission = "US forces clear out an insurgent compound and destroy a weapons cache.";
+loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "overview.paa";
+
+
+
+class Header
+{
+ gameType = COOP;            
+ minPlayers = 1;             
+ maxPlayers = 20;      
+
+};
+
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+respawn = 1; 
+enableDebugConsole = 2;
+
+#include "Riflesquad.cpp"
+#include "WeaponsSquad.cpp"
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission Successful";
+		subtitle = "The weapons cache has been destroyed";
+		description = "The Blufor were able to locate and destroy the weapons cache in the insurgent compound.";
+		pictureBackground = "MissionOver.paa";
+		picture = "fist.paa";
+		pictureColor[] = {1.0,1.0,1.0,1};
+	};
+
+	class End2
+	{
+		title = "Opfor Victory";
+		subtitle = "The HVT has escaped to Canada";
+		description = "The Blufor were unable to eliminate the HVT and he has escaped to Canada where he will enjoy all the Canadian Bacon he wants. Way to go, Blufor.";
+		pictureBackground = "overview.paa";
+		picture = "flag_canada";
+		pictureColor[] = {1.0,1.0,1.0,1};
+	};
+
+};

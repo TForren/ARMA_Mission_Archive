@@ -1,0 +1,44 @@
+author = "Hoizen"; // Author
+onLoadName = "CO-21 Blood Money";
+onLoadMission = "Rangers dismantle a band of rogue AAF";
+loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "overview.paa";
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+
+class Header {
+   gameType = Coop;
+   playerCountMultipleOf = 1; //Disables auto balance
+};
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission Complete";
+		subtitle = "All objectives have been completed";
+		description = "The AAF HVT has been eliminated and his band of rogues have been rendered combat ineffective.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class End2
+	{
+		title = "Mission Failed";
+		subtitle = "The HVT has escaped to Canada";
+		description = "The Blufor were unable to eliminate the HVT and he has escaped to Canada where he will enjoy all the Canadian Bacon he wants. Way to go, Blufor.";
+		pictureBackground = "overview.paa";
+		picture = "flag_canada";
+		pictureColor[] = {1.0,1.0,1.0,1};
+	};
+	
+		class End3
+	{
+		title = "Mission Failed";
+		subtitle = "Blufor have been wiped out";
+		description = "The Blufor suffered too many casualties and are no longer capable of completing the objective.";
+		pictureBackground = "overview.paa";
+		picture = "o_inf";
+		pictureColor[] = {0.0,0.6,0.0,1};
+	};
+};

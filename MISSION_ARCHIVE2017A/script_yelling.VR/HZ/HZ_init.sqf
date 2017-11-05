@@ -1,0 +1,1 @@
+#include "Yelling\HZ_Yelling_init.sqf";

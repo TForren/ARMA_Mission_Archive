@@ -1,0 +1,44 @@
+author = "Hoizen"; // Author
+onLoadName = "TvT24 Into The Fray";
+onLoadMission = "US Supply Convoy Attempts a FOB resupply";
+loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "overview.paa";
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+
+class Header {
+   gameType = Coop;
+   playerCountMultipleOf = 1; //Disables auto balance
+};
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Blufor Victory";
+		subtitle = "The UN FOB has been resupplied";
+		description = "The US forces have successfully resupplied the FOB.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+		class End2
+	{
+		title = "Opfor Victory";
+		subtitle = "All supply trucks have been destroyed";
+		description = "The Blufor were unable to get at least one ammo truck to the FOB.";
+		pictureBackground = "overview.paa";
+		picture = "o_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+	
+		class End3
+	{
+		title = "Opfor Victory";
+		subtitle = "All Blufor have been killed";
+		description = "The Blufor have been wiped out.";
+		pictureBackground = "overview.paa";
+		picture = "o_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+};

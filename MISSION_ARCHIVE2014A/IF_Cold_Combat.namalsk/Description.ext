@@ -1,0 +1,47 @@
+disabledAI = 1;
+
+respawnButton = 0;
+
+class Header
+{
+	gameType = DM;
+	minPlayers = 12;
+	maxPlayers = 41;
+};
+
+onLoadName = "TvT-20 Cold Combat";
+onLoadMission = "";
+author = "Hoizen";
+loadScreen = "";
+
+respawn = 1;
+respawndelay = 0;
+
+
+#include "loadouts.cpp"
+
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "US Victory";
+		subtitle = "Russian Units Eliminated";
+		description = "The US remaining in the are were able to eliminate the Russian forces. Granted with extra time, the remaining US have a better chance of surviving the conflict.";
+		pictureBackground = "overview.paa";
+		picture = "flag_USA";
+		pictureColor[] = {1.0,1.0,1.0,1};
+	};
+
+	class End2
+	{
+		title = "Russian Victory";
+		subtitle = "US Units Eliminated";
+		description = "The Russian Forces remaining in the are were able to eliminate the US Forces. Granted with extra time, the remaining Russians have a better chance of surviving the conflict.";
+		pictureBackground = "overview.paa";
+		picture = "FACTION_RU";
+		pictureColor[] = {1.0,1.0,1.0,1};
+	};
+
+
+};

@@ -1,0 +1,96 @@
+#include "tb3\defines.hpp"
+
+	/* Adds screen when loading. */
+	author = Axelius;
+	onLoadName = "Running the gauntlet";
+	loadScreen = "mission.jpg";
+	onLoadMission = "Prepare for a world of hurt.";	
+	onLoadMissionTime = true;
+	
+	respawn = "BASE"; //Gunnah no change this k?
+	respawnDelay = 5;
+	respawnDialog = 0;
+	disabledAI = 1;
+	ShowGPS = 1;
+	enableDebugConsole = 1; //2 for all, 1 for logged in only, 0 for disabled.
+	
+	class Header {
+		gameType = Coop;            // (https://community.bistudio.com/wiki/Multiplayer_Game_Types) for list if game types
+		minPlayers = 10;             //min # of players the mission supports
+		maxPlayers = 22;            //Max # of players the mission supports
+		playerCountMultipleOf = 1; //Unknown
+	};
+	class Extended_PreInit_EventHandlers {
+		class tb3 {
+			init = "call ('tb3\preInit.sqf' call SLX_XEH_COMPILE)";
+		};
+	};
+	class CfgSettings {
+		class CBA {
+			class Caching {
+				compile = 0;
+				xeh = 0;
+				functions = 0;
+			};
+		};
+	};
+	class RscTitles	{
+		#include "tb3\f\tags\rsctitles.hpp"
+	};
+	class TB3_Settings {
+		class General {
+			version = 3;
+			processParams = 1;
+			enableSaving = 0;
+			missionMonitor = 1;
+			dynamicViewDistance = 1;
+			spectator = 1;
+			enableNameTags = 0; // nametags on(1) or off (0)
+			enableFlexiMenu = 0; // CBA Fleximenu options on(1) or off (0)
+		};
+		class NameTags {
+			colour[] = { 0.7, 0.8, 1 };
+			distance = 20;
+		};
+		class MissionMonitor {
+			initDelay 			= 5; 		// delay (in secs) before starting the mission monitor
+			updateDelay 		= 2; 		// delay (in secs) between each update
+		}; 
+	};	
+
+//Separated Loadouts into its own cpp file
+//If you are just editing loadouts, you shouldn't mess with this. 
+#include "loadouts\IncludedLoadouts.cpp"
+
+class CfgDebriefing {  
+	class End1 {
+		title = "Mission Accomplished";
+		subtitle = "Convoy home safe.";
+		description = "Somehow you managed to get at least some supplies through.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.1,0.4,1,1};
+		condition[] = {false};
+	};
+	class End2 {
+		title = "Mission Failed";
+		subtitle = "Convoy Destroyed.";
+		description = "The enemy has captured or destroyed all transports.";
+		pictureBackground = "";
+		picture = "waypoint";
+		pictureColor[] = {1.0,0.0,0.0,1};
+		condition[] = {(WCasRate > 70)};
+	};
+	class ENDEX {
+		title = "ENDED by Admin";
+		subtitle = "";
+		description = "Mission stopped by the logged in Admin, please be patient as the mission is changed.";
+		pictureBackground = "";
+		picture = "waypoint";
+		pictureColor[] = {0.0,0.0,0.0,0};
+		condition[] = {(tb3_adminEndex)};
+	};
+};
+
+
+	

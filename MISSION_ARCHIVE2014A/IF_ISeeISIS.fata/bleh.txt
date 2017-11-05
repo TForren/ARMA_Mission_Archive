@@ -1,0 +1,34 @@
+comment "Exported from Arsenal by Hoizen";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "SP_0000_Standard_FieldUniform_Black";
+for "_i" from 1 to 2 do {this addItemToUniform "AGM_Bandage";};
+for "_i" from 1 to 3 do {this addItemToUniform "RH_20Rnd_32cal_vz61";};
+for "_i" from 1 to 3 do {this addItemToUniform "Kae_30Rnd_545x39_7n6_AK";};
+this addVest "V_Rangemaster_belt";
+this addGoggles "Balaclava_Black";
+
+comment "Add weapons";
+this addWeapon "Kae_SVD_545";
+this addPrimaryWeaponItem "kae_optic_pso_z_2x_6x";
+this addWeapon "RH_vz61";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "tf_anprc152_1";
+
+comment "Set identity";
+this setFace "GreekHead_A3_01";
+this setSpeaker "Male01ENG";

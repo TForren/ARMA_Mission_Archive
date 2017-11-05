@@ -1,0 +1,81 @@
+enableDebugConsole = 1;
+
+
+class RscDisplayCurator 
+{
+    onLoad = "[_this select 0] call HZ_EH_zeusLoaded;";
+    onUnload = "[_this select 0] call HZ_EH_zeusUnloaded;";
+};
+
+class Params {
+	
+	class FOW
+	{
+		title = "Fog of War (EXPERIMENTAL)"; // Param name visible in the list
+		values[] = {0, 1}; // Values; must be integers; has to have the same number of elements as 'texts'
+		texts[] = {"Disabled","Enabled"}; // Description of each selectable item
+		default = 1; // Default value; must be listed in 'values' array, otherwise 0 is used
+
+	};
+
+};
+
+
+// Control types
+#define CT_STATIC	0
+
+// Static styles
+#define ST_LEFT	0
+#define ST_RIGHT	1
+#define ST_CENTER	2
+#define ST_UP		3
+#define ST_DOWN	4
+#define ST_VCENTER	5
+
+#define ST_SINGLE	0
+#define ST_MULTI	16
+#define ST_PICTURE	48
+#define ST_FRAME	64
+
+#define ST_HUD_BACKGROUND 128
+#define ST_TILE_PICTURE 144
+#define ST_WITH_RECT 160
+#define ST_LINE	176
+
+#define ST_SHADOW	256
+#define ST_NO_RECT	512
+
+#define FontM "TahomaB"
+#define ST_LEFT      0
+#define ST_RIGHT     1
+#define ST_CENTER    2
+#define CT_STATIC    0
+class RscText{        
+	type = CT_STATIC;        
+	idc = 889;
+	style = ST_LEFT;        
+	colorBackground[] = {0, 0, 0, 0};        
+	colorText[] = {1, 1, 1, 1};        
+	font = FontM;        
+	sizeEx = 0.04;
+};
+
+class RscTestA
+{  
+	idd = 888;
+	movingEnable = true;
+	controlsBackground[] = { };
+	objects[] = { };
+	controls[] = { HELLO_WORLD };  
+	class HELLO_WORLD : RscText  
+	{    
+		idc = 181;    
+		style = ST_CENTER;    
+		x = 0.4;    
+		y = 0.45;    
+		w = 0.5;    
+		h = 0.5;    
+		text = "Hello World!";  
+	};
+};
+

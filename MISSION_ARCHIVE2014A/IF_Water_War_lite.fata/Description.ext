@@ -1,0 +1,55 @@
+author = "Hoizen"; // Author
+onLoadName = "TvT-20 Water War RV4";
+onLoadMission = "US Rangers and Rebels fight over water supply";
+//loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "overview.paa";
+
+
+
+class Header
+{
+ gameType = COOP;            
+ minPlayers = 1;             
+ maxPlayers = 20;      
+
+};
+
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+respawn = 3; 
+respawnDelay = 30;  
+enableDebugConsole = 2;
+
+#include "sounds\config.cpp"
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Blufor Victory";
+		subtitle = "The Truck has been returned";
+		description = "The Blufor have successfully returned the truck to the FOB before the opfor were able to distribute all the water to the hideouts.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+		class End2
+	{
+		title = "Opfor Victory";
+		subtitle = "The water has been distributed";
+		description = "The opfor have successfully distributed the water supply to their hideouts and the blufor base lost its desperately needed water";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+	
+		class End3
+	{
+		title = "Everyone Loses";
+		subtitle = "The Truck has been destroyed.";
+		description = "The truck has been destroyed and everyone loses out on the water.";
+		pictureBackground = "overview.paa";
+		picture = "flag_greece";
+		pictureColor[] = {0.0,0.0,0.0,1};
+	};
+};

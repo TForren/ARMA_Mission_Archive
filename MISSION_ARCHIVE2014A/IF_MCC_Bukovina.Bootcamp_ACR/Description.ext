@@ -1,0 +1,50 @@
+author = "Hoizen"; // Author
+onLoadName = "CO-x IF MCC Bukovina";
+onLoadMission = "IF MCC on Bukovina";
+loadScreen = "overview.paa"; // Preview picture
+overviewPicture = "overview.paa";
+
+
+
+class Header
+{
+ gameType = COOP;            
+ minPlayers = 1;             
+ maxPlayers = 20;      
+
+};
+
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+respawn = 3; 
+respawnDelay = 10;  
+enableDebugConsole = 2;
+
+#include "VAS\menu.hpp"
+
+class CfgFunctions
+{
+	#include "VAS\cfgfunctions.hpp"
+};
+
+class CfgDebriefing
+{  
+	class HEnd1
+	{
+		title = "Heroic Blufor Victory";
+		subtitle = "Blufor operated hard";
+		description = "Congrats to blufor for being operator as fuck.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+		class HEnd2
+	{
+		title = "Heroic Opfor Victory";
+		subtitle = "Opfor operated hard";
+		description = "Congrats to opfor for opforing the shit out of the mission.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.6,0.3,0.0,1};
+	};
+};

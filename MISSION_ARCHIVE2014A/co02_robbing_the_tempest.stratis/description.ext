@@ -1,0 +1,68 @@
+author="Phantom Six";
+OnLoadName = "Robbing the Tempest";
+onLoadMission = "Steal some intel from the CSAT in the Tempest base.";
+onLoadMissionTime = False;
+loadScreen =  "phantom.jpg";
+debriefing = 1;
+
+class Header
+{
+  gameType = Coop;
+  minPlayers = 1;
+  maxPlayers = 2;
+  playerCountMultipleOf =1;
+};
+
+respawn = "GROUP"; 
+respawnDelay = 5;
+
+class CfgDebriefing
+{
+	class End1
+	{
+		title = "Mission Failed";
+		subtitle = "You Cheated";
+		description = "Cheaters fail at life";
+	};
+	class End2
+	{
+		title = "Mission Accomplished";
+		subtitle = "";
+		description = "You have successfully stole the data from the CSAT forces and escaped. Mission accomplished!!";
+	};
+	class End3
+	{
+		title = "Mission Failed";
+		subtitle = "";
+		description = "Your stealth skills fail and you have been eliminated. Mission failed.";
+	};
+	class End4
+	{
+		title = "Partial Accomplished";
+		subtitle = "";
+		description = "One of you have successfully stole the data from the CSAT forces and escaped. Unfortunately, one of you didn't make it out alive... The mission could've been better executed than it was to sacrifice your partner's life.";
+	};
+};
+
+class Params
+{
+	class Difficulty
+	{	
+		title="Difficulty";
+		values[]={0,1,2};
+		texts[]={"Easy - Play as Spec-Ops","Medium - Play as Guerilla", "Hard - Play as Undercover Civilian"};
+		default = 1;
+	};
+};
+
+//--------------------------------------------------------------
+//------------------------AIS INJURY----------------------------
+//--------------------------------------------------------------
+//#include "ais_injury\dialogs\rscBasicDefinesAIS.hpp"
+class RscTitles {
+	#include "ais_injury\dialogs\rscTitlesAIS.hpp"
+};
+class CfgFunctions {
+	#include "ais_injury\cfgFunctionsAIS.hpp"
+};
+//--------------------------------------------------------------

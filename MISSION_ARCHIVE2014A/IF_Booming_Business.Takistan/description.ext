@@ -1,0 +1,56 @@
+//Description.ext
+
+class Header
+{	
+	
+	gameType = Coop;
+	minPlayers = 1;
+	maxPlayers = 1;
+};
+onLoadMission = "US Forces tackle the rising use of armour and IEDs in the area. [Logistics/cqb/Open/Combined Arms]";
+OnLoadMissionTime = FALSE;
+author="Hoizen";
+OnLoadName = "Booming Business";
+
+loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "JO4.paa";
+
+#include "anyspectator\spectating.hpp"
+
+
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+respawn = 3; 
+enableDebugConsole = 1;
+respawnDelay = 3;
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission Successful";
+		subtitle = "All Objectives Completed";
+		description = "The Blufor have successfully accomplished all objectives. The IED workshop has been destroyed, the arms dealer's armoured assets are destroyed, and the HVT has been captured. Full mission success.";
+		pictureBackground = "JO4.paa";
+		picture = "end.paa";
+		pictureColor[] = {1.0,1.0,1.0,1};
+	};
+	
+		class End2
+	{
+		title = "Mission Successful";
+		subtitle = "Partial Mission Complete";
+		description = "The Blufor have successfully destroyed the IED workshop and armoured assets of the arms dealer but were unable to take the HVT alive. Overall mission success.";
+		pictureBackground = "JO4.paa";
+		picture = "end.paa";
+		pictureColor[] = {1.0,1.0,1.0,1};
+	};	
+		class End4
+	{
+		title = "Mission Failed";
+		subtitle = "Too many casualities";
+		description = "The Blufor suffered too many casualties and are no longer combat effective.";
+		pictureBackground = "JO4.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.6,0.3,0.0,1};
+	};
+};

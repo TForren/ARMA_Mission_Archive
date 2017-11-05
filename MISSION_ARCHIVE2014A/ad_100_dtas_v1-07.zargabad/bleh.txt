@@ -1,0 +1,40 @@
+comment "Exported from Arsenal by Hoizen";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "kae_TK_Uniform";
+for "_i" from 1 to 3 do {this addItemToUniform "Kae_30Rnd_545x39_7n6_AK";};
+this addVest "SP_OpforRig1_Tan";
+this addItemToVest "RH_8Rnd_9x18_Mak";
+this addBackpack "kae_Backpack_small_RPG";
+this addItemToBackpack "kae_PG_7VL_mag";
+this addItemToBackpack "kae_TBG_7V_mag";
+this addItemToBackpack "kae_PG_7VR_mag";
+this addHeadgear "SP_SSh68NetHelmet_Tan1";
+this addGoggles "SAS_shemagh_Tan";
+
+comment "Add weapons";
+this addWeapon "Kae_SVD_545";
+this addPrimaryWeaponItem "kae_optic_pso_z_3x_9x";
+this addWeapon "kae_RPG7v";
+this addWeapon "RH_mak";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "tf_pnr1000a_1";
+this linkItem "NVGoggles";
+
+comment "Set identity";
+this setFace "WhiteHead_17";
+this setSpeaker "Male01ENG";

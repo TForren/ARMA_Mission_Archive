@@ -1,0 +1,31 @@
+#include "core\dia\rscdefinitions.hpp" //Must have for the end screen to work, if removed Arma 3 will crash on mission load
+#include "core\dia\endscreen\dia_endscreen.hpp" //Must have for the end screen to work, if removed arma 3 will crash on mission load
+
+
+
+allowFunctionsLog	= 0;
+author				= "Sacher";
+briefingName 		= "CO28 Groza Part 2";
+loadScreen          = "core\uoLogo.jpg";
+enableDebugConsole	= 0;
+onLoadMission 		= "Russian assault on town";
+onLoadName 			= "CO28 Groza Part 2";
+overviewText 		= "Russian assault on town to secure area around airfield | JIP Teleport | No respawn | CMS";
+respawn 			= "BASE"; 
+respawndelay 		= 5;
+respawnButton 		= 0;
+respawnDialog 		= 0;
+disabledAI			= 1;
+
+class Header {
+   gameType = Coop;
+   minPlayers = 1;
+   maxPlayers = 28; //maxPlayers must always be accurate to the amount of playable units
+   playerCountMultipleOf = 1; //Disables auto balance
+};
+
+class Extended_PreInit_EventHandlers {
+	class Mission {
+		init = "TRACKASSET = compile preprocessFileLineNumbers 'core\trackAsset.sqf'"; //Compiles the track asset script for the server and client
+	};
+};

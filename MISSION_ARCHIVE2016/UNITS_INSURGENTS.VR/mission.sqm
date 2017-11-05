@@ -1,0 +1,83 @@
+version=51;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=15;
+	};
+	class Camera
+	{
+		pos[]={5882.937,7.5323825,3918.0227};
+		dir[]={-0.67758662,-0.40515512,-0.61380726};
+		up[]={-0.30027574,0.91424721,-0.272012};
+		aside[]={-0.67137867,1.5366822e-008,0.74114007};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Characters_F_INDEP",
+	"a3_characters_f"
+};
+randomSeed=2539584;
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		day=28;
+		hour=13;
+		minute=37;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Entities
+	{
+		items=1;
+		class Item0
+		{
+			dataType="Group";
+			side="Independent";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5879.688,5.0014391,3915.1392};
+						angles[]={0,1.4730231,0};
+					};
+					side="Independent";
+					flags=3;
+					class Attributes
+					{
+						init="[this, ""I_SL"", ""First Group""] call FNC_GearScript;";
+						name="I1";
+						isPlayer=1;
+					};
+					id=14;
+					type="I_soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=13;
+		};
+	};
+};

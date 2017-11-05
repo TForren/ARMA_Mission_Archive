@@ -1,0 +1,95 @@
+author = "Hoizen, Jords"; // Author
+onLoadName = "TvT20 Silent Diffusion";
+onLoadMission = "Blufor Infiltration. Opfor security.";
+loadScreen = "diffusion.jpg";
+overviewPicture = "diffusion.jpg";
+onLoadMissionTime = true;
+	
+	respawnDelay = 9999999; // 9999999 = No Respawn;
+	#include "CSSA3\CSSA3_header.hpp"
+	disabledAI = 1;
+	ShowGPS = 1;
+	enableDebugConsole = 1; //2 for all, 1 for logged in only, 0 for disabled.
+	
+	class Header {
+		gameType = TDM;            // (https://community.bistudio.com/wiki/Multiplayer_Game_Types) for list if game types
+		minPlayers = 1;             //min # of players the mission supports
+		maxPlayers = 50;            //Max # of players the mission supports
+		playerCountMultipleOf = 1; //Unknown
+	};
+	class Extended_PreInit_EventHandlers {
+		class tb3 {
+			init = "call ('tb3\preInit.sqf' call SLX_XEH_COMPILE)";
+		};
+	};
+	class CfgSettings {
+		class CBA {
+			class Caching {
+				compile = 0;
+				xeh = 0;
+				functions = 0;
+			};
+		};
+	};
+	class TB3_Settings {
+		class General {
+			version = 3;
+			processParams = 1;
+			enableSaving = 0;
+			missionMonitor = 1;
+		};
+		class MissionMonitor {
+			initDelay 			= 5; 		// delay (in secs) before starting the mission monitor
+			updateDelay 		= 2; 		// delay (in secs) between each update
+		}; 
+	};	
+	
+//Separated Loadouts into its own cpp file
+//If you are just editing loadouts, you shouldn't mess with this. 
+#include "loadouts\IncludedLoadouts.cpp"
+
+//#include "sounds\config.cpp"
+
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Blufor Victory";
+		subtitle = "Blufor Objectives Complete";
+		description = "The Blufor have successfully completed the necessary number of objectives and have survived the mission.";
+		pictureBackground = "diffusion.jpg";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+		class End2
+	{
+		title = "Opfor Victory";
+		subtitle = "Time Limit Reached";
+		description = "The Blufor were unable to complete the necessary number of objectives before the time limit.";
+		pictureBackground = "diffusion.jpg";
+		picture = "b_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};		
+	
+	class End2B
+	{
+		title = "Blufor Victory";
+		subtitle = "All Opfor Eliminated";
+		description = "The Blufor eliminated all opfor in the area.";
+		pictureBackground = "diffusion.jpg";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+		class End3
+	{
+		title = "Opfor Victory";
+		subtitle = "All Blufor Eliminated";
+		description = "All Blufor in the AO have been eliminated or chased off into a state of insignificance.";
+		pictureBackground = "diffusion.jpg";
+		picture = "KIA";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+};

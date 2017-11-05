@@ -1,0 +1,99 @@
+#include "tb3\defines.hpp"
+
+	/* Adds screen when loading. */
+	author = Hoizen;
+	onLoadName = "TvT-30 Water Wars";
+	loadScreen = "waterwar.jpg"; // Loading mission screen image
+	onLoadMission = "US Forces attempt to recover stolen water supply.";	// Mission description show when loading the mission
+	onLoadMissionTime = true;
+	overviewText = "Entire Map Mission[Respawn/Convoy/Objective]"; // Text for admins to see when browsing the list
+	
+	respawn = 3;
+	respawnDelay = 10; // 9999999 = No Respawn;
+	disabledAI = 1;
+	ShowGPS = 1;
+	enableDebugConsole = 1; //2 for all, 1 for logged in only, 0 for disabled.
+	
+	class Header {
+		gameType = Seize;            // (https://community.bistudio.com/wiki/Multiplayer_Game_Types) for list if game types
+		minPlayers = 1;             //min # of players the mission supports
+		maxPlayers = 50;            //Max # of players the mission supports
+		playerCountMultipleOf = 1; //Unknown
+	};
+	
+	// Don't touch these unless you have to
+	class Extended_PreInit_EventHandlers {
+		class tb3 {
+			init = "call ('tb3\preInit.sqf' call SLX_XEH_COMPILE)";
+		};
+	};
+	class CfgSettings {
+		class CBA {
+			class Caching {
+				compile = 0;
+				xeh = 0;
+				functions = 0;
+			};
+		};
+	};
+	class TB3_Settings {
+		class General {
+			version = 3;
+			processParams = 1;
+			enableSaving = 0;
+			missionMonitor = 1;
+		};
+		class MissionMonitor {
+			initDelay 			= 5; 		// delay (in secs) before starting the mission monitor
+			updateDelay 		= 2; 		// delay (in secs) between each update
+		}; 
+	};	
+
+//You shouldn't mess with this. 
+#include "loadouts\IncludedLoadouts.cpp"
+#include "sounds\config.cpp"
+
+//ADD ENDING CONDITIONS/DISCRIPTIONS BELOW
+
+class CfgDebriefing {  
+	class End1
+	{
+		title = "Blufor Victory";
+		subtitle = "The Truck has been returned";
+		description = "The Blufor have successfully returned the truck to the FOB before the opfor were able to distribute all the water to the hideouts.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+		class End2
+	{
+		title = "Opfor Victory";
+		subtitle = "The water has been distributed";
+		description = "The opfor have successfully distributed the water supply to their hideouts and the blufor base lost its desperately needed water";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+	class End3
+	{
+		title = "Everyone Loses";
+		subtitle = "The Truck has been destroyed.";
+		description = "The truck has been destroyed and everyone loses out on the water.";
+		pictureBackground = "overview.paa";
+		picture = "flag_greece";
+		pictureColor[] = {0.0,0.0,0.0,1};
+	};
+	class TimeLimitEnding {
+		title = "Mission Failed";
+		subtitle = "Time Limit Reached!";
+		description = "Mission was not completed within the given time limit";
+		pictureBackground = "";
+		picture = "waypoint";
+		pictureColor[] = {1.0,0.0,0.0,1};
+		condition[] = {false};
+	};
+};
+
+
+	

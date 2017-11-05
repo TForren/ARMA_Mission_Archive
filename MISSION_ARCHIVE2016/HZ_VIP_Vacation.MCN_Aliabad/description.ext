@@ -1,0 +1,261 @@
+#define description
+
+#include "core\description.hpp" //DO NOT REMOVE
+#include "modules\modules.sqf" //DO NOT REMOVE
+#include "sounds\config.cpp"
+
+#undef description
+#define description_functions
+
+class CfgFunctions {
+
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+
+};
+	
+#undef description_functions
+#define description_titles
+	
+class rscTitles {
+
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+
+};
+
+#undef description_titles
+#define description_params
+
+class Params {
+
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+	
+};
+
+
+class CfgRespawnInventory
+{
+	class EAST1
+	{
+		displayName = "Insurgent(AKM)"; // Name visible in the menu
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+		role = "InsurgentRole";
+		
+		// Loadout definition, uses same entries as CfgVehicles classes
+		weapons[] = {
+			"rhs_weap_akm"
+		};
+		magazines[] = {
+			"rhs_30Rnd_762x39mm",
+			"rhs_30Rnd_762x39mm",
+			"rhs_30Rnd_762x39mm",
+			"rhs_30Rnd_762x39mm"
+		};
+		items[] = {
+			"ACE_packingBandage",
+			"ACE_EarPlugs",
+			"ACE_packingBandage",
+			"ACE_packingBandage",
+		};
+		linkedItems[] = {
+			"CUP_V_OI_TKI_Jacket2_03",
+			"CUP_H_TKI_Lungee_01",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "CUP_O_TKI_Khet_Partug_01";
+		backpack = "";
+	};
+	
+	class EAST2
+	{
+		displayName = "Insurgent(FAL)"; // Name visible in the menu
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+		role = "InsurgentRole";
+		
+		// Loadout definition, uses same entries as CfgVehicles classes
+		weapons[] = {
+			"CUP_arifle_FNFAL"
+		};
+		magazines[] = {
+			"CUP_20Rnd_762x51_FNFAL_M",
+			"CUP_20Rnd_762x51_FNFAL_M",
+			"CUP_20Rnd_762x51_FNFAL_M",
+			"CUP_20Rnd_762x51_FNFAL_M",
+			"CUP_20Rnd_762x51_FNFAL_M"
+		};
+		items[] = {
+			"ACE_packingBandage",
+			"ACE_EarPlugs",
+			"ACE_packingBandage",
+			"ACE_packingBandage",
+		};
+		linkedItems[] = {
+			"CUP_V_OI_TKI_Jacket3_01",
+			"CUP_H_TKI_Lungee_01",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "CUP_O_TKI_Khet_Partug_06";
+		backpack = "CUP_B_CivPack_WDL";
+	};
+	class EAST3
+	{
+		displayName = "Insurgent(RPK)"; // Name visible in the menu
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+		role = "InsurgentRole";
+
+		// Loadout definition, uses same entries as CfgVehicles classes
+		weapons[] = {
+			"CUP_arifle_RPK74_45"
+		};
+		magazines[] = {
+			"CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M",
+			"CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M",
+			"CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M",
+			"CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M"
+		};
+		items[] = {
+			"ACE_packingBandage",
+			"ACE_EarPlugs",
+			"ACE_packingBandage",
+			"ACE_packingBandage",
+		};
+		linkedItems[] = {
+			"CUP_V_OI_TKI_Jacket2_02",
+			"CUP_TK_NeckScarf",
+			"CUP_H_TKI_Lungee_Open_06",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "CUP_O_TKI_Khet_Partug_06";
+		backpack = "CUP_B_TKI_CivPack_WDL_RPK";
+	};
+	
+	class EAST4
+	{
+		displayName = "Insurgent(Enfield)"; // Name visible in the menu
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+		role = "InsurgentRole";
+
+		// Loadout definition, uses same entries as CfgVehicles classes
+		weapons[] = {
+			"CUP_srifle_LeeEnfield"
+		};
+		magazines[] = {
+			"CUP_10x_303_M",
+			"CUP_10x_303_M",
+			"CUP_10x_303_M",
+			"CUP_10x_303_M",
+			"CUP_10x_303_M",
+			"CUP_10x_303_M",
+			"CUP_10x_303_M"
+		};
+		items[] = {
+			"ACE_packingBandage",
+			"ACE_EarPlugs",
+			"ACE_packingBandage",
+			"ACE_packingBandage",
+		};
+		linkedItems[] = {
+			"CUP_V_OI_TKI_Jacket4_01",
+			"CUP_H_TKI_Lungee_06",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "CUP_O_TKI_Khet_Partug_06";
+		backpack = "";
+	};
+
+	class EAST5
+	{
+		displayName = "Insurgent(AK74u)"; // Name visible in the menu
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+		role = "InsurgentRole";
+
+		// Loadout definition, uses same entries as CfgVehicles classes
+		weapons[] = {
+			"rhs_weap_aks74u"
+		};
+		magazines[] = {
+			"rhs_30Rnd_545x39_AK",
+			"rhs_30Rnd_545x39_AK",
+			"rhs_30Rnd_545x39_AK",
+			"rhs_30Rnd_545x39_AK",
+			"rhs_30Rnd_545x39_AK"
+		};
+		items[] = {
+			"ACE_packingBandage",
+			"ACE_EarPlugs",
+			"ACE_packingBandage",
+			"ACE_packingBandage",
+		};
+		linkedItems[] = {
+			"CUP_V_OI_TKI_Jacket4_05",
+			"CUP_H_TKI_Pakol_1_01",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "CUP_O_TKI_Khet_Partug_02";
+		backpack = "";
+	};
+	
+	class EAST6
+	{
+		displayName = "Insurgent(IED)"; // Name visible in the menu
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa"; // Icon displayed next to the name
+		role = "InsurgentRole";
+
+		// Loadout definition, uses same entries as CfgVehicles classes
+		weapons[] = {
+			"rhs_weap_aks74u"
+		};
+		magazines[] = {
+			"rhs_30Rnd_545x39_AK",
+			"rhs_30Rnd_545x39_AK",
+			"rhs_30Rnd_545x39_AK",
+			"rhs_30Rnd_545x39_AK",
+			"IEDLandBig_Remote_Mag"
+		};
+		items[] = {
+			"ACE_packingBandage",
+			"ACE_EarPlugs",
+			"ACE_packingBandage",
+			"ACE_packingBandage",
+			"ACE_Cellphone"
+		};
+		linkedItems[] = {
+			"CUP_V_OI_TKI_Jacket4_05",
+			"CUP_H_TKI_Pakol_1_01",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		uniformClass = "CUP_O_TKI_Khet_Partug_02";
+		backpack = "CUP_B_TKI_CivPack_WDL_RPK";
+	};
+
+}; //end respawn inventory
+
+class CfgRoles
+{
+     class InsurgentRole
+     {
+          displayName = "Insurgents";
+          icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
+     };
+};
+	

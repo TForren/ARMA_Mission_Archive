@@ -1,0 +1,681 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"BH_SWIA_Characters_Scout",
+		"aia_chernarus_summer_config",
+		"A3_Characters_F_OPFOR",
+		"a3_characters_f"
+	};
+	addOnsAuto[]=
+	{
+		"BH_SWIA_Characters_Scout",
+		"A3_Characters_F_OPFOR",
+		"a3_characters_f",
+		"aia_chernarus_summer_config"
+	};
+	randomSeed=8429205;
+	class Intel
+	{
+		startWeather=0.25;
+		startWind=0.099999994;
+		startWaves=0.099999994;
+		forecastWeather=0.25;
+		forecastWind=0.099999994;
+		forecastWaves=0.099999994;
+		forecastLightnings=0.099999994;
+		year=2008;
+		month=10;
+		day=11;
+		hour=3;
+		minute=20;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Groups
+	{
+		items=7;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6077.8364,229.82454,11673.19};
+					azimut=60.198502;
+					id=0;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.60000002;
+					init="this allowdamage false;comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17"";  this setSpeaker ""ACE_NoVoice"";";
+				};
+			};
+		};
+		class Item1
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=7;
+				class Item0
+				{
+					position[]={6094.7148,226.8484,11712.284};
+					azimut=-7.44028;
+					id=1;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					leader=1;
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17"";";
+				};
+				class Item1
+				{
+					position[]={6106.8652,228.87579,11707.678};
+					azimut=-7.44028;
+					id=2;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17"";";
+				};
+				class Item2
+				{
+					position[]={6083.3379,226.0598,11708.029};
+					azimut=-7.44028;
+					id=3;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17"";";
+				};
+				class Item3
+				{
+					position[]={6079.3604,227.39618,11693.224};
+					azimut=-7.44028;
+					id=4;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17"";";
+				};
+				class Item4
+				{
+					position[]={6112.2168,230.99719,11694.505};
+					azimut=-7.44028;
+					id=5;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17"";";
+				};
+				class Item5
+				{
+					position[]={6106.1641,231.78349,11680.937};
+					azimut=-7.44028;
+					id=6;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17""; ";
+				};
+				class Item6
+				{
+					position[]={6079.2891,229.37407,11677.603};
+					azimut=-7.44028;
+					id=7;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17"";";
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6675.3086,207.03847,12184.878};
+					type="SAD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item2
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=7;
+				class Item0
+				{
+					position[]={6745.4077,193.65512,12277.681};
+					id=8;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					leader=1;
+					skill=0.44359595;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_BG_Guerrilla_6_1"";  this addItemToUniform ""ACRE_PRC152_ID_1"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""BH_E11BlasterRifle_Mag"";};  this addVest ""V_BandollierB_cbr"";  this addItemToVest ""ACRE_PRC343_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_2"";  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""H_MilCap_gry"";  this addGoggles ""G_Bandanna_oli"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addPrimaryWeaponItem ""BH_E11Blaster_Scope"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""rhs_Male05RUS"";  ";
+				};
+				class Item1
+				{
+					position[]={6763.0269,193.31769,12276.055};
+					id=9;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					skill=0.4793306;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_BG_Guerrilla_6_1"";  this addItemToUniform ""ACRE_PRC152_ID_1"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""BH_E11BlasterRifle_Mag"";};  this addVest ""V_BandollierB_cbr"";  this addItemToVest ""ACRE_PRC343_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_2"";  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""H_MilCap_gry"";  this addGoggles ""G_Bandanna_oli"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addPrimaryWeaponItem ""BH_E11Blaster_Scope"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""rhs_Male05RUS"";  ";
+				};
+				class Item2
+				{
+					position[]={6769.5347,197.22903,12263.855};
+					id=10;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					skill=0.52578574;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_BG_Guerrilla_6_1"";  this addItemToUniform ""ACRE_PRC152_ID_1"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""BH_E11BlasterRifle_Mag"";};  this addVest ""V_BandollierB_cbr"";  this addItemToVest ""ACRE_PRC343_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_2"";  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""H_MilCap_gry"";  this addGoggles ""G_Bandanna_oli"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addPrimaryWeaponItem ""BH_E11Blaster_Scope"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""rhs_Male05RUS"";  ";
+				};
+				class Item3
+				{
+					position[]={6763.2983,200.8653,12255.451};
+					id=11;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					skill=0.52221221;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_BG_Guerrilla_6_1"";  this addItemToUniform ""ACRE_PRC152_ID_1"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""BH_E11BlasterRifle_Mag"";};  this addVest ""V_BandollierB_cbr"";  this addItemToVest ""ACRE_PRC343_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_2"";  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""H_MilCap_gry"";  this addGoggles ""G_Bandanna_oli"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addPrimaryWeaponItem ""BH_E11Blaster_Scope"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""rhs_Male05RUS"";  ";
+				};
+				class Item4
+				{
+					position[]={6736.4614,195.61237,12273.071};
+					id=12;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					skill=0.5365063;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_BG_Guerrilla_6_1"";  this addItemToUniform ""ACRE_PRC152_ID_1"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""BH_E11BlasterRifle_Mag"";};  this addVest ""V_BandollierB_cbr"";  this addItemToVest ""ACRE_PRC343_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_2"";  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""H_MilCap_gry"";  this addGoggles ""G_Bandanna_oli"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addPrimaryWeaponItem ""BH_E11Blaster_Scope"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""rhs_Male05RUS"";  ";
+				};
+				class Item5
+				{
+					position[]={6730.2261,199.43161,12262.229};
+					id=13;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					skill=0.50077164;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_BG_Guerrilla_6_1"";  this addItemToUniform ""ACRE_PRC152_ID_1"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""BH_E11BlasterRifle_Mag"";};  this addVest ""V_BandollierB_cbr"";  this addItemToVest ""ACRE_PRC343_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_2"";  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""H_MilCap_gry"";  this addGoggles ""G_Bandanna_oli"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addPrimaryWeaponItem ""BH_E11Blaster_Scope"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""rhs_Male05RUS"";  ";
+				};
+				class Item6
+				{
+					position[]={6732.937,202.85725,12249.217};
+					id=14;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					skill=0.49005109;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_BG_Guerrilla_6_1"";  this addItemToUniform ""ACRE_PRC152_ID_1"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""BH_E11BlasterRifle_Mag"";};  this addVest ""V_BandollierB_cbr"";  this addItemToVest ""ACRE_PRC343_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_2"";  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""H_MilCap_gry"";  this addGoggles ""G_Bandanna_oli"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addPrimaryWeaponItem ""BH_E11Blaster_Scope"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""rhs_Male05RUS"";  ";
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6179.7549,240.86807,11686.53};
+					type="SAD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item3
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=7;
+				class Item0
+				{
+					position[]={6276.6719,249.53896,11725.737};
+					azimut=-7.44028;
+					id=15;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					leader=1;
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17"";";
+				};
+				class Item1
+				{
+					position[]={6288.8223,251.52208,11721.131};
+					azimut=-7.44028;
+					id=16;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17"";";
+				};
+				class Item2
+				{
+					position[]={6265.2949,248.70001,11721.482};
+					azimut=-7.44028;
+					id=17;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17"";";
+				};
+				class Item3
+				{
+					position[]={6261.3174,250.15297,11706.677};
+					azimut=-7.44028;
+					id=18;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17"";";
+				};
+				class Item4
+				{
+					position[]={6294.1738,253.76091,11707.958};
+					azimut=-7.44028;
+					id=19;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17"";";
+				};
+				class Item5
+				{
+					position[]={6288.1211,254.69554,11694.39};
+					azimut=-7.44028;
+					id=20;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17""; ";
+				};
+				class Item6
+				{
+					position[]={6261.2461,252.07266,11691.056};
+					azimut=-7.44028;
+					id=21;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17"";";
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6884.7256,205.01198,12183.457};
+					type="SAD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item4
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=7;
+				class Item0
+				{
+					position[]={6795.7832,219.82915,12127.516};
+					id=22;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					leader=1;
+					skill=0.44359595;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_BG_Guerrilla_6_1"";  this addItemToUniform ""ACRE_PRC152_ID_1"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""BH_E11BlasterRifle_Mag"";};  this addVest ""V_BandollierB_cbr"";  this addItemToVest ""ACRE_PRC343_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_2"";  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""H_MilCap_gry"";  this addGoggles ""G_Bandanna_oli"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addPrimaryWeaponItem ""BH_E11Blaster_Scope"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""rhs_Male05RUS"";  ";
+				};
+				class Item1
+				{
+					position[]={6813.4023,222.07712,12125.89};
+					id=23;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					skill=0.4793306;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_BG_Guerrilla_6_1"";  this addItemToUniform ""ACRE_PRC152_ID_1"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""BH_E11BlasterRifle_Mag"";};  this addVest ""V_BandollierB_cbr"";  this addItemToVest ""ACRE_PRC343_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_2"";  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""H_MilCap_gry"";  this addGoggles ""G_Bandanna_oli"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addPrimaryWeaponItem ""BH_E11Blaster_Scope"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""rhs_Male05RUS"";  ";
+				};
+				class Item2
+				{
+					position[]={6819.9102,226.44519,12113.69};
+					id=24;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					skill=0.52578574;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_BG_Guerrilla_6_1"";  this addItemToUniform ""ACRE_PRC152_ID_1"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""BH_E11BlasterRifle_Mag"";};  this addVest ""V_BandollierB_cbr"";  this addItemToVest ""ACRE_PRC343_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_2"";  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""H_MilCap_gry"";  this addGoggles ""G_Bandanna_oli"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addPrimaryWeaponItem ""BH_E11Blaster_Scope"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""rhs_Male05RUS"";  ";
+				};
+				class Item3
+				{
+					position[]={6813.6738,228.43684,12105.286};
+					id=25;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					skill=0.52221221;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_BG_Guerrilla_6_1"";  this addItemToUniform ""ACRE_PRC152_ID_1"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""BH_E11BlasterRifle_Mag"";};  this addVest ""V_BandollierB_cbr"";  this addItemToVest ""ACRE_PRC343_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_2"";  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""H_MilCap_gry"";  this addGoggles ""G_Bandanna_oli"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addPrimaryWeaponItem ""BH_E11Blaster_Scope"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""rhs_Male05RUS"";  ";
+				};
+				class Item4
+				{
+					position[]={6786.8369,219.95201,12122.906};
+					id=26;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					skill=0.5365063;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_BG_Guerrilla_6_1"";  this addItemToUniform ""ACRE_PRC152_ID_1"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""BH_E11BlasterRifle_Mag"";};  this addVest ""V_BandollierB_cbr"";  this addItemToVest ""ACRE_PRC343_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_2"";  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""H_MilCap_gry"";  this addGoggles ""G_Bandanna_oli"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addPrimaryWeaponItem ""BH_E11Blaster_Scope"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""rhs_Male05RUS"";  ";
+				};
+				class Item5
+				{
+					position[]={6780.6016,222.2375,12112.063};
+					id=27;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					skill=0.50077164;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_BG_Guerrilla_6_1"";  this addItemToUniform ""ACRE_PRC152_ID_1"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""BH_E11BlasterRifle_Mag"";};  this addVest ""V_BandollierB_cbr"";  this addItemToVest ""ACRE_PRC343_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_2"";  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""H_MilCap_gry"";  this addGoggles ""G_Bandanna_oli"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addPrimaryWeaponItem ""BH_E11Blaster_Scope"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""rhs_Male05RUS"";  ";
+				};
+				class Item6
+				{
+					position[]={6783.3125,226.60692,12099.052};
+					id=28;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					skill=0.49005109;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_BG_Guerrilla_6_1"";  this addItemToUniform ""ACRE_PRC152_ID_1"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""BH_E11BlasterRifle_Mag"";};  this addVest ""V_BandollierB_cbr"";  this addItemToVest ""ACRE_PRC343_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_2"";  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""H_MilCap_gry"";  this addGoggles ""G_Bandanna_oli"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addPrimaryWeaponItem ""BH_E11Blaster_Scope"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""rhs_Male05RUS"";  ";
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6361.7119,257.62436,11699.983};
+					type="SAD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item5
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=7;
+				class Item0
+				{
+					position[]={6030.7256,213.43892,11797.051};
+					azimut=-7.44028;
+					id=29;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					leader=1;
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17"";";
+				};
+				class Item1
+				{
+					position[]={6042.876,214.18492,11792.444};
+					azimut=-7.44028;
+					id=30;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17"";";
+				};
+				class Item2
+				{
+					position[]={6019.3486,213.50742,11792.796};
+					azimut=-7.44028;
+					id=31;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17"";";
+				};
+				class Item3
+				{
+					position[]={6015.3711,214.68369,11777.99};
+					azimut=-7.44028;
+					id=32;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17"";";
+				};
+				class Item4
+				{
+					position[]={6048.2275,215.75066,11779.271};
+					azimut=-7.44028;
+					id=33;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17"";";
+				};
+				class Item5
+				{
+					position[]={6042.1748,217.02428,11765.703};
+					azimut=-7.44028;
+					id=34;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17""; ";
+				};
+				class Item6
+				{
+					position[]={6015.2998,216.20343,11762.369};
+					azimut=-7.44028;
+					id=35;
+					side="WEST";
+					vehicle="BH_Scouttrooper_blue";
+					skill=0.60000002;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""BH_StormCom_camo_comsuit"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addVest ""BH_StormCom_armor_camo"";  this addItemToVest ""ACRE_PRC343_ID_1"";  for ""_i"" from 1 to 4 do {this addItemToVest ""BH_ScoutBlasterPistol_Mag"";};  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""BH_StormCom_helmet_camo"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addWeapon ""BH_ScoutBlasterPistol_Scoped"";  this addHandgunItem ""BH_ScoutBlaster_Scope"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_17"";";
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6611.3193,192.85875,12269.645};
+					type="SAD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item6
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=7;
+				class Item0
+				{
+					position[]={6549.8369,209.95862,12198.829};
+					id=36;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					leader=1;
+					skill=0.44359595;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_BG_Guerrilla_6_1"";  this addItemToUniform ""ACRE_PRC152_ID_1"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""BH_E11BlasterRifle_Mag"";};  this addVest ""V_BandollierB_cbr"";  this addItemToVest ""ACRE_PRC343_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_2"";  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""H_MilCap_gry"";  this addGoggles ""G_Bandanna_oli"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addPrimaryWeaponItem ""BH_E11Blaster_Scope"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""rhs_Male05RUS"";  ";
+				};
+				class Item1
+				{
+					position[]={6567.4561,211.04839,12197.203};
+					id=37;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					skill=0.4793306;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_BG_Guerrilla_6_1"";  this addItemToUniform ""ACRE_PRC152_ID_1"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""BH_E11BlasterRifle_Mag"";};  this addVest ""V_BandollierB_cbr"";  this addItemToVest ""ACRE_PRC343_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_2"";  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""H_MilCap_gry"";  this addGoggles ""G_Bandanna_oli"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addPrimaryWeaponItem ""BH_E11Blaster_Scope"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""rhs_Male05RUS"";  ";
+				};
+				class Item2
+				{
+					position[]={6573.9639,213.18393,12185.004};
+					id=38;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					skill=0.52578574;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_BG_Guerrilla_6_1"";  this addItemToUniform ""ACRE_PRC152_ID_1"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""BH_E11BlasterRifle_Mag"";};  this addVest ""V_BandollierB_cbr"";  this addItemToVest ""ACRE_PRC343_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_2"";  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""H_MilCap_gry"";  this addGoggles ""G_Bandanna_oli"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addPrimaryWeaponItem ""BH_E11Blaster_Scope"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""rhs_Male05RUS"";  ";
+				};
+				class Item3
+				{
+					position[]={6567.7275,214.20294,12176.6};
+					id=39;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					skill=0.52221221;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_BG_Guerrilla_6_1"";  this addItemToUniform ""ACRE_PRC152_ID_1"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""BH_E11BlasterRifle_Mag"";};  this addVest ""V_BandollierB_cbr"";  this addItemToVest ""ACRE_PRC343_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_2"";  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""H_MilCap_gry"";  this addGoggles ""G_Bandanna_oli"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addPrimaryWeaponItem ""BH_E11Blaster_Scope"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""rhs_Male05RUS"";  ";
+				};
+				class Item4
+				{
+					position[]={6540.8906,209.97566,12194.22};
+					id=40;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					skill=0.5365063;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_BG_Guerrilla_6_1"";  this addItemToUniform ""ACRE_PRC152_ID_1"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""BH_E11BlasterRifle_Mag"";};  this addVest ""V_BandollierB_cbr"";  this addItemToVest ""ACRE_PRC343_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_2"";  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""H_MilCap_gry"";  this addGoggles ""G_Bandanna_oli"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addPrimaryWeaponItem ""BH_E11Blaster_Scope"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""rhs_Male05RUS"";  ";
+				};
+				class Item5
+				{
+					position[]={6534.6553,210.86124,12183.377};
+					id=41;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					skill=0.50077164;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_BG_Guerrilla_6_1"";  this addItemToUniform ""ACRE_PRC152_ID_1"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""BH_E11BlasterRifle_Mag"";};  this addVest ""V_BandollierB_cbr"";  this addItemToVest ""ACRE_PRC343_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_2"";  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""H_MilCap_gry"";  this addGoggles ""G_Bandanna_oli"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addPrimaryWeaponItem ""BH_E11Blaster_Scope"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""rhs_Male05RUS"";  ";
+				};
+				class Item6
+				{
+					position[]={6537.3662,212.87727,12170.365};
+					id=42;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					skill=0.49005109;
+					init="comment ""Exported from Arsenal by Hoizen"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_BG_Guerrilla_6_1"";  this addItemToUniform ""ACRE_PRC152_ID_1"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""BH_E11BlasterRifle_Mag"";};  this addVest ""V_BandollierB_cbr"";  this addItemToVest ""ACRE_PRC343_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_1"";  this addItemToVest ""ACRE_PRC148_ID_2"";  this addItemToVest ""BH_Scout_ThermalDetonator"";  for ""_i"" from 1 to 6 do {this addItemToVest ""BH_E11BlasterRifle_Mag"";};  this addHeadgear ""H_MilCap_gry"";  this addGoggles ""G_Bandanna_oli"";    comment ""Add weapons"";  this addWeapon ""BH_E11BlasterRifle"";  this addPrimaryWeaponItem ""BH_E11Blaster_Scope"";  this addWeapon ""ACE_Vector"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadioAcreFlagged"";  this linkItem ""ItemGPS"";    comment ""Set identity"";  this setFace ""WhiteHead_05"";  this setSpeaker ""rhs_Male05RUS"";  ";
+				};
+			};
+			class Waypoints
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6115.7656,224.01155,11771.297};
+					type="SAD";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"aia_chernarus_summer_config"
+	};
+	addOnsAuto[]=
+	{
+		"aia_chernarus_summer_config"
+	};
+	randomSeed=8621354;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.25;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.25;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2008;
+		month=10;
+		day=11;
+		hour=9;
+		minute=20;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"aia_chernarus_summer_config"
+	};
+	addOnsAuto[]=
+	{
+		"aia_chernarus_summer_config"
+	};
+	randomSeed=11918151;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.25;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.25;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2008;
+		month=10;
+		day=11;
+		hour=9;
+		minute=20;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"aia_chernarus_summer_config"
+	};
+	addOnsAuto[]=
+	{
+		"aia_chernarus_summer_config"
+	};
+	randomSeed=16537862;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.25;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.25;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2008;
+		month=10;
+		day=11;
+		hour=9;
+		minute=20;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};

@@ -1,0 +1,3252 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 5.66
+//'now' is Fri Jun 09 17:56:46 2017 : 'file' last modified on Fri Sep 30 14:35:44 2016
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class CO28_Groza_Part2_V10.ALtis : mission.sqm{
+version = 52;
+class EditorData
+{
+	moveGridStep = 1.0;
+	angleGridStep = 0.2617994;
+	scaleGridStep = 1.0;
+	autoGroupingDist = 10.0;
+	toggles = 1;
+	class ItemIDProvider
+	{
+		nextID = 188;
+	};
+	class MarkerIDProvider
+	{
+		nextID = 8;
+	};
+	class Camera
+	{
+		pos[] = {11706.518,47.87954,11840.317};
+		dir[] = {0.0,-0.7071068,0.7071068};
+		up[] = {0.0,0.70710677,0.70710677};
+		aside[] = {0.99999994,0.0,-0.0};
+	};
+};
+
+randomSeed = 13340216;
+class ScenarioData
+{
+	author = "Sacher";
+	aIKills = 1;
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name = "Multiplayer";
+		class Attribute0
+		{
+			property = "RespawnButton";
+			expression = "true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[] = {"SCALAR"};
+					};
+					value = 1.0;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property = "RespawnTemplates";
+			expression = "true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[] = {"ARRAY"};
+					};
+				};
+			};
+		};
+		class Attribute2
+		{
+			property = "SharedObjectives";
+			expression = "if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[] = {"SCALAR"};
+					};
+					value = 0.0;
+				};
+			};
+		};
+		nAttributes = 3;
+	};
+	class Category1
+	{
+		name = "Scenario";
+		class Attribute0
+		{
+			property = "EnableDebugConsole";
+			expression = "true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[] = {"SCALAR"};
+					};
+					value = 0.0;
+				};
+			};
+		};
+		nAttributes = 1;
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		briefingName = "CO28 Groza Part 2 V10";
+		overviewText = "Russian assault on Canadian held town";
+		resistanceWest = 0.0;
+		resistanceEast = 1.0;
+		startWeather = 0.29999998;
+		startWind = 0.099999994;
+		startWaves = 0.099999994;
+		forecastWeather = 0.29999998;
+		forecastWind = 0.099999994;
+		forecastWaves = 0.099999994;
+		forecastLightnings = 0.099999994;
+		year = 2035;
+		month = 7;
+		day = 6;
+		hour = 12;
+		minute = 0;
+		startFogDecay = 0.013;
+		forecastFogDecay = 0.013;
+	};
+	class Entities
+	{
+		items = 67;
+		class Item0
+		{
+			dataType = "Marker";
+			position[] = {10812.771,22.713745,12283.495};
+			name = "AO";
+			markerType = "RECTANGLE";
+			type = "Empty";
+			colorName = "ColorRed";
+			fillName = "Border";
+			a = 1500.0;
+			b = 1500.0;
+			drawBorder = 1;
+			id = 0;
+		};
+		class Item1
+		{
+			dataType = "Marker";
+			position[] = {10928.314,22.257301,11721.996};
+			name = "LOA";
+			text = "LOA";
+			markerType = "RECTANGLE";
+			type = "Empty";
+			colorName = "ColorRed";
+			fillName = "DiagGrid";
+			a = 20.0;
+			b = 750.0;
+			angle = 181.11694;
+			id = 1;
+		};
+		class Item2
+		{
+			dataType = "Marker";
+			position[] = {10288.199,25.546618,12796.033};
+			name = "LOA_1";
+			markerType = "RECTANGLE";
+			type = "Empty";
+			colorName = "ColorRed";
+			fillName = "DiagGrid";
+			a = 20.0;
+			b = 750.0;
+			angle = 297.18396;
+			id = 2;
+		};
+		class Item3
+		{
+			dataType = "Marker";
+			position[] = {11126.042,25.253351,12120.049};
+			name = "sddssd";
+			text = "2nd Platoon";
+			type = "mil_arrow";
+			colorName = "ColorWEST";
+			angle = 284.31845;
+			id = 3;
+		};
+		class Item4
+		{
+			dataType = "Marker";
+			position[] = {11383.587,17.791265,12711.292};
+			name = "sddssd_1";
+			text = "1st Platoon";
+			type = "mil_arrow";
+			colorName = "ColorWEST";
+			angle = 338.738;
+			id = 4;
+		};
+		class Item5
+		{
+			dataType = "Marker";
+			position[] = {11354.071,-0.022221453,4096.8076};
+			name = "dsdsdsdsss";
+			type = "mil_arrow";
+			colorName = "ColorRed";
+			a = 1.4;
+			b = 1.4;
+			angle = 359.32712;
+			id = 5;
+			atlOffset = 187.86166;
+		};
+		class Item6
+		{
+			dataType = "Marker";
+			position[] = {15430.101,-0.026683705,3924.11};
+			name = "dsdsdsdsss_1_1";
+			type = "mil_arrow";
+			colorName = "ColorRed";
+			a = 1.4;
+			b = 1.4;
+			angle = 359.93515;
+			id = 6;
+			atlOffset = 175.91939;
+		};
+		class Item7
+		{
+			dataType = "Marker";
+			position[] = {12306.135,-0.00072743447,13780.522};
+			name = "AOmarker";
+			text = "AO";
+			type = "mil_objective";
+			colorName = "ColorRed";
+			id = 7;
+			atlOffset = 6.050146;
+		};
+		class Item8
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {11709.209,24.587103,11897.298};
+				angles[] = {6.2765174,0.0,0.0013372133};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes
+			{
+				skill = 0.6;
+				lock = "UNLOCKED";
+				init = "id = [""BTR"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";[this,[[""Number"", [9,10,11], ""Default"",231]]] spawn rhs_fnc_decalsInit; [this,[[""Label"", [3], ""Army"", [0,0]]]] spawn rhs_fnc_decalsInit; [this, ""BTR-80"", ""Russian Armed Forces""] call TRACKASSET;";
+			};
+			id = 8;
+			type = "rhs_btr80_msv";
+		};
+		class Item9
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {11682.726,24.327137,11863.25};
+				angles[] = {6.2818937,0.0,0.0};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes
+			{
+				skill = 0.6;
+				lock = "UNLOCKED";
+				init = "id = [""BTR"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";[this,[[""Number"", [9,10,11], ""Default"",232]]] spawn rhs_fnc_decalsInit; [this,[[""Label"", [3], ""Army"", [0,0]]]] spawn rhs_fnc_decalsInit; [this, ""BTR-80"", ""Russian Armed Forces""] call TRACKASSET;";
+			};
+			id = 9;
+			type = "rhs_btr80_msv";
+		};
+		class Item10
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {11668.947,24.251617,11835.803};
+				angles[] = {6.2805333,0.0,0.0};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes
+			{
+				skill = 0.6;
+				lock = "UNLOCKED";
+				init = "id = [""BTR"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";[this,[[""Number"", [9,10,11], ""Default"",233]]] spawn rhs_fnc_decalsInit; [this,[[""Label"", [3], ""Army"", [0,0]]]] spawn rhs_fnc_decalsInit; [this, ""BTR-80"", ""Russian Armed Forces""] call TRACKASSET;";
+			};
+			id = 10;
+			type = "rhs_btr80_msv";
+		};
+		class Item11
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {11726.0205,23.841791,11822.791};
+				angles[] = {6.2765174,2.0943952,6.2765174};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes
+			{
+				skill = 0.6;
+				init = "id = [""Medicvan"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+			};
+			id = 11;
+			type = "rhs_gaz66_ap2_vmf";
+			atlOffset = -0.2649746;
+		};
+		class Item12
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {10932.119,30.689926,13293.587};
+				angles[] = {6.2818484,2.0943952,6.220601};
+			};
+			side = "Empty";
+			flags = 4;
+			class Attributes
+			{
+				skill = 0.6;
+			};
+			id = 12;
+			type = "B_HMG_01_F";
+		};
+		class Item13
+		{
+			dataType = "Group";
+			side = "East";
+			class Entities
+			{
+				items = 8;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11705.834,23.127644,11900.48};
+						angles[] = {6.276526,0.0,0.0};
+					};
+					side = "East";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "SERGEANT";
+						init = "id = [""SL"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf""; group this setGroupId [""Meteor – 231""];";
+						description = "Meteor – 231 | 1st Squad | BTR Commander/Squad Leader";
+						isPlayable = 1;
+					};
+					id = 14;
+					type = "rhs_msv_junior_sergeant";
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11711.717,23.12287,11899.067};
+						angles[] = {6.2778587,0.0,0.0};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "CORPORAL";
+						init = "id = [""ASL"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 231 | 1st Squad | Asst Squad Leader/BTR Gunner";
+						isPlayable = 1;
+					};
+					id = 15;
+					type = "rhs_msv_combatcrew";
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11711.615,23.126385,11899.727};
+						angles[] = {6.2778587,0.0,0.0};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""Driver"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 231 | 1st Squad | BTR Driver/Mechanic";
+						isPlayable = 1;
+					};
+					id = 16;
+					type = "rhs_msv_crew";
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11705.656,23.109303,11897.729};
+						angles[] = {6.276526,0.0,0.0};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""RPK"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 231 | 1st Squad | RPK Gunner";
+						isPlayable = 1;
+					};
+					id = 17;
+					type = "rhs_msv_machinegunner";
+				};
+				class Item4
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11705.785,23.122828,11899.758};
+						angles[] = {6.276526,0.0,0.0};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""Gren"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 231 | 1st Squad | Grenadier RPG ";
+						isPlayable = 1;
+					};
+					id = 18;
+					type = "rhs_msv_at";
+				};
+				class Item5
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11705.732,23.118837,11899.159};
+						angles[] = {6.276526,0.0,0.0};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""ARPG"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 231 | 1st Squad | Assistant RPG";
+						isPlayable = 1;
+					};
+					id = 19;
+					type = "rhs_msv_strelok_rpg_assist";
+				};
+				class Item6
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11705.688,23.11357,11898.369};
+						angles[] = {6.276526,0.0,0.0};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "CORPORAL";
+						init = "id = [""SR"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 231 | 1st Squad | Senior Rifleman/Efreitor";
+						isPlayable = 1;
+					};
+					id = 20;
+					type = "rhs_msv_efreitor";
+				};
+				class Item7
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11705.656,23.104506,11897.01};
+						angles[] = {6.276526,0.0,0.0};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""RIF"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 231 | 1st Squad | Rifleman";
+						isPlayable = 1;
+					};
+					id = 21;
+					type = "rhs_msv_rifleman";
+				};
+			};
+			class Attributes{};
+			id = 13;
+		};
+		class Item14
+		{
+			dataType = "Group";
+			side = "East";
+			class Entities
+			{
+				items = 8;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11677.55,22.849817,11864.61};
+						angles[] = {6.2791886,0.0,0.0026520467};
+					};
+					side = "East";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "SERGEANT";
+						init = "id = [""SL"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf""; group this setGroupId [""Meteor – 232""];";
+						description = "Meteor – 232 | 2nd Squad | BTR Commander/Squad Leader";
+						isPlayable = 1;
+					};
+					id = 23;
+					type = "rhs_msv_junior_sergeant";
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11685.316,22.850702,11864.182};
+						angles[] = {6.2818484,0.0,0.0013372133};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "CORPORAL";
+						init = "id = [""ASL"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 232 | 2nd Squad | Asst Squad Leader/BTR Gunner";
+						isPlayable = 1;
+					};
+					id = 24;
+					type = "rhs_msv_combatcrew";
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11685.191,22.851597,11864.977};
+						angles[] = {6.2818484,0.0,0.0013372133};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""Driver"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 232 | 2nd Squad | BTR Driver/Mechanic";
+						isPlayable = 1;
+					};
+					id = 25;
+					type = "rhs_msv_crew";
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11677.547,22.840008,11862.16};
+						angles[] = {6.2791886,0.0,0.0026520467};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""RPK"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 232 | 2nd Squad | RPK Gunner";
+						isPlayable = 1;
+					};
+					id = 26;
+					type = "rhs_msv_machinegunner";
+				};
+				class Item4
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11677.604,22.847307,11863.947};
+						angles[] = {6.2791886,0.0,0.0026520467};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""Gren"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 232 | 2nd Squad | Grenadier RPG ";
+						isPlayable = 1;
+					};
+					id = 27;
+					type = "rhs_msv_at";
+				};
+				class Item5
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11677.541,22.845074,11863.431};
+						angles[] = {6.2791886,0.0,0.0026520467};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""ARPG"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 232 | 2nd Squad | Assistant RPG";
+						isPlayable = 1;
+					};
+					id = 28;
+					type = "rhs_msv_strelok_rpg_assist";
+				};
+				class Item6
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11677.529,22.842476,11862.789};
+						angles[] = {6.2791886,0.0,0.0026520467};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "CORPORAL";
+						init = "id = [""SR"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 232 | 2nd Squad | Senior Rifleman/Efreitor";
+						isPlayable = 1;
+					};
+					id = 29;
+					type = "rhs_msv_efreitor";
+				};
+				class Item7
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11677.621,22.835745,11861.045};
+						angles[] = {6.2791886,0.0,0.0026520467};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""RIF"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 232 | 2nd Squad | Rifleman";
+						isPlayable = 1;
+					};
+					id = 30;
+					type = "rhs_msv_rifleman";
+				};
+			};
+			class Attributes{};
+			id = 22;
+		};
+		class Item15
+		{
+			dataType = "Group";
+			side = "East";
+			class Entities
+			{
+				items = 8;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11664.168,22.77966,11838.132};
+						angles[] = {6.2805333,0.0,0.0};
+					};
+					side = "East";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "SERGEANT";
+						init = "id = [""SL"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf""; group this setGroupId [""Meteor – 233""];";
+						description = "Meteor – 233 | 3rd Squad | BTR Commander/Squad Leader";
+						isPlayable = 1;
+					};
+					id = 32;
+					type = "rhs_msv_junior_sergeant";
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11675.241,22.780838,11836.857};
+						angles[] = {6.2818484,0.0,0.0013372133};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "CORPORAL";
+						init = "id = [""ASL"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | Asst Squad Leader/BTR Gunner";
+						isPlayable = 1;
+					};
+					id = 33;
+					type = "rhs_msv_combatcrew";
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11675.126,22.781504,11837.471};
+						angles[] = {6.2818484,0.0,0.0013372133};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""Driver"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | BTR Driver/Mechanic";
+						isPlayable = 1;
+					};
+					id = 34;
+					type = "rhs_msv_crew";
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11664.172,22.773432,11835.796};
+						angles[] = {6.2805333,0.0,0.0};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""RPK"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | RPK Gunner";
+						isPlayable = 1;
+					};
+					id = 35;
+					type = "rhs_msv_machinegunner";
+				};
+				class Item4
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11664.183,22.777866,11837.46};
+						angles[] = {6.2805333,0.0,0.0};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""Gren"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | Grenadier RPG ";
+						isPlayable = 1;
+					};
+					id = 36;
+					type = "rhs_msv_at";
+				};
+				class Item5
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11664.17,22.776419,11836.917};
+						angles[] = {6.2805333,0.0,0.0};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""ARPG"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | Assistant RPG";
+						isPlayable = 1;
+					};
+					id = 37;
+					type = "rhs_msv_strelok_rpg_assist";
+				};
+				class Item6
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11664.201,22.774923,11836.355};
+						angles[] = {6.2805333,0.0,0.0};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "CORPORAL";
+						init = "id = [""SR"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | Senior Rifleman/Efreitor";
+						isPlayable = 1;
+					};
+					id = 38;
+					type = "rhs_msv_efreitor";
+				};
+				class Item7
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11664.129,22.771805,11835.187};
+						angles[] = {6.2805333,0.0,0.0};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""RIF"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | Rifleman";
+						isPlayable = 1;
+					};
+					id = 39;
+					type = "rhs_msv_rifleman";
+				};
+			};
+			class Attributes{};
+			id = 31;
+		};
+		class Item16
+		{
+			dataType = "Group";
+			side = "East";
+			class Entities
+			{
+				items = 4;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11706.518,22.880976,11865.367};
+						angles[] = {6.2805324,0.0,0.0013439035};
+					};
+					side = "East";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "LIEUTENANT";
+						init = "id = [""PL"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf""; group this setGroupId [""Meteor – 230""];";
+						description = "Meteor – 230 | 1st Platoon HQ | Platoon Commander";
+						isPlayer = 1;
+						isPlayable = 1;
+					};
+					id = 41;
+					type = "rhs_msv_officer";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property = "uo_unitDescription";
+							expression = "_this setVariable ['uo_unitDescription', _value];";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "true";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property = "speaker";
+							expression = "_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property = "pitch";
+							expression = "_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"SCALAR"};
+									};
+									value = 1.02;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property = "face";
+							expression = "_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[] = {"STRING"};
+									};
+									value = "";
+								};
+							};
+						};
+						nAttributes = 4;
+					};
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11696.147,22.871948,11867.167};
+						angles[] = {6.2805333,0.0,0.0013372133};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "SERGEANT";
+						init = "id = [""PSG"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 230 | 1st Platoon HQ | Platoon Sergeant";
+						isPlayable = 1;
+					};
+					id = 42;
+					type = "rhs_msv_sergeant";
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11713.107,22.8719,11858.669};
+						angles[] = {6.2805333,0.0,0.0013372133};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "CORPORAL";
+						init = "id = [""MD"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 230 | 1st Platoon HQ | Medic";
+						isPlayable = 1;
+					};
+					id = 43;
+					type = "rhs_msv_medic";
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11702.317,22.85576,11858.011};
+						angles[] = {6.2805333,0.0,0.0013372133};
+					};
+					side = "East";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "CORPORAL";
+						init = "id = [""SVD"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 230 | 1st Platoon HQ | Marksman";
+						isPlayable = 1;
+					};
+					id = 44;
+					type = "rhs_msv_marksman";
+				};
+			};
+			class Attributes{};
+			id = 40;
+		};
+		class Item17
+		{
+			dataType = "Logic";
+			class PositionInfo
+			{
+				position[] = {10976.308,28.479094,13467.107};
+			};
+			name = "TEST";
+			id = 45;
+			type = "Logic";
+		};
+		class Item18
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10864.096,32.643345,13266.313};
+						angles[] = {6.2445393,2.0943952,6.2245874};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "this setUnitPos ""MIDDLE"";id = [""AT"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 47;
+					type = "tin_soldier_caf_ar_mat";
+				};
+			};
+			class Attributes{};
+			id = 46;
+		};
+		class Item19
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 2;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10929.659,29.713217,13294.701};
+						angles[] = {0.0,2.0943952,6.219273};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""RIFLE"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 49;
+					type = "tin_soldier_caf_ar_rifle";
+				};
+				class Item1
+				{
+					dataType = "Waypoint";
+					position[] = {10932.048,30.059757,13293.589};
+					type = "GetIn";
+					class Effects{};
+					showWP = "NEVER";
+					id = 50;
+					atlOffset = 0.5;
+					class AttachedTo
+					{
+						id = 12;
+						offset[] = {0.0,0.5,0.0};
+					};
+				};
+			};
+			class Attributes{};
+			id = 48;
+		};
+		class Item20
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10778.766,34.075462,13283.187};
+						angles[] = {6.251197,3.9269907,0.018663859};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "this setUnitPos ""MIDDLE"";id = [""LMG"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 52;
+					type = "tin_soldier_caf_ar_mmg";
+				};
+			};
+			class Attributes{};
+			id = 51;
+		};
+		class Item21
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10979.269,32.86509,13670.308};
+						angles[] = {0.010664274,0.5235988,6.2698536};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "this setUnitPos ""MIDDLE"";id = [""GREN"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 54;
+					type = "tin_soldier_caf_ar_gren";
+				};
+			};
+			class Attributes{};
+			id = 53;
+		};
+		class Item22
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10711.104,34.253536,13280.626};
+						angles[] = {6.248533,3.9269907,6.2458706};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "this setUnitPos ""MIDDLE"";id = [""AT"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 56;
+					type = "tin_soldier_caf_ar_mat";
+				};
+			};
+			class Attributes{};
+			id = 55;
+		};
+		class Item23
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10711.593,42.21221,13450.712};
+						angles[] = {6.247201,4.0142574,6.249864};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""AT"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 58;
+					type = "tin_soldier_caf_ar_mat";
+				};
+			};
+			class Attributes{};
+			id = 57;
+		};
+		class Item24
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11033.0,23.569206,13342.356};
+						angles[] = {6.25786,3.4906585,6.248533};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "this setPosATL [(getPosATL this) select 0, (getPosATL this) select 1, 3];id = [""GPMG"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 60;
+					type = "tin_soldier_caf_ar_lmg";
+				};
+			};
+			class Attributes{};
+			id = 59;
+		};
+		class Item25
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11049.401,26.471027,13485.963};
+						angles[] = {0.00799353,1.3089969,6.2605233};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "this setPosATL [(getPosATL this) select 0, (getPosATL this) select 1, 3];id = [""AT"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 62;
+					type = "tin_soldier_caf_ar_mat";
+				};
+			};
+			class Attributes{};
+			id = 61;
+		};
+		class Item26
+		{
+			dataType = "Group";
+			side = "Independent";
+			class Entities
+			{
+				items = 12;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11687.106,21.9907,11978.487};
+						angles[] = {0.035984326,0.0,6.199382};
+					};
+					side = "Independent";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "COLONEL";
+						presence = 0.0;
+					};
+					id = 64;
+					type = "tb_alfr1bn_soldier_cc";
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11690.445,21.804523,11976.709};
+						angles[] = {0.07187581,0.0,6.199382};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "SERGEANT";
+						init = "id = [""SL"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf""; group this setGroupId [""Meteor – 233""];";
+						description = "Meteor – 233 | 3rd Squad | BTR Commander/Squad Leader";
+					};
+					id = 65;
+					type = "rhs_msv_junior_sergeant";
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11684.273,22.25496,11977.3};
+						angles[] = {0.039979152,0.0,6.223257};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "CORPORAL";
+						init = "id = [""SR"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | Senior Rifleman/Efreitor";
+					};
+					id = 66;
+					type = "rhs_msv_efreitor";
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11684.748,22.281437,11975.927};
+						angles[] = {0.039979152,0.0,6.223257};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""RPK"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | RPK Gunner";
+					};
+					id = 67;
+					type = "rhs_msv_machinegunner";
+				};
+				class Item4
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11684.085,22.39683,11974.036};
+						angles[] = {0.039979152,0.0,6.223257};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""RIF"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | Rifleman";
+					};
+					id = 68;
+					type = "rhs_msv_rifleman";
+				};
+				class Item5
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11687.125,22.205666,11974.68};
+						angles[] = {0.039977662,0.0,6.231232};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""Gren"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | Grenadier RPG ";
+					};
+					id = 69;
+					type = "rhs_msv_at";
+				};
+				class Item6
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11689.866,22.074482,11973.635};
+						angles[] = {0.07187581,0.0,6.199382};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""ARPG"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | Assistant RPG";
+					};
+					id = 70;
+					type = "rhs_msv_strelok_rpg_assist";
+				};
+				class Item7
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11677.366,22.829325,11972.638};
+						angles[] = {0.034652505,0.0,6.2259154};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes{};
+					id = 72;
+					type = "rhs_msv_armoredcrew";
+				};
+				class Item8
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11677.366,22.829325,11972.638};
+						angles[] = {0.034652505,0.0,6.2259154};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes{};
+					id = 73;
+					type = "rhs_msv_armoredcrew";
+				};
+				class Item9
+				{
+					dataType = "Waypoint";
+					position[] = {10843.89,17.897247,12200.064};
+					class Effects{};
+					showWP = "NEVER";
+					id = 74;
+					type = "Move";
+				};
+				class Item10
+				{
+					dataType = "Waypoint";
+					position[] = {10832.143,18.09448,12202.244};
+					type = "Unload";
+					class Effects{};
+					showWP = "NEVER";
+					id = 75;
+				};
+				class Item11
+				{
+					dataType = "Waypoint";
+					position[] = {10679.374,16.788385,12261.652};
+					placement = 50.0;
+					completitionRadius = 50.0;
+					type = "SeekAndDestroy";
+					combatMode = "RED";
+					formation = "LINE";
+					speed = "NORMAL";
+					combat = "AWARE";
+					class Effects{};
+					showWP = "NEVER";
+					id = 76;
+				};
+			};
+			class Attributes{};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID = 2;
+				};
+				class Links
+				{
+					items = 2;
+					class Item0
+					{
+						linkID = 0;
+						item0 = 72;
+						item1 = 71;
+						class CustomData
+						{
+							role = 1;
+						};
+					};
+					class Item1
+					{
+						linkID = 1;
+						item0 = 73;
+						item1 = 71;
+						class CustomData
+						{
+							role = 2;
+							turretPath[] = {1};
+						};
+					};
+				};
+			};
+			id = 63;
+		};
+		class Item27
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {11677.419,24.304882,11972.655};
+				angles[] = {0.034652505,0.0,6.2259154};
+			};
+			side = "Independent";
+			flags = 4;
+			class Attributes
+			{
+				skill = 0.6;
+				rank = "COLONEL";
+			};
+			id = 71;
+			type = "rhs_btr80_msv";
+			atlOffset = -0.00044059753;
+		};
+		class Item28
+		{
+			dataType = "Group";
+			side = "Independent";
+			class Entities
+			{
+				items = 12;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11706.947,22.631592,11952.694};
+						angles[] = {0.049293593,0.0,6.257858};
+					};
+					side = "Independent";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "COLONEL";
+						presence = 0.0;
+					};
+					id = 78;
+					type = "tb_alfr1bn_soldier_cc";
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11710.286,22.497276,11950.916};
+						angles[] = {0.049293593,0.0,6.208657};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "SERGEANT";
+						init = "id = [""SL"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf""; group this setGroupId [""Meteor – 233""];";
+						description = "Meteor – 233 | 3rd Squad | BTR Commander/Squad Leader";
+					};
+					id = 79;
+					type = "rhs_msv_junior_sergeant";
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11704.114,22.761932,11951.507};
+						angles[] = {0.049293593,0.0,6.257858};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "CORPORAL";
+						init = "id = [""SR"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | Senior Rifleman/Efreitor";
+					};
+					id = 80;
+					type = "rhs_msv_efreitor";
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11704.589,22.815928,11950.134};
+						angles[] = {0.043971907,0.0,6.2631893};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""RPK"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | RPK Gunner";
+					};
+					id = 81;
+					type = "rhs_msv_machinegunner";
+				};
+				class Item4
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11703.926,22.91237,11948.243};
+						angles[] = {0.043971907,0.0,6.2631893};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""RIF"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | Rifleman";
+					};
+					id = 82;
+					type = "rhs_msv_rifleman";
+				};
+				class Item5
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11706.966,22.818972,11948.887};
+						angles[] = {0.049293593,0.0,6.257858};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""Gren"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | Grenadier RPG ";
+					};
+					id = 83;
+					type = "rhs_msv_at";
+				};
+				class Item6
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11709.707,22.692171,11947.842};
+						angles[] = {0.049293593,0.0,6.208657};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""ARPG"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | Assistant RPG";
+					};
+					id = 84;
+					type = "rhs_msv_strelok_rpg_assist";
+				};
+				class Item7
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11697.207,23.053165,11946.845};
+						angles[] = {0.013332055,0.0,6.275192};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes{};
+					id = 86;
+					type = "rhs_msv_armoredcrew";
+				};
+				class Item8
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11697.207,23.053165,11946.845};
+						angles[] = {0.013332055,0.0,6.275192};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes{};
+					id = 87;
+					type = "rhs_msv_armoredcrew";
+				};
+				class Item9
+				{
+					dataType = "Waypoint";
+					position[] = {10836.519,17.186766,12161.825};
+					class Effects{};
+					showWP = "NEVER";
+					id = 88;
+					type = "Move";
+				};
+				class Item10
+				{
+					dataType = "Waypoint";
+					position[] = {10827.445,17.24038,12163.782};
+					type = "Unload";
+					class Effects{};
+					showWP = "NEVER";
+					id = 89;
+				};
+				class Item11
+				{
+					dataType = "Waypoint";
+					position[] = {10711.271,17.393606,12250.626};
+					completitionRadius = 50.0;
+					type = "SeekAndDestroy";
+					combatMode = "RED";
+					formation = "LINE";
+					speed = "NORMAL";
+					combat = "AWARE";
+					class Effects{};
+					showWP = "NEVER";
+					id = 90;
+				};
+			};
+			class Attributes{};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID = 2;
+				};
+				class Links
+				{
+					items = 2;
+					class Item0
+					{
+						linkID = 0;
+						item0 = 86;
+						item1 = 85;
+						class CustomData
+						{
+							role = 1;
+						};
+					};
+					class Item1
+					{
+						linkID = 1;
+						item0 = 87;
+						item1 = 85;
+						class CustomData
+						{
+							role = 2;
+							turretPath[] = {1};
+						};
+					};
+				};
+			};
+			id = 77;
+		};
+		class Item29
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {11697.236,24.530521,11946.828};
+				angles[] = {0.013332055,0.0,6.275192};
+			};
+			side = "Independent";
+			flags = 4;
+			class Attributes
+			{
+				skill = 0.6;
+				rank = "COLONEL";
+			};
+			id = 85;
+			type = "rhs_btr80_msv";
+			atlOffset = -0.00018501282;
+		};
+		class Item30
+		{
+			dataType = "Group";
+			side = "Independent";
+			class Entities
+			{
+				items = 12;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11733.799,22.978174,11927.273};
+						angles[] = {0.030656165,0.0,6.2818484};
+					};
+					side = "Independent";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "COLONEL";
+						presence = 0.0;
+					};
+					id = 92;
+					type = "tb_alfr1bn_soldier_cc";
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11737.138,23.027687,11925.495};
+						angles[] = {0.03731497,0.0,6.275192};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "SERGEANT";
+						init = "id = [""SL"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf""; group this setGroupId [""Meteor – 233""];";
+						description = "Meteor – 233 | 3rd Squad | BTR Commander/Squad Leader";
+					};
+					id = 93;
+					type = "rhs_msv_junior_sergeant";
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11730.966,23.018366,11926.086};
+						angles[] = {0.030656165,0.0,6.2818484};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "CORPORAL";
+						init = "id = [""SR"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | Senior Rifleman/Efreitor";
+					};
+					id = 94;
+					type = "rhs_msv_efreitor";
+				};
+				class Item3
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11731.44,23.05534,11924.713};
+						angles[] = {0.017329043,0.0,6.2818484};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""RPK"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | RPK Gunner";
+					};
+					id = 95;
+					type = "rhs_msv_machinegunner";
+				};
+				class Item4
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11730.777,23.0832,11922.822};
+						angles[] = {0.013332055,0.0,0.0026520467};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""RIF"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | Rifleman";
+					};
+					id = 96;
+					type = "rhs_msv_rifleman";
+				};
+				class Item5
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11733.817,23.073786,11923.466};
+						angles[] = {0.017329043,0.0,6.2818484};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""Gren"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | Grenadier RPG ";
+					};
+					id = 97;
+					type = "rhs_msv_at";
+				};
+				class Item6
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11736.559,23.088255,11922.421};
+						angles[] = {0.017329043,0.0,6.2818484};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""ARPG"", this] call compile preprocessFileLineNumbers ""Orbat\APCOrbat.sqf"";";
+						description = "Meteor – 233 | 3rd Squad | Assistant RPG";
+					};
+					id = 98;
+					type = "rhs_msv_strelok_rpg_assist";
+				};
+				class Item7
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11724.059,23.117687,11921.424};
+						angles[] = {0.0066682254,0.0,0.0013372133};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes{};
+					id = 100;
+					type = "rhs_msv_armoredcrew";
+				};
+				class Item8
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11724.059,23.117687,11921.424};
+						angles[] = {0.0066682254,0.0,0.0013372133};
+					};
+					side = "Independent";
+					flags = 4;
+					class Attributes{};
+					id = 101;
+					type = "rhs_msv_armoredcrew";
+				};
+				class Item9
+				{
+					dataType = "Waypoint";
+					position[] = {10830.341,17.726576,12134.967};
+					class Effects{};
+					showWP = "NEVER";
+					id = 102;
+					type = "Move";
+				};
+				class Item10
+				{
+					dataType = "Waypoint";
+					position[] = {10816.93,17.735357,12142.639};
+					type = "Unload";
+					class Effects{};
+					showWP = "NEVER";
+					id = 103;
+				};
+				class Item11
+				{
+					dataType = "Waypoint";
+					position[] = {10716.675,17.785173,12217.103};
+					completitionRadius = 50.0;
+					type = "SeekAndDestroy";
+					combatMode = "RED";
+					formation = "LINE";
+					speed = "NORMAL";
+					combat = "AWARE";
+					class Effects{};
+					showWP = "NEVER";
+					id = 104;
+				};
+			};
+			class Attributes{};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID = 2;
+				};
+				class Links
+				{
+					items = 2;
+					class Item0
+					{
+						linkID = 0;
+						item0 = 100;
+						item1 = 99;
+						class CustomData
+						{
+							role = 1;
+						};
+					};
+					class Item1
+					{
+						linkID = 1;
+						item0 = 101;
+						item1 = 99;
+						class CustomData
+						{
+							role = 2;
+							turretPath[] = {1};
+						};
+					};
+				};
+			};
+			id = 91;
+		};
+		class Item31
+		{
+			dataType = "Object";
+			class PositionInfo
+			{
+				position[] = {11724.055,24.595707,11921.378};
+				angles[] = {0.0066682254,0.0,0.0013372133};
+			};
+			side = "Independent";
+			flags = 4;
+			class Attributes
+			{
+				skill = 0.6;
+				rank = "COLONEL";
+			};
+			id = 99;
+			type = "rhs_btr80_msv";
+			atlOffset = -1.1444092e-005;
+		};
+		class Item32
+		{
+			dataType = "Logic";
+			class PositionInfo
+			{
+				position[] = {10902.634,120.2753,8038.3447};
+			};
+			init = "[""NAadsME"",getPos this,east,[""hq""],5,1.5,[west,east],""880th Marine Battalion HQ""] call vk_fnc_addMarker;";
+			id = 105;
+			type = "Logic";
+		};
+		class Item33
+		{
+			dataType = "Logic";
+			class PositionInfo
+			{
+				position[] = {11239.857,-0.11290753,2253.1223};
+			};
+			init = "[""NAssssME"",getPos this,east,[""armor"",""heavy""],5,1.5,[west,east],""382th Marine Battalion""] call vk_fnc_addMarker;";
+			id = 106;
+			type = "Logic";
+			atlOffset = 185.85709;
+		};
+		class Item34
+		{
+			dataType = "Logic";
+			class PositionInfo
+			{
+				position[] = {11235.488,0.140111,1405.349};
+			};
+			init = "[""NadsasdadAME"",getPos this,east,[""arty""],5,1.5,[west,east],""1613rd Artillery Battery""] call vk_fnc_addMarker;";
+			id = 107;
+			type = "Logic";
+			atlOffset = 186.1101;
+		};
+		class Item35
+		{
+			dataType = "Logic";
+			class PositionInfo
+			{
+				position[] = {15439.192,-0.1543343,2952.332};
+			};
+			init = "[""NAyyyyME"",getPos this,east,[""fixed""],6,1.5,[west,east],""960th Assault Aviation Regiment""] call vk_fnc_addMarker;";
+			id = 108;
+			type = "Logic";
+			atlOffset = 181.02693;
+		};
+		class Item36
+		{
+			dataType = "Logic";
+			class PositionInfo
+			{
+				position[] = {10620.333,15.529659,12271.751};
+			};
+			init = "[""whatessssver"",getPos this,east,[""inf""],3,1] call vk_fnc_addMarker;";
+			id = 109;
+			type = "Logic";
+		};
+		class Item37
+		{
+			dataType = "Logic";
+			class PositionInfo
+			{
+				position[] = {10947.46,29.8167,13422.844};
+			};
+			init = "[""whaadsdsatever"",getPos this,east,[""inf""],3,1] call vk_fnc_addMarker;";
+			id = 110;
+			type = "Logic";
+		};
+		class Item38
+		{
+			dataType = "Logic";
+			class PositionInfo
+			{
+				position[] = {11656.852,22.892014,11857.324};
+			};
+			init = "[""NAasssdsME"",getPos this,west,[""inf"",""motor""],3,1,[west,east],""1st Platoon""] call vk_fnc_addMarker;";
+			id = 111;
+			type = "Logic";
+		};
+		class Item39
+		{
+			dataType = "Logic";
+			class PositionInfo
+			{
+				position[] = {11696.58,22.423431,11962.583};
+			};
+			init = "[""NAassssssssdsME"",getPos this,west,[""inf"",""motor""],3,1,[west,east],""2nd Platoon""] call vk_fnc_addMarker;";
+			id = 112;
+			type = "Logic";
+		};
+		class Item40
+		{
+			dataType = "Logic";
+			class PositionInfo
+			{
+				position[] = {11250.898,0.24791756,3039.3457};
+			};
+			init = "[""NadsasasddssdadAME"",getPos this,east,[""hq""],6,1.5,[west,east],""810th Marine Brigade""] call vk_fnc_addMarker;";
+			id = 113;
+			type = "Logic";
+			atlOffset = 186.21793;
+		};
+		class Item41
+		{
+			dataType = "Logic";
+			class PositionInfo
+			{
+				position[] = {11723.675,22.714779,11821.892};
+			};
+			init = "[""NAassssssdsME"",getPos this,west,[""medic"",""wheeled""],1,1] call vk_fnc_addMarker;";
+			id = 114;
+			type = "Logic";
+		};
+		class Item42
+		{
+			dataType = "Logic";
+			class PositionInfo
+			{
+				position[] = {15452.869,0.07905968,2336.9824};
+			};
+			init = "[""NAyysssyyME"",getPos this,east,[""fixed""],6,1.5,[west,east],""Guards 3rd Fighter Aviation Regiment""] call vk_fnc_addMarker;";
+			id = 115;
+			type = "Logic";
+			atlOffset = 186.04906;
+		};
+		class Item43
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11070.187,22.120256,13353.503};
+						angles[] = {6.267187,2.0943952,6.195412};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "SERGEANT";
+						init = "this setUnitPos ""DOWN"";id = [""AT"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 117;
+					type = "tin_soldier_caf_ar_mat";
+				};
+			};
+			class Attributes{};
+			id = 116;
+		};
+		class Item44
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10998.538,26.146809,13321.656};
+						angles[] = {6.2698536,4.0142574,6.2645216};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""LMG"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 119;
+					type = "tin_soldier_caf_ar_mmg";
+				};
+			};
+			class Attributes{};
+			id = 118;
+		};
+		class Item45
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11058.169,21.890577,13303.469};
+						angles[] = {6.277848,3.577925,6.2099833};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""MED"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 121;
+					type = "tin_soldier_caf_ar_medic";
+				};
+			};
+			class Attributes{};
+			id = 120;
+		};
+		class Item46
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11045.598,25.021624,13428.176};
+						angles[] = {6.217945,0.6981317,6.248533};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "SERGEANT";
+					};
+					id = 123;
+					type = "tin_soldier_caf_ar_sec2ic";
+				};
+			};
+			class Attributes{};
+			id = 122;
+		};
+		class Item47
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10979.529,27.110188,13398.111};
+						angles[] = {6.2711854,2.0943952,6.21529};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "this setPosATL [(getPosATL this) select 0, (getPosATL this) select 1, 4];id = [""GREN"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 125;
+					type = "tin_soldier_caf_ar_gren";
+				};
+			};
+			class Attributes{};
+			id = 124;
+		};
+		class Item48
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11047.567,26.457323,13476.255};
+						angles[] = {6.202031,2.7925267,0.017332481};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "SERGEANT";
+						init = "this setPosATL [(getPosATL this) select 0, (getPosATL this) select 1, 3];id = [""ASL"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 127;
+					type = "tin_soldier_caf_ar_sec2ic";
+				};
+			};
+			class Attributes{};
+			id = 126;
+		};
+		class Item49
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11057.687,26.105047,13515.464};
+						angles[] = {6.2033563,2.8797932,6.249864};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "this setUnitPos ""DOWN"";id = [""RIFLE"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 129;
+					type = "tin_soldier_caf_ar_rifle";
+				};
+			};
+			class Attributes{};
+			id = 128;
+		};
+		class Item50
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10812.815,36.446693,13454.58};
+						angles[] = {6.280511,3.8397243,6.2299027};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "SERGEANT";
+						init = "this setPosATL [(getPosATL this) select 0, (getPosATL this) select 1, 3];id = [""SL"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 131;
+					type = "tin_soldier_caf_ar_sec2ic";
+				};
+			};
+			class Attributes{};
+			id = 130;
+		};
+		class Item51
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10823.745,36.012535,13438.226};
+						angles[] = {0.01599837,2.8797932,6.220601};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "this setPosATL [(getPosATL this) select 0, (getPosATL this) select 1, 3];this setUnitPos ""DOWN"";";
+					};
+					id = 133;
+					type = "tin_soldier_caf_ar_lmg";
+				};
+			};
+			class Attributes{};
+			id = 132;
+		};
+		class Item52
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10883.907,32.740067,13407.703};
+						angles[] = {6.2751846,2.0943952,6.2245865};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "SERGEANT";
+						init = "this setUnitPos ""DOWN"";id = [""ASL"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 135;
+					type = "tin_soldier_caf_ar_sec2ic";
+				};
+			};
+			class Attributes{};
+			id = 134;
+		};
+		class Item53
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10938.426,29.729837,13385.125};
+						angles[] = {0.014664836,3.577925,6.182197};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "this setPosATL [(getPosATL this) select 0, (getPosATL this) select 1, 3];id = [""GPMG"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 137;
+					type = "tin_soldier_caf_ar_lmg";
+				};
+			};
+			class Attributes{};
+			id = 136;
+		};
+		class Item54
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10957.951,33.133415,13669.398};
+						angles[] = {0.0066682254,0.0,6.2631893};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "this setUnitPos ""MIDDLE"";id = [""AT"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 139;
+					type = "tin_soldier_caf_ar_mat";
+				};
+			};
+			class Attributes{};
+			id = 138;
+		};
+		class Item55
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11171.639,17.02166,13208.331};
+						angles[] = {0.017329043,2.268928,6.267187};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "this setPosATL [(getPosATL this) select 0, (getPosATL this) select 1, 1];this setUnitPos ""MIDDLE"";id = [""LMG"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 141;
+					type = "tin_soldier_caf_ar_lmg";
+				};
+			};
+			class Attributes{};
+			id = 140;
+		};
+		class Item56
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11230.509,15.799374,13215.312};
+						angles[] = {0.014660771,2.0943952,6.2605257};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""AT"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 143;
+					type = "tin_soldier_caf_ar_mat";
+				};
+			};
+			class Attributes{};
+			id = 142;
+		};
+		class Item57
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11101.102,18.459295,13215.615};
+						angles[] = {6.248533,2.0943952,6.272521};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "SERGEANT";
+						init = "this setPosATL [(getPosATL this) select 0, (getPosATL this) select 1, 3];this setUnitPos ""DOWN"";id = [""ASL"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 145;
+					type = "tin_soldier_caf_ar_sec2ic";
+				};
+			};
+			class Attributes{};
+			id = 144;
+		};
+		class Item58
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 1;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11026.629,23.394718,13275.594};
+						angles[] = {6.2805333,2.0943952,6.174285};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "this setPosATL [(getPosATL this) select 0, (getPosATL this) select 1, 1];this setUnitPos ""MIDDLE"";id = [""AT"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 147;
+					type = "tin_soldier_caf_ar_mat";
+				};
+			};
+			class Attributes{};
+			id = 146;
+		};
+		class Item59
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 4;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11035.15,24.433455,13387.497};
+						angles[] = {6.257858,2.0943952,6.2392135};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "SERGEANT";
+						init = "id = [""AT"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 149;
+					type = "tin_soldier_caf_ar_mat";
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11040.15,24.170645,13385.847};
+						angles[] = {6.257858,2.0943952,6.232562};
+					};
+					side = "West";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""GREN"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 150;
+					type = "tin_soldier_caf_ar_gren";
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {11030.15,24.57126,13385.847};
+						angles[] = {6.252527,3.577925,6.252527};
+					};
+					side = "West";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""GPMG"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 151;
+					type = "tin_soldier_caf_ar_lmg";
+				};
+				class Item3
+				{
+					dataType = "Waypoint";
+					position[] = {11119.516,18.467337,13284.006};
+					type = "Sentry";
+					class Effects{};
+					showWP = "NEVER";
+					id = 152;
+				};
+			};
+			class Attributes{};
+			id = 148;
+		};
+		class Item60
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 4;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10735.009,35.44807,13356.352};
+						angles[] = {6.248533,2.0943952,6.0896387};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "SERGEANT";
+						init = "id = [""AT"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 154;
+					type = "tin_soldier_caf_ar_mat";
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10740.009,34.412296,13354.701};
+						angles[] = {6.248533,2.0943952,6.2392135};
+					};
+					side = "West";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""GREN"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 155;
+					type = "tin_soldier_caf_ar_gren";
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10730.009,36.7459,13354.701};
+						angles[] = {6.211309,3.577925,5.911908};
+					};
+					side = "West";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""GPMG"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 156;
+					type = "tin_soldier_caf_ar_lmg";
+				};
+				class Item3
+				{
+					dataType = "Waypoint";
+					position[] = {10789.28,32.337177,13238.555};
+					type = "Sentry";
+					class Effects{};
+					showWP = "NEVER";
+					id = 157;
+				};
+			};
+			class Attributes{};
+			id = 153;
+		};
+		class Item61
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 4;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10524.691,15.027137,12359.992};
+						angles[] = {6.2645183,2.0943952,0.021331646};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "SERGEANT";
+						init = "id = [""AT"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 159;
+					type = "tin_soldier_caf_ar_mat";
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10529.691,15.103004,12358.342};
+						angles[] = {6.2645183,2.0943952,0.021331646};
+					};
+					side = "West";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""GREN"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 160;
+					type = "tin_soldier_caf_ar_gren";
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10519.691,14.926597,12358.342};
+						angles[] = {6.275192,3.577925,0.014664836};
+					};
+					side = "West";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""GPMG"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 161;
+					type = "tin_soldier_caf_ar_lmg";
+				};
+				class Item3
+				{
+					dataType = "Waypoint";
+					position[] = {10655.617,16.322432,12223.359};
+					type = "Sentry";
+					class Effects{};
+					showWP = "NEVER";
+					id = 162;
+				};
+			};
+			class Attributes{};
+			id = 158;
+		};
+		class Item62
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 4;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10583.286,15.495526,12336.205};
+						angles[] = {6.2392135,2.0943952,6.2618537};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "SERGEANT";
+						init = "id = [""AT"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 164;
+					type = "tin_soldier_caf_ar_mat";
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10588.286,15.360893,12334.555};
+						angles[] = {6.223258,2.0943952,6.2778587};
+					};
+					side = "West";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""GREN"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 165;
+					type = "tin_soldier_caf_ar_gren";
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10578.286,15.417202,12334.555};
+						angles[] = {6.239215,3.577925,0.005326526};
+					};
+					side = "West";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""GPMG"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 166;
+					type = "tin_soldier_caf_ar_lmg";
+				};
+				class Item3
+				{
+					dataType = "Waypoint";
+					position[] = {10637.558,16.076982,12218.408};
+					type = "Sentry";
+					class Effects{};
+					showWP = "NEVER";
+					id = 167;
+				};
+			};
+			class Attributes{};
+			id = 163;
+		};
+		class Item63
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 4;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10648.843,15.654191,12316.48};
+						angles[] = {0.0066682254,2.0943952,0.0066682254};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "SERGEANT";
+						init = "id = [""AT"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 169;
+					type = "tin_soldier_caf_ar_mat";
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10653.843,15.655774,12314.83};
+						angles[] = {6.2818484,2.0943952,6.2791886};
+					};
+					side = "West";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""GREN"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 170;
+					type = "tin_soldier_caf_ar_gren";
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10643.843,15.557094,12314.83};
+						angles[] = {0.0026744273,3.577925,0.018663859};
+					};
+					side = "West";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""GPMG"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 171;
+					type = "tin_soldier_caf_ar_lmg";
+				};
+				class Item3
+				{
+					dataType = "Waypoint";
+					position[] = {10703.114,18.273006,12198.684};
+					type = "Sentry";
+					class Effects{};
+					showWP = "NEVER";
+					id = 172;
+				};
+			};
+			class Attributes{};
+			id = 168;
+		};
+		class Item64
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 4;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10552.539,14.810526,12256.726};
+						angles[] = {0.0066682254,2.0943952,0.0066682254};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "SERGEANT";
+						init = "id = [""AT"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 174;
+					type = "tin_soldier_caf_ar_mat";
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10557.539,14.854868,12255.075};
+						angles[] = {0.0066682254,2.0943952,0.0066682254};
+					};
+					side = "West";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""GREN"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 175;
+					type = "tin_soldier_caf_ar_gren";
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10547.539,14.873768,12255.075};
+						angles[] = {0.022662206,3.577925,6.272521};
+					};
+					side = "West";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""GPMG"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 176;
+					type = "tin_soldier_caf_ar_lmg";
+				};
+				class Item3
+				{
+					dataType = "Waypoint";
+					position[] = {10651.051,16.199587,12193.682};
+					type = "Sentry";
+					class Effects{};
+					showWP = "NEVER";
+					id = 177;
+				};
+			};
+			class Attributes{};
+			id = 173;
+		};
+		class Item65
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 4;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10618.096,15.452528,12271.809};
+						angles[] = {0.01599837,2.0943952,0.02666023};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "SERGEANT";
+						init = "id = [""AT"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 179;
+					type = "tin_soldier_caf_ar_mat";
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10623.096,15.59293,12270.158};
+						angles[] = {0.003996757,2.0943952,0.019996032};
+					};
+					side = "West";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""GREN"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 180;
+					type = "tin_soldier_caf_ar_gren";
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10613.096,15.345589,12270.158};
+						angles[] = {0.01599837,3.577925,0.02666023};
+					};
+					side = "West";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""GPMG"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 181;
+					type = "tin_soldier_caf_ar_lmg";
+					atlOffset = -9.536743e-007;
+				};
+				class Item3
+				{
+					dataType = "Waypoint";
+					position[] = {10683.772,17.637747,12186.498};
+					type = "Sentry";
+					class Effects{};
+					showWP = "NEVER";
+					id = 182;
+				};
+			};
+			class Attributes{};
+			id = 178;
+		};
+		class Item66
+		{
+			dataType = "Group";
+			side = "West";
+			class Entities
+			{
+				items = 4;
+				class Item0
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10638.4,15.6395235,12328.663};
+						angles[] = {6.2765174,2.0943952,6.2765174};
+					};
+					side = "West";
+					flags = 6;
+					class Attributes
+					{
+						skill = 0.6;
+						rank = "SERGEANT";
+						init = "id = [""AT"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 184;
+					type = "tin_soldier_caf_ar_mat";
+				};
+				class Item1
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10643.4,15.6072,12327.013};
+						angles[] = {6.2765174,2.0943952,0.0066682254};
+					};
+					side = "West";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""GREN"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 185;
+					type = "tin_soldier_caf_ar_gren";
+				};
+				class Item2
+				{
+					dataType = "Object";
+					class PositionInfo
+					{
+						position[] = {10633.4,15.608355,12327.013};
+						angles[] = {6.2645216,3.577925,0.003996757};
+					};
+					side = "West";
+					flags = 4;
+					class Attributes
+					{
+						skill = 0.6;
+						init = "id = [""GPMG"", this] call compile preprocessFileLineNumbers ""Orbat\Canada.sqf"";";
+					};
+					id = 186;
+					type = "tin_soldier_caf_ar_lmg";
+				};
+				class Item3
+				{
+					dataType = "Waypoint";
+					position[] = {10679.227,17.192049,12226.146};
+					type = "Sentry";
+					class Effects{};
+					showWP = "NEVER";
+					id = 187;
+				};
+			};
+			class Attributes{};
+			id = 183;
+		};
+	};
+};
+//};

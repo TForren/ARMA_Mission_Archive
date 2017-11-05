@@ -1,0 +1,775 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"a3_map_altis",
+		"a3_characters_f_gamma",
+		"A3_Armor_F_Marid",
+		"A3_Soft_F_MRAP_01",
+		"A3_Characters_F_OPFOR",
+		"A3_Weapons_F_Ammoboxes",
+		"A3_Modules_F_Misc",
+		"A3_Armor_F_Panther",
+		"a3_weapons_f_beta_ammoboxes"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Characters_F_Gamma",
+		"A3_Characters_F_OPFOR",
+		"A3_Modules_F_Misc",
+		"A3_Armor_F_Panther",
+		"A3_Armor_F_Marid",
+		"A3_Soft_F_MRAP_01",
+		"A3_Weapons_F_Ammoboxes",
+		"a3_weapons_f_beta_ammoboxes",
+		"a3_map_altis"
+	};
+	randomSeed=11985634;
+	class Intel
+	{
+		briefingName="TvT 10 Wet Work";
+		overviewText="Opfor manhunt for a FIV HVT";
+		startWind=0.099999994;
+		startWaves=0.099999994;
+		forecastWind=0.099999994;
+		forecastWaves=0.099999994;
+		forecastLightnings=0.099999994;
+		year=2035;
+		month=6;
+		day=24;
+		hour=23;
+		minute=55;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+	class Groups
+	{
+		items=7;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={20867.244,1.8494031,14741.272};
+					placement=100;
+					azimut=379.396;
+					id=0;
+					side="WEST";
+					vehicle="B_G_officer_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.2;
+					text="hvt";
+					init="this removemagazine ""30Rnd_556x45_Stanag"";this removemagazine ""30Rnd_556x45_Stanag"";this removemagazine ""30Rnd_556x45_Stanag"";this additem ""NVGoggles"";this assignItem ""NVGoggles"";this addPrimaryWeaponItem ""muzzle_snds_M"";nul = [] execVM ""scripts\zod_stakedown_init.sqf""";
+					description="Saggitariut Jefferspin ";
+					syncId=0;
+					synchronizations[]={1};
+				};
+				class Item1
+				{
+					position[]={20857.625,1.673075,14733.146};
+					azimut=4.02951;
+					id=1;
+					side="WEST";
+					vehicle="B_G_Soldier_F";
+					player="PLAY CDG";
+					skill=0.30423084;
+					init="this removemagazine ""30Rnd_556x45_Stanag"";this removemagazine ""30Rnd_556x45_Stanag"";this removemagazine ""30Rnd_556x45_Stanag"";this removemagazine ""30Rnd_556x45_Stanag"";this removemagazine ""30Rnd_556x45_Stanag"";this addPrimaryWeaponItem ""acc_flashlight"";this addPrimaryWeaponItem ""muzzle_snds_M"";nul = [] execVM ""scripts\zod_stakedown_init.sqf""";
+				};
+				class Item2
+				{
+					position[]={20859.695,1.7027661,14748.454};
+					azimut=175.298;
+					id=2;
+					side="WEST";
+					vehicle="B_G_Soldier_F";
+					player="PLAY CDG";
+					skill=0.2;
+					init="this removemagazine ""30Rnd_556x45_Stanag"";this removemagazine ""30Rnd_556x45_Stanag"";this removemagazine ""30Rnd_556x45_Stanag"";this removemagazine ""30Rnd_556x45_Stanag"";this removemagazine ""30Rnd_556x45_Stanag"";this addPrimaryWeaponItem ""acc_flashlight"";this addPrimaryWeaponItem ""muzzle_snds_M"";nul = [] execVM ""scripts\zod_stakedown_init.sqf""";
+				};
+			};
+		};
+		class Item1
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=7;
+				class Item0
+				{
+					position[]={20243.104,11.034024,14775.474};
+					azimut=113.708;
+					id=3;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.46666664;
+					text="op1";
+					init="this unassignItem ""NVGoggles_OPFOR""; this removeItem ""NVGoggles_OPFOR"";removeHeadgear this;this addheadgear ""H_HelmetSpecO_ocamo"";this addPrimaryWeaponItem ""acc_flashlight"";nul = [] execVM ""scripts\zod_stakedown_init.sqf""";
+				};
+				class Item1
+				{
+					position[]={20242.322,10.954204,14780.581};
+					azimut=113.708;
+					id=4;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.46666664;
+					text="op5";
+					init="this unassignItem ""NVGoggles_OPFOR""; this removeItem ""NVGoggles_OPFOR"";removeHeadgear this;this addheadgear ""H_HelmetSpecO_ocamo"";this addPrimaryWeaponItem ""acc_flashlight"";nul = [] execVM ""scripts\zod_stakedown_init.sqf""";
+				};
+				class Item2
+				{
+					position[]={20238.352,11.225651,14773.11};
+					azimut=113.708;
+					id=5;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.46666664;
+					text="op3";
+					init="this unassignItem ""NVGoggles_OPFOR""; this removeItem ""NVGoggles_OPFOR"";removeHeadgear this;this addheadgear ""H_HelmetSpecO_ocamo"";this addPrimaryWeaponItem ""acc_flashlight"";nul = [] execVM ""scripts\zod_stakedown_init.sqf""";
+				};
+				class Item3
+				{
+					position[]={20243.668,11.218243,14770.237};
+					azimut=113.708;
+					id=6;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.46666664;
+					text="op2";
+					init="this unassignItem ""NVGoggles_OPFOR""; this removeItem ""NVGoggles_OPFOR"";removeHeadgear this;this addheadgear ""H_HelmetSpecO_ocamo"";this addPrimaryWeaponItem ""acc_flashlight"";nul = [] execVM ""scripts\zod_stakedown_init.sqf""";
+				};
+				class Item4
+				{
+					position[]={20239.963,11.054148,14777.348};
+					azimut=113.708;
+					id=7;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.46666664;
+					text="op6";
+					init="this unassignItem ""NVGoggles_OPFOR""; this removeItem ""NVGoggles_OPFOR"";removeHeadgear this;this addheadgear ""H_HelmetSpecO_ocamo"";this addPrimaryWeaponItem ""acc_flashlight"" ;nul = [] execVM ""scripts\zod_stakedown_init.sqf""";
+				};
+				class Item5
+				{
+					position[]={20247.92,11.006382,14778.467};
+					azimut=113.708;
+					id=8;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.46666664;
+					text="op4";
+					init="this unassignItem ""NVGoggles_OPFOR""; this removeItem ""NVGoggles_OPFOR"";removeHeadgear this;this addheadgear ""H_HelmetSpecO_ocamo"";this addPrimaryWeaponItem ""acc_flashlight"";nul = [] execVM ""scripts\zod_stakedown_init.sqf""";
+				};
+				class Item6
+				{
+					position[]={20246.189,11.063857,14774.248};
+					azimut=113.708;
+					id=9;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					player="PLAY CDG";
+					rank="SERGEANT";
+					skill=0.46666664;
+					text="op7";
+					init="this unassignItem ""NVGoggles_OPFOR""; this removeItem ""NVGoggles_OPFOR"";removeHeadgear this;this addheadgear ""H_HelmetSpecO_ocamo"";this addPrimaryWeaponItem ""acc_flashlight"";nul = [] execVM ""scripts\zod_stakedown_init.sqf""";
+				};
+			};
+		};
+		class Item2
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={20734.154,2.2160609,14756.763};
+					placement=5;
+					azimut=145.035;
+					id=10;
+					side="WEST";
+					vehicle="B_G_Soldier_F";
+					leader=1;
+					skill=0.2;
+					init="removeallweapons this; this setdamage 1;this setPos [getPos this select 0, getPos this select 1, 2.6]";
+					description="Richard McScrub";
+				};
+			};
+		};
+		class Item3
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={20738.857,2.1945789,14754.494};
+					placement=5;
+					azimut=-166.731;
+					id=11;
+					side="WEST";
+					vehicle="B_G_Soldier_F";
+					leader=1;
+					skill=0.2;
+					init="removeallweapons this; this setdamage 1;this setPos [getPos this select 0, getPos this select 1, 2.6]";
+				};
+			};
+		};
+		class Item4
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					presenceCondition="!end";
+					position[]={21041.188,1.0015955,14752.87};
+					class args
+					{
+						items=6;
+						class Item0
+						{
+							value="0";
+							parentCls="ModuleZoneRestriction_F";
+							typeName="Units";
+						};
+						class Item1
+						{
+							value="1";
+							parentCls="ModuleZoneRestriction_F";
+							typeName="Inverse";
+						};
+						class Item2
+						{
+							value="5";
+							parentCls="ModuleZoneRestriction_F";
+							typeName="WarningTime";
+						};
+						class Item3
+						{
+							value="hint ""OUT OF BOUNDS!!""";
+							parentCls="ModuleZoneRestriction_F";
+							typeName="CustomEffectWarning";
+						};
+						class Item4
+						{
+							value="_this setdamage 1";
+							parentCls="ModuleZoneRestriction_F";
+							typeName="CustomEffectPunishment";
+						};
+						class Item5
+						{
+							value="1";
+							parentCls="ModuleZoneRestriction_F";
+							typeName="AirExcluded";
+						};
+					};
+					id=12;
+					side="LOGIC";
+					vehicle="ModuleZoneRestriction_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=1;
+					synchronizations[]={0};
+				};
+			};
+		};
+		class Item5
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={21334.324,14.247837,15766.138};
+					azimut=-165.38499;
+					id=13;
+					side="WEST";
+					vehicle="B_APC_Tracked_01_rcws_F";
+					leader=1;
+					skill=0.2;
+					text="ifv";
+					init="this disableTIEquipment true;this setBehaviour ""COMBAT""";
+				};
+			};
+		};
+		class Item6
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={20738.842,2.150979,14751.822};
+					placement=15;
+					azimut=-166.731;
+					id=14;
+					side="WEST";
+					vehicle="B_G_Soldier_F";
+					leader=1;
+					skill=0.2;
+					init="removeallweapons this; this setdamage 1;this setPos [getPos this select 0, getPos this select 1, 2.6]";
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=5;
+		class Item0
+		{
+			position[]={20256.881,11.051856,14776.861};
+			azimut=124.097;
+			id=15;
+			side="EMPTY";
+			vehicle="O_APC_Wheeled_02_rcws_F";
+			leader=1;
+			skill=0.2;
+			ammo=0.081152976;
+			init="this disableTIEquipment true;";
+		};
+		class Item1
+		{
+			position[]={20735.75,2.2817066,14760.085};
+			azimut=-258.616;
+			id=16;
+			side="EMPTY";
+			vehicle="B_MRAP_01_hmg_F";
+			leader=1;
+			skill=0.2;
+			init="this setdamage 1";
+		};
+		class Item2
+		{
+			position[]={21112.133,2.033457,14742.194};
+			placement=300;
+			id=17;
+			side="EMPTY";
+			vehicle="B_supplyCrate_F";
+			skill=0.60000002;
+			text="box";
+			init="clearweaponcargo this;clearmagazinecargo this;this additemcargo [""FirstAidKit"", 10];_Act = this addAction [""Interact"", ""scripts\heal.sqf""];this addmagazineCargo [""30Rnd_556x45_Stanag"", 10]";
+		};
+		class Item3
+		{
+			presence=0.46530119;
+			position[]={20886.893,2.6698585,14622.579};
+			placement=20;
+			azimut=379.396;
+			id=18;
+			side="EMPTY";
+			vehicle="Box_East_Grenades_F";
+			leader=1;
+			skill=0.2;
+		};
+		class Item4
+		{
+			position[]={20737.539,2.1428614,14751.961};
+			placement=13;
+			azimut=145.035;
+			id=19;
+			side="EMPTY";
+			vehicle="Box_East_Support_F";
+			leader=1;
+			skill=0.2;
+			init="clearmagazinecargo this;clearweaponcargo this;_Act = this addAction [""Interact"", ""scripts\pickup.sqf""];";
+		};
+	};
+	class Markers
+	{
+		items=20;
+		class Item0
+		{
+			position[]={21007.223,5.2165451,15211.911};
+			name="BIS_restriction";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="FDiagonal";
+			a=59;
+			b=500;
+			angle=-634.11932;
+		};
+		class Item1
+		{
+			position[]={21560.496,7.0905361,14955.377};
+			name="BIS_restriction_1";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="FDiagonal";
+			a=59;
+			b=350;
+			angle=-540.22498;
+		};
+		class Item2
+		{
+			position[]={21802.238,5.378242,14526.67};
+			name="BIS_restriction_2";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="FDiagonal";
+			a=59;
+			b=300;
+			angle=-610.88;
+		};
+		class Item3
+		{
+			position[]={21726.764,12.192884,14190.121};
+			name="BIS_restriction_4";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="FDiagonal";
+			a=59;
+			b=300;
+			angle=-642.13397;
+		};
+		class Item4
+		{
+			position[]={21992.934,7.5428371,14342.37};
+			name="BIS_restriction_3";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="FDiagonal";
+			a=59;
+			b=100;
+			angle=-539.19501;
+		};
+		class Item5
+		{
+			position[]={21030.027,13.45265,14251.551};
+			name="BIS_restriction_5";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="FDiagonal";
+			a=59;
+			b=500;
+			angle=-435.52618;
+		};
+		class Item6
+		{
+			position[]={20472.381,9.726264,14556.531};
+			name="BIS_restriction_6";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="FDiagonal";
+			a=59;
+			b=300;
+			angle=-766.74597;
+		};
+		class Item7
+		{
+			position[]={20396.59,7.4880838,14981.522};
+			name="BIS_restriction_7";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="FDiagonal";
+			a=59;
+			b=300;
+			angle=-693.68597;
+		};
+		class Item8
+		{
+			position[]={21164.291,16.012041,15906.969};
+			name="leave";
+			type="Empty";
+		};
+		class Item9
+		{
+			position[]={21111.449,1.9912622,14742.056};
+			name="?";
+			text="300?";
+			type="mil_dot";
+			colorName="ColorBlack";
+		};
+		class Item10
+		{
+			position[]={20307.318,10.533888,14757.949};
+			name="1";
+			type="mil_arrow2";
+			colorName="ColorRed";
+			angle=113.39413;
+		};
+		class Item11
+		{
+			position[]={16825.977,24,12662.942};
+			name="csat";
+			type="flag_CSAT";
+		};
+		class Item12
+		{
+			position[]={14709.463,17.91,16696.27};
+			name="nato";
+			type="flag_NATO";
+		};
+		class Item13
+		{
+			position[]={16837.619,24,12679.843};
+			name="l";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="FDiagonal";
+			a=500;
+			b=500;
+		};
+		class Item14
+		{
+			position[]={18103.711,23.454967,15221.703};
+			name="l_1";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="FDiagonal";
+			a=500;
+			b=500;
+		};
+		class Item15
+		{
+			position[]={18843.813,32.511269,16684.285};
+			name="l_1_1";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="FDiagonal";
+			a=500;
+			b=500;
+		};
+		class Item16
+		{
+			position[]={18624.471,49.947468,16151.367};
+			name="1_1_1";
+			type="mil_arrow2";
+			colorName="ColorBlue";
+			angle=206.78494;
+		};
+		class Item17
+		{
+			position[]={16874.328,43.116306,16914.924};
+			name="l_1_1_1";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorBlue";
+			fillName="FDiagonal";
+			a=300;
+			b=1500;
+			angle=30.815201;
+		};
+		class Item18
+		{
+			position[]={17065.166,29.457842,15998.58};
+			name="1_1_1_1";
+			type="mil_arrow2";
+			colorName="ColorBlue";
+			angle=126.50998;
+		};
+		class Item19
+		{
+			position[]={20735.584,2.2707715,14759.479};
+			name="h";
+			text="Wrecked Hunter";
+			type="mil_box";
+		};
+	};
+	class Sensors
+	{
+		items=4;
+		class Item0
+		{
+			position[]={20627.898,1.9733069,14986.846};
+			a=0;
+			b=0;
+			interruptable=1;
+			age="UNKNOWN";
+			text="HVT Dead";
+			expCond="!alive hvt";
+			expActiv="end = true";
+			class Effects
+			{
+				sound="SN_Flare_Fired_4";
+				track="LeadTrack02_F";
+				titleType="TEXT";
+				title="Opfor Victory. The HVT is dead.";
+			};
+		};
+		class Item1
+		{
+			position[]={21055.189,1.5402905,14718.92};
+			a=1000;
+			b=1000;
+			rectangular=1;
+			activationBy="EAST";
+			activationType="NOT PRESENT";
+			age="UNKNOWN";
+			expActiv="end = true;";
+			class Effects
+			{
+				sound="SN_Flare_Fired_4";
+				track="Track15_MainTheme";
+				titleType="TEXT";
+				title="Blufor Victory. The Search Party was wiped out.";
+			};
+		};
+		class Item2
+		{
+			position[]={20674.576,1.6396582,14985.717};
+			a=0;
+			b=0;
+			timeoutMin=17;
+			timeoutMid=17;
+			timeoutMax=17;
+			interruptable=1;
+			type="END1";
+			age="UNKNOWN";
+			expCond="end";
+			class Effects
+			{
+			};
+		};
+		class Item3
+		{
+			position[]={20722.529,2.0082045,14985.567};
+			a=0;
+			b=0;
+			interruptable=1;
+			age="UNKNOWN";
+			text="HVT Dead";
+			expCond="hvt in ifv";
+			expActiv="end = true; ifv domove (getmarkerpos ""leave"")";
+			class Effects
+			{
+				sound="SN_Flare_Fired_4";
+				track="Track15_MainTheme";
+				titleType="TEXT";
+				title="Blufor Victory. The HVT is safe.";
+			};
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=10938687;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=4830184;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=302101;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};

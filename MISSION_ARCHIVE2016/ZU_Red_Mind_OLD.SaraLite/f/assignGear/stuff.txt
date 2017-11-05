@@ -1,0 +1,41 @@
+comment "Exported from Arsenal by Hoizen";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "rhs_uniform_cu_ocp";
+for "_i" from 1 to 2 do {this addItemToUniform "AGM_Bandage";};
+this addItemToUniform "AGM_Epipen";
+this addItemToUniform "AGM_Morphine";
+for "_i" from 1 to 2 do {this addItemToUniform "SmokeShell";};
+for "_i" from 1 to 3 do {this addItemToUniform "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
+this addVest "rhsusf_iotv_ocp_Medic";
+for "_i" from 1 to 3 do {this addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
+for "_i" from 1 to 2 do {this addItemToVest "SmokeShell";};
+this addBackpack "rhsusf_assault_eagleaiii_ocp";
+for "_i" from 1 to 20 do {this addItemToBackpack "AGM_Bandage";};
+for "_i" from 1 to 10 do {this addItemToBackpack "AGM_Epipen";};
+for "_i" from 1 to 10 do {this addItemToBackpack "AGM_Morphine";};
+for "_i" from 1 to 3 do {this addItemToBackpack "AGM_Bloodbag";};
+this addHeadgear "rhsusf_ach_helmet_ESS_ocp";
+this addGoggles "TRYK_US_ESS_Glasses_BLK";
+
+comment "Add weapons";
+this addWeapon "rhs_weap_m4_grip";
+this addPrimaryWeaponItem "acc_pointer_IR";
+this addPrimaryWeaponItem "FHQ_optic_HWS";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "tf_microdagr";
+this linkItem "tf_anprc152_1";
+this linkItem "ItemGPS";

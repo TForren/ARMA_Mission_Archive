@@ -1,0 +1,279 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
+		"A3_Structures_F_Bootcamp_VR_CoverObjects",
+		"map_vr",
+		"A3_Structures_F_Bootcamp_VR_Helpers",
+		"A3_Structures_F_Mark_VR_Targets",
+		"A3_Structures_F_Mark_VR_Shapes"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Characters_F_BLUFOR",
+		"a3_characters_f",
+		"A3_Structures_F_Bootcamp_VR_CoverObjects",
+		"A3_Structures_F_Bootcamp_VR_Helpers",
+		"A3_Structures_F_Mark_VR_Shapes",
+		"map_vr"
+	};
+	randomSeed=15187520;
+	class Intel
+	{
+		briefingName="Olsen Framework - Gear Builder";
+		resistanceEast=1;
+		startWeather=0;
+		startWind=0.099999994;
+		startWaves=0.099999994;
+		forecastWeather=0;
+		forecastWind=0.099999994;
+		forecastWaves=0.099999994;
+		forecastLightnings=0.099999994;
+		year=2035;
+		day=28;
+		hour=13;
+		minute=35;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Groups
+	{
+		items=1;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4000.0029,5,3999.981};
+					special="NONE";
+					id=0;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="nul = [""AmmoboxInit"", [this, true]] spawn BIS_fnc_arsenal;";
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=11;
+		class Item0
+		{
+			position[]={4000.0032,5,4002.2686};
+			special="NONE";
+			id=1;
+			side="EMPTY";
+			vehicle="Land_VR_CoverObject_01_kneelHigh_F";
+			skill=0.60000002;
+		};
+		class Item1
+		{
+			position[]={3995.9922,5,4000.0261};
+			id=2;
+			side="EMPTY";
+			vehicle="VR_Area_01_square_2x2_grey_F";
+			skill=0.60000002;
+			text="capture_grey";
+		};
+		class Item2
+		{
+			position[]={3995.9922,5,4000.0261};
+			id=3;
+			side="EMPTY";
+			vehicle="VR_Area_01_square_2x2_yellow_F";
+			skill=0.60000002;
+			text="capture_yellow";
+			init="this hideObject true;";
+		};
+		class Item3
+		{
+			position[]={4002.9736,5,4000.9688};
+			azimut=45;
+			id=4;
+			side="EMPTY";
+			vehicle="VR_Billboard_01_F";
+			skill=0.60000002;
+			init="this setObjectTexture [0, ""\A3\Structures_F_Bootcamp\VR\Helpers\Data\vr_symbol_commanding_behavior_ca.paa""];";
+		};
+		class Item4
+		{
+			position[]={3998.9836,5,3996.3662};
+			special="NONE";
+			id=5;
+			side="EMPTY";
+			vehicle="Land_VR_CoverObject_01_kneel_F";
+			skill=0.60000002;
+		};
+		class Item5
+		{
+			position[]={3993.728,5,4002.2583};
+			special="NONE";
+			id=6;
+			side="EMPTY";
+			vehicle="Land_VR_CoverObject_01_stand_F";
+			skill=0.60000002;
+		};
+		class Item6
+		{
+			position[]={3996.5513,5,4003.6084};
+			special="NONE";
+			id=7;
+			side="EMPTY";
+			vehicle="Land_VR_CoverObject_01_kneelLow_F";
+			skill=0.60000002;
+		};
+		class Item7
+		{
+			position[]={3995.2834,5,3996.7422};
+			special="NONE";
+			id=8;
+			side="EMPTY";
+			vehicle="Land_VR_Shape_01_cube_1m_F";
+			skill=0.60000002;
+		};
+		class Item8
+		{
+			position[]={3992.614,5,3999.0391};
+			special="NONE";
+			id=9;
+			side="EMPTY";
+			vehicle="Land_VR_CoverObject_01_kneelHigh_F";
+			skill=0.60000002;
+		};
+		class Item9
+		{
+			position[]={4004.1843,5,3998.3564};
+			special="NONE";
+			id=10;
+			side="EMPTY";
+			vehicle="Land_VR_CoverObject_01_kneelLow_F";
+			skill=0.60000002;
+		};
+		class Item10
+		{
+			position[]={4001.8491,5,3996.8789};
+			special="NONE";
+			id=11;
+			side="EMPTY";
+			vehicle="Land_VR_CoverObject_01_stand_F";
+			skill=0.60000002;
+		};
+	};
+	class Sensors
+	{
+		items=1;
+		class Item0
+		{
+			position[]={3995.9922,5,4000.0261};
+			a=1;
+			b=1;
+			rectangular=1;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			expActiv="capture_yellow hideObject false; capture_grey hideObject true; (thisList select 0) execVM ""gearExport.sqf"";";
+			expDesactiv="capture_yellow hideObject true; capture_grey hideObject false;";
+			class Effects
+			{
+			};
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"map_vr"
+	};
+	addOnsAuto[]=
+	{
+		"map_vr"
+	};
+	randomSeed=4118348;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		day=28;
+		hour=13;
+		minute=37;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"map_vr"
+	};
+	addOnsAuto[]=
+	{
+		"map_vr"
+	};
+	randomSeed=2430765;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		day=28;
+		hour=13;
+		minute=37;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"map_vr"
+	};
+	addOnsAuto[]=
+	{
+		"map_vr"
+	};
+	randomSeed=10513429;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		day=28;
+		hour=13;
+		minute=37;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};

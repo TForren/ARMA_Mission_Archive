@@ -1,0 +1,1842 @@
+version=51;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=9;
+	class ItemIDProvider
+	{
+		nextID=68;
+	};
+	class MarkerIDProvider
+	{
+		nextID=7;
+	};
+	class Camera
+	{
+		pos[]={1120.6174,624.83154,4613.063};
+		dir[]={0.17972128,-0.51221901,0.83984399};
+		up[]={0.10718483,0.85885417,0.50087881};
+		aside[]={0.97786283,-2.5486224e-007,-0.20925601};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"rhsusf_c_m113",
+	"A3_Characters_F",
+	"A3_Modules_F",
+	"acre_api",
+	"ace_viewdistance",
+	"ace_finger",
+	"ace_sitting",
+	"ace_medical",
+	"A3_Characters_F_BLUFOR"
+};
+randomSeed=9268405;
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="EnableDebugConsole";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		nAttributes=1;
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		briefingName="CO30 Lingering Lament V1.21";
+		overviewText="Lingor Gov. Forces attempt a daring breakout of an encirclement [M113 Convoy/Low Tech/Short]";
+		startWeather=0.63;
+		startWind=0.099999994;
+		startWaves=0.099999994;
+		forecastWeather=0.65999997;
+		forecastWind=0.099999994;
+		forecastWaves=0.099999994;
+		forecastRain=1;
+		forecastLightnings=0.099999994;
+		rainForced=1;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Entities
+	{
+		items=32;
+		class Item0
+		{
+			dataType="Marker";
+			position[]={3906.9929,66.764954,6771.4175};
+			name="aomarksoyoucanseeit";
+			type="Empty";
+			id=0;
+		};
+		class Item1
+		{
+			dataType="Marker";
+			position[]={3907.0994,67.603645,6773.0757};
+			name="ao";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="Border";
+			a=3800;
+			b=5900;
+			drawBorder=1;
+			id=1;
+		};
+		class Item2
+		{
+			dataType="Marker";
+			position[]={598.4425,30.053015,4686.2681};
+			name="HQ";
+			type="IDM_LOGO";
+			colorName="ColorWhite";
+			a=0.89999998;
+			b=0.89999998;
+			id=2;
+		};
+		class Item3
+		{
+			dataType="Marker";
+			position[]={2711.3342,14.352324,4964.123};
+			name="end";
+			text="End";
+			type="mil_end";
+			colorName="ColorGreen";
+			id=3;
+		};
+		class Item4
+		{
+			dataType="Marker";
+			position[]={621.84753,29.807747,4713.6357};
+			name="start";
+			text="Start";
+			type="mil_start";
+			colorName="ColorGreen";
+			angle=16.327709;
+			id=4;
+		};
+		class Item5
+		{
+			dataType="Marker";
+			position[]={741.05841,14.28546,5010.9854};
+			name="1";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="BDiagonal";
+			a=500;
+			b=20;
+			angle=9.46385;
+			id=5;
+		};
+		class Item6
+		{
+			dataType="Marker";
+			position[]={720.742,22.281784,4930.771};
+			name="1_1";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorGUER";
+			fillName="BDiagonal";
+			a=500;
+			b=20;
+			angle=9.4638195;
+			id=6;
+		};
+		class Item7
+		{
+			dataType="Trigger";
+			position[]={892.31238,41.207565,5531.8442};
+			angle=0.0111348;
+			class Attributes
+			{
+				name="ei1";
+				text="ei1";
+				condition="time > 1";
+				onActivation="if (isServer) then {_fun=[""ei1"",[4,0,0,0],[2,3,10,6],[1,2,10,10],[],[],[2,2,6,1]] spawn DAC_Zone}";
+				sizeA=150;
+				sizeB=140;
+				interuptable=1;
+				isRectangle=1;
+			};
+			id=7;
+			type="EmptyDetector";
+		};
+		class Item8
+		{
+			dataType="Trigger";
+			position[]={1340.0073,31.384195,5571.8818};
+			angle=-1.5569214;
+			class Attributes
+			{
+				name="ei2";
+				text="ei2 Patrols";
+				condition="time > 1";
+				onActivation="if (isServer) then {_fun=[""ei2"",[4,0,0,0],[3,2,10,6],[],[],[],[2,2,6,1]] spawn DAC_Zone}";
+				sizeA=105;
+				sizeB=440;
+				interuptable=1;
+				isRectangle=1;
+			};
+			id=8;
+			type="EmptyDetector";
+		};
+		class Item9
+		{
+			dataType="Trigger";
+			position[]={1857.703,27.420294,5274.5142};
+			angle=-2.3638742;
+			class Attributes
+			{
+				name="ei3";
+				text="ei3";
+				condition="time > 1";
+				onActivation="if (isServer) then {_fun=[""ei3"",[4,0,0,0],[3,3,10,6],[1,2,10,10],[],[],[2,2,6,1]] spawn DAC_Zone}";
+				sizeA=500;
+				sizeB=140;
+				interuptable=1;
+				isRectangle=1;
+			};
+			id=9;
+			type="EmptyDetector";
+		};
+		class Item10
+		{
+			dataType="Trigger";
+			position[]={869.49695,22.707113,5259.2573};
+			angle=-1.5571483;
+			class Attributes
+			{
+				name="ei4";
+				text="e4";
+				condition="time > 1";
+				onActivation="if (isServer) then {_fun=[""ei4"",[4,0,0,0],[2,3,10,6],[],[],[],[2,2,6,1]] spawn DAC_Zone}";
+				sizeA=350;
+				sizeB=140;
+				interuptable=1;
+				isRectangle=1;
+			};
+			id=10;
+			type="EmptyDetector";
+		};
+		class Item11
+		{
+			dataType="Trigger";
+			position[]={1505.2052,26.04394,5371.6533};
+			angle=-2.3362803;
+			class Attributes
+			{
+				name="campZone";
+				text="camps";
+				condition="time > 1";
+				onActivation="if (isServer) then {_fun=[""campZone"",[1,0,0],[],[],[],[2,2,50,1,100,15,[ei1,ei2,ei3,ei4]],[2,2,0,3,4]] spawn DAC_Zone}";
+				sizeA=400;
+				sizeB=200;
+				interuptable=1;
+			};
+			id=11;
+			type="EmptyDetector";
+		};
+		class Item12
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={631.1651,32.800209,4707.3618};
+				angles[]={6.278111,5.0023751,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				init="[this, ""STD""] call FNC_VehicleGearScript;";
+				name="m4";
+				description="1'1 Gov. Army of Lingor Squad Leader";
+			};
+			id=12;
+			type="rhsusf_m113_usarmy";
+		};
+		class Item13
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={630.09528,32.739746,4702.4854};
+				angles[]={6.278111,4.9507136,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				init="[this, ""STD""] call FNC_VehicleGearScript;";
+				name="m3";
+				description="1'1 Gov. Army of Lingor Squad Leader";
+			};
+			id=13;
+			type="rhsusf_m113_usarmy_M240";
+		};
+		class Item14
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={629.08905,32.727097,4698.146};
+				angles[]={0,4.9216886,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				init="[this, ""STD2""] call FNC_VehicleGearScript;";
+				name="m2";
+				description="1'1 Gov. Army of Lingor Squad Leader";
+			};
+			id=14;
+			type="rhsusf_m113_usarmy_medical";
+		};
+		class Item15
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={628.25159,32.727097,4693.188};
+				angles[]={0,4.8973594,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				init="[this, ""STD""] call FNC_VehicleGearScript;";
+				name="m1";
+				description="1'1 Gov. Army of Lingor Squad Leader";
+			};
+			id=15;
+			type="rhsusf_m113_usarmy_MK19";
+		};
+		class Item16
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={722.50757,14.664691,4701.5933};
+			};
+			name="HC";
+			isPlayable=1;
+			description="Headless Client";
+			id=16;
+			type="HeadlessClient_F";
+		};
+		class Item17
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={5317.5078,1.5277869,10545.568};
+			};
+			name="dac_Support_logic";
+			id=17;
+			type="Logic";
+		};
+		class Item18
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={735.74475,13.690612,4701.2275};
+			};
+			id=18;
+			type="acre_api_DifficultySettings";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="acre_api_DifficultySettings_Interference";
+					expression="_this setVariable ['Interference',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="acre_api_DifficultySettings_SignalLoss";
+					expression="_this setVariable ['SignalLoss',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="acre_api_DifficultySettings_FullDuplex";
+					expression="_this setVariable ['FullDuplex',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=3;
+			};
+		};
+		class Item19
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={740.70764,13.627421,4701.2061};
+			};
+			id=19;
+			type="acre_api_nameChannels";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="acre_api_nameChannels_Channel_1";
+					expression="_this setVariable ['Channel_1',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="PLTNET 1";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="acre_api_nameChannels_Channel_2";
+					expression="_this setVariable ['Channel_2',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="PLTNET 2";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="acre_api_nameChannels_Channel_3";
+					expression="_this setVariable ['Channel_3',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="PLTNET 3";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="acre_api_nameChannels_Channel_4";
+					expression="_this setVariable ['Channel_4',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="COYNET 1";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="acre_api_nameChannels_Channel_5";
+					expression="_this setVariable ['Channel_5',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="CASNET 1";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="acre_api_nameChannels_SideSelect";
+					expression="_this setVariable ['SideSelect',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="acre_api_nameChannels_Channel_6";
+					expression="_this setVariable ['Channel_6',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="CASNET 2";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="acre_api_nameChannels_Channel_7";
+					expression="_this setVariable ['Channel_7',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="CASNET 3";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="acre_api_nameChannels_Channel_8";
+					expression="_this setVariable ['Channel_8',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="FIRES";
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="acre_api_nameChannels_Channel_9";
+					expression="_this setVariable ['Channel_9',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="LOGISTICS";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="acre_api_nameChannels_Channel_10";
+					expression="_this setVariable ['Channel_10',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="SUPPORT";
+						};
+					};
+				};
+				nAttributes=11;
+			};
+		};
+		class Item20
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={745.95282,13.726884,4701.27};
+			};
+			id=20;
+			type="ace_viewdistance_ModuleSettings";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_viewdistance_ModuleSettings_moduleViewDistanceLimit";
+					expression="_this setVariable ['moduleViewDistanceLimit',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3000;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_viewdistance_ModuleSettings_moduleViewDistanceEnabled";
+					expression="_this setVariable ['moduleViewDistanceEnabled',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item21
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={731.05334,13.810713,4701.0625};
+			};
+			id=21;
+			type="acre_api_basicMissionSetup";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="acre_api_basicMissionSetup_DefaultRadio";
+					expression="_this setVariable ['DefaultRadio',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="ACRE_PRC343";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="acre_api_basicMissionSetup_BabelSetup";
+					expression="_this setVariable ['BabelSetup',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="acre_api_basicMissionSetup_RadioSetup";
+					expression="_this setVariable ['RadioSetup',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="acre_api_basicMissionSetup_DefaultRadio_Three";
+					expression="_this setVariable ['DefaultRadio_Three',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="acre_api_basicMissionSetup_DefaultRadio_Four";
+					expression="_this setVariable ['DefaultRadio_Four',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="acre_api_basicMissionSetup_DefaultRadio_Two";
+					expression="_this setVariable ['DefaultRadio_Two',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=6;
+			};
+		};
+		class Item22
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={733.26428,14.049487,4707.5605};
+			};
+			id=22;
+			type="ace_finger_moduleSettings";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_finger_moduleSettings_maxRange";
+					expression="_this setVariable ['maxRange',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=4;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_finger_moduleSettings_enabled";
+					expression="_this setVariable ['enabled',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item23
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={726.62561,14.222312,4707.4609};
+			};
+			id=23;
+			type="ACE_ModuleSitting";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_ModuleSitting_enable";
+					expression="_this setVariable ['enable',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item24
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={616.41339,30.053015,4696.1367};
+			};
+			id=24;
+			type="ACE_moduleAssignMedicRoles";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_moduleAssignMedicRoles_EnableList";
+					expression="_this setVariable ['EnableList',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ACE_moduleAssignMedicRoles_role";
+					expression="_this setVariable ['role',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item25
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={610.47687,30.124008,4701.3345};
+						angles[]={6.2291017,0.94066286,0};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CAPTAIN";
+						init="[this,""B_PC"",""1'0""] call FNC_GearScript;";
+						name="b1";
+						description="1'0 HQ US Platoon Commander";
+						isPlayer=1;
+						isPlayable=1;
+					};
+					id=26;
+					type="B_Soldier_SL_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={608.81622,30.090298,4700.209};
+						angles[]={6.0618634,1.183351,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="SERGEANT";
+						init="[this,""B_MED"",""1'0""] call FNC_GearScript;";
+						name="b3";
+						description="1'0 HQ Platoon Medic";
+						isPlayable=1;
+					};
+					id=27;
+					type="B_medic_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={609.10693,30.260347,4701.0342};
+						angles[]={6.2291017,1.9687142,6.1139483};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="SERGEANT";
+						init="[this,""B_MED"",""1'0""] call FNC_GearScript;";
+						name="b4";
+						description="1'0 HQ Platoon Medic";
+						isPlayable=1;
+					};
+					id=28;
+					type="B_medic_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=25;
+		};
+		class Item26
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=8;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={638.29993,29.789665,4705.79};
+						angles[]={0.067568816,0.9054594,6.2105665};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="LIEUTENANT";
+						init="[this,""B_SL"",""1'1""] call FNC_GearScript;";
+						name="b5";
+						description="1'1 Gov. Army of Lingor Squad Leader";
+						isPlayable=1;
+					};
+					id=30;
+					type="B_Soldier_SL_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={640.07617,29.555254,4707.2456};
+						angles[]={0.067568816,4.7315879,6.1238279};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_MG"",""1'1""] call FNC_GearScript;";
+						name="b6";
+						description="1'1 Machine Gunner";
+						isPlayable=1;
+					};
+					id=31;
+					type="B_Soldier_TL_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={641.13434,29.523104,4705.2075};
+						angles[]={0.067568816,5.4341054,6.1238279};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_RPG"",""1'1""] call FNC_GearScript;";
+						name="b12";
+						description="1'1 RPG Gunner";
+						isPlayable=1;
+					};
+					id=32;
+					type="B_Soldier_GL_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={639.7049,29.701729,4705.5791};
+						angles[]={0.067568816,0.45397663,6.2105665};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_RPGA"",""1'1""] call FNC_GearScript;";
+						name="b7";
+						description="1'1 Assistant RPG Gunner";
+						isPlayable=1;
+					};
+					id=33;
+					type="B_soldier_AR_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={641.49524,29.347832,4706.9404};
+						angles[]={0.067568816,4.6660976,6.1238279};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_FTL"",""1'1""] call FNC_GearScript;";
+						name="b10";
+						description="1'1 Senior RIfleman";
+						isPlayable=1;
+					};
+					id=34;
+					type="B_Soldier_TL_F";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={642.94678,29.137304,4706.604};
+						angles[]={0.067568816,4.7567377,6.1238279};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_DR"",""1'1 Crew""] call FNC_GearScript;";
+						name="b11";
+						description="1'1 M113 Gunner";
+						isPlayable=1;
+					};
+					id=35;
+					type="B_soldier_AR_F";
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={638.73224,29.652147,4707.3574};
+						angles[]={0.067568816,1.9784007,6.2105665};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_RIF"",""1'1""] call FNC_GearScript;";
+						name="b9";
+						description="1'1 Rifleman";
+						isPlayable=1;
+					};
+					id=36;
+					type="B_soldier_LAT_F";
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={642.71802,29.288065,4704.9194};
+						angles[]={0.067568816,4.725338,6.1238279};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_DR"",""1'1 Crew""] call FNC_GearScript;";
+						name="b13";
+						description="1'1 M113 Driver";
+						isPlayable=1;
+					};
+					id=37;
+					type="B_soldier_LAT_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=29;
+		};
+		class Item27
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=8;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={637.27289,30.059315,4701.0078};
+						angles[]={6.278111,0.9054594,0};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="LIEUTENANT";
+						init="[this,""B_SL"",""1'2""] call FNC_GearScript;";
+						name="b5_1";
+						description="1'2 Gov. Army of Lingor Squad Leader";
+						isPlayable=1;
+					};
+					id=39;
+					type="B_Soldier_SL_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={639.04913,29.960289,4702.4634};
+						angles[]={0.067568816,4.7315879,6.2105665};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_MG"",""1'2""] call FNC_GearScript;";
+						name="b6_1";
+						description="1'2 Machine Gunner";
+						isPlayable=1;
+					};
+					id=40;
+					type="B_Soldier_TL_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={640.1073,30.011778,4700.4253};
+						angles[]={0.067568816,5.4341054,6.1238279};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_RPG"",""1'2""] call FNC_GearScript;";
+						name="b12_1";
+						description="1'2 RPG Gunner";
+						isPlayable=1;
+					};
+					id=41;
+					type="B_Soldier_GL_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={638.67786,30.058245,4700.7969};
+						angles[]={6.278111,0.45397663,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_RPGA"",""1'2""] call FNC_GearScript;";
+						name="b7_1";
+						description="1'2 Assistant RPG Gunner";
+						isPlayable=1;
+					};
+					id=42;
+					type="B_soldier_AR_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={640.4682,29.836517,4702.1582};
+						angles[]={0.067568816,4.6660976,6.1238279};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_FTL"",""1'2""] call FNC_GearScript;";
+						name="b10_1";
+						description="1'2 Senior RIfleman";
+						isPlayable=1;
+					};
+					id=43;
+					type="B_Soldier_TL_F";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={641.91974,29.625978,4701.8218};
+						angles[]={0.067568816,4.7567377,6.1238279};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_DR"",""1'2 Crew""] call FNC_GearScript;";
+						name="b11_1";
+						description="1'2 M113 Gunner";
+						isPlayable=1;
+					};
+					id=44;
+					type="B_soldier_AR_F";
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={637.7052,30.050499,4702.5752};
+						angles[]={0.067568816,1.9784007,6.2105665};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_RIF"",""1'2""] call FNC_GearScript;";
+						name="b9_1";
+						description="1'2 Rifleman";
+						isPlayable=1;
+					};
+					id=45;
+					type="B_soldier_LAT_F";
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={641.69098,29.776752,4700.1372};
+						angles[]={0.067568816,4.725338,6.1238279};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_DR"",""1'2 Crew""] call FNC_GearScript";
+						name="b13_1";
+						description="1'2 M113 Driver";
+						isPlayable=1;
+					};
+					id=46;
+					type="B_soldier_LAT_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=38;
+		};
+		class Item28
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=8;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={636.29266,30.054453,4696.3467};
+						angles[]={0,0.9054594,0};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="LIEUTENANT";
+						init="[this,""B_SL"",""1'3""] call FNC_GearScript;";
+						name="b5_1_1";
+						description="1'3 Gov. Army of Lingor Squad Leader";
+						isPlayable=1;
+					};
+					id=48;
+					type="B_Soldier_SL_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={638.06891,30.054453,4697.8022};
+						angles[]={0,4.7315879,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_MG"",""1'3""] call FNC_GearScript;";
+						name="b6_1_1";
+						description="1'3 Machine Gunner";
+						isPlayable=1;
+					};
+					id=49;
+					type="B_Soldier_TL_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={639.12708,30.054453,4695.7642};
+						angles[]={0,5.4341054,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_RPG"",""1'3""] call FNC_GearScript;";
+						name="b12_1_1";
+						description="1'3 RPG Gunner";
+						isPlayable=1;
+					};
+					id=50;
+					type="B_Soldier_GL_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={637.69763,30.054453,4696.1357};
+						angles[]={0,0.45397663,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_RPGA"",""1'3""] call FNC_GearScript;";
+						name="b7_1_1";
+						description="1'3 Assistant RPG Gunner";
+						isPlayable=1;
+					};
+					id=51;
+					type="B_soldier_AR_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={639.48798,30.054453,4697.4971};
+						angles[]={0,4.6660976,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_FTL"",""1'3""] call FNC_GearScript;";
+						name="b10_1_1";
+						description="1'3 Senior RIfleman";
+						isPlayable=1;
+					};
+					id=52;
+					type="B_Soldier_TL_F";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={640.93951,29.936296,4697.1606};
+						angles[]={0,4.7567377,6.1580858};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_DR"",""1'3 Crew""] call FNC_GearScript;";
+						name="b11_1_1";
+						description="1'3 M113 Gunner";
+						isPlayable=1;
+					};
+					id=53;
+					type="B_soldier_AR_F";
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={636.72498,30.054453,4697.9141};
+						angles[]={0,1.9784007,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_RIF"",""1'3""] call FNC_GearScript;";
+						name="b9_1_1";
+						description="1'3 Rifleman";
+						isPlayable=1;
+					};
+					id=54;
+					type="B_soldier_LAT_F";
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={640.71075,29.965071,4695.4761};
+						angles[]={0,4.725338,6.1580858};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_DR"",""1'3 Crew""] call FNC_GearScript";
+						name="b13_1_1";
+						description="1'3 M113 Driver";
+						isPlayable=1;
+					};
+					id=55;
+					type="B_soldier_LAT_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=47;
+		};
+		class Item29
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=8;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={635.21661,30.054453,4691.7471};
+						angles[]={0,0.9054594,0};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="LIEUTENANT";
+						init="[this,""B_SL"",""1'4""] call FNC_GearScript;";
+						name="b5_1_1_1";
+						description="1'4 Gov. Army of Lingor Squad Leader";
+						isPlayable=1;
+					};
+					id=57;
+					type="B_Soldier_SL_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={636.99286,30.054453,4693.2026};
+						angles[]={0,4.7315879,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_MG"",""1'4""] call FNC_GearScript;";
+						name="b6_1_1_1";
+						description="1'4 Machine Gunner";
+						isPlayable=1;
+					};
+					id=58;
+					type="B_Soldier_TL_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={638.05103,30.054453,4691.1646};
+						angles[]={0,5.4341054,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_RPG"",""1'3""] call FNC_GearScript;";
+						name="b12_1_1_1";
+						description="1'4 RPG Gunner";
+						isPlayable=1;
+					};
+					id=59;
+					type="B_Soldier_GL_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={636.62158,30.054453,4691.5361};
+						angles[]={0,0.45397663,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_RPGA"",""1'4""] call FNC_GearScript;";
+						name="b7_1_1_1";
+						description="1'4 Assistant RPG Gunner";
+						isPlayable=1;
+					};
+					id=60;
+					type="B_soldier_AR_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={638.41193,30.054453,4692.8975};
+						angles[]={0,4.6660976,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_FTL"",""1'4""] call FNC_GearScript;";
+						name="b10_1_1_1";
+						description="1'4 Senior RIfleman";
+						isPlayable=1;
+					};
+					id=61;
+					type="B_Soldier_TL_F";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={639.86346,30.054453,4692.561};
+						angles[]={0,4.7567377,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_DR"",""1'4 Crew""] call FNC_GearScript;";
+						name="b11_1_1_1";
+						description="1'4 M113 Gunner";
+						isPlayable=1;
+					};
+					id=62;
+					type="B_soldier_AR_F";
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={635.64893,30.054453,4693.3145};
+						angles[]={0,1.9784007,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_RIF"",""1'4""] call FNC_GearScript;";
+						name="b9_1_1_1";
+						description="1'4 Rifleman";
+						isPlayable=1;
+					};
+					id=63;
+					type="B_soldier_LAT_F";
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={639.6347,30.054453,4690.8765};
+						angles[]={0,4.725338,0};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="[this,""B_DR"",""1'4 Crew""] call FNC_GearScript";
+						name="b13_1_1_1";
+						description="1'4 M113 Driver";
+						isPlayable=1;
+					};
+					id=64;
+					type="B_soldier_LAT_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=56;
+		};
+		class Item30
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={633.21088,30.053015,4697.4614};
+			};
+			id=65;
+			type="ACE_moduleAssignMedicalFacility";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_moduleAssignMedicalFacility_enabled";
+					expression="_this setVariable ['enabled',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item31
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={714.44751,17.508797,4693.8823};
+			};
+			name="Server";
+			id=67;
+			type="Logic";
+		};
+	};
+	class Connections
+	{
+		class LinkIDProvider
+		{
+			nextID=3;
+		};
+		class Links
+		{
+			items=3;
+			class Item0
+			{
+				linkID=0;
+				item0=65;
+				item1=14;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item1
+			{
+				linkID=1;
+				item0=28;
+				item1=24;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item2
+			{
+				linkID=2;
+				item0=27;
+				item1=24;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+		};
+	};
+};

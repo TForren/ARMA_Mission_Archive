@@ -1,0 +1,46 @@
+author = "Hoizen"; // Author
+onLoadName = "CO-12 Smash n' Grab";
+onLoadMission = "FIA raiders steal hemp shipment";
+loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "overview.paa";
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+
+class Header {
+   gameType = Coop;
+   playerCountMultipleOf = 1; //Disables auto balance
+};
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission Completed";
+		subtitle = "Hemp Shipment Transferee";
+		description = "The FIA raider team was able to steal the hemp shipment and transfer it over.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class End2
+	{
+		title = "Mission Failed";
+		subtitle = "Hemp Shipment Destroyed";
+		description = "The FIA raiders were unable to keep the shipment from exploding.";
+		pictureBackground = "overview.paa";
+		picture = "o_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+};
+
+class CfgSounds
+{
+	
+	class cariboon
+	{
+		name = "cariboon"; 
+		sound[] = {sounds\cariboon.ogg, 0.4, 1.0};
+		titles[] = {}; 
+	};
+
+};

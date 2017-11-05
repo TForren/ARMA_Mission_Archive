@@ -1,0 +1,65 @@
+#define description
+
+#include "core\description.hpp" //DO NOT REMOVE
+#include "customization\missionSettings.hpp" //DO NOT REMOVE
+#include "modules\modules.sqf" //DO NOT REMOVE
+#include "sounds\config.cpp"
+
+#undef description
+#define description_functions
+
+class CfgFunctions {
+
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+
+};
+	
+#undef description_functions
+#define description_titles
+	
+class rscTitles {
+
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+
+};
+
+#undef description_titles
+#define description_params
+
+class Params {
+
+   class MKY_EFX
+	{
+		title = "Sand Particle EFX strength";
+		values[] = {0,1,2,3,4};
+		texts[] = {"Random","Light","Moderate","Heavy","Disabled"};
+		default = 4;
+	};
+	
+   class Disable_Vehicles
+	{
+		title = "Disable Opfor Vehicles";
+		values[] = {0,1};
+		texts[] = {"Yes","No"};
+		default = 1;
+	};
+	
+	
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+	
+};
+
+class CfgMusic
+{
+	tracks[]={"MKY_Blizzard"};
+
+	class MKY_Blizzard
+	{
+		name = "";
+		sound[] = {"\MKY\sounds\m0nkey_blizzard.ogg", db+0, 1.0};
+	};
+
+};

@@ -1,0 +1,53 @@
+
+enableDebugConsole  = 1;
+
+
+#define description
+
+#include "core\description.hpp" //DO NOT REMOVE
+#include "modules\modules.sqf" //DO NOT REMOVE
+
+#undef description
+#define description_functions
+
+class CfgFunctions {
+
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+
+};
+	
+#undef description_functions
+#define description_titles
+	
+class rscTitles {
+
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+
+};
+
+#undef description_titles
+#define description_params
+
+class Params {
+	
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+	
+	class objDist
+	{
+		title = "Minimum Distance To Target"; // Param name visible in the list
+		values[] = {1000,2000,3000,4000,5000}; // Values; must be integers; has to have the same number of elements as 'texts'
+		texts[] = {"1000","2000","3000","4000","5000"}; // Description of each selectable item
+		default = 3000; // Default value; must be listed in 'values' array, otherwise 0 is used
+	};
+		class enemySize
+	{
+		title = "Enemy Size (Roughly)"; // Param name visible in the list
+		values[] = {4,6,8,10,12,14,16,28,30}; // Values; must be integers; has to have the same number of elements as 'texts'
+		texts[] = {"4","6","8","10","12","14","16","28","30"}; // Description of each selectable item
+		default = 6; // Default value; must be listed in 'values' array, otherwise 0 is used
+	};
+	
+};

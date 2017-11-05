@@ -1,0 +1,54 @@
+
+/* DO NOT EDIT BELOW THIS COMMENT */
+
+#define CONFIG_ENV
+
+#include "core\headers\macros.h"
+#include "settings.cpp"
+
+class Modules {
+	#define MODULES
+	#include "modules\modules.cpp"
+	#undef MODULES
+};
+
+class Params {
+	#define PARAMS
+	#include "modules\modules.cpp"
+	#undef PARAMS
+};
+
+#define ROOT
+#include "modules\modules.cpp"
+#undef ROOT
+
+class Extended_PreInit_EventHandlers {
+	mission_preInit = "call compile preProcessFileLineNumbers 'core\boot.sqf'";
+};
+
+class Mission {
+	#include "mission.sqm"
+};
+
+/* DO NOT EDIT ABOVE THIS COMMENT */
+
+class Header
+{
+ gameType = COOP;            
+ minPlayers = 1;             
+ maxPlayers = 20;      
+
+};
+
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+respawn = 3; 
+respawnDelay = 30;  
+enableDebugConsole = 2;
+
+#include "sounds\config.cpp"
+#include "VAS\menu.hpp"
+
+class CfgFunctions
+{
+	#include "VAS\cfgfunctions.hpp"
+};

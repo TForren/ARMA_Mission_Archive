@@ -1,0 +1,51 @@
+#define description
+
+#include "core\description.hpp" //DO NOT REMOVE
+#include "modules\modules.sqf" //DO NOT REMOVE
+#include "sounds\config.cpp"
+
+#undef description
+#define description_functions
+
+class CfgFunctions {
+
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+
+};
+	
+#undef description_functions
+#define description_titles
+	
+class rscTitles {
+
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+
+};
+
+#undef description_titles
+#define description_params
+
+class Params {
+
+   class lzDist
+	{
+		title = "Distance: LZ -> Objective";
+		values[] = {50,100,150,200,250,300,350,400,450,500,550,600,650,700};
+		texts[] = {"50","100","150","200","250","300","350","400","450","500","550","600","650","700"};
+		default = 350;
+	};
+	
+   class ipDist
+	{
+		title = "Distance: IP -> LZ";
+		values[] = {1000,1500,2000,2500,3000,3500,4000,4500,5000,5500,6000};
+		texts[] = {"1000","1500","2000","2500","3000","3500","4000","4500","5000","5500","6000"};
+		default = 3000;
+	};
+	
+	#include "core\description.hpp" //DO NOT REMOVE
+	#include "modules\modules.sqf" //DO NOT REMOVE
+	
+};

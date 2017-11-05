@@ -1,0 +1,43 @@
+comment "Exported from Arsenal by Hoizen";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "AV_CombatUniform1_OCP_shortsleeve";
+for "_i" from 1 to 2 do {this addItemToUniform "AGM_Bandage";};
+for "_i" from 1 to 2 do {this addItemToUniform "30Rnd_556x45_Stanag";};
+this addVest "AV_PlateCarrier1_OCP";
+for "_i" from 1 to 2 do {this addItemToVest "16Rnd_9x21_Mag";};
+for "_i" from 1 to 2 do {this addItemToVest "HandGrenade";};
+this addItemToVest "Chemlight_red";
+this addBackpack "AV_Kitbag_OCP";
+this addItemToBackpack "ToolKit";
+for "_i" from 1 to 5 do {this addItemToBackpack "AV_200Rnd_556x45";};
+this addHeadgear "AV_ACH1_OCP";
+this addGoggles "AV_ESS_blk_clr";
+
+comment "Add weapons";
+this addWeapon "RH_M16A4";
+this addPrimaryWeaponItem "RH_peq2";
+this addPrimaryWeaponItem "RH_eotech553";
+this addWeapon "hgun_Rook40_F";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "tf_anprc152_1";
+this linkItem "O_UavTerminal";
+this linkItem "AV_anpvs7";
+
+comment "Set identity";
+this setFace "WhiteHead_17";
+this setSpeaker "Male01ENG";

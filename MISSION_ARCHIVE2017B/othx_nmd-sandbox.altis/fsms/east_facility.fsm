@@ -1,0 +1,165 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, NMD Sandbox East Facility">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Init",0,250,-50.000000,-125.000000,50.000000,-75.000000,0.000000,"Init"};
+item1[] = {"AI_Enabled",4,4314,-50.000000,100.000000,50.000000,150.000000,0.000000,"AI Enabled"};
+item2[] = {"Setup_Facility",1,250,-50.000000,175.000000,50.000000,225.000000,0.000000,"Setup Facility"};
+item3[] = {"AI_Disabled",4,218,-175.000000,25.000000,-75.000000,75.000000,0.000000,"AI Disabled"};
+item4[] = {"Delete_Facility",1,250,-300.000000,25.000000,-200.000000,75.000000,0.000000,"Delete Facility"};
+item5[] = {"Is_Server",4,218,-50.000000,-50.000000,50.000000,0.000000,0.000000,"Is Server"};
+item6[] = {"Is_Client",4,218,-50.000000,-200.000000,50.000000,-150.000000,0.000000,"Is Client"};
+item7[] = {"Terminate",1,250,-50.000000,-275.000000,50.000000,-225.000000,0.000000,"Terminate"};
+item8[] = {"_",2,250,-50.000000,25.000000,50.000000,75.000000,0.000000,""};
+link0[] = {0,5};
+link1[] = {0,6};
+link2[] = {1,2};
+link3[] = {3,4};
+link4[] = {5,8};
+link5[] = {6,7};
+link6[] = {8,1};
+link7[] = {8,3};
+globals[] = {25.000000,1,0,0,0,640,480,1,10,6316128,1,-756.482544,753.031006,477.941650,-540.699219,1544,1270,1};
+window[] = {2,-1,-1,-1,-1,1107,222,2142,78,3,1562};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "NMD Sandbox East Facility";
+  class States
+  {
+    /*%FSM<STATE "Init">*/
+    class Init
+    {
+      name = "Init";
+      init = /*%FSM<STATEINIT""">*/"//--- Open dome doors" \n
+       "private [ ""_dome"" ];" \n
+       "_dome = [ 20898,19223, 0 ] nearestObject ""Land_Dome_Big_F"";" \n
+       "[ _dome, ""Door_3_rot"" ] execVM ""\A3\Structures_F\scripts\DoorNoHandle_open.sqf"";"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Is_Client">*/
+        class Is_Client
+        {
+          priority = 0.000000;
+          to="Terminate";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!isServer"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Is_Server">*/
+        class Is_Server
+        {
+          priority = 0.000000;
+          to="_";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"isServer"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Setup_Facility">*/
+    class Setup_Facility
+    {
+      name = "Setup_Facility";
+      init = /*%FSM<STATEINIT""">*/"private ""_units"";" \n
+       "_units = ( NMD_east_facility nearEntities [ [ ""Man"", ""LandVehicle"", ""Air"" ], 200 ] );" \n
+       "" \n
+       "//--- Set AI skill" \n
+       "{ if( _x isKindOf ""Man"" ) then { _x setSkill ( 0.3 + ( random 0.4 ) ) } } forEach _units;" \n
+       "" \n
+       "//--- Create marker" \n
+       "private ""_marker"";" \n
+       "_marker = createMarker [ ""NMD_east_facility"", position NMD_east_facility ];" \n
+       """NMD_east_facility"" setMarkerType ""o_service"";" \n
+       """NMD_east_facility"" setMarkerSize [ 1.4, 1.4 ];" \n
+       "" \n
+       "//--- Hide outpost" \n
+       "{ hideObjectGlobal _x } forEach ( nearestObjects [ [ 21030, 18980, 0 ], [ ""Building"" ], 50 ] );" \n
+       "" \n
+       "//--- Add units to editable curator objects" \n
+       "//NMD_curator addCuratorEditableObjects [ _units, false ];"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Delete_Facility">*/
+    class Delete_Facility
+    {
+      name = "Delete_Facility";
+      init = /*%FSM<STATEINIT""">*/"private ""_radius"";" \n
+       "_radius = 200;" \n
+       "" \n
+       "//--- Delete synchronized objects" \n
+       "{ deleteVehicle _x } forEach ( synchronizedObjects NMD_east_facility );" \n
+       "" \n
+       "//--- Delete vehicles" \n
+       "{ deleteVehicle _x } forEach ( NMD_east_facility nearEntities [ [ ""LandVehicle"", ""Air"" ], _radius ] );" \n
+       "" \n
+       "//--- Delete AI" \n
+       "{ deleteVehicle _x } forEach ( NMD_east_facility nearEntities [ ""Man"", _radius ] );" \n
+       "" \n
+       "//--- Delete logic " \n
+       "deleteVehicle NMD_east_facility;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Terminate">*/
+    class Terminate
+    {
+      name = "Terminate";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "_">*/
+    class _
+    {
+      name = "_";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "AI_Disabled">*/
+        class AI_Disabled
+        {
+          priority = 0.000000;
+          to="Delete_Facility";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"( ""AIBases"" call BIS_fnc_getParamValue ) <= 0"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "AI_Enabled">*/
+        class AI_Enabled
+        {
+          priority = 0.000000;
+          to="Setup_Facility";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"( ""AIBases"" call BIS_fnc_getParamValue ) >= 1"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="Init";
+  finalStates[] =
+  {
+    "Setup_Facility",
+    "Delete_Facility",
+    "Terminate",
+  };
+};
+/*%FSM</COMPILE>*/

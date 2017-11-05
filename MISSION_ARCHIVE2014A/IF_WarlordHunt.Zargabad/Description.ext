@@ -1,0 +1,79 @@
+author = "Hoizen"; // Author
+onLoadName = "TvT-16 Scavenger Hunt";
+onLoadMission = "US Rangers hunt for an infamous warlord";
+//loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "overview.paa";
+
+
+
+class Header
+{
+ gameType = COOP;            
+ minPlayers = 1;             
+ maxPlayers = 16;      
+
+};
+
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+respawn = 0; 
+enableDebugConsole = 2;
+
+class CfgRadio
+{
+	sounds[] = {};
+	class civResponse
+	{
+		name = "civResponse";
+		sound[] = {};
+		title = "Last I heard he was here on your map! Don't kill me!";
+	};
+	
+		class Durka
+	{
+		name = "Durka";
+		sound[] = {};
+		title = "Duraka Durka Hurka Durka";
+	};
+	
+			class mkrResponse
+	{
+		name = "mkrResponse";
+		sound[] = {};
+		title = "Duraka Durka. This is where the intel was hidden on your map. Hurka Durka";
+	};
+	
+
+};
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Blufor Victory";
+		subtitle = "The HVT has been eliminated";
+		description = "The Blufor have successfully eliminated the HVT before he was able to escape.";
+		pictureBackground = "overview.paa";
+		picture = "flag_USA";
+		pictureColor[] = {0.0,0.0,0.0,1};
+	};
+
+		class End2
+	{
+		title = "Opfor Victory";
+		subtitle = "The HVT has escaped";
+		description = "Ratzebad successfully collected the briefcases and escaped to durka another day.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+	
+		class End3
+	{
+		title = "Opfor Victory";
+		subtitle = "All Blufor Eliminated";
+		description = "The Blufor have been completely wiped out and Ratzebad now freely durkas all over Zargabad and where ever he damn well pleases.";
+		pictureBackground = "overview.paa";
+		picture = "KIA";
+		pictureColor[] = {0.0,0.0,0.0,1};
+	};
+};

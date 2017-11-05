@@ -1,0 +1,54 @@
+author = "Hoizen - RV2"; // Author
+onLoadName = "TvT10 Silent Diffusion";
+onLoadMission = "Blufor Infiltration. Opfor security.";
+//loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "overview.paa";
+
+
+
+class Header
+{
+ gameType = TDM;            
+ minPlayers = 1;             
+ maxPlayers = 10;      
+
+};
+
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+respawn = 0; 
+enableDebugConsole = 2;
+
+#include "sounds\config.cpp"
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Blufor Victory";
+		subtitle = "Blufor Objectives Complete";
+		description = "The Blufor have successfully completed the necessary number of objectives and have survived the mission.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+		class End2
+	{
+		title = "Opfor Victory";
+		subtitle = "Time Limit Reached";
+		description = "The Blufor were unable to complete the necessary number of objectives before the time limit.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+	
+		class End3
+	{
+		title = "Opfor Victory";
+		subtitle = "All Blufor Eliminated";
+		description = "All Blufor in the AO have been eliminated or chased off into a state of insignificance.";
+		pictureBackground = "overview.paa";
+		picture = "KIA";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+};

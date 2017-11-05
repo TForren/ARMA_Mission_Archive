@@ -1,0 +1,29 @@
+comment "Exported from Arsenal by Hoizen";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers"; 
+this forceAddUniform "TRYK_U_B_Denim_T_WH"; TRYK_U_B_Denim_T_BK TRYK_DMARPAT_T
+for "_i" from 1 to 2 do {this addItemToUniform "BWA3_20Rnd_762x51_G28";};
+this addVest "V_TacVest_brn";
+this addItemToVest "BWA3_20Rnd_762x51_G28";
+this addHeadgear "H_Cap_blk_ION", "H_Cap_grn", "H_Cap_blk_CMMG", "H_Cap_blk", "H_Cap_grn_BI", "H_Cap_tan", "H_Cap_khaki_specops_UK", "H_Cap_usblack", "H_Cap_tan_specops_US"
+this addGoggles "TRYK_Shemagh"; TRYK_Shemagh_EAR_TAN TRYK_Shemagh_ESS TRYK_Shemagh_shade TRYK_TAC_SET_TAN
+ 
+comment "Add weapons";
+this addWeapon "BWA3_G28_Assault";
+this addPrimaryWeaponItem "BWA3_optic_Aimpoint";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "tf_microdagr";
+this linkItem "tf_anprc152_1";

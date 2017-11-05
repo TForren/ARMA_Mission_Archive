@@ -1,0 +1,45 @@
+author = "Hoizen"; // Author
+onLoadName = "CO-13 Grounded Greeks";
+onLoadMission = "US NATO forces raid airfield for CSAT HVT";
+loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "overview.paa";
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+
+class Header {
+   gameType = Coop;
+   playerCountMultipleOf = 1; //Disables auto balance
+};
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission Completed";
+		subtitle = "All objectives completed";
+		description = "The HVT has been eliminated, the air assets destroyed, and the terminal dismantled";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+		class End2
+	{
+		title = "Mission Failed";
+		subtitle = "Blufor have been eliminated";
+		description = "The Blufor forces have been either eliminated or chased out of the AO and are no long capable of completing their objective";
+		pictureBackground = "overview.paa";
+		picture = "o_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+	
+		class End3
+	{
+		title = "Mission Failed";
+		subtitle = "The HVT has escaped";
+		description = "The Blufor forces were unable to eliminate the HVT before he escaped via air transport.";
+		pictureBackground = "overview.paa";
+		picture = "o_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+
+};

@@ -1,0 +1,57 @@
+author = "Hoizen"; // Author
+onLoadName = "CAMP20 CRIMSON SHADE";
+onLoadMission = "Introduction Mission to the Crimson Shade Campaign";
+loadScreen = "loading.paa"; // Preview picture
+overviewPicture = "overview.paa";
+disabledAI = 1; //This does so not slotted units do not spawn as ai
+
+class Header {
+   gameType = Coop;
+   playerCountMultipleOf = 1; //Disables auto balance
+};
+
+
+//classes go from best result to worst result.
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission Completed";
+		subtitle = "All objectives have been completed";
+		description = "TF KNIGHT and SPECTRE have acomplished all tasks and have kept all three trucks alive giving them full FOB support in the next mission.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class End2
+	{
+		title = "Mission Competed";
+		subtitle = "All objectives have been completed";
+		description = "TF KNIGHT and SPECTRE have acomplished all tasks but have allowed one truck to be destroyed meaning the FOB will not run at its maximum potential.";
+		pictureBackground = "overview.paa";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	
+	class End3
+	{
+		title = "Mission Failed";
+		subtitle = "Too many trucks have been destroyed";
+		description = "TF KNIGHT and SPECTRE were unable to keep enough trucks alive to establish a FOB";
+		pictureBackground = "overview.paa";
+		picture = "o_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+	
+		class End4
+	{
+		title = "Mission Failed";
+		subtitle = "Blufor have suffered too many casualties";
+		description = "The Blufor forces have suffered too many casualties and are no longer combat effective.";
+		pictureBackground = "overview.paa";
+		picture = "o_inf";
+		pictureColor[] = {0.6,0.0,0.0,1};
+	};
+
+};

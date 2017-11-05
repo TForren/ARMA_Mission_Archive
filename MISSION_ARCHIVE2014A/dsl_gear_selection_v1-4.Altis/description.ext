@@ -1,0 +1,446 @@
+#include "GUI\resincl.hpp"
+#include "GUI\commonDefs.hpp"
+#include "GUI\rscCommon.hpp"
+
+author="Dslyecxi";
+OnLoadName = "Dslyecxi's Gear Menu";
+OnLoadMission = "Wondering what to wear to that special military occasion? Look no further!";
+
+
+class dsl_Slider : RscSlider
+{
+}; 
+
+#define X_MOD 60 // this needs to be adjusted if an aspect ratio other than 16:9 is used, as I am dialog-retarded.  
+#define Y_MOD 10
+#define SLIDER_START -19
+#define SLIDER_INTERVAL 4
+#define SLIDER_TITLE_SPACE 1.3
+
+class dsl_gear_dialog
+{
+	idd = 10568; 
+	movingEnable = 1; 
+	enableSimulation = 1;
+	enableDisplay = 1; 
+	
+	onLoad = "dsl_gear_dialog = _this; disableSerialization"; 
+	onunLoad = "dsl_ShowingSelfCam = false"; 
+
+	class controls 
+	{
+
+		class RscSlider_1900: dsl_Slider // headgear
+		{
+			idc = 1900;
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + safezoneH / 28 + 0.04;
+			w = safezoneW / 3;
+			h = safezoneH / 40;
+			
+		};
+		class RscSlider_1901: dsl_Slider  // vest
+		{
+			idc = 1901;
+			type = CT_SLIDER;
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + 3 * safezoneH / 28 + 0.04;
+			w = safezoneW / 3;
+			h = safezoneH / 40;
+		};
+		class RscSlider_1902: dsl_Slider // uniform
+		{
+			idc = 1902;
+			type = CT_SLIDER;
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + 5 * safezoneH / 28 + 0.04;
+			w = safezoneW / 3;
+			h = safezoneH / 40;
+		};
+		class RscSlider_1903: dsl_Slider  // backpack
+		{
+			idc = 1903;
+			type = CT_SLIDER;
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + 7 * safezoneH / 28 + 0.04;
+			w = safezoneW / 3;
+			h = safezoneH / 40;
+		};
+		class RscSlider_1904: dsl_Slider  // weapon
+		{
+			idc = 1904;
+			type = CT_SLIDER;
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + 9 * safezoneH / 28 + 0.04;
+			w = safezoneW / 3;
+			h = safezoneH / 40;
+		};
+		class RscSlider_1905: dsl_Slider // optic
+		{
+			idc = 1905;
+			type = CT_SLIDER;
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + 11 * safezoneH / 28 + 0.04;
+			w = safezoneW / 3;
+			h = safezoneH / 40;
+		};
+		
+		class RscSlider_1906: dsl_Slider  // rail
+		{
+			idc = 1906;
+			type = CT_SLIDER;
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + 13 * safezoneH / 28 + 0.04;
+			w = safezoneW / 3;
+			h = safezoneH / 40;
+		};
+		
+		class RscSlider_1907: dsl_Slider // sidearm
+		{
+			idc = 1907;
+			type = CT_SLIDER;
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + 15 * safezoneH / 28 + 0.04;
+			w = safezoneW / 3;
+			h = safezoneH / 40;
+		};
+		class RscSlider_1908: dsl_Slider  // faces
+		{
+			idc = 1908;
+			type = CT_SLIDER;
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + 17 * safezoneH / 28 + 0.04;
+			w = safezoneW / 3;
+			h = safezoneH / 40;
+		};
+		
+		class RscSlider_1914: dsl_Slider  // launchers
+		{
+			idc = 1914;
+			type = CT_SLIDER;
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + 19 * safezoneH / 28 + 0.04;
+			w = safezoneW / 3;
+			h = safezoneH / 40;
+		};
+		
+		class RscSlider_1913: dsl_Slider // glasses
+		{
+			idc = 1913;
+			type = CT_SLIDER;
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + 21 * safezoneH / 28 + 0.04;
+			w = safezoneW / 3;
+			h = safezoneH / 40;
+		};
+		
+		
+
+
+
+
+		class RscText_1001: RscText
+		{
+			idc = 1001;
+			text = "Headgear"; 
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + safezoneH / 28;
+			w = safezoneW;
+			h = safezoneH / 40;
+		};
+
+		class RscText_1000: RscText
+		{
+			idc = 1000;
+			text = "Vest";
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + 3 * safezoneH / 28;
+			w = safezoneW;
+			h = safezoneH / 40;
+		};
+		
+		class RscText_1002: RscText
+		{
+			idc = 1002;
+			text = "Uniform";
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + 5 * safezoneH / 28;
+			w = safezoneW;
+			h = safezoneH / 40;
+		};
+		class RscText_1003: RscText
+		{
+			idc = 1003;
+			text = "Backpack";
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + 7 * safezoneH / 28;
+			w = safezoneW;
+			h = safezoneH / 40;
+		};
+		class RscText_1004: RscText
+		{
+			idc = 1004;
+			text = "Weapon"; 
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + 9 * safezoneH / 28;
+			w = safezoneW;
+			h = safezoneH / 40;
+		};
+		class RscText_1005: RscText
+		{
+			idc = 1005;
+			text = "Optic"; 
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + 11 * safezoneH / 28;
+			w = safezoneW;
+			h = safezoneH / 40;
+		};
+		class RscText_1006: RscText
+		{
+			idc = 1006;
+			text = "Rail";
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + 13 * safezoneH / 28;
+			w = safezoneW;
+			h = safezoneH / 40;
+		};
+		class RscText_1007: RscText
+		{
+			idc = 1007;
+			text = "Sidearm"; 
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + 15 * safezoneH / 28;
+			w = safezoneW;
+			h = safezoneH / 40;
+		};
+		class RscText_1008: RscText
+		{
+			idc = 1008;
+			text = "Face"; 
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + 17 * safezoneH / 28;
+			w = safezoneW;
+			h = safezoneH / 40;
+		};
+		
+		class RscText_1014: RscText
+		{
+			idc = 1014;
+			text = "Launcher"; 
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + 19 * safezoneH / 28;
+			w = safezoneW;
+			h = safezoneH / 40;
+		};
+		
+		
+		class RscText_1013: RscText
+		{
+			idc = 1013;
+			text = "Glasses"; 
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + 21 * safezoneH / 28;
+			w = safezoneW;
+			h = safezoneH / 40;
+		};		
+		
+		
+		
+		
+		
+		
+		class RscSlider_1909: RscSlider // time
+		{
+			idc = 1909;
+			x = safezoneX + safezoneW / 40;
+			y = safezoneY + safezoneH / 28 + 0.04;
+			w = safezoneW / 3.8;
+			h = safezoneH / 40;
+		};
+		
+		class RscSlider_1910: RscSlider // overcast
+		{
+			idc = 1910;
+			x = safezoneX + safezoneW / 40;
+			y = safezoneY + 3 * safezoneH / 28 + 0.04;
+			w = safezoneW / 3.8;
+			h = safezoneH / 40;
+		};
+		class RscSlider_1911: RscSlider // day of month
+		{
+			idc = 1911;
+			x = safezoneX + safezoneW / 40;
+			y = safezoneY + 5 * safezoneH / 28 + 0.04;
+			w = safezoneW / 3.8;
+			h = safezoneH / 40;
+		};
+		class RscSlider_1912: RscSlider // view distance
+		{
+			idc = 1912;
+			x = safezoneX + safezoneW / 40;
+			y = safezoneY + 7 * safezoneH / 28 + 0.04;
+			w = safezoneW / 3.8;
+			h = safezoneH / 40;
+		};
+
+
+
+
+		class RscText_1015: RscText
+		{
+			idc = 1015;
+			text = "Dslyecxi's Gear Menu";
+			SizeEx = 0.075; 
+			x = safezoneX + safezoneW / 40;
+			y = safezoneY + 11 * safezoneH / 28;
+			w = safezoneW;
+			h = safezoneH / 20;
+		};
+			
+		
+		class RscText_1009: RscText
+		{
+			idc = 1009;
+			text = "Time of Day"; 
+			x = safezoneX + safezoneW / 40;
+			y = safezoneY + safezoneH / 28;
+			w = safezoneW;
+			h = safezoneH / 40;
+		};
+		
+		
+		class RscText_1010: RscText
+		{
+			idc = 1010;
+			text = "Overcast"; //--- ToDo: Localize;
+			x = safezoneX + safezoneW / 40;
+			y = safezoneY + 3 * safezoneH / 28;
+			w = safezoneW;
+			h = safezoneH / 40;
+		};
+		class RscText_1011: RscText
+		{
+			idc = 1011;
+			text = "Day of Month"; //--- ToDo: Localize;
+			x = safezoneX + safezoneW / 40;
+			y = safezoneY + 5 * safezoneH / 28;
+			w = safezoneW;
+			h = safezoneH / 40;
+		};
+		class RscText_1012: RscText
+		{
+			idc = 1012;
+			text = "Viewdistance"; //--- ToDo: Localize;
+			x = safezoneX + safezoneW / 40;
+			y = safezoneY + 7 * safezoneH / 28;
+			w = safezoneW;
+			h = safezoneH / 40;
+		};
+
+
+
+
+	
+		
+		class RscButton_1600: RscButton
+		{
+			idc = 1600;
+			text = "Random"; //--- ToDo: Localize;
+			x = safezoneX + safezoneW / 40;
+			y = safezoneY + 22 * safezoneH / 28 + 0.04;
+			w = safezoneW / 15;
+			h = safezoneH / 30;
+		};
+		class RscButton_1601: RscButton
+		{
+			idc = 1601;
+			text = "Copy"; //--- ToDo: Localize;
+			x = safezoneX + safezoneW / 40 + safezoneW / 15 + 0.02;
+			y = safezoneY + 22 * safezoneH / 28 + 0.04;
+			w = safezoneW / 15;
+			h = safezoneH / 30;
+		};
+		class RscButton_1602: RscButton
+		{
+			idc = 1602;
+			text = "Presets"; //--- ToDo: Localize;
+			x = safezoneX + safezoneW / 40 + 2 * safezoneW / 15 + 0.04;
+			y = safezoneY + 22 * safezoneH / 28 + 0.04;
+			w = safezoneW / 15;
+			h = safezoneH / 30;
+		};
+		
+		class RscButton_1608: RscButton
+		{
+			idc = 1608;
+			text = "Thermal"; //--- ToDo: Localize;
+			x = safezoneX + safezoneW / 40 + 3 * safezoneW / 15 + 0.06;
+			y = safezoneY + 22 * safezoneH / 28 + 0.04;
+			w = safezoneW / 15;
+			h = safezoneH / 30;
+		};
+			
+		
+		class RscButton_1603: RscButton
+		{
+			idc = 1603;
+			text = "Head"; //--- ToDo: Localize;
+			x = safezoneX + safezoneW / 40;
+			y = safezoneY + 24 * safezoneH / 28 + 0.04;
+			w = safezoneW / 15;
+			h = safezoneH / 30;
+		};
+		class RscButton_1604: RscButton
+		{
+			idc = 1604;
+			text = "Body"; //--- ToDo: Localize;
+			x = safezoneX + safezoneW / 40 + safezoneW / 15 + 0.02;
+			y = safezoneY + 24 * safezoneH / 28 + 0.04;
+			w = safezoneW / 15;
+			h = safezoneH / 30;
+		};
+		class RscButton_1605: RscButton
+		{
+			idc = 1605;
+			text = "Backpack"; //--- ToDo: Localize;
+			x = safezoneX + safezoneW / 40 + 2 * safezoneW / 15 + 0.04;
+			y = safezoneY + 24 * safezoneH / 28 + 0.04;
+			w = safezoneW / 15;
+			h = safezoneH / 30;
+		};
+		
+		class RscButton_1606: RscButton
+		{
+			idc = 1606;
+			text = "Weapon"; //--- ToDo: Localize;
+			x = safezoneX + safezoneW / 40 + 3 * safezoneW / 15 + 0.06;
+			y = safezoneY + 24 * safezoneH / 28 + 0.04;
+			w = safezoneW / 15;
+			h = safezoneH / 30;
+		};
+		
+		
+		class RscButton_1607: RscButton
+		{
+			idc = 1607;
+			text = "Muzzle Device"; //--- ToDo: Localize;
+			x = safezoneX + 0.65 * safezoneW;
+			y = safezoneY + 24 * safezoneH / 28 + 0.04;
+			w = safezoneW / 10;
+			h = safezoneH / 30;
+		};
+		
+		class RscButton_1609: RscButton
+		{
+			idc = 1609;
+			text = "NV Goggles"; //--- ToDo: Localize;
+			x = safezoneX + 0.65 * safezoneW + safezoneW / 10 + 0.05;
+			y = safezoneY + 24 * safezoneH / 28 + 0.04;
+			w = safezoneW / 10;
+			h = safezoneH / 30;
+		};	
+	};
+};
+
+
+
